@@ -1,0 +1,13 @@
+- handle status error reasonably enough
+- why the logger doesn't log!!! only partially!
+- i always have this log [* Detected change in '/home/zerin/prj/tahweela/core/server/server.py', reloading] !!!
+- why the authentication @auth.get_password callback fails! also the logger doesn't work, so i can't debug at all!!
+- i think the logging object is unified, that is why there is a problem! (fix) it, see working example
+- i think the logging error is due to permissions, and nothing else, user tahweela isn't authorized
+- maybe they would ask me to use dejango
+- or large data manipulation, so i expect to use pandas
+- wsgi flask deployment server
+- maybe they will give me part of their codebase, and ask me for solve of the problems (impact from day1!)
+- i should stay up all night, and wake up slowly, and comfortably at 12-2 PM at next day.
+- get goods, need to return list of goods ion a dictionary with key goods being a list of dictionary of goods
+- i think this mean that i should return tabular structure as list .to_list rather than to_json! test it

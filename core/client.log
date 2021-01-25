@@ -1,0 +1,64 @@
+2021-01-25 02:40:35,123 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-25 02:40:35,125 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-25 02:40:35,128 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-25 02:40:35,131 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-25 02:40:35,134 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-25 02:40:35,137 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-25 02:40:35,140 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-25 02:40:35,142 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-25 02:40:35,150 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-25 02:40:35,154 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-25 02:40:35,154 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-25 02:40:35,161 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-25 02:40:35,164 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-25 02:40:35,166 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-25 02:40:35,169 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-25 02:40:35,173 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-25 02:40:35,176 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-25 02:40:35,186 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-25 02:40:35,189 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-25 02:40:35,191 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-25 02:40:35,191 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-25 02:40:35,193 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-25 02:40:35,202 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-25 02:40:35,207 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-25 02:40:35,208 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-25 02:40:35,211 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-25 02:40:35,215 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-25 02:40:35,217 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-25 02:40:35,222 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-25 02:40:35,225 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-25 02:40:35,229 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-25 02:40:35,240 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-25 02:40:35,244 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-25 02:40:35,250 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-25 02:40:35,252 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-25 02:40:35,252 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-25 02:40:35,252 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-25 02:40:35,257 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-25 02:40:35,260 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-25 02:40:35,269 database initialized
+2021-01-25 02:40:35,280 Starting new HTTP connection (1): localhost:5000
+2021-01-25 02:40:35,298 http://localhost:5000 "POST /api/v0.1/register HTTP/1.1" 201 82
+2021-01-25 02:40:35,302 Composed([SQL('INSERT INTO credentials (passcode, cred_id) VALUES ('), Literal('cjG7zTeYH'), SQL(', '), Literal(6.207014365500808e+18), SQL(');')])
+2021-01-25 02:40:35,305 username:6.207014365500808e+18, passcode: cjG7zTeYH
+2021-01-25 02:40:35,306 auth (6.207014365500808e+18:cjG7zTeYH)
+2021-01-25 02:40:35,312 Starting new HTTP connection (1): localhost:5000
+2021-01-25 02:40:35,553 http://localhost:5000 "POST /api/v0.1/goods HTTP/1.1" 201 2328
+2021-01-25 02:40:35,558 database committed
+2021-01-25 02:40:35,558 auth (6.207014365500808e+18:cjG7zTeYH)
+2021-01-25 02:40:35,564 Starting new HTTP connection (1): localhost:5000
+2021-01-25 02:40:35,646 http://localhost:5000 "GET /api/v0.1/goods HTTP/1.1" 201 51212
+2021-01-25 02:40:36,065 client initialized
+2021-01-25 02:40:36,068 database initialized
+2021-01-25 02:40:36,068 SELECT currval(pg_get_serial_sequence('ledger', 'trx_id'));
+2021-01-25 02:40:36,070 failed to retrieve ledger time stamp
+2021-01-25 02:40:36,071 database rollback
+2021-01-25 02:40:36,071 auth (6.207014365500808e+18:cjG7zTeYH)
+2021-01-25 02:40:36,073 Starting new HTTP connection (1): localhost:5000
+2021-01-25 02:40:36,116 http://localhost:5000 "POST /api/v0.1/ledger HTTP/1.1" 201 129
+2021-01-25 02:40:36,127 database initialized
+2021-01-25 02:40:36,137 database rollback
+2021-01-25 02:40:36,139 auth (6.207014365500808e+18:cjG7zTeYH)
+2021-01-25 02:40:36,144 Starting new HTTP connection (1): localhost:5000
+2021-01-25 02:40:36,242 http://localhost:5000 "POST /api/v0.1/purchase HTTP/1.1" 500 None
