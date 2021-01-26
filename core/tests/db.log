@@ -1,0 +1,39 @@
+2021-01-26 01:31:37,626 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-26 01:31:37,627 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-26 01:31:37,661 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-26 01:31:37,662 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-26 01:31:37,680 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-26 01:31:37,681 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-26 01:31:37,683 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-26 01:31:37,683 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-26 01:31:37,685 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-26 01:31:37,686 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-26 01:31:37,687 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-26 01:31:37,688 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-26 01:31:37,690 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-26 01:31:37,690 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-26 01:31:37,691 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-26 01:31:37,691 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-26 01:31:37,692 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-26 01:31:37,694 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-26 01:31:37,708 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-26 01:31:37,709 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-26 01:31:37,709 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-26 01:31:37,719 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-26 01:31:37,723 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-26 01:31:37,725 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-26 01:31:37,725 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-26 01:31:37,728 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-26 01:31:37,729 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-26 01:31:37,731 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-26 01:31:37,734 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-26 01:31:37,735 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-26 01:31:37,737 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-26 01:31:37,741 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-26 01:31:37,748 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-26 01:31:37,751 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-26 01:31:37,752 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-26 01:31:37,753 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-26 01:31:37,753 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-26 01:31:37,755 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-26 01:31:37,756 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.

@@ -12,3 +12,5 @@ frontend:
 	psql -d demo_client -U tahweela_client -w -f ./database/client_initialize.sql
 restart:
 	sudo /etc/init.d/postgresql restart
+test:
+	python3 tests/*.py
