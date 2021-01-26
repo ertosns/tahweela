@@ -1,0 +1,70 @@
+2021-01-26 23:01:08,200 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('rogersashley@maxwell-brown.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,201 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(1), SQL(', '), Literal('kKnEr3ogQ'), SQL(', '), Literal(508935198202), SQL(');')])
+2021-01-26 23:01:08,202 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference) VALUES ('), Literal(1), SQL(', '), Literal(125.14445787859435), SQL(', '), Literal('Daniel'), SQL(', '), Literal(26), SQL(', '), Literal(839595), SQL(', '), Literal('Pace'), SQL(');')])
+2021-01-26 23:01:08,203 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-26 23:01:08,205 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('ryandaniels@taylor.org'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,206 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(2), SQL(', '), Literal('aCXEU07aL'), SQL(', '), Literal(1095010283254), SQL(');')])
+2021-01-26 23:01:08,206 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference) VALUES ('), Literal(2), SQL(', '), Literal(125.14445787859435), SQL(', '), Literal('Daniel'), SQL(', '), Literal(26), SQL(', '), Literal(839595), SQL(', '), Literal('Pace'), SQL(');')])
+2021-01-26 23:01:08,206 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-26 23:01:08,207 Composed([SQL('SELECT (balance) FROM banking WHERE client_id='), Literal(2), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,208 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('kathryn06@hotmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,209 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('david84@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,211 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('henryjoshua@hotmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,211 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(5), SQL(', '), Literal('w2gi2XPIM'), SQL(', '), Literal(966144597322), SQL(');')])
+2021-01-26 23:01:08,212 Composed([SQL('SELECT (c.client_id) FROM clients AS c INNER JOIN credentials   ON (credentials.id=c.client_id) WHERE c.client_name='), Literal('Duane Smith'), SQL(' AND credentials.passcode='), Literal('w2gi2XPIM'), SQL(' LIMIT 1  FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,214 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('thomas56@deleon.org'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,215 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(6), SQL(', '), Literal('zZveZbgM9'), SQL(', '), Literal(1787804379861), SQL(');')])
+2021-01-26 23:01:08,215 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference) VALUES ('), Literal(6), SQL(', '), Literal(125.14445787859435), SQL(', '), Literal('Daniel'), SQL(', '), Literal(26), SQL(', '), Literal(839595), SQL(', '), Literal('Pace'), SQL(');')])
+2021-01-26 23:01:08,216 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-26 23:01:08,216 Composed([SQL('SELECT (client_id) FROM banking WHERE id='), Literal(3), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,216 Composed([SQL('SELECT (id) FROM banking WHERE client_id='), Literal(6), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,218 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('fmitchell@jacobson-acevedo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,240 database committed
+2021-01-26 23:01:08,240 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('jamie16@kerr.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,257 database committed
+2021-01-26 23:01:08,259 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(8), SQL(', '), Literal('RLxGkRYGd'), SQL(', '), Literal(2903149510465), SQL(');')])
+2021-01-26 23:01:08,260 Composed([SQL('SELECT (c.client_id) FROM clients AS c INNER JOIN credentials   ON (credentials.id=c.client_id) WHERE c.client_name='), Literal('Robert Bell'), SQL(' AND credentials.passcode='), Literal('RLxGkRYGd'), SQL(' LIMIT 1  FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,274 database committed
+2021-01-26 23:01:08,279 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('joshuaross@keller-strickland.org'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,280 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(9), SQL(', '), Literal('Oqjjdk5lv'), SQL(', '), Literal(2993188851247), SQL(');')])
+2021-01-26 23:01:08,281 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(2993188851247), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,282 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(9), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,287 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('tmosley@hotmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,289 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(10), SQL(', '), Literal('ByUitNn4e'), SQL(', '), Literal(2368527650507), SQL(');')])
+2021-01-26 23:01:08,290 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference) VALUES ('), Literal(10), SQL(', '), Literal(125.14445787859435), SQL(', '), Literal('Daniel'), SQL(', '), Literal(26), SQL(', '), Literal(839595), SQL(', '), Literal('Pace'), SQL(');')])
+2021-01-26 23:01:08,292 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-26 23:01:08,293 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(2368527650507), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,314 database committed
+2021-01-26 23:01:08,314 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('alvaradosara@banks.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,315 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(11), SQL(', '), Literal('Yi8Zgc8AF'), SQL(', '), Literal(518660544125), SQL(');')])
+2021-01-26 23:01:08,331 database committed
+2021-01-26 23:01:08,331 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference) VALUES ('), Literal(11), SQL(', '), Literal(161.06550320301346), SQL(', '), Literal('Dennis'), SQL(', '), Literal(9), SQL(', '), Literal(1424365), SQL(', '), Literal('James'), SQL(');')])
+2021-01-26 23:01:08,333 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-26 23:01:08,349 database committed
+2021-01-26 23:01:08,366 database committed
+2021-01-26 23:01:08,366 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('davidphillips@aguirre.net'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,367 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(12), SQL(', '), Literal('gjgKFyss3'), SQL(', '), Literal(3222863582868), SQL(');')])
+2021-01-26 23:01:08,384 database committed
+2021-01-26 23:01:08,384 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference) VALUES ('), Literal(12), SQL(', '), Literal(173.72821223177297), SQL(', '), Literal('Dylan'), SQL(', '), Literal(4), SQL(', '), Literal(3244258), SQL(', '), Literal('Green'), SQL(');')])
+2021-01-26 23:01:08,386 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-26 23:01:08,400 database committed
+2021-01-26 23:01:08,401 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost) VALUES ('), Literal(3222863582868), SQL(', '), Literal(518660544125), SQL(', '), Literal(10000), SQL(');')])
+2021-01-26 23:01:08,418 database committed
+2021-01-26 23:01:08,419 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost) VALUES ('), Literal(3222863582868), SQL(', '), Literal(518660544125), SQL(', '), Literal(20000), SQL(');')])
+2021-01-26 23:01:08,435 database committed
+2021-01-26 23:01:08,436 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost) VALUES ('), Literal(518660544125), SQL(', '), Literal(3222863582868), SQL(', '), Literal(5000), SQL(');')])
+2021-01-26 23:01:08,453 database committed
+2021-01-26 23:01:08,453 Composed([SQL('SELECT SUM(trx_cost) FROM ledger WHERE (trx_dt>='), Literal('2021-01-26 23:01:08.401276'), SQL(' AND trx_dt<'), Literal('2021-01-26 23:01:08.453784'), SQL(' AND trx_dest='), Literal(518660544125), SQL(') OR (trx_dt>='), Literal('2021-01-26 23:01:08.401276'), SQL(' AND trx_dt<'), Literal('2021-01-26 23:01:08.453784'), SQL(' AND trx_src='), Literal(518660544125), SQL(');')])
+2021-01-26 23:01:08,456 database committed
+2021-01-26 23:01:08,456 Composed([SQL('SELECT SUM(trx_cost) FROM ledger WHERE (trx_dt>='), Literal('2021-01-26 23:01:08.419123'), SQL(' AND trx_dt<'), Literal('2021-01-26 23:01:08.456272'), SQL(' AND trx_dest='), Literal(518660544125), SQL(') OR (trx_dt>='), Literal('2021-01-26 23:01:08.419123'), SQL(' AND trx_dt<'), Literal('2021-01-26 23:01:08.456272'), SQL(' AND trx_src='), Literal(518660544125), SQL(');')])
+2021-01-26 23:01:08,458 database committed
+2021-01-26 23:01:08,458 Composed([SQL('SELECT SUM(trx_cost) FROM ledger WHERE (trx_dt>='), Literal('2021-01-26 23:01:08.436124'), SQL(' AND trx_dt<'), Literal('2021-01-26 23:01:08.458258'), SQL(' AND trx_dest='), Literal(518660544125), SQL(') OR (trx_dt>='), Literal('2021-01-26 23:01:08.436124'), SQL(' AND trx_dt<'), Literal('2021-01-26 23:01:08.458258'), SQL(' AND trx_src='), Literal(518660544125), SQL(');')])
+2021-01-26 23:01:08,459 database committed
+2021-01-26 23:01:08,481 database committed
+2021-01-26 23:01:08,481 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('williambarrett@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-26 23:01:08,482 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(13), SQL(', '), Literal('RiOO0D1pH'), SQL(', '), Literal(2004945395420), SQL(');')])
+2021-01-26 23:01:08,499 database committed
+2021-01-26 23:01:08,499 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference) VALUES ('), Literal(13), SQL(', '), Literal(7.038136337508157), SQL(', '), Literal('Daniel'), SQL(', '), Literal(26), SQL(', '), Literal(839595), SQL(', '), Literal('Pace'), SQL(');')])
+2021-01-26 23:01:08,501 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-26 23:01:08,516 database committed
+2021-01-26 23:01:08,517 Composed([SQL('SELECT (balance) FROM banking WHERE client_id='), Literal(13), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
