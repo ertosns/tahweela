@@ -1,0 +1,378 @@
+\hypertarget{namespacedatabase}{}\doxysection{database Namespace Reference}
+\label{namespacedatabase}\index{database@{database}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdatabase_1_1_server_database_test}{Server\+Database\+Test}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344}{get\+\_\+bank\+\_\+name}} ()
+\item 
+def \mbox{\hyperlink{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36}{get\+\_\+branch\+\_\+number}} ()
+\item 
+def \mbox{\hyperlink{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1}{get\+\_\+account\+\_\+number}} ()
+\item 
+def \mbox{\hyperlink{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197}{get\+\_\+name\+\_\+reference}} ()
+\item 
+def \mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\+\_\+name}} ()
+\item 
+def \mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\+\_\+email}} ()
+\item 
+def \mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\+\_\+balance}} ()
+\item 
+def \mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\+\_\+credid}} ()
+\item 
+def \mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\+\_\+rand\+\_\+pass}} (L=9)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacedatabase_abb0df7875b6b17e64ef00eefd079feba}{seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \char`\"{}big\char`\"{})
+\item 
+\mbox{\hyperlink{namespacedatabase_a409a956876af2281cdabb40fc9760b6d}{faker}} = Faker(\mbox{\hyperlink{namespacedatabase_abb0df7875b6b17e64ef00eefd079feba}{seed}})
+\item 
+string \mbox{\hyperlink{namespacedatabase_a63b1533b2186e51f26cbca5b4c40e997}{db\+\_\+configs}} = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespacedatabase_ae1f424018e81011f5382b6f8edc7ac86}{db}} = \mbox{\hyperlink{classcore_1_1queries_1_1database_1_1database}{database}}(\mbox{\hyperlink{namespacedatabase_a63b1533b2186e51f26cbca5b4c40e997}{db\+\_\+configs}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1}\label{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1}} 
+\index{database@{database}!get\_account\_number@{get\_account\_number}}
+\index{get\_account\_number@{get\_account\_number}!database@{database}}
+\doxysubsubsection{\texorpdfstring{get\_account\_number()}{get\_account\_number()}}
+{\footnotesize\ttfamily def database.\+get\+\_\+account\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1}{get\_account\_number}}():}
+\DoxyCodeLine{21     \textcolor{keywordflow}{return} int(3333333*random.random())}
+
+\end{DoxyCode}
+
+
+Referenced by get\+\_\+name\+\_\+reference(), and database.\+Server\+Database\+Test.\+test\+\_\+transaction().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}\label{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}} 
+\index{database@{database}!get\_balance@{get\_balance}}
+\index{get\_balance@{get\_balance}!database@{database}}
+\doxysubsubsection{\texorpdfstring{get\_balance()}{get\_balance()}}
+{\footnotesize\ttfamily def database.\+get\+\_\+balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}():}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} 333*random.random()}
+
+\end{DoxyCode}
+
+
+Referenced by get\+\_\+credid(), database.\+Server\+Database\+Test.\+test\+\_\+add\+\_\+bank\+\_\+account(), database.\+Server\+Database\+Test.\+test\+\_\+balance(), database.\+Server\+Database\+Test.\+test\+\_\+bid\+\_\+cid\+\_\+conversion(), database.\+Server\+Database\+Test.\+test\+\_\+password(), database.\+Server\+Database\+Test.\+test\+\_\+transaction(), and database.\+Server\+Database\+Test.\+test\+\_\+update\+\_\+balance().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344}\label{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344}} 
+\index{database@{database}!get\_bank\_name@{get\_bank\_name}}
+\index{get\_bank\_name@{get\_bank\_name}!database@{database}}
+\doxysubsubsection{\texorpdfstring{get\_bank\_name()}{get\_bank\_name()}}
+{\footnotesize\ttfamily def database.\+get\+\_\+bank\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344}{get\_bank\_name}}():}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} faker.name().split()[0]}
+
+\end{DoxyCode}
+
+
+Referenced by get\+\_\+name\+\_\+reference(), and database.\+Server\+Database\+Test.\+test\+\_\+transaction().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36}\label{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36}} 
+\index{database@{database}!get\_branch\_number@{get\_branch\_number}}
+\index{get\_branch\_number@{get\_branch\_number}!database@{database}}
+\doxysubsubsection{\texorpdfstring{get\_branch\_number()}{get\_branch\_number()}}
+{\footnotesize\ttfamily def database.\+get\+\_\+branch\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36}{get\_branch\_number}}():}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return} int(33*random.random())}
+
+\end{DoxyCode}
+
+
+Referenced by get\+\_\+name\+\_\+reference(), and database.\+Server\+Database\+Test.\+test\+\_\+transaction().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}\label{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}} 
+\index{database@{database}!get\_credid@{get\_credid}}
+\index{get\_credid@{get\_credid}!database@{database}}
+\doxysubsubsection{\texorpdfstring{get\_credid()}{get\_credid()}}
+{\footnotesize\ttfamily def database.\+get\+\_\+credid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}():}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} int(3333333333333*random.random())}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{40 name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{41 credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{42 balance=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
+\DoxyCodeLine{43 }
+
+\end{DoxyCode}
+
+
+References get\+\_\+balance(), get\+\_\+email(), and get\+\_\+name().
+
+
+
+Referenced by database.\+Server\+Database\+Test.\+test\+\_\+add\+\_\+bank\+\_\+account(), database.\+Server\+Database\+Test.\+test\+\_\+balance(), database.\+Server\+Database\+Test.\+test\+\_\+bid\+\_\+cid\+\_\+conversion(), database.\+Server\+Database\+Test.\+test\+\_\+credential\+\_\+exists(), database.\+Server\+Database\+Test.\+test\+\_\+credid2cid(), database.\+Server\+Database\+Test.\+test\+\_\+password(), database.\+Server\+Database\+Test.\+test\+\_\+transaction(), and database.\+Server\+Database\+Test.\+test\+\_\+update\+\_\+balance().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedatabase_a8b13622a2162db83088b17b25f745069}\label{namespacedatabase_a8b13622a2162db83088b17b25f745069}} 
+\index{database@{database}!get\_email@{get\_email}}
+\index{get\_email@{get\_email}!database@{database}}
+\doxysubsubsection{\texorpdfstring{get\_email()}{get\_email()}}
+{\footnotesize\ttfamily def database.\+get\+\_\+email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}():}
+\DoxyCodeLine{33     \textcolor{keywordflow}{return} faker.email()}
+
+\end{DoxyCode}
+
+
+Referenced by get\+\_\+credid(), database.\+Server\+Database\+Test.\+test\+\_\+add\+\_\+bank\+\_\+account(), database.\+Server\+Database\+Test.\+test\+\_\+balance(), database.\+Server\+Database\+Test.\+test\+\_\+bank\+\_\+account\+\_\+exist\+\_\+by\+\_\+cid(), database.\+Server\+Database\+Test.\+test\+\_\+banking\+\_\+byname(), database.\+Server\+Database\+Test.\+test\+\_\+bid\+\_\+cid\+\_\+conversion(), database.\+Server\+Database\+Test.\+test\+\_\+client\+\_\+exists(), database.\+Server\+Database\+Test.\+test\+\_\+credential\+\_\+exists(), database.\+Server\+Database\+Test.\+test\+\_\+credid2cid(), database.\+Server\+Database\+Test.\+test\+\_\+password(), database.\+Server\+Database\+Test.\+test\+\_\+transaction(), and database.\+Server\+Database\+Test.\+test\+\_\+update\+\_\+balance().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a8b13622a2162db83088b17b25f745069_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}\label{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}} 
+\index{database@{database}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!database@{database}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily def database.\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30 \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}():}
+\DoxyCodeLine{31     \textcolor{keywordflow}{return} faker.name()}
+
+\end{DoxyCode}
+
+
+Referenced by get\+\_\+credid(), database.\+Server\+Database\+Test.\+test\+\_\+add\+\_\+bank\+\_\+account(), database.\+Server\+Database\+Test.\+test\+\_\+balance(), database.\+Server\+Database\+Test.\+test\+\_\+bank\+\_\+account\+\_\+exist\+\_\+by\+\_\+cid(), database.\+Server\+Database\+Test.\+test\+\_\+banking\+\_\+byname(), database.\+Server\+Database\+Test.\+test\+\_\+bid\+\_\+cid\+\_\+conversion(), database.\+Server\+Database\+Test.\+test\+\_\+client\+\_\+exists(), database.\+Server\+Database\+Test.\+test\+\_\+credential\+\_\+exists(), database.\+Server\+Database\+Test.\+test\+\_\+password(), database.\+Server\+Database\+Test.\+test\+\_\+transaction(), and database.\+Server\+Database\+Test.\+test\+\_\+update\+\_\+balance().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197}\label{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197}} 
+\index{database@{database}!get\_name\_reference@{get\_name\_reference}}
+\index{get\_name\_reference@{get\_name\_reference}!database@{database}}
+\doxysubsubsection{\texorpdfstring{get\_name\_reference()}{get\_name\_reference()}}
+{\footnotesize\ttfamily def database.\+get\+\_\+name\+\_\+reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197}{get\_name\_reference}}():}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} faker.name().split()[1]}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 bank\_name=\mbox{\hyperlink{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344}{get\_bank\_name}}()}
+\DoxyCodeLine{26 branch\_number=\mbox{\hyperlink{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36}{get\_branch\_number}}()}
+\DoxyCodeLine{27 account\_number=\mbox{\hyperlink{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1}{get\_account\_number}}()}
+\DoxyCodeLine{28 name\_reference=\mbox{\hyperlink{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197}{get\_name\_reference}}()}
+\DoxyCodeLine{29 }
+
+\end{DoxyCode}
+
+
+References get\+\_\+account\+\_\+number(), get\+\_\+bank\+\_\+name(), and get\+\_\+branch\+\_\+number().
+
+
+
+Referenced by database.\+Server\+Database\+Test.\+test\+\_\+transaction().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}\label{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}} 
+\index{database@{database}!get\_rand\_pass@{get\_rand\_pass}}
+\index{get\_rand\_pass@{get\_rand\_pass}!database@{database}}
+\doxysubsubsection{\texorpdfstring{get\_rand\_pass()}{get\_rand\_pass()}}
+{\footnotesize\ttfamily def database.\+get\+\_\+rand\+\_\+pass (\begin{DoxyParamCaption}\item[{}]{L = {\ttfamily 9} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}(L=9):}
+\DoxyCodeLine{45     passcode=\textcolor{stringliteral}{''}.join(random.choice(string.ascii\_uppercase+\(\backslash\)}
+\DoxyCodeLine{46                                  string.ascii\_lowercase+\(\backslash\)}
+\DoxyCodeLine{47                                  string.digits)\(\backslash\)}
+\DoxyCodeLine{48                      \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(L))}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} passcode}
+\DoxyCodeLine{50 }
+
+\end{DoxyCode}
+
+
+Referenced by database.\+Server\+Database\+Test.\+test\+\_\+add\+\_\+bank\+\_\+account(), database.\+Server\+Database\+Test.\+test\+\_\+balance(), database.\+Server\+Database\+Test.\+test\+\_\+banking\+\_\+byname(), database.\+Server\+Database\+Test.\+test\+\_\+bid\+\_\+cid\+\_\+conversion(), database.\+Server\+Database\+Test.\+test\+\_\+credential\+\_\+exists(), database.\+Server\+Database\+Test.\+test\+\_\+credid2cid(), database.\+Server\+Database\+Test.\+test\+\_\+password(), database.\+Server\+Database\+Test.\+test\+\_\+transaction(), and database.\+Server\+Database\+Test.\+test\+\_\+update\+\_\+balance().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedatabase_a9d74c400363ef92ac842aff68c31457d_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedatabase_ae1f424018e81011f5382b6f8edc7ac86}\label{namespacedatabase_ae1f424018e81011f5382b6f8edc7ac86}} 
+\index{database@{database}!db@{db}}
+\index{db@{db}!database@{database}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily database.\+db = \mbox{\hyperlink{classcore_1_1queries_1_1database_1_1database}{database}}(\mbox{\hyperlink{namespacedatabase_a63b1533b2186e51f26cbca5b4c40e997}{db\+\_\+configs}})}
+
+
+
+Definition at line 14 of file database.\+py.
+
+\mbox{\Hypertarget{namespacedatabase_a63b1533b2186e51f26cbca5b4c40e997}\label{namespacedatabase_a63b1533b2186e51f26cbca5b4c40e997}} 
+\index{database@{database}!db\_configs@{db\_configs}}
+\index{db\_configs@{db\_configs}!database@{database}}
+\doxysubsubsection{\texorpdfstring{db\_configs}{db\_configs}}
+{\footnotesize\ttfamily string database.\+db\+\_\+configs = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}}
+
+
+
+Definition at line 13 of file database.\+py.
+
+\mbox{\Hypertarget{namespacedatabase_a409a956876af2281cdabb40fc9760b6d}\label{namespacedatabase_a409a956876af2281cdabb40fc9760b6d}} 
+\index{database@{database}!faker@{faker}}
+\index{faker@{faker}!database@{database}}
+\doxysubsubsection{\texorpdfstring{faker}{faker}}
+{\footnotesize\ttfamily database.\+faker = Faker(\mbox{\hyperlink{namespacedatabase_abb0df7875b6b17e64ef00eefd079feba}{seed}})}
+
+
+
+Definition at line 12 of file database.\+py.
+
+\mbox{\Hypertarget{namespacedatabase_abb0df7875b6b17e64ef00eefd079feba}\label{namespacedatabase_abb0df7875b6b17e64ef00eefd079feba}} 
+\index{database@{database}!seed@{seed}}
+\index{seed@{seed}!database@{database}}
+\doxysubsubsection{\texorpdfstring{seed}{seed}}
+{\footnotesize\ttfamily database.\+seed = int.\+from\+\_\+bytes(os.\+urandom(2), \char`\"{}big\char`\"{})}
+
+
+
+Definition at line 10 of file database.\+py.
+

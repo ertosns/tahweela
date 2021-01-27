@@ -1,0 +1,64 @@
+\hypertarget{namespacequeries_1_1gets_1_1contacts}{}\doxysection{queries.\+gets.\+contacts Namespace Reference}
+\label{namespacequeries_1_1gets_1_1contacts}\index{queries.gets.contacts@{queries.gets.contacts}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1contacts_aa9e9e642bd7f76d2735a8a31e7298229}{get\+\_\+all}} ()
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1contacts_a17dd20d1d75fa179a933ba48f5d3619f}{get\+\_\+banking\+\_\+id}} (cid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1contacts_aa9e9e642bd7f76d2735a8a31e7298229}\label{namespacequeries_1_1gets_1_1contacts_aa9e9e642bd7f76d2735a8a31e7298229}} 
+\index{queries.gets.contacts@{queries.gets.contacts}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!queries.gets.contacts@{queries.gets.contacts}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily def queries.\+gets.\+contacts.\+get\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file contacts.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1contacts_a863a3b77cb56e4d587f8640fb234de00}{get\_all}}():}
+\DoxyCodeLine{7     query = \textcolor{stringliteral}{"SELECT * FROM contacts;"}}
+\DoxyCodeLine{8     db\_log.debug(query)}
+\DoxyCodeLine{9     \textcolor{keywordflow}{return} pd.read\_sql(query, conn)}
+\DoxyCodeLine{10 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1contacts_a17dd20d1d75fa179a933ba48f5d3619f}\label{namespacequeries_1_1gets_1_1contacts_a17dd20d1d75fa179a933ba48f5d3619f}} 
+\index{queries.gets.contacts@{queries.gets.contacts}!get\_banking\_id@{get\_banking\_id}}
+\index{get\_banking\_id@{get\_banking\_id}!queries.gets.contacts@{queries.gets.contacts}}
+\doxysubsubsection{\texorpdfstring{get\_banking\_id()}{get\_banking\_id()}}
+{\footnotesize\ttfamily def queries.\+gets.\+contacts.\+get\+\_\+banking\+\_\+id (\begin{DoxyParamCaption}\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}called at the client side, to retrieve the stored banking id in the contacts
+
+@param cid: contact id
+@return banking_id or the associated banking id for the given contact id
+\end{DoxyVerb}
+ 
+
+Definition at line 11 of file contacts.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1contacts_aaaafe0c43da5c49502c803312a902650}{get\_banking\_id}}(cid):}
+\DoxyCodeLine{12     \textcolor{stringliteral}{""" called at the client side, to retrieve the stored banking id in the contacts}}
+\DoxyCodeLine{13 \textcolor{stringliteral}{}}
+\DoxyCodeLine{14 \textcolor{stringliteral}{    @param cid: contact id}}
+\DoxyCodeLine{15 \textcolor{stringliteral}{    @return banking\_id or the associated banking id for the given contact id}}
+\DoxyCodeLine{16 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{17     query=sql.SQL(\textcolor{stringliteral}{"SELECT (bank\_account\_id) FROM contacts WHERE contact\_id='\{cid\}' LIMIT 1;"}).\(\backslash\)}
+\DoxyCodeLine{18         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{19     db\_log.debug(query)}
+\DoxyCodeLine{20     \textcolor{keywordflow}{return} pd.read\_sql(query, conn).ix[0]}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

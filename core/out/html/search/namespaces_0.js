@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['banking_251',['banking',['../namespacecore_1_1queries_1_1exists_1_1banking.html',1,'core.queries.exists.banking'],['../namespacecore_1_1queries_1_1gets_1_1banking.html',1,'core.queries.gets.banking'],['../namespacecore_1_1queries_1_1inserts_1_1banking.html',1,'core.queries.inserts.banking'],['../namespacecore_1_1queries_1_1updates_1_1banking.html',1,'core.queries.updates.banking']]],
+  ['client_252',['client',['../namespaceclient.html',1,'client'],['../namespaceclient_1_1client.html',1,'client.client'],['../namespacecore_1_1client.html',1,'core.client'],['../namespacecore_1_1client_1_1client.html',1,'core.client.client']]],
+  ['clients_253',['clients',['../namespacecore_1_1queries_1_1exists_1_1clients.html',1,'core.queries.exists.clients'],['../namespacecore_1_1queries_1_1gets_1_1clients.html',1,'core.queries.gets.clients'],['../namespacecore_1_1queries_1_1inserts_1_1clients.html',1,'core.queries.inserts.clients']]],
+  ['connection_5fcursor_254',['connection_cursor',['../namespacecore_1_1connection__cursor.html',1,'core']]],
+  ['contacts_255',['contacts',['../namespacecore_1_1queries_1_1exists_1_1contacts.html',1,'core.queries.exists.contacts'],['../namespacecore_1_1queries_1_1gets_1_1contacts.html',1,'core.queries.gets.contacts'],['../namespacecore_1_1queries_1_1inserts_1_1contacts.html',1,'core.queries.inserts.contacts']]],
+  ['core_256',['core',['../namespacecore.html',1,'']]],
+  ['core_5ftest_257',['core_test',['../namespacecore__test.html',1,'']]],
+  ['credentials_258',['credentials',['../namespacecore_1_1queries_1_1exists_1_1credentials.html',1,'core.queries.exists.credentials'],['../namespacecore_1_1queries_1_1gets_1_1credentials.html',1,'core.queries.gets.credentials'],['../namespacecore_1_1queries_1_1inserts_1_1credentials.html',1,'core.queries.inserts.credentials']]],
+  ['currency_259',['currency',['../namespacecore_1_1queries_1_1gets_1_1currency.html',1,'core::queries::gets']]],
+  ['database_260',['database',['../namespacecore_1_1queries_1_1database.html',1,'core::queries']]],
+  ['exists_261',['exists',['../namespacecore_1_1queries_1_1exists.html',1,'core::queries']]],
+  ['gets_262',['gets',['../namespacecore_1_1queries_1_1gets.html',1,'core::queries']]],
+  ['goods_263',['goods',['../namespacecore_1_1queries_1_1exists_1_1goods.html',1,'core.queries.exists.goods'],['../namespacecore_1_1queries_1_1gets_1_1goods.html',1,'core.queries.gets.goods'],['../namespacecore_1_1queries_1_1inserts_1_1goods.html',1,'core.queries.inserts.goods']]],
+  ['inserts_264',['inserts',['../namespacecore_1_1queries_1_1inserts.html',1,'core::queries']]],
+  ['ledger_265',['ledger',['../namespacecore_1_1queries_1_1gets_1_1ledger.html',1,'core.queries.gets.ledger'],['../namespacecore_1_1queries_1_1inserts_1_1ledger.html',1,'core.queries.inserts.ledger']]],
+  ['owner_266',['owner',['../namespacecore_1_1queries_1_1gets_1_1owner.html',1,'core::queries::gets']]],
+  ['owners_267',['owners',['../namespacecore_1_1queries_1_1exists_1_1owners.html',1,'core.queries.exists.owners'],['../namespacecore_1_1queries_1_1inserts_1_1owners.html',1,'core.queries.inserts.owners'],['../namespacecore_1_1queries_1_1updates_1_1owners.html',1,'core.queries.updates.owners']]],
+  ['queries_268',['queries',['../namespacecore_1_1queries.html',1,'core']]],
+  ['server_269',['server',['../namespacecore_1_1server.html',1,'core.server'],['../namespacecore_1_1server_1_1server.html',1,'core.server.server']]],
+  ['updates_270',['updates',['../namespacecore_1_1queries_1_1updates.html',1,'core::queries']]],
+  ['utils_271',['utils',['../namespacecore_1_1utils.html',1,'core']]]
+];

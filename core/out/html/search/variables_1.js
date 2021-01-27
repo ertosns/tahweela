@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['balance_430',['balance',['../classclient_1_1client_1_1_client.html#a457a40963893b10c62da9271139b7af7',1,'client.client.Client.balance()'],['../classcore_1_1client_1_1client_1_1_client.html#af7010ac6fb9cbacfca8ace5a2d4e0fa3',1,'core.client.client.Client.balance()'],['../classcore__test_1_1_client.html#ac21739fcd74a4ea6eda20fdf17b91ab5',1,'core_test.Client.balance()'],['../classcore__test_1_1_restful_test.html#a68a00911fb8751f2b8ebdb78a56844ee',1,'core_test.RestfulTest.balance()'],['../namespacecore_1_1utils.html#ae97978e2270dab09224699fe41d0450d',1,'core.utils.BALANCE()']]],
+  ['balance_5furl_431',['BALANCE_URL',['../namespacecore_1_1utils.html#a0d86ced3754761f6594c03dee0eaf55e',1,'core::utils']]],
+  ['bank_5fname_432',['bank_name',['../classclient_1_1client_1_1_client.html#ac29018311c5f1810eed0a6775c162a9f',1,'client.client.Client.bank_name()'],['../classcore_1_1client_1_1client_1_1_client.html#a0e1bd6c4ee34e4dfd487f85c1b18e7b5',1,'core.client.client.Client.bank_name()'],['../classcore__test_1_1_client.html#a712d0907fed7793a26a51f8633d520b3',1,'core_test.Client.bank_name()']]],
+  ['branch_5fnumber_433',['branch_number',['../classclient_1_1client_1_1_client.html#a85c0dbd2170687058b05136db0cabccf',1,'client.client.Client.branch_number()'],['../classcore_1_1client_1_1client_1_1_client.html#a53b518c239be4327087e6c7c2057f51e',1,'core.client.client.Client.branch_number()'],['../classcore__test_1_1_client.html#a690599bf0a1c905a19473c8087808521',1,'core_test.Client.branch_number()']]]
+];

@@ -6,12 +6,22 @@ import pandas as pd
 import datetime as dt
 import random as rand
 import string
-from core.utils import CONTACTS_URL, GOODS_URL, REGISTER_URL, LEDGER_URL, PURCHASE_URL, BALANCE_URL, MAX_GOODS, MAX_COST, STOCHASTIC_TRADE_THRESHOLD, MAX_CRED_ID, TIMESTAMP_FORMAT
+from core.utils import CONTACTS_URL, GOODS_URL, REGISTER_URL, LEDGER_URL, PURCHASE_URL, BALANCE_URL, MAX_GOODS, MAX_COST, STOCHASTIC_TRADE_THRESHOLD, MAX_CRED_ID, TIMESTAMP_FORMAT, Currency, process_cur, EUR, USD, EGP
 
 class exists(object):
     def __init__(self, conn, cur):
         self.conn=conn
         self.cur=cur
+    def currency(self, name):
+        """check wither given currency name exists
+
+        @param name: currency name
+        """
+        stat=sql.SQL("SELECT EXISTS (SELECT 1 FROM currency WHERE currency_name={name}) LIMIT 1 FOR UPDATE SKIP LOCKED").format(name=sql.Literal(process_cur(name)))
+        self.cur.execute(stat)
+        ret=self.cur.fetchone()[0]
+        print('assert that currency exists with name {}, ret: {}'.format(name, ret))
+        return ret
     def account_byemail(self, email):
         """verify that account with corresponding email doesn't exists
 
@@ -149,35 +159,71 @@ class gets(object):
         self.cur.execute(query)
         return self.cur.fetchone()[0]
         #return pd.read_sql(query, self.conn).ix[0]
-
-    def get_balance_by_cid(self, cid):
-        """called at the server side to retrieve the account balance d of the given client_id (cid)
+    def get_preference_currency_bycid(self, cid):
+        """get the preference currency for client with client id (cid)
 
         @param cid: client id
-        @return bid: banking id
+        @return string: of the preference currency name
         """
-        query=sql.SQL("SELECT (balance) FROM banking WHERE client_id={cid} LIMIT 1 FOR UPDATE SKIP LOCKED;").\
+        query=sql.SQL("SELECT (currency.currency_name) FROM currency  JOIN clients  ON (clients.currency_id=currency.id) WHERE clients.client_id={cid} LIMIT 1 FOR UPDATE SKIP LOCKED;").\
             format(cid=sql.Literal(cid))
         self.db_log.debug(query)
         self.cur.execute(query)
         return self.cur.fetchone()[0]
+    def get_currency_id(self, cur_name):
+        """ get currency id associated with currency_name
+
+        @param cur_name: currency_name
+        @return id: currency id
+        """
+        query=sql.SQL("SELECT id FROM currency WHERE currency_name={cur_name}").format(cur_name=sql.Literal(process_cur(cur_name)))
+        self.db_log.debug(query)
+        self.cur.execute(query)
+        return self.cur.fetchone()
+    def get_currency_name(self, id):
+        """ get currency name associated with currency id
+
+        @param id: currency id
+        @return cur_name: currency_name
+        """
+        query=sql.SQL("SELECT currency_name FROM currency WHERE id={id}").format(id=sql.Literal(id))
+        self.db_log.debug(query)
+        self.cur.execute(query)
+        return self.cur.fetchone()
+    def get_balance_by_cid(self, cid):
+        """called at the server side to retrieve the account balance d of the given client_id (cid)
+
+        @param cid: client id
+        @return dict {'balance':balance, 'base': base}
+        """
+        #remove LIMIT 1 FOR UPDATE SKIP LOCKED
+        query=sql.SQL("SELECT (banking.balance, cur.currency_name) FROM banking INNER JOIN currency AS cur ON (cur.id=banking.currency_id) WHERE banking.client_id={cid} ;").\
+            format(cid=sql.Literal(cid))
+        self.db_log.debug(query)
+        self.cur.execute(query)
+        fet=self.cur.fetchone()
+        print('fet: ', fet)
+        print('fet[0]: ', fet[0])
+        fet=eval(fet[0])
+        balance=fet[0]
+        base=fet[1]
+        return {'balance':balance, 'base': base}
         #return pd.read_sql(query, self.conn).ix[0]
 
     def get_balance_by_credid(self, cred_id):
         """ get balance of client with given credential id
 
         @param cred_id: client credential id
+        @return dict {'balance':balance, 'base': base}
         """
-        query=sql.SQL("SELECT (b.balance) FROM banking as b JOIN  credentials AS c ON c.id=b.client_id WHERE c.cred_id={credid} FOR UPDATE SKIP LOCKED;").\
+        query=sql.SQL("SELECT (b.balance, cur.currency_name) FROM banking as b INNER JOIN  credentials AS c ON (c.id=b.client_id) INNER JOIN currency AS cur ON (cur.id=b.currency_id) WHERE c.cred_id={credid} FOR UPDATE SKIP LOCKED;").\
             format(credid=sql.Literal(cred_id))
         self.db_log.debug(query)
         self.cur.execute(query)
-        fet=self.cur.fetchone()
-        print("credid fet: ", fet)
-        #TODO handle none! how to handle this in the transaction itself
-        if fet==None:
-            return 0
-        return fet[0]
+        fet=eval(self.cur.fetchone()[0])
+        balance=fet[0]
+        base=fet[1]
+        return {'balance':balance, 'base': base}
     def get_all_clients(self):
         """retrieve all clients info
 
@@ -275,6 +321,22 @@ class gets(object):
         self.db_log.debug(query)
         self.cur.execute(query)
         return self.cur.fetchone()[0]
+    def to_euro(self, cid):
+        """ convert currency of the corresponding id to euro ratio
+
+        for example if currency A = 2 euros, then the conversion would be 0.5,
+        for another currency B = 0.5 euros, then the conversion to euro would be 2
+        such that for given cost of xA, would be 0.5x$.
+        @param cid is the id of the corresponding currency
+        @return transformation ratio to euros
+        """
+        query = sql.SQL("SELECT currency_value FROM currency WHERE id={cid} LIMIT 1 FOR UPDATE SKIP LOCKED;").\
+            format(cid=sql.Literal(cid))
+        self.db_log.debug(query)
+        self.cur.execute(query)
+        fet=self.cur.fetchone()
+        #ratio = 1.0/pd.read_sql(query, self.conn)['currency_value'].ix[0]
+        return fet[0]
     '''
     def get_credid_with_gid(self, gid):
         """cross reference credential id, with good's id
@@ -290,20 +352,6 @@ class gets(object):
         self.db_log.debug("fetched credid with gid: "+str(fet))
         return fet
     '''
-    def to_dollar(self, cid):
-        """ convert currency of the corresponding id to dollar ratio
-
-        for example if currency A = 2 dollars, then the conversion would be 0.5,
-        for another currency B = 0.5 dollar, then the conversion to dollar would be 2
-        such that for given cost of xA, would be 0.5x$.
-        @param cid is the id of the corresponding currency
-        @return transformation ratio to dollar
-        """
-        query = sql.SQL("SELECT * FROM currency WHERE id=cid FOR UPDATE SKIP LOCKED;").\
-            format(cid=sql.Literal(cid))
-        self.db_log.debug(query)
-        ratio = 1.0/pd.read_sql(query, self.conn)['currency_value'].ix[0]
-        return ratio
     '''
     def get_all_goods(self):
         query="SELECT * FROM goods FOR UPDATE NOWAIT;"
@@ -336,7 +384,7 @@ class gets(object):
         """ get good price with given good's id
 
         @param gid: good's id
-        @return price in dollar
+        @return price in euro
         """
         df = self.get_good(gid)
         print("length: ", len(df))
@@ -344,7 +392,7 @@ class gets(object):
         if len(df)==0:
             return 0
         cur_id = df.iloc[0]['good_currency_id']
-        return df.iloc[0]['good_cost']*to_dollar(cur_id)
+        return df.iloc[0]['good_cost']*to_euro(cur_id)
     '''
     def get_transactions(self, st_dt, end_dt=dt.datetime.now()):
         """ get the transactions within the given period exclusively
@@ -359,7 +407,6 @@ class gets(object):
             format(st_dt=sql.Literal(st_dt), end_dt=sql.Literal(end_dt))
         self.db_log.debug(stat)
         return pd.read_sql(stat, self.conn)
-    #TODO if not transactions available return 0
     def get_transactions_sum(self, \
                              trx_with_credid, \
                              st_dt=None, \
@@ -374,24 +421,34 @@ class gets(object):
         if end_dt==None:
             end_dt=dt.datetime.now().strftime(TIMESTAMP_FORMAT)
 
-        stat = "SELECT SUM(trx_cost) FROM ledger WHERE (trx_dest={to_credid} OR trx_src={from_credid});".\
+        stat = "SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dest={to_credid} OR trx_src={from_credid});".\
             format(to_credid=sql.Literal(trx_with_credid),\
                    from_credid=sql.Literal(trx_with_credid))
 
         if not st_dt==None:
             #note! FOR UPDATE is not allowed with aggregate functions
-            stat=sql.SQL("SELECT SUM(trx_cost) FROM ledger WHERE (trx_dt>={st_dt} AND trx_dt<{end_dt} AND trx_dest={to_credid}) OR (trx_dt>={st_dt} AND trx_dt<{end_dt} AND trx_src={from_credid});").\
+            stat=sql.SQL("SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dt>={st_dt} AND trx_dt<{end_dt} AND trx_dest={to_credid}) OR (trx_dt>={st_dt} AND trx_dt<{end_dt} AND trx_src={from_credid});").\
             format(st_dt=sql.Literal(st_dt),\
                    end_dt=sql.Literal(end_dt),\
                    to_credid=sql.Literal(trx_with_credid), \
                    from_credid=sql.Literal(trx_with_credid))
         self.db_log.debug(stat)
-        self.cur.execute(stat)
-        fet=self.cur.fetchone()[0]
-        if fet==None:
-            return 0
-        return fet
-        #return pd.read_sql(stat, self.conn)
+        #self.cur.execute(stat)
+        #fet=self.cur.fetchone()[0]
+        #if fet==None:
+            #return 0
+        #return fet
+        trxs_df=pd.read_sql(stat, self.conn)
+        #the transaction sum in euros
+        sum=0
+        for i in range(len(trxs_df)):
+            row=eval(trxs_df.iloc[i][0])
+            value=row[0]
+            base=row[1]
+            currency = Currency(EUR, base)
+            ineuro_cost=currency.exchange(value)
+            sum+=float(ineuro_cost)
+        return sum
     def get_sells(self, dest, st_dt, end_dt=None):
         """ get sells transaction within the st_dt, end_dt period, while there destined to dest (CALLED AT SERVER SIDE)
 
@@ -407,13 +464,15 @@ class gets(object):
                    end_dt=sql.Literal(end_dt),\
                    dest=dest)
         self.db_log.debug(stat)
-        return pd.read_sql(stat, self.conn)
+        return pd.read_sql(stat, self.conn).to_json()
+    #ANOTHER IMPLEMENTATION
+    '''
         ###
         trx=self.get_transactions(st_dt, end_dt)
         #trx.apply(lambda x:x['trx_dest']==dest, inplace=True)
         trx=trx.apply(lambda x:x['trx_dest']==dest)
         return trx
-
+    '''
     def get_last_timestamp(self):
         """ retrieve the timestamp of the last transaction (CALLED FROM THE CLIENT SIDE)
 
@@ -455,54 +514,49 @@ class inserts(object):
         self.conn=conn
         self.cur=cur
         self.db_log=logger
-    def add_bank_account(self, cid, balance, bank_name, branch_number, account_number, name_reference):
+    def add_currency(self, cur_name, cur_rate):
+        """support new currency
+
+        @param cur_name: currency_name
+        @param cur_rate: currency rate based by euro
+        """
+        stat=sql.SQL("INSERT INTO currency (currency_name, currency_value) VALUES ({cur_name}, {cur_val});").\
+            format(cur_name=sql.Literal(process_cur(cur_name)), \
+                   cur_val=sql.Literal(cur_rate))
+        print('currency added name: {}, and rate: {}'.format(cur_name, cur_rate))
+        self.cur.execute(stat)
+    def add_bank_account(self, cid, balance, bank_name, branch_number, account_number, name_reference, base_currency_id):
         """ give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)
 
         @param cid: client id
         @param balance: client account balance
         """
-        stat=sql.SQL("INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference) VALUES ({cid}, {balance}, {bname}, {bnum}, {anum}, {nr});"). \
+        stat=sql.SQL("INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ({cid}, {balance}, {bname}, {bnum}, {anum}, {nr}, {base_currency});").\
             format(cid=sql.Literal(cid), \
                    balance=sql.Literal(balance), \
-                   bname=sql.Literal(bank_name),
-                   bnum=sql.Literal(branch_number),
-                   anum=sql.Literal(account_number),
-                   nr=sql.Literal(name_reference)
-                   )
+                   bname=sql.Literal(bank_name), \
+                   bnum=sql.Literal(branch_number), \
+                   anum=sql.Literal(account_number), \
+                   nr=sql.Literal(name_reference), \
+                   base_currency=sql.Literal(base_currency_id))
         self.db_log.debug(stat)
         self.cur.execute(stat)
         stat="SELECT currval(pg_get_serial_sequence('banking', 'id'));"
         self.db_log.debug(stat)
-        self.cur.execute(stat);
-        return self.cur.fetchone()[0]
-    '''
-    def add_account(self, cid, balance):
-        """ give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)
-
-        @param cid: client id
-        @param balance: client account balance
-        """
-        stat=sql.SQL("INSERT INTO banking (client_id, balance, balance_dt) VALUES ({cid}, {balance}, {dt});"). \
-            format(cid=sql.Literal(cid), \
-                   balance=sql.Literal(balance), \
-                   dt=sql.Literal(dt.datetime.now().strftime(TIMESTAMP_FORMAT)))
-        self.db_log.debug(stat)
         self.cur.execute(stat)
-        stat="SELECT currval(pg_get_serial_sequence('banking', 'id'));"
-        self.db_log.debug(stat)
-        self.cur.execute(stat);
         return self.cur.fetchone()[0]
-    '''
-    def add_client(self, name, email):
+    def add_client(self, name, email, cur_pref_id):
         """ add new client to the network (CALLED AT THE SERVER SIDE),
 
         note that some clients might not have banking id yet
         @param name: client name
         @param email: client email
+        @param cur_pref: currency preference id
         """
-        stat=sql.SQL("INSERT INTO clients (client_name, client_email) VALUES ({name}, {email})").\
+        stat=sql.SQL("INSERT INTO clients (client_name, client_email, currency_id) VALUES ({name}, {email}, {cur_pref})").\
             format(name=sql.Literal(name),\
-                   email=sql.Literal(email))
+                   email=sql.Literal(email),\
+                   cur_pref=sql.Literal(cur_pref_id))
         self.cur.execute(stat)
         self.cur.execute("SELECT currval(pg_get_serial_sequence('clients', 'client_id'));")
         return self.cur.fetchone()[0]
@@ -534,7 +588,40 @@ class inserts(object):
                    credid=sql.Literal(cred_id))
         self.db_log.debug(stat)
         self.cur.execute(stat)
+    def insert_trx(self, des, src, cost, cur_id, name):
+        """ insert transaction from 'src' to 'des' for good with 'gid'
+
+        @param des: the transaction destination
+        @param src: the transaction source
+        @param cost: the transaction amount
+        @param cur_id: the currency id
+        @param name: the transaction name
+        """
+        stat=sql.SQL("INSERT INTO ledger (trx_dest, trx_src, trx_cost, trx_cur_id, trx_name) VALUES ({des}, {src}, {cost}, {cur_id}, {name});").\
+            format(des=sql.Literal(des), \
+                   src=sql.Literal(src), \
+                   cost=sql.Literal(cost), \
+                   cur_id=sql.Literal(cur_id), \
+                   name=sql.Literal(name))
+        self.db_log.debug(stat)
+        self.cur.execute(stat)
     '''
+    def add_account(self, cid, balance):
+        """ give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)
+
+        @param cid: client id
+        @param balance: client account balance
+        """
+        stat=sql.SQL("INSERT INTO banking (client_id, balance, balance_dt) VALUES ({cid}, {balance}, {dt});"). \
+            format(cid=sql.Literal(cid), \
+                   balance=sql.Literal(balance), \
+                   dt=sql.Literal(dt.datetime.now().strftime(TIMESTAMP_FORMAT)))
+        self.db_log.debug(stat)
+        self.cur.execute(stat)
+        stat="SELECT currval(pg_get_serial_sequence('banking', 'id'));"
+        self.db_log.debug(stat)
+        self.cur.execute(stat);
+        return self.cur.fetchone()[0]
     def add_good(self, gname, gquality, gcost, gcid=1):
         """ INSERT new good into the goods table
 
@@ -554,21 +641,6 @@ class inserts(object):
         self.cur.execute(stat)
         self.db_log.debug(stat)
         return self.cur.fetchone()[0]
-    '''
-    def insert_trx(self, des, src, cost):
-        """ insert transaction from 'src' to 'des' for good with 'gid'
-
-        @param des: the transaction destination
-        @param src: the transaction source
-        @param cost: the transaction amount
-        """
-        stat=sql.SQL("INSERT INTO ledger (trx_dest, trx_src, trx_cost) VALUES ({des}, {src}, {cost});").\
-            format(des=sql.Literal(des), \
-                   src=sql.Literal(src), \
-                   cost=sql.Literal(cost))
-        self.db_log.debug(stat)
-        self.cur.execute(stat)
-    '''
     def add_owner(self, oid, gid):
         """assign ownership of owner with id (oid) to the good with id (gid)
 
@@ -595,6 +667,16 @@ class updates(object):
         stat = sql.SQL("UPDATE banking SET (balance, balance_dt) = ({balance}, {dt}) WHERE client_id={cid}").\
             format(balance=sql.Literal(balance), \
                    dt=sql.Literal(dt.datetime.now().strftime(TIMESTAMP_FORMAT)), \
+                   cid=sql.Literal(cid))
+        self.cur.execute(stat)
+    def currency_preference(self, cid, base):
+        """ update currency preference (base ) for the client with client id (cid)
+
+        @param cid: client id
+        @param base: base currency of preference
+        """
+        stat = sql.SQL("update clients SET c.currency_id = cur.id FROM currency AS cur  JOIN clients AS c WHERE c.client_id={cid} AND cur.currency_name={cur_name}").\
+            format(cur_name=sql.Literal(cur_name), \
                    cid=sql.Literal(cid))
         self.cur.execute(stat)
     '''

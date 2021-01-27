@@ -12,7 +12,7 @@ import unittest
 from core.server.server import app
 import os
 import string
-from core.utils import CONTACTS_URL, GOODS_URL, REGISTER_URL, LEDGER_URL, PURCHASE_URL, BALANCE_URL, BALANCE, MAX_GOODS, MAX_COST, STOCHASTIC_TRADE_THRESHOLD, TRANSACTION_URL, ADD_BANK_ACCOUNT_URL, REGISTER, ADD_BANK_ACCOUNT, FEE, TRANSACTION
+from core.utils import CONTACTS_URL, GOODS_URL, REGISTER_URL, LEDGER_URL, PURCHASE_URL, BALANCE_URL, BALANCE, MAX_GOODS, MAX_COST, STOCHASTIC_TRADE_THRESHOLD, TRANSACTION_URL, ADD_BANK_ACCOUNT_URL, REGISTER, ADD_BANK_ACCOUNT, FEE, TRANSACTION, EUR, USD, EGP, process_cur, Currency, unwrap_cur
 from core.queries.database import database
 import base64
 
@@ -73,6 +73,7 @@ class Client(object):
         self.branch_number=get_branch_number()
         self.account_number=get_account_number()
         self.name_reference=get_name_reference()
+        self.currency_pref=EUR
         #
         self.db = database(db_configs)
         self.my_contacts = []
@@ -99,7 +100,8 @@ class Client(object):
         """
         payload={'name':self.name, \
                  'email': self.email, \
-                 'passcode': self.passcode}
+                 'passcode': self.passcode,\
+                 'cur_pref':self.currency_pref}
         print('payload: ', payload)
         res=self.app.post(REGISTER_URL, data=json.dumps(payload))
         #response = json.loads(res.text)
@@ -144,12 +146,13 @@ class Client(object):
         print('add contact response: ', response)
         return response['credid']
     def get_balance(self):
-        #TODO implement get balance in the client side
         logger.info('verifying balance for {}/{} + {} with balance {}'.format(self.name, self.email, self.passcode, self.balance))
         res=self.app.get(BALANCE,headers=self.headers())
         assert res.status_code== 201
         balance = res.json['balance']
-        return balance
+        base = res.json['base']
+        return balance, base
+    #TODO update currency preference
     def make_transaction(self, email, name, amount):
         credid=self.add_contact(email, name)
         payload={'credid':credid,\
@@ -158,7 +161,7 @@ class Client(object):
                           data=json.dumps(payload),\
                           headers=self.headers())
         response=res.json
-        assert res.status_code, 201
+        assert res.status_code==201
         print('make transaction response: {}'.format(response))
         balance_eq=response['balance']
         trxs=response['transactions']
@@ -202,7 +205,10 @@ class RestfulTest(unittest.TestCase):
 
     def test_get_balance(self):
         src = Client(self.app)
-        self.assertEqual(src.get_balance(), src.balance)
+        balance=src.get_balance()
+        print('|------------>balance: ', balance)
+        self.assertEqual(balance[0], src.balance)
+        self.assertEqual(unwrap_cur(balance[1]), unwrap_cur(src.currency_pref))
 
     def test_add_contact(self):
         src = Client(self.app)

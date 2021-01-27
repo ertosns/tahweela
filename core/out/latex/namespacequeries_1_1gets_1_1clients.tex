@@ -1,0 +1,121 @@
+\hypertarget{namespacequeries_1_1gets_1_1clients}{}\doxysection{queries.\+gets.\+clients Namespace Reference}
+\label{namespacequeries_1_1gets_1_1clients}\index{queries.gets.clients@{queries.gets.clients}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1clients_a47dbd3b87e7f4d7faa9c82987cec3a5d}{get\+\_\+all}} ()
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967}{get}} (cid)
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1clients_ac42c598d8042ade2e6bd72ada44bfd81}{get\+\_\+name}} (cid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967}\label{namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967}} 
+\index{queries.gets.clients@{queries.gets.clients}!get@{get}}
+\index{get@{get}!queries.gets.clients@{queries.gets.clients}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily def queries.\+gets.\+clients.\+get (\begin{DoxyParamCaption}\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve client into with given client id (cid)
+
+@param cid: client id
+@return tuple (id, name, join date)
+\end{DoxyVerb}
+ 
+
+Definition at line 15 of file clients.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1clients_a5f570c6683ac4f1a2570e7d9be2d29c8}{get}}(cid):}
+\DoxyCodeLine{16     \textcolor{stringliteral}{"""retrieve client into with given client id (cid)}}
+\DoxyCodeLine{17 \textcolor{stringliteral}{}}
+\DoxyCodeLine{18 \textcolor{stringliteral}{    @param cid: client id}}
+\DoxyCodeLine{19 \textcolor{stringliteral}{    @return tuple (id, name, join date)}}
+\DoxyCodeLine{20 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{21     query=sql.SQL(\textcolor{stringliteral}{"SELECT (id, contact\_name, client\_join\_dt) FROM clients WHERE id=\{cid\};"}).\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{22     db\_log.debug(query)}
+\DoxyCodeLine{23     cur.execute(query)}
+\DoxyCodeLine{24     \textcolor{keywordflow}{return} cur.fetchone()}
+\DoxyCodeLine{25 }
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+
+
+
+Referenced by core\+\_\+test.\+Client.\+get\+\_\+balance(), and queries.\+gets.\+clients.\+get\+\_\+name().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1clients_a47dbd3b87e7f4d7faa9c82987cec3a5d}\label{namespacequeries_1_1gets_1_1clients_a47dbd3b87e7f4d7faa9c82987cec3a5d}} 
+\index{queries.gets.clients@{queries.gets.clients}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!queries.gets.clients@{queries.gets.clients}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily def queries.\+gets.\+clients.\+get\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve all clients info\end{DoxyVerb}
+ 
+
+Definition at line 7 of file clients.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1clients_a89d6eabb7b579700fc607e7858f6f8d0}{get\_all}}():}
+\DoxyCodeLine{8     \textcolor{stringliteral}{"""retrieve all clients info}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{11     query=\textcolor{stringliteral}{"SELECT * FROM clients;"}}
+\DoxyCodeLine{12     db\_log.debug(query)}
+\DoxyCodeLine{13     \textcolor{keywordflow}{return} pd.read\_sql(query, conn)}
+\DoxyCodeLine{14 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1clients_ac42c598d8042ade2e6bd72ada44bfd81}\label{namespacequeries_1_1gets_1_1clients_ac42c598d8042ade2e6bd72ada44bfd81}} 
+\index{queries.gets.clients@{queries.gets.clients}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!queries.gets.clients@{queries.gets.clients}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily def queries.\+gets.\+clients.\+get\+\_\+name (\begin{DoxyParamCaption}\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve client name corresponding to given client id (cid)
+
+@param cid: client id
+@return client name
+\end{DoxyVerb}
+ 
+
+Definition at line 26 of file clients.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1clients_af9e4fe854ac628d8bb786a8058374335}{get\_name}}(cid):}
+\DoxyCodeLine{27     \textcolor{stringliteral}{"""retrieve client name corresponding to given client id (cid)}}
+\DoxyCodeLine{28 \textcolor{stringliteral}{}}
+\DoxyCodeLine{29 \textcolor{stringliteral}{    @param cid: client id}}
+\DoxyCodeLine{30 \textcolor{stringliteral}{    @return client name}}
+\DoxyCodeLine{31 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{32     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1clients_a5f570c6683ac4f1a2570e7d9be2d29c8}{get}}(cid)[1]}
+
+\end{DoxyCode}
+
+
+References queries.\+gets.\+clients.\+get().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacequeries_1_1gets_1_1clients_ac42c598d8042ade2e6bd72ada44bfd81_cgraph}
+\end{center}
+\end{figure}

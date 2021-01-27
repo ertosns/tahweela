@@ -1,0 +1,59 @@
+\hypertarget{core_2server_2server_8py}{}\doxysection{server/server.py File Reference}
+\label{core_2server_2server_8py}\index{server/server.py@{server/server.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecore_1_1server_1_1server}{core.\+server.\+server}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a9ed4334dbfb6933ba31561c62a326811}{core.\+server.\+server.\+get\+\_\+credid}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a96466dc42f56cae7d190d0a32d235556}{core.\+server.\+server.\+is\+\_\+email}} (email)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a971d8b7372b9e3548a266ff9373e0ad5}{core.\+server.\+server.\+authenticate}} (user, passcode)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_ae03340bacb313931ea21ed616bf75cf0}{core.\+server.\+server.\+unauthorized}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a7abed3618dce8dfc82db88504621e7fa}{core.\+server.\+server.\+register\+\_\+client}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_aa6df1567622a40f24e74f1daa3c424e9}{core.\+server.\+server.\+add\+\_\+bank\+\_\+account}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a2ccd3f4fc783a6da9115970238b12230}{core.\+server.\+server.\+add\+\_\+contact}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_af238ee0ce6d5e29834c8f207b7cd7c41}{core.\+server.\+server.\+get\+\_\+balance}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a97a5fcbe887022d384ea97f7d3b7dc47}{core.\+server.\+server.\+update\+\_\+ledger}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_aaa1ff2a38465c5ade1f235cf197dde62}{core.\+server.\+server.\+make\+\_\+transaction}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_ad2bf3b7601bca535e854bac189410f0b}{core.\+server.\+server.\+seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacecore_1_1server_1_1server_aacc32d3c57c3b577b7e2647528baaf8c}{core.\+server.\+server.\+db\+\_\+configs}} = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a39c673ca728dfb59e5fa8e3da0dd8be9}{core.\+server.\+server.\+db}} = database(db\+\_\+configs)
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a4cc77d0b54229e293423876599326ce9}{core.\+server.\+server.\+filename}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}{core.\+server.\+server.\+format}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_adb9ec4bde84331664eb52b6412cb09fd}{core.\+server.\+server.\+filemode}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a015041a18162a9c613c7321dd94c440e}{core.\+server.\+server.\+level}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a826f85e804e434c97db7e6738226d717}{core.\+server.\+server.\+logger}} = logging.\+get\+Logger()
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a67e902b543f6cff982320c5d78af065e}{core.\+server.\+server.\+app}} = Flask(\textquotesingle{}tahweela\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a43a2e2d9bdeff715032f6df4b5396792}{core.\+server.\+server.\+auth}} = H\+T\+T\+P\+Basic\+Auth()
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_acb92592041332fb2b9ba60483b370a64}{core.\+server.\+server.\+client\+\_\+passcode}} = None
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_aaab15fe49e5cba7d460578def43c0d0c}{core.\+server.\+server.\+client\+\_\+cred\+\_\+id}} = None
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_af424e5a3aad0db0c0b8cd014a17f2f5a}{core.\+server.\+server.\+debug}}
+\end{DoxyCompactItemize}

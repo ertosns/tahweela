@@ -1,0 +1,377 @@
+\hypertarget{classcore_1_1utils_1_1_currency}{}\doxysection{core.\+utils.\+Currency Class Reference}
+\label{classcore_1_1utils_1_1_currency}\index{core.utils.Currency@{core.utils.Currency}}
+
+
+Inheritance diagram for core.\+utils.\+Currency\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classcore_1_1utils_1_1_currency__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for core.\+utils.\+Currency\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classcore_1_1utils_1_1_currency__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcore_1_1utils_1_1_currency_a69350e0066b514e076504f1756dec085}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, preference, \mbox{\hyperlink{classcore_1_1utils_1_1_currency_a8b5f129a338cc6695600b0f36bbc9424}{base}}=\mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{E\+UR}})
+\item 
+def \mbox{\hyperlink{classcore_1_1utils_1_1_currency_a077a679b7ea6fa4656a183a28b86e9a1}{valid}} (self)
+\item 
+def \mbox{\hyperlink{classcore_1_1utils_1_1_currency_ab9657777f036e2f2773f4fa2f182f1bb}{exchange}} (self, amount=1)
+\item 
+def \mbox{\hyperlink{classcore_1_1utils_1_1_currency_aacc36d5f14c3423d970efc461ba76a76}{exchange\+\_\+back}} (self, amount=1)
+\item 
+def \mbox{\hyperlink{classcore_1_1utils_1_1_currency_a69350e0066b514e076504f1756dec085}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, preference, \mbox{\hyperlink{classcore_1_1utils_1_1_currency_a8b5f129a338cc6695600b0f36bbc9424}{base}}=\mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{E\+UR}})
+\item 
+def \mbox{\hyperlink{classcore_1_1utils_1_1_currency_a077a679b7ea6fa4656a183a28b86e9a1}{valid}} (self)
+\item 
+def \mbox{\hyperlink{classcore_1_1utils_1_1_currency_ab9657777f036e2f2773f4fa2f182f1bb}{exchange}} (self, amount=1)
+\item 
+def \mbox{\hyperlink{classcore_1_1utils_1_1_currency_aacc36d5f14c3423d970efc461ba76a76}{exchange\+\_\+back}} (self, amount=1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1utils_1_1_currency_a8b5f129a338cc6695600b0f36bbc9424}{base}}
+\item 
+\mbox{\hyperlink{classcore_1_1utils_1_1_currency_ad120746185705e27127cbfe663b266d4}{pref}}
+\item 
+\mbox{\hyperlink{classcore_1_1utils_1_1_currency_a58b43b2f0bb0cfbe814018ef96bde970}{rate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 94 of file utils.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_a69350e0066b514e076504f1756dec085}\label{classcore_1_1utils_1_1_currency_a69350e0066b514e076504f1756dec085}} 
+\index{core.utils.Currency@{core.utils.Currency}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{preference,  }\item[{}]{base = {\ttfamily \mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{E\+UR}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95     \textcolor{keyword}{def }\_\_init\_\_(self, preference, base=EUR):}
+\DoxyCodeLine{96         self.base=base}
+\DoxyCodeLine{97         self.pref=preference}
+\DoxyCodeLine{98         self.rate = \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self.base, self.pref)}
+\DoxyCodeLine{99         log.info(\textcolor{stringliteral}{"exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{100         \textcolor{keywordflow}{if} self.rate==0:}
+\DoxyCodeLine{101             log.critical(\textcolor{stringliteral}{"currence base \{\}, pref \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.base, self.pref))}
+\DoxyCodeLine{102 }
+
+\end{DoxyCode}
+
+
+Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classcore_1_1utils_1_1_currency_a69350e0066b514e076504f1756dec085_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_a69350e0066b514e076504f1756dec085}\label{classcore_1_1utils_1_1_currency_a69350e0066b514e076504f1756dec085}} 
+\index{core.utils.Currency@{core.utils.Currency}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{preference,  }\item[{}]{base = {\ttfamily \mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{E\+UR}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95     \textcolor{keyword}{def }\_\_init\_\_(self, preference, base=EUR):}
+\DoxyCodeLine{96         self.base=base}
+\DoxyCodeLine{97         self.pref=preference}
+\DoxyCodeLine{98         self.rate = \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self.base, self.pref)}
+\DoxyCodeLine{99         log.info(\textcolor{stringliteral}{"exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{100         \textcolor{keywordflow}{if} self.rate==0:}
+\DoxyCodeLine{101             log.critical(\textcolor{stringliteral}{"currence base \{\}, pref \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.base, self.pref))}
+\DoxyCodeLine{102 }
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Currency.\+base, core.\+utils.\+Currency.\+exchange(), core.\+utils.\+format, core.\+utils.\+Currency.\+pref, and core.\+utils.\+Currency.\+rate.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcore_1_1utils_1_1_currency_a69350e0066b514e076504f1756dec085_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_ab9657777f036e2f2773f4fa2f182f1bb}\label{classcore_1_1utils_1_1_currency_ab9657777f036e2f2773f4fa2f182f1bb}} 
+\index{core.utils.Currency@{core.utils.Currency}!exchange@{exchange}}
+\index{exchange@{exchange}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{exchange()}{exchange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def core.\+utils.\+Currency.\+exchange (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{amount = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107     \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self, amount=1):}
+\DoxyCodeLine{108         print(\textcolor{stringliteral}{"making exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{109         }
+\DoxyCodeLine{110         \textcolor{keywordflow}{return} amount*self.rate}
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+format, and core.\+utils.\+Currency.\+rate.
+
+
+
+Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), and core.\+utils.\+Currency.\+exchange().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcore_1_1utils_1_1_currency_ab9657777f036e2f2773f4fa2f182f1bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_ab9657777f036e2f2773f4fa2f182f1bb}\label{classcore_1_1utils_1_1_currency_ab9657777f036e2f2773f4fa2f182f1bb}} 
+\index{core.utils.Currency@{core.utils.Currency}!exchange@{exchange}}
+\index{exchange@{exchange}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{exchange()}{exchange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def core.\+utils.\+Currency.\+exchange (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{amount = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107     \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self, amount=1):}
+\DoxyCodeLine{108         print(\textcolor{stringliteral}{"making exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{109         }
+\DoxyCodeLine{110         \textcolor{keywordflow}{return} amount*self.rate}
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+Currency.\+exchange(), core.\+utils.\+format, and core.\+utils.\+Currency.\+rate.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classcore_1_1utils_1_1_currency_ab9657777f036e2f2773f4fa2f182f1bb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_aacc36d5f14c3423d970efc461ba76a76}\label{classcore_1_1utils_1_1_currency_aacc36d5f14c3423d970efc461ba76a76}} 
+\index{core.utils.Currency@{core.utils.Currency}!exchange\_back@{exchange\_back}}
+\index{exchange\_back@{exchange\_back}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{exchange\_back()}{exchange\_back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def core.\+utils.\+Currency.\+exchange\+\_\+back (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{amount = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111     \textcolor{keyword}{def }exchange\_back(self, amount=1):}
+\DoxyCodeLine{112         print(\textcolor{stringliteral}{"making back exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{113         \textcolor{keywordflow}{return} amount/self.rate}
+\DoxyCodeLine{114 }
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+Currency.\+exchange\+\_\+back(), core.\+utils.\+format, and core.\+utils.\+Currency.\+rate.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classcore_1_1utils_1_1_currency_aacc36d5f14c3423d970efc461ba76a76_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_aacc36d5f14c3423d970efc461ba76a76}\label{classcore_1_1utils_1_1_currency_aacc36d5f14c3423d970efc461ba76a76}} 
+\index{core.utils.Currency@{core.utils.Currency}!exchange\_back@{exchange\_back}}
+\index{exchange\_back@{exchange\_back}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{exchange\_back()}{exchange\_back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def core.\+utils.\+Currency.\+exchange\+\_\+back (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{amount = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111     \textcolor{keyword}{def }exchange\_back(self, amount=1):}
+\DoxyCodeLine{112         print(\textcolor{stringliteral}{"making back exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{113         \textcolor{keywordflow}{return} amount/self.rate}
+\DoxyCodeLine{114 }
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+format, and core.\+utils.\+Currency.\+rate.
+
+
+
+Referenced by core.\+utils.\+Currency.\+exchange\+\_\+back().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classcore_1_1utils_1_1_currency_aacc36d5f14c3423d970efc461ba76a76_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_a077a679b7ea6fa4656a183a28b86e9a1}\label{classcore_1_1utils_1_1_currency_a077a679b7ea6fa4656a183a28b86e9a1}} 
+\index{core.utils.Currency@{core.utils.Currency}!valid@{valid}}
+\index{valid@{valid}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def core.\+utils.\+Currency.\+valid (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wither the given preference currency is available
+\end{DoxyVerb}
+ 
+
+Definition at line 103 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103     \textcolor{keyword}{def }valid(self):}
+\DoxyCodeLine{104         \textcolor{stringliteral}{""" wither the given preference currency is available}}
+\DoxyCodeLine{105 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{106         \textcolor{keywordflow}{return} \textcolor{keywordflow}{not} self.rate==0}
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+Currency.\+rate, and core.\+utils.\+Currency.\+valid().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classcore_1_1utils_1_1_currency_a077a679b7ea6fa4656a183a28b86e9a1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_a077a679b7ea6fa4656a183a28b86e9a1}\label{classcore_1_1utils_1_1_currency_a077a679b7ea6fa4656a183a28b86e9a1}} 
+\index{core.utils.Currency@{core.utils.Currency}!valid@{valid}}
+\index{valid@{valid}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def core.\+utils.\+Currency.\+valid (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wither the given preference currency is available
+\end{DoxyVerb}
+ 
+
+Definition at line 103 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103     \textcolor{keyword}{def }valid(self):}
+\DoxyCodeLine{104         \textcolor{stringliteral}{""" wither the given preference currency is available}}
+\DoxyCodeLine{105 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{106         \textcolor{keywordflow}{return} \textcolor{keywordflow}{not} self.rate==0}
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+Currency.\+rate.
+
+
+
+Referenced by core.\+utils.\+Currency.\+valid().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classcore_1_1utils_1_1_currency_a077a679b7ea6fa4656a183a28b86e9a1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_a8b5f129a338cc6695600b0f36bbc9424}\label{classcore_1_1utils_1_1_currency_a8b5f129a338cc6695600b0f36bbc9424}} 
+\index{core.utils.Currency@{core.utils.Currency}!base@{base}}
+\index{base@{base}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily core.\+utils.\+Currency.\+base}
+
+
+
+Definition at line 96 of file utils.\+py.
+
+
+
+Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Payment\+Gate.\+authenticated(), and core.\+utils.\+Payment\+Gate.\+get\+\_\+balance().
+
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_ad120746185705e27127cbfe663b266d4}\label{classcore_1_1utils_1_1_currency_ad120746185705e27127cbfe663b266d4}} 
+\index{core.utils.Currency@{core.utils.Currency}!pref@{pref}}
+\index{pref@{pref}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{pref}{pref}}
+{\footnotesize\ttfamily core.\+utils.\+Currency.\+pref}
+
+
+
+Definition at line 97 of file utils.\+py.
+
+
+
+Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+\mbox{\Hypertarget{classcore_1_1utils_1_1_currency_a58b43b2f0bb0cfbe814018ef96bde970}\label{classcore_1_1utils_1_1_currency_a58b43b2f0bb0cfbe814018ef96bde970}} 
+\index{core.utils.Currency@{core.utils.Currency}!rate@{rate}}
+\index{rate@{rate}!core.utils.Currency@{core.utils.Currency}}
+\doxysubsubsection{\texorpdfstring{rate}{rate}}
+{\footnotesize\ttfamily core.\+utils.\+Currency.\+rate}
+
+
+
+Definition at line 98 of file utils.\+py.
+
+
+
+Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Currency.\+exchange(), core.\+utils.\+Currency.\+exchange\+\_\+back(), and core.\+utils.\+Currency.\+valid().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{core_2utils_8py}{utils.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,236 @@
+2021-01-27 20:31:40,448 Not in REPL -> leaving logger event level as is.
+2021-01-27 20:31:40,449 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-27 20:31:40,454 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-27 20:31:40,460 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-27 20:31:40,463 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-27 20:31:40,465 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-27 20:31:40,467 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-27 20:31:40,471 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-27 20:31:40,474 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-27 20:31:40,483 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-27 20:31:40,486 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-27 20:31:40,489 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-27 20:31:40,497 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-27 20:31:40,499 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-27 20:31:40,500 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-27 20:31:40,502 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-27 20:31:40,503 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-27 20:31:40,504 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-27 20:31:40,509 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-27 20:31:40,512 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:31:40,513 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-27 20:31:40,516 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-27 20:31:40,519 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-27 20:31:40,527 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-27 20:31:40,531 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:31:40,532 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-27 20:31:40,537 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-27 20:31:40,540 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-27 20:31:40,543 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-27 20:31:40,546 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-27 20:31:40,548 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-27 20:31:40,551 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-27 20:31:40,561 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-27 20:31:40,570 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-27 20:31:40,577 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-27 20:31:40,580 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:31:40,581 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:31:40,582 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-27 20:31:40,586 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-27 20:31:40,589 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:31:40,620 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:31:40,883 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:31:40,893 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:31:40,896 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:31:41,326 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:31:42,352 exchange with rate 1.0
+2021-01-27 20:31:42,357 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:31:42,364 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('eric09@cooley-greene.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:42,368 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(189), SQL(', '), Literal('wzZGbcTeR'), SQL(', '), Literal(69480145450), SQL(');')])
+2021-01-27 20:31:42,369 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(189), SQL(', '), Literal(51.32743318706074), SQL(', '), Literal('Kevin'), SQL(', '), Literal(18), SQL(', '), Literal(1376088), SQL(', '), Literal('Nelson'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:31:42,372 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:31:42,377 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:31:42,605 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:31:42,614 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:31:42,617 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:31:44,302 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:31:45,325 exchange with rate 1.0
+2021-01-27 20:31:45,326 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:31:45,335 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('zimmermanchristopher@green-smith.net'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:45,338 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(190), SQL(', '), Literal('ZUDt3W9ZO'), SQL(', '), Literal(1268728847609), SQL(');')])
+2021-01-27 20:31:45,339 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(190), SQL(', '), Literal(51.32743318706074), SQL(', '), Literal('Kevin'), SQL(', '), Literal(18), SQL(', '), Literal(1376088), SQL(', '), Literal('Nelson'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:31:45,340 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:31:45,341 Composed([SQL('SELECT (banking.balance, cur.currency_name) FROM banking INNER JOIN currency AS cur ON (cur.id=banking.currency_id) WHERE banking.client_id='), Literal(190), SQL(' ;')])
+2021-01-27 20:31:45,347 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:31:45,598 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:31:45,607 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:31:45,613 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:31:46,029 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:31:47,033 exchange with rate 1.0
+2021-01-27 20:31:47,034 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:31:47,039 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('lynndavis@hotmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:47,051 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:31:47,296 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:31:47,306 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:31:47,313 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:31:47,785 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:31:48,820 exchange with rate 1.0
+2021-01-27 20:31:48,822 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:31:48,825 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('john94@hotmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:48,831 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:31:49,743 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:31:49,762 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:31:49,763 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:31:50,560 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:31:51,594 exchange with rate 1.0
+2021-01-27 20:31:51,596 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:31:51,599 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('ejefferson@gmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:51,602 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(193), SQL(', '), Literal('REnb4FYKu'), SQL(', '), Literal(918421011805), SQL(');')])
+2021-01-27 20:31:51,609 Composed([SQL('SELECT (c.client_id) FROM clients AS c INNER JOIN credentials   ON (credentials.id=c.client_id) WHERE c.client_name='), Literal('Kevin Hale'), SQL(' AND credentials.passcode='), Literal('REnb4FYKu'), SQL(' LIMIT 1  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:51,620 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:31:51,952 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:31:51,962 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:31:51,969 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:31:53,113 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:31:54,128 exchange with rate 1.0
+2021-01-27 20:31:54,130 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:31:54,137 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('candicesanders@gmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:54,139 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(194), SQL(', '), Literal('QJp1DsNsy'), SQL(', '), Literal(172127272761), SQL(');')])
+2021-01-27 20:31:54,143 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(194), SQL(', '), Literal(51.32743318706074), SQL(', '), Literal('Kevin'), SQL(', '), Literal(18), SQL(', '), Literal(1376088), SQL(', '), Literal('Nelson'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:31:54,144 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:31:54,145 Composed([SQL('SELECT (client_id) FROM banking WHERE id='), Literal(139), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:54,148 Composed([SQL('SELECT (id) FROM banking WHERE client_id='), Literal(194), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:54,159 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:31:55,133 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:31:55,141 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:31:55,144 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:31:55,882 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:31:56,957 exchange with rate 1.0
+2021-01-27 20:31:56,958 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:31:56,965 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('shepardjeff@forbes.biz'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:56,974 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:31:57,309 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:31:57,319 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:31:57,325 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:31:58,118 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:31:59,170 exchange with rate 1.0
+2021-01-27 20:31:59,172 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:31:59,281 database committed
+2021-01-27 20:31:59,281 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('nelsontravis@sanchez.biz'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:59,298 database committed
+2021-01-27 20:31:59,301 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(196), SQL(', '), Literal('ArGjF2GRm'), SQL(', '), Literal(1536433341830), SQL(');')])
+2021-01-27 20:31:59,302 Composed([SQL('SELECT (c.client_id) FROM clients AS c INNER JOIN credentials   ON (credentials.id=c.client_id) WHERE c.client_name='), Literal('Ebony Smith'), SQL(' AND credentials.passcode='), Literal('ArGjF2GRm'), SQL(' LIMIT 1  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:31:59,326 database committed
+2021-01-27 20:31:59,332 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:31:59,609 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:31:59,620 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:31:59,626 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:00,771 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:01,776 exchange with rate 1.0
+2021-01-27 20:32:01,777 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:32:01,780 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('courtney73@gmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:32:01,782 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(197), SQL(', '), Literal('ZDPmq0dHn'), SQL(', '), Literal(464412511747), SQL(');')])
+2021-01-27 20:32:01,785 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(464412511747), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:32:01,789 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(197), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:32:01,797 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:03,222 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:03,231 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:03,234 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:04,368 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:05,375 exchange with rate 1.0
+2021-01-27 20:32:05,379 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:05,999 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:06,007 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:06,010 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:06,494 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:07,571 exchange with rate 1.0
+2021-01-27 20:32:07,572 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:32:07,580 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('mitchellturner@gmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:32:07,582 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(198), SQL(', '), Literal('aF5mikJsH'), SQL(', '), Literal(1565662458916), SQL(');')])
+2021-01-27 20:32:07,585 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(198), SQL(', '), Literal(51.32743318706074), SQL(', '), Literal('Kevin'), SQL(', '), Literal(18), SQL(', '), Literal(1376088), SQL(', '), Literal('Nelson'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:32:07,586 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:32:07,586 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(1565662458916), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:32:07,589 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:07,881 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:07,891 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:07,897 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:08,294 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:09,321 exchange with rate 1.0
+2021-01-27 20:32:09,322 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:32:09,433 database committed
+2021-01-27 20:32:09,433 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('ckennedy@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:32:09,434 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(199), SQL(', '), Literal('P85SRdZzw'), SQL(', '), Literal(2651079370341), SQL(');')])
+2021-01-27 20:32:09,467 database committed
+2021-01-27 20:32:09,468 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(199), SQL(', '), Literal(80.39860551669601), SQL(', '), Literal('Hannah'), SQL(', '), Literal(14), SQL(', '), Literal(432368), SQL(', '), Literal('Davis'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:32:09,469 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:32:09,485 database committed
+2021-01-27 20:32:09,502 database committed
+2021-01-27 20:32:09,502 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('pharrison@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:32:09,503 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(200), SQL(', '), Literal('3g8O9tqx6'), SQL(', '), Literal(1669487674143), SQL(');')])
+2021-01-27 20:32:09,520 database committed
+2021-01-27 20:32:09,520 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(200), SQL(', '), Literal(300.8610834974582), SQL(', '), Literal('Monica'), SQL(', '), Literal(4), SQL(', '), Literal(1015171), SQL(', '), Literal('Green'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:32:09,522 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:32:09,537 database committed
+2021-01-27 20:32:09,537 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost, trx_cur_id, trx_name) VALUES ('), Literal(1669487674143), SQL(', '), Literal(2651079370341), SQL(', '), Literal(10000), SQL(', '), Literal((1,)), SQL(', '), Literal('transaction1'), SQL(');')])
+2021-01-27 20:32:09,554 database committed
+2021-01-27 20:32:09,555 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost, trx_cur_id, trx_name) VALUES ('), Literal(1669487674143), SQL(', '), Literal(2651079370341), SQL(', '), Literal(20000), SQL(', '), Literal((1,)), SQL(', '), Literal('transaction2'), SQL(');')])
+2021-01-27 20:32:09,571 database committed
+2021-01-27 20:32:09,572 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost, trx_cur_id, trx_name) VALUES ('), Literal(2651079370341), SQL(', '), Literal(1669487674143), SQL(', '), Literal(5000), SQL(', '), Literal((1,)), SQL(', '), Literal('transaction3'), SQL(');')])
+2021-01-27 20:32:09,589 database committed
+2021-01-27 20:32:09,589 Composed([SQL('SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dt>='), Literal('2021-01-27 20:32:09.537397'), SQL(' AND trx_dt<'), Literal('2021-01-27 20:32:09.589615'), SQL(' AND trx_dest='), Literal(2651079370341), SQL(') OR (trx_dt>='), Literal('2021-01-27 20:32:09.537397'), SQL(' AND trx_dt<'), Literal('2021-01-27 20:32:09.589615'), SQL(' AND trx_src='), Literal(2651079370341), SQL(');')])
+2021-01-27 20:32:09,661 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:10,506 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:10,514 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:10,515 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:11,321 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:12,326 exchange with rate 1.0
+2021-01-27 20:32:12,330 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:13,166 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:13,173 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:13,177 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:13,888 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:14,898 exchange with rate 1.0
+2021-01-27 20:32:14,904 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:16,049 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:16,057 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:16,060 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:16,587 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:17,706 exchange with rate 1.0
+2021-01-27 20:32:17,707 database committed
+2021-01-27 20:32:17,707 Composed([SQL('SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dt>='), Literal('2021-01-27 20:32:09.555056'), SQL(' AND trx_dt<'), Literal('2021-01-27 20:32:17.707624'), SQL(' AND trx_dest='), Literal(2651079370341), SQL(') OR (trx_dt>='), Literal('2021-01-27 20:32:09.555056'), SQL(' AND trx_dt<'), Literal('2021-01-27 20:32:17.707624'), SQL(' AND trx_src='), Literal(2651079370341), SQL(');')])
+2021-01-27 20:32:17,717 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:17,983 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:17,992 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:17,999 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:18,807 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:19,827 exchange with rate 1.0
+2021-01-27 20:32:19,832 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:21,157 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:21,163 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:21,166 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:23,240 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:24,608 exchange with rate 1.0
+2021-01-27 20:32:24,609 database committed
+2021-01-27 20:32:24,610 Composed([SQL('SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dt>='), Literal('2021-01-27 20:32:09.571941'), SQL(' AND trx_dt<'), Literal('2021-01-27 20:32:24.610160'), SQL(' AND trx_dest='), Literal(2651079370341), SQL(') OR (trx_dt>='), Literal('2021-01-27 20:32:09.571941'), SQL(' AND trx_dt<'), Literal('2021-01-27 20:32:24.610160'), SQL(' AND trx_src='), Literal(2651079370341), SQL(');')])
+2021-01-27 20:32:24,623 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:24,912 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:24,921 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:24,927 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:25,762 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:26,773 exchange with rate 1.0
+2021-01-27 20:32:26,774 database committed
+2021-01-27 20:32:26,778 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:32:27,026 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:32:27,035 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:32:27,041 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:32:27,713 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:32:28,728 exchange with rate 1.0
+2021-01-27 20:32:28,730 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:32:28,762 database committed
+2021-01-27 20:32:28,762 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('brettbanks@blake.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:32:28,762 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(201), SQL(', '), Literal('XRtIB9Hwm'), SQL(', '), Literal(410404532333), SQL(');')])
+2021-01-27 20:32:28,780 database committed
+2021-01-27 20:32:28,780 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(201), SQL(', '), Literal(162.68623131044077), SQL(', '), Literal('Kevin'), SQL(', '), Literal(18), SQL(', '), Literal(1376088), SQL(', '), Literal('Nelson'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:32:28,783 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:32:28,796 database committed
+2021-01-27 20:32:28,798 Composed([SQL('SELECT (banking.balance, cur.currency_name) FROM banking INNER JOIN currency AS cur ON (cur.id=banking.currency_id) WHERE banking.client_id='), Literal(201), SQL(' ;')])

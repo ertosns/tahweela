@@ -1,0 +1,146 @@
+\hypertarget{namespacequeries_1_1gets_1_1banking}{}\doxysection{queries.\+gets.\+banking Namespace Reference}
+\label{namespacequeries_1_1gets_1_1banking}\index{queries.gets.banking@{queries.gets.banking}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1banking_a2197f897962796e5597172f35689e3db}{get\+\_\+client\+\_\+id}} (bid)
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1banking_a9fa96648f94cd09613bce9a3d75c44f4}{get\+\_\+banking\+\_\+id}} (cid)
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1banking_a8a7c7f170beca16623673c7ea353fa33}{get\+\_\+balance\+\_\+by\+\_\+cid}} (cid)
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1banking_a9726c6f6c2631b4e96e31b1fb305f177}{get\+\_\+balance\+\_\+by\+\_\+credid}} (cred\+\_\+id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1banking_a8a7c7f170beca16623673c7ea353fa33}\label{namespacequeries_1_1gets_1_1banking_a8a7c7f170beca16623673c7ea353fa33}} 
+\index{queries.gets.banking@{queries.gets.banking}!get\_balance\_by\_cid@{get\_balance\_by\_cid}}
+\index{get\_balance\_by\_cid@{get\_balance\_by\_cid}!queries.gets.banking@{queries.gets.banking}}
+\doxysubsubsection{\texorpdfstring{get\_balance\_by\_cid()}{get\_balance\_by\_cid()}}
+{\footnotesize\ttfamily def queries.\+gets.\+banking.\+get\+\_\+balance\+\_\+by\+\_\+cid (\begin{DoxyParamCaption}\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}called at the server side to retrieve the account balance d of the given client_id (cid)
+
+@param cid: client id
+@return bid: banking id
+\end{DoxyVerb}
+ 
+
+Definition at line 26 of file banking.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1banking_af1b7bc44ae7c5aec4e8e5cf479a56476}{get\_balance\_by\_cid}}(cid):}
+\DoxyCodeLine{27     \textcolor{stringliteral}{"""called at the server side to retrieve the account balance d of the given client\_id (cid)}}
+\DoxyCodeLine{28 \textcolor{stringliteral}{}}
+\DoxyCodeLine{29 \textcolor{stringliteral}{    @param cid: client id}}
+\DoxyCodeLine{30 \textcolor{stringliteral}{    @return bid: banking id}}
+\DoxyCodeLine{31 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{32     query=sql.SQL(\textcolor{stringliteral}{"SELECT (balance) FROM banking WHERE client\_id=\{cid\} LIMIT 1"}).\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{33     db\_log.debug(query)}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} pd.read\_sql(query, conn).ix[0]}
+\DoxyCodeLine{35 }
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1banking_a9726c6f6c2631b4e96e31b1fb305f177}\label{namespacequeries_1_1gets_1_1banking_a9726c6f6c2631b4e96e31b1fb305f177}} 
+\index{queries.gets.banking@{queries.gets.banking}!get\_balance\_by\_credid@{get\_balance\_by\_credid}}
+\index{get\_balance\_by\_credid@{get\_balance\_by\_credid}!queries.gets.banking@{queries.gets.banking}}
+\doxysubsubsection{\texorpdfstring{get\_balance\_by\_credid()}{get\_balance\_by\_credid()}}
+{\footnotesize\ttfamily def queries.\+gets.\+banking.\+get\+\_\+balance\+\_\+by\+\_\+credid (\begin{DoxyParamCaption}\item[{}]{cred\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get balance of client with given credential id
+
+@param cred_id: client credential id
+\end{DoxyVerb}
+ 
+
+Definition at line 36 of file banking.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1banking_a2eef056fc19d98552e0640a6af2d39e5}{get\_balance\_by\_credid}}(cred\_id):}
+\DoxyCodeLine{37     \textcolor{stringliteral}{""" get balance of client with given credential id}}
+\DoxyCodeLine{38 \textcolor{stringliteral}{}}
+\DoxyCodeLine{39 \textcolor{stringliteral}{    @param cred\_id: client credential id}}
+\DoxyCodeLine{40 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{41     query=sql.SQL(\textcolor{stringliteral}{"SELECT (b.balance) FROM banking as b JOIN WITH credentials AS c WHERE c.cred\_id=\{credid\} AND c.id==b.client\_id;"}).\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(credid=sql.Literal(cred\_id))}
+\DoxyCodeLine{42     db\_log.debug(query)}
+\DoxyCodeLine{43     cur.execute(query)}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1banking_a9fa96648f94cd09613bce9a3d75c44f4}\label{namespacequeries_1_1gets_1_1banking_a9fa96648f94cd09613bce9a3d75c44f4}} 
+\index{queries.gets.banking@{queries.gets.banking}!get\_banking\_id@{get\_banking\_id}}
+\index{get\_banking\_id@{get\_banking\_id}!queries.gets.banking@{queries.gets.banking}}
+\doxysubsubsection{\texorpdfstring{get\_banking\_id()}{get\_banking\_id()}}
+{\footnotesize\ttfamily def queries.\+gets.\+banking.\+get\+\_\+banking\+\_\+id (\begin{DoxyParamCaption}\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve the corresponding banking_id of the given  client_id (cid) (called at the server side)
+
+@param cid: client id
+@return bid: banking id
+\end{DoxyVerb}
+ 
+
+Definition at line 16 of file banking.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1banking_ad1e46a4d833d795e76259b65632bb837}{get\_banking\_id}}(cid):}
+\DoxyCodeLine{17     \textcolor{stringliteral}{"""retrieve the corresponding banking\_id of the given  client\_id (cid) (called at the server side)}}
+\DoxyCodeLine{18 \textcolor{stringliteral}{}}
+\DoxyCodeLine{19 \textcolor{stringliteral}{    @param cid: client id}}
+\DoxyCodeLine{20 \textcolor{stringliteral}{    @return bid: banking id}}
+\DoxyCodeLine{21 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{22     query=sql.SQL(\textcolor{stringliteral}{"SELECT (id) FROM banking WHERE client\_id=\{cid\} LIMIT 1"}).\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{23     db\_log.debug(query)}
+\DoxyCodeLine{24     \textcolor{keywordflow}{return} pd.read\_sql(query, conn).ix[0]}
+\DoxyCodeLine{25 }
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1banking_a2197f897962796e5597172f35689e3db}\label{namespacequeries_1_1gets_1_1banking_a2197f897962796e5597172f35689e3db}} 
+\index{queries.gets.banking@{queries.gets.banking}!get\_client\_id@{get\_client\_id}}
+\index{get\_client\_id@{get\_client\_id}!queries.gets.banking@{queries.gets.banking}}
+\doxysubsubsection{\texorpdfstring{get\_client\_id()}{get\_client\_id()}}
+{\footnotesize\ttfamily def queries.\+gets.\+banking.\+get\+\_\+client\+\_\+id (\begin{DoxyParamCaption}\item[{}]{bid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve the corresponding client_id of the given banking_id (bid) (called at the server side)
+
+@param bid: banking id
+@return cid: contact id
+\end{DoxyVerb}
+ 
+
+Definition at line 6 of file banking.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1banking_a60b82c92928bdbf6eb73d65b15f299ed}{get\_client\_id}}(bid):}
+\DoxyCodeLine{7     \textcolor{stringliteral}{""" retrieve the corresponding client\_id of the given banking\_id (bid) (called at the server side)}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    @param bid: banking id}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{    @return cid: contact id}}
+\DoxyCodeLine{11 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{12     query=sql.SQL(\textcolor{stringliteral}{"SELECT (client\_id) FROM banking WHERE id=\{bid\} LIMIT 1"}).\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(bid=sql.Literal(bid))}
+\DoxyCodeLine{13     db\_log.debug(query)}
+\DoxyCodeLine{14     \textcolor{keywordflow}{return} pd.read\_sql(query, conn).ix[0]}
+\DoxyCodeLine{15 }
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

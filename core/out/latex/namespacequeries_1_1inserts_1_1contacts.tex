@@ -1,0 +1,47 @@
+\hypertarget{namespacequeries_1_1inserts_1_1contacts}{}\doxysection{queries.\+inserts.\+contacts Namespace Reference}
+\label{namespacequeries_1_1inserts_1_1contacts}\index{queries.inserts.contacts@{queries.inserts.contacts}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1inserts_1_1contacts_a3b7b9d1a7b1fea50f69d8f0ca8f43332}{insert\+\_\+contact}} (cid, cname, bid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacequeries_1_1inserts_1_1contacts_a3b7b9d1a7b1fea50f69d8f0ca8f43332}\label{namespacequeries_1_1inserts_1_1contacts_a3b7b9d1a7b1fea50f69d8f0ca8f43332}} 
+\index{queries.inserts.contacts@{queries.inserts.contacts}!insert\_contact@{insert\_contact}}
+\index{insert\_contact@{insert\_contact}!queries.inserts.contacts@{queries.inserts.contacts}}
+\doxysubsubsection{\texorpdfstring{insert\_contact()}{insert\_contact()}}
+{\footnotesize\ttfamily def queries.\+inserts.\+contacts.\+insert\+\_\+contact (\begin{DoxyParamCaption}\item[{}]{cid,  }\item[{}]{cname,  }\item[{}]{bid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}insert new contact (CALLED AT THE CLIENT SIDE)
+
+@param cid: contact id (the same as client id in the server side)
+@param cname: contact name
+@param bid: bank account id
+\end{DoxyVerb}
+ 
+
+Definition at line 5 of file contacts.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1inserts_1_1contacts_a7dc16acde52804e62587eb993b0e2e56}{insert\_contact}}(cid, cname, bid):}
+\DoxyCodeLine{6     \textcolor{stringliteral}{""" insert new contact (CALLED AT THE CLIENT SIDE)}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{    @param cid: contact id (the same as client id in the server side)}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    @param cname: contact name}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{    @param bid: bank account id}}
+\DoxyCodeLine{11 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{12     stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO contacts (contact\_id, contact\_name bank\_account\_id) VALUES (\{cid\}, \{cname\}, \{bid\})"}).\(\backslash\)}
+\DoxyCodeLine{13         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid), \(\backslash\)}
+\DoxyCodeLine{14                cname=sql.Literal(cname), \(\backslash\)}
+\DoxyCodeLine{15                bid=sql.Literal(bid))}
+\DoxyCodeLine{16     db\_log.debug(stat)}
+\DoxyCodeLine{17     cur.execute(stat)}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

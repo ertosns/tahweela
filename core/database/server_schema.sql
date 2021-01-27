@@ -1,8 +1,8 @@
--- currency table of local currency conversion to dollar
+-- currency table of the supported currency rates to base dollar
 -- 'currency_value' is the value relative to American dollar.
--- all calculations in the are done in dollar.
+-- all calculations in are done in dollar.
 CREATE TABLE IF NOT EXISTS currency (
-       id SERIAL PRIMARY KEY,
+       id SERIAL PRIMARY KEY NOT NULL,
        currency_name varchar(10) UNIQUE NOT NULL,
        currency_value float NOT NULL
 );
@@ -10,12 +10,14 @@ CREATE TABLE IF NOT EXISTS currency (
 -- 'contact_name' is the name of the contact, and can be null for anonymous contacts
 -- 'contact_email' user's email
 -- 'client_join_dt' the timestamp at which the client joined the network
+-- currency_id default currency used for specific user
 -- TODO add email, country, address, etc
 CREATE TABLE IF NOT EXISTS clients (
        client_id SERIAL PRIMARY KEY,
        client_name text NOT NULL,
        client_email text UNIQUE NOT NULL,
-       client_join_dt TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+       client_join_dt TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+       currency_id int REFERENCES currency(id) NOT NULL
 );
 -- 'banking' table is for capturing the banking information necessary for transaction,
 -- and wire transaction, but for simplicity, only a single id is used in transaction,
@@ -25,6 +27,8 @@ CREATE TABLE IF NOT EXISTS clients (
 -- 'balance_dt' is the datetime of the last update of the account balance
 -- note that both (balance, balance_dt) gets updated with every transaction for that client
 -- TODO is the bank_number, and bank_name unique globally
+-- 'balance' note that the balance is saved in the bank account preference, such that the bank assign this value, not the user, but the client can choose to retrieve data in any value,.
+-- 'currency_id' is fixed, doesn't change.
 CREATE TABLE IF NOT EXISTS banking (
        id SERIAL PRIMARY KEY,
        client_id int REFERENCES clients (client_id),
@@ -33,7 +37,8 @@ CREATE TABLE IF NOT EXISTS banking (
        bank_name text NOT NULL,
        branch_number int NOT NULL,
        account_number bigint NOT NULL,
-       name_reference text
+       name_reference text,
+       currency_id int REFERENCES currency(id) NOT NULL
 );
 -- 'passcode' authentication is done with name/email and pass-code
 -- 'cred_id' cred_id is an extra id, for example public key for encrypted communication, user create this key locally (in case of public-key encryption), or receive it from the server upon registering, or login in new application install.
@@ -43,13 +48,18 @@ CREATE TABLE IF NOT EXISTS credentials (
        cred_id bigint UNIQUE NOT NULL
 );
 -- not that this has changed, trx_dest, trx_src now refers to the credentials(cred_id)
+-- 'trx_cost' is the transaction amount
+-- 'trx_cur_id' is the cross reference with the currency id of the trx_cost
+-- 'trx name' is the transaction description.
 CREATE TABLE IF NOT EXISTS ledger (
        id SERIAL PRIMARY KEY,
        trx_dest bigint REFERENCES credentials(cred_id),
        trx_src bigint REFERENCES credentials(cred_id),
        trx_cost int NOT NULL,
 --       good_id int REFERENCES goods(id),
-       trx_dt TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+       trx_dt TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+       trx_cur_id int REFERENCES currency(id) NOT NULL,
+       trx_name text
 );
 --CREATE  INDEX IF NOT EXISTS contacts_id_name ON contacts (contact_name);
 

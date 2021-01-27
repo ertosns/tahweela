@@ -1,0 +1,352 @@
+\hypertarget{namespacecore__test}{}\doxysection{core\+\_\+test Namespace Reference}
+\label{namespacecore__test}\index{core\_test@{core\_test}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcore__test_1_1_client}{Client}}
+\item 
+class \mbox{\hyperlink{classcore__test_1_1_restful_test}{Restful\+Test}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore__test_a16799aa51f679b1e5afdb1713d46aecd}{get\+\_\+bank\+\_\+name}} ()
+\item 
+def \mbox{\hyperlink{namespacecore__test_a2c7fd0d179e5b280a8293d3cd26ed390}{get\+\_\+branch\+\_\+number}} ()
+\item 
+def \mbox{\hyperlink{namespacecore__test_a3ebf81397c77f07fa01010b764e6f07a}{get\+\_\+account\+\_\+number}} ()
+\item 
+def \mbox{\hyperlink{namespacecore__test_a0fba6d16a7365dbc3f7ed1625382d99e}{get\+\_\+name\+\_\+reference}} ()
+\item 
+def \mbox{\hyperlink{namespacecore__test_aa7ce5d11a5f3c59bdfb5c76b6e963d80}{get\+\_\+name}} ()
+\item 
+def \mbox{\hyperlink{namespacecore__test_a4ddada31ec653b462e8043ef152380f6}{get\+\_\+email}} ()
+\item 
+def \mbox{\hyperlink{namespacecore__test_a9910ce45b903bc2b48d54c9ef1516462}{get\+\_\+balance}} ()
+\item 
+def \mbox{\hyperlink{namespacecore__test_a00bef1f7c688f80157c1f94390b90ede}{get\+\_\+credid}} ()
+\item 
+def \mbox{\hyperlink{namespacecore__test_a6addcfcb8b4aca4adab09b90870508c4}{get\+\_\+rand\+\_\+pass}} (L=9)
+\item 
+def \mbox{\hyperlink{namespacecore__test_ad6f4459be232b9ccdde6265eb216d6ed}{rand\+\_\+alphanum}} (L=9)
+\item 
+def \mbox{\hyperlink{namespacecore__test_a4b1e9e63ced2616f8c2ec4a6893d353c}{get\+\_\+amount}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecore__test_a2f1d61ba066479c846360df538582c7e}{seed}} = int.\+from\+\_\+bytes(os.\+urandom(3), \textquotesingle{}big\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacecore__test_a573a7f9a43ce2ddec525eed60e243a8b}{faker}} = Faker(\mbox{\hyperlink{namespacecore__test_a2f1d61ba066479c846360df538582c7e}{seed}})
+\item 
+string \mbox{\hyperlink{namespacecore__test_aa7408f505492bb85a676e4b72db18815}{db\+\_\+configs}} = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespacecore__test_a7649a3bfa6ddac3c389abf150d31e913}{filename}}
+\item 
+\mbox{\hyperlink{namespacecore__test_a97c620d38442bfffbfa43ab3a8575e9c}{format}}
+\item 
+\mbox{\hyperlink{namespacecore__test_a66e495c8329e3aed0c1544cebe70b80a}{filemode}}
+\item 
+\mbox{\hyperlink{namespacecore__test_a1ac46e5c31fc2a9d360edd5ba5991ca4}{logger}} = logging.\+get\+Logger()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore__test_a3ebf81397c77f07fa01010b764e6f07a}\label{namespacecore__test_a3ebf81397c77f07fa01010b764e6f07a}} 
+\index{core\_test@{core\_test}!get\_account\_number@{get\_account\_number}}
+\index{get\_account\_number@{get\_account\_number}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_account\_number()}{get\_account\_number()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+account\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_a3ebf81397c77f07fa01010b764e6f07a}{get\_account\_number}}():}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} int(3333333*random.random())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore__test_a4b1e9e63ced2616f8c2ec4a6893d353c}\label{namespacecore__test_a4b1e9e63ced2616f8c2ec4a6893d353c}} 
+\index{core\_test@{core\_test}!get\_amount@{get\_amount}}
+\index{get\_amount@{get\_amount}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_amount()}{get\_amount()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_a4b1e9e63ced2616f8c2ec4a6893d353c}{get\_amount}}():}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} 3333*random.random()}
+\DoxyCodeLine{59 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore__test_a9910ce45b903bc2b48d54c9ef1516462}\label{namespacecore__test_a9910ce45b903bc2b48d54c9ef1516462}} 
+\index{core\_test@{core\_test}!get\_balance@{get\_balance}}
+\index{get\_balance@{get\_balance}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_balance()}{get\_balance()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_a9910ce45b903bc2b48d54c9ef1516462}{get\_balance}}():}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} 333*random.random()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore__test_a16799aa51f679b1e5afdb1713d46aecd}\label{namespacecore__test_a16799aa51f679b1e5afdb1713d46aecd}} 
+\index{core\_test@{core\_test}!get\_bank\_name@{get\_bank\_name}}
+\index{get\_bank\_name@{get\_bank\_name}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_bank\_name()}{get\_bank\_name()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+bank\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_a16799aa51f679b1e5afdb1713d46aecd}{get\_bank\_name}}():}
+\DoxyCodeLine{30     \textcolor{keywordflow}{return} faker.name().split()[0]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore__test_a2c7fd0d179e5b280a8293d3cd26ed390}\label{namespacecore__test_a2c7fd0d179e5b280a8293d3cd26ed390}} 
+\index{core\_test@{core\_test}!get\_branch\_number@{get\_branch\_number}}
+\index{get\_branch\_number@{get\_branch\_number}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_branch\_number()}{get\_branch\_number()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+branch\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_a2c7fd0d179e5b280a8293d3cd26ed390}{get\_branch\_number}}():}
+\DoxyCodeLine{32     \textcolor{keywordflow}{return} int(33*random.random())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore__test_a00bef1f7c688f80157c1f94390b90ede}\label{namespacecore__test_a00bef1f7c688f80157c1f94390b90ede}} 
+\index{core\_test@{core\_test}!get\_credid@{get\_credid}}
+\index{get\_credid@{get\_credid}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_credid()}{get\_credid()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+credid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_a00bef1f7c688f80157c1f94390b90ede}{get\_credid}}():}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} int(3333333333333*random.random())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore__test_a4ddada31ec653b462e8043ef152380f6}\label{namespacecore__test_a4ddada31ec653b462e8043ef152380f6}} 
+\index{core\_test@{core\_test}!get\_email@{get\_email}}
+\index{get\_email@{get\_email}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_email()}{get\_email()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_a4ddada31ec653b462e8043ef152380f6}{get\_email}}():}
+\DoxyCodeLine{40     \textcolor{keywordflow}{return} faker.email()}
+
+\end{DoxyCode}
+
+
+Referenced by core\+\_\+test.\+Restful\+Test.\+test\+\_\+register().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore__test_a4ddada31ec653b462e8043ef152380f6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore__test_aa7ce5d11a5f3c59bdfb5c76b6e963d80}\label{namespacecore__test_aa7ce5d11a5f3c59bdfb5c76b6e963d80}} 
+\index{core\_test@{core\_test}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_aa7ce5d11a5f3c59bdfb5c76b6e963d80}{get\_name}}():}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} faker.name()}
+
+\end{DoxyCode}
+
+
+Referenced by core\+\_\+test.\+Restful\+Test.\+test\+\_\+register().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore__test_aa7ce5d11a5f3c59bdfb5c76b6e963d80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore__test_a0fba6d16a7365dbc3f7ed1625382d99e}\label{namespacecore__test_a0fba6d16a7365dbc3f7ed1625382d99e}} 
+\index{core\_test@{core\_test}!get\_name\_reference@{get\_name\_reference}}
+\index{get\_name\_reference@{get\_name\_reference}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_name\_reference()}{get\_name\_reference()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+name\+\_\+reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_a0fba6d16a7365dbc3f7ed1625382d99e}{get\_name\_reference}}():}
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} faker.name().split()[1]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore__test_a6addcfcb8b4aca4adab09b90870508c4}\label{namespacecore__test_a6addcfcb8b4aca4adab09b90870508c4}} 
+\index{core\_test@{core\_test}!get\_rand\_pass@{get\_rand\_pass}}
+\index{get\_rand\_pass@{get\_rand\_pass}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{get\_rand\_pass()}{get\_rand\_pass()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+get\+\_\+rand\+\_\+pass (\begin{DoxyParamCaption}\item[{}]{L = {\ttfamily 9} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_a6addcfcb8b4aca4adab09b90870508c4}{get\_rand\_pass}}(L=9):}
+\DoxyCodeLine{46     passcode=\textcolor{stringliteral}{''}.join(random.choice(string.ascii\_uppercase+\(\backslash\)}
+\DoxyCodeLine{47                                  string.ascii\_lowercase+\(\backslash\)}
+\DoxyCodeLine{48                                  string.digits)\(\backslash\)}
+\DoxyCodeLine{49                      \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(L))}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} passcode}
+
+\end{DoxyCode}
+
+
+Referenced by core\+\_\+test.\+Restful\+Test.\+test\+\_\+register().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore__test_a6addcfcb8b4aca4adab09b90870508c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore__test_ad6f4459be232b9ccdde6265eb216d6ed}\label{namespacecore__test_ad6f4459be232b9ccdde6265eb216d6ed}} 
+\index{core\_test@{core\_test}!rand\_alphanum@{rand\_alphanum}}
+\index{rand\_alphanum@{rand\_alphanum}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{rand\_alphanum()}{rand\_alphanum()}}
+{\footnotesize\ttfamily def core\+\_\+test.\+rand\+\_\+alphanum (\begin{DoxyParamCaption}\item[{}]{L = {\ttfamily 9} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file core\+\_\+test.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore__test_ad6f4459be232b9ccdde6265eb216d6ed}{rand\_alphanum}}(L=9):}
+\DoxyCodeLine{52     passcode=\textcolor{stringliteral}{''}.join(random.choice(string.ascii\_uppercase+\(\backslash\)}
+\DoxyCodeLine{53                                  string.ascii\_lowercase+\(\backslash\)}
+\DoxyCodeLine{54                                  string.digits)\(\backslash\)}
+\DoxyCodeLine{55                      \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(L))}
+\DoxyCodeLine{56     \textcolor{keywordflow}{return} passcode}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecore__test_aa7408f505492bb85a676e4b72db18815}\label{namespacecore__test_aa7408f505492bb85a676e4b72db18815}} 
+\index{core\_test@{core\_test}!db\_configs@{db\_configs}}
+\index{db\_configs@{db\_configs}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{db\_configs}{db\_configs}}
+{\footnotesize\ttfamily string core\+\_\+test.\+db\+\_\+configs = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}}
+
+
+
+Definition at line 22 of file core\+\_\+test.\+py.
+
+\mbox{\Hypertarget{namespacecore__test_a573a7f9a43ce2ddec525eed60e243a8b}\label{namespacecore__test_a573a7f9a43ce2ddec525eed60e243a8b}} 
+\index{core\_test@{core\_test}!faker@{faker}}
+\index{faker@{faker}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{faker}{faker}}
+{\footnotesize\ttfamily core\+\_\+test.\+faker = Faker(\mbox{\hyperlink{namespacecore__test_a2f1d61ba066479c846360df538582c7e}{seed}})}
+
+
+
+Definition at line 21 of file core\+\_\+test.\+py.
+
+\mbox{\Hypertarget{namespacecore__test_a66e495c8329e3aed0c1544cebe70b80a}\label{namespacecore__test_a66e495c8329e3aed0c1544cebe70b80a}} 
+\index{core\_test@{core\_test}!filemode@{filemode}}
+\index{filemode@{filemode}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{filemode}{filemode}}
+{\footnotesize\ttfamily core\+\_\+test.\+filemode}
+
+
+
+Definition at line 25 of file core\+\_\+test.\+py.
+
+\mbox{\Hypertarget{namespacecore__test_a7649a3bfa6ddac3c389abf150d31e913}\label{namespacecore__test_a7649a3bfa6ddac3c389abf150d31e913}} 
+\index{core\_test@{core\_test}!filename@{filename}}
+\index{filename@{filename}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily core\+\_\+test.\+filename}
+
+
+
+Definition at line 23 of file core\+\_\+test.\+py.
+
+\mbox{\Hypertarget{namespacecore__test_a97c620d38442bfffbfa43ab3a8575e9c}\label{namespacecore__test_a97c620d38442bfffbfa43ab3a8575e9c}} 
+\index{core\_test@{core\_test}!format@{format}}
+\index{format@{format}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily core\+\_\+test.\+format}
+
+
+
+Definition at line 24 of file core\+\_\+test.\+py.
+
+
+
+Referenced by core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+auth(), core\+\_\+test.\+Restful\+Test.\+autotract(), core\+\_\+test.\+Client.\+basic\+\_\+auth(), core\+\_\+test.\+Client.\+get\+\_\+balance(), core\+\_\+test.\+Client.\+make\+\_\+transaction(), core\+\_\+test.\+Client.\+register(), and core\+\_\+test.\+Restful\+Test.\+test\+\_\+register().
+
+\mbox{\Hypertarget{namespacecore__test_a1ac46e5c31fc2a9d360edd5ba5991ca4}\label{namespacecore__test_a1ac46e5c31fc2a9d360edd5ba5991ca4}} 
+\index{core\_test@{core\_test}!logger@{logger}}
+\index{logger@{logger}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily core\+\_\+test.\+logger = logging.\+get\+Logger()}
+
+
+
+Definition at line 26 of file core\+\_\+test.\+py.
+
+\mbox{\Hypertarget{namespacecore__test_a2f1d61ba066479c846360df538582c7e}\label{namespacecore__test_a2f1d61ba066479c846360df538582c7e}} 
+\index{core\_test@{core\_test}!seed@{seed}}
+\index{seed@{seed}!core\_test@{core\_test}}
+\doxysubsubsection{\texorpdfstring{seed}{seed}}
+{\footnotesize\ttfamily core\+\_\+test.\+seed = int.\+from\+\_\+bytes(os.\+urandom(3), \textquotesingle{}big\textquotesingle{})}
+
+
+
+Definition at line 19 of file core\+\_\+test.\+py.
+

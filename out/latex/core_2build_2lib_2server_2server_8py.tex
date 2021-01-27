@@ -1,0 +1,59 @@
+\hypertarget{core_2build_2lib_2server_2server_8py}{}\doxysection{core/build/lib/server/server.py File Reference}
+\label{core_2build_2lib_2server_2server_8py}\index{core/build/lib/server/server.py@{core/build/lib/server/server.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceserver_1_1server}{server.\+server}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_a474f4b5138fb289357b6b044f80bf3b3}{server.\+server.\+get\+\_\+credid}} ()
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_af0dc32da8e1669ebf3248e6c6ec7a66f}{server.\+server.\+is\+\_\+email}} (email)
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_aaba9b82f81aa6e69050f3e95b5a89ec6}{server.\+server.\+authenticate}} (user, passcode)
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_a9da8a7741f79cadc947590281acc7d6f}{server.\+server.\+unauthorized}} ()
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_a3b26dcf792d6a148cc538f51773ff2f3}{server.\+server.\+register\+\_\+client}} ()
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_aced7adfb3283961f246d18e0a562e7f2}{server.\+server.\+add\+\_\+bank\+\_\+account}} ()
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_a9543f6165e186fa9fcfdcaae8c3414fd}{server.\+server.\+add\+\_\+contact}} ()
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_aace011080def0837d48533bda4fc21ad}{server.\+server.\+get\+\_\+balance}} ()
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_a1905eca6a10dee5c1cc64f75fe3975a2}{server.\+server.\+update\+\_\+ledger}} ()
+\item 
+def \mbox{\hyperlink{namespaceserver_1_1server_ae4c2771edb84763e259ba10240b5f6f0}{server.\+server.\+make\+\_\+transaction}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_a37d4d87eb8aeb8769c690b471eab28ca}{server.\+server.\+seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespaceserver_1_1server_a89f995f86b205c512c8003ddfeba3b91}{server.\+server.\+db\+\_\+configs}} = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_a75fd86c1264bd63e873f69cf9e597f1e}{server.\+server.\+db}} = database(db\+\_\+configs)
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_a12e865150b9b7c0ef28501bda50ea9ff}{server.\+server.\+filename}}
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_a6a275403c603ab911add552ad5d4885b}{server.\+server.\+format}}
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_a165e0befaf38e0305742470a2633fb60}{server.\+server.\+filemode}}
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_abd36b8d87cf3ebf11380670cfa717bc8}{server.\+server.\+level}}
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_a12e4a9ebc4ffd2b39ef3b9231ac018c0}{server.\+server.\+logger}} = logging.\+get\+Logger()
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_abe540ab6e7c9bffd61dda91273e699e2}{server.\+server.\+app}} = Flask(\textquotesingle{}tahweela\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_ab802d8377425f04baff600f81f7d373c}{server.\+server.\+auth}} = H\+T\+T\+P\+Basic\+Auth()
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_abe383ab3b980cb73ca1e0ea901a991b6}{server.\+server.\+client\+\_\+passcode}} = None
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_af859db18db6c8d4298081a38fcbce8a9}{server.\+server.\+client\+\_\+cred\+\_\+id}} = None
+\item 
+\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{server.\+server.\+debug}}
+\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{namespacequeries_1_1gets_1_1currency}{}\doxysection{queries.\+gets.\+currency Namespace Reference}
+\label{namespacequeries_1_1gets_1_1currency}\index{queries.gets.currency@{queries.gets.currency}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1currency_ab3a96eb4cd55d9255081024ba4d7d55c}{to\+\_\+dollar}} (cid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1currency_ab3a96eb4cd55d9255081024ba4d7d55c}\label{namespacequeries_1_1gets_1_1currency_ab3a96eb4cd55d9255081024ba4d7d55c}} 
+\index{queries.gets.currency@{queries.gets.currency}!to\_dollar@{to\_dollar}}
+\index{to\_dollar@{to\_dollar}!queries.gets.currency@{queries.gets.currency}}
+\doxysubsubsection{\texorpdfstring{to\_dollar()}{to\_dollar()}}
+{\footnotesize\ttfamily def queries.\+gets.\+currency.\+to\+\_\+dollar (\begin{DoxyParamCaption}\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}convert currency of the corresponding id to dollar ratio
+
+for example if currency A = 2 dollars, then the conversion would be 0.5,
+for another currency B = 0.5 dollar, then the conversion to dollar would be 2
+such that for given cost of xA, would be 0.5x$.
+@param cid is the id of the corresponding currency
+@return transformation ratio to dollar
+\end{DoxyVerb}
+ 
+
+Definition at line 6 of file currency.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1currency_a4759e17e89208c328ca27e1820d8135d}{to\_dollar}}(cid):}
+\DoxyCodeLine{7     \textcolor{stringliteral}{""" convert currency of the corresponding id to dollar ratio}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    for example if currency A = 2 dollars, then the conversion would be 0.5,}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{    for another currency B = 0.5 dollar, then the conversion to dollar would be 2}}
+\DoxyCodeLine{11 \textcolor{stringliteral}{    such that for given cost of xA, would be 0.5x\$.}}
+\DoxyCodeLine{12 \textcolor{stringliteral}{    @param cid is the id of the corresponding currency}}
+\DoxyCodeLine{13 \textcolor{stringliteral}{    @return transformation ratio to dollar}}
+\DoxyCodeLine{14 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{15     query = sql.SQL(\textcolor{stringliteral}{"SELECT * FROM currency WHERE id=cid;"}).\(\backslash\)}
+\DoxyCodeLine{16         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{17     db\_log.debug(query)}
+\DoxyCodeLine{18     ratio = 1.0/pd.read\_sql(query, conn)[\textcolor{stringliteral}{'currency\_value'}].ix[0]}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return} ratio}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+
+
+
+Referenced by queries.\+gets.\+goods.\+get\+\_\+new\+\_\+price(), and core.\+queries.\+gets.\+goods.\+get\+\_\+new\+\_\+price().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacequeries_1_1gets_1_1currency_ab3a96eb4cd55d9255081024ba4d7d55c_icgraph}
+\end{center}
+\end{figure}

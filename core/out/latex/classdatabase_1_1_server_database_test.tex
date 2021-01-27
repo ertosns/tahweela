@@ -1,0 +1,585 @@
+\hypertarget{classdatabase_1_1_server_database_test}{}\doxysection{database.\+Server\+Database\+Test Class Reference}
+\label{classdatabase_1_1_server_database_test}\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+
+
+Inheritance diagram for database.\+Server\+Database\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classdatabase_1_1_server_database_test__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for database.\+Server\+Database\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classdatabase_1_1_server_database_test__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a9623bc8062c3d0a1b5f8c5245d144a3e}{test\+\_\+banking\+\_\+byemail}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_aaf0c2f070e584254ab662f50502c3c7c}{test\+\_\+banking\+\_\+byname}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a907489a3fcc63a12b5da6cffc0c4d4ce}{test\+\_\+bank\+\_\+account\+\_\+exist\+\_\+by\+\_\+cid}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_aff371e1da020a9f44f0c8d0968d1963c}{test\+\_\+client\+\_\+exists}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_acaf50537a1442a19c8c907976342a6ef}{test\+\_\+credential\+\_\+exists}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a4730f14dd16271d65cdc5e04978d017c}{test\+\_\+add\+\_\+bank\+\_\+account}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a47192eae9d5d69403964cf09f31d0008}{test\+\_\+bid\+\_\+cid\+\_\+conversion}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a78035b38d8dfa943ae2f6433be51eac7}{test\+\_\+balance}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a949cf63fa0d447c810fa8263ca209bdd}{test\+\_\+update\+\_\+balance}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a10f7732f3ce5b85197d9b8bf97c3a214}{test\+\_\+credid2cid}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_aa6e782c291a261aaf97f95bfb3009a36}{test\+\_\+password}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a41e3628ffcad40e12a039d790f52ad00}{test\+\_\+transaction}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 51 of file database.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_a4730f14dd16271d65cdc5e04978d017c}\label{classdatabase_1_1_server_database_test_a4730f14dd16271d65cdc5e04978d017c}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_add\_bank\_account@{test\_add\_bank\_account}}
+\index{test\_add\_bank\_account@{test\_add\_bank\_account}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_add\_bank\_account()}{test\_add\_bank\_account()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+add\+\_\+bank\+\_\+account (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 97 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97     \textcolor{keyword}{def }test\_add\_bank\_account(self):}
+\DoxyCodeLine{98         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{99         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{100         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{101         banalce=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
+\DoxyCodeLine{102         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{103         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{104         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{105         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{106         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{107         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{108         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference)}
+\DoxyCodeLine{109         self.assertTrue(db.exists.bank\_account\_bycid(cid))}
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_a4730f14dd16271d65cdc5e04978d017c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_a78035b38d8dfa943ae2f6433be51eac7}\label{classdatabase_1_1_server_database_test_a78035b38d8dfa943ae2f6433be51eac7}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_balance@{test\_balance}}
+\index{test\_balance@{test\_balance}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_balance()}{test\_balance()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+balance (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130     \textcolor{keyword}{def }test\_balance(self):}
+\DoxyCodeLine{131         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{132         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{133         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{134         banalce=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
+\DoxyCodeLine{135         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{136         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{137         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{138         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{139         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{140         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{141         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference)}
+\DoxyCodeLine{142         balance\_cur=db.gets.get\_balance\_by\_cid(cid)}
+\DoxyCodeLine{143         self.assertEqual(balance\_cur, balance)}
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_a78035b38d8dfa943ae2f6433be51eac7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_a907489a3fcc63a12b5da6cffc0c4d4ce}\label{classdatabase_1_1_server_database_test_a907489a3fcc63a12b5da6cffc0c4d4ce}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_bank\_account\_exist\_by\_cid@{test\_bank\_account\_exist\_by\_cid}}
+\index{test\_bank\_account\_exist\_by\_cid@{test\_bank\_account\_exist\_by\_cid}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_bank\_account\_exist\_by\_cid()}{test\_bank\_account\_exist\_by\_cid()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+bank\+\_\+account\+\_\+exist\+\_\+by\+\_\+cid (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70     \textcolor{keyword}{def }test\_bank\_account\_exist\_by\_cid(self):}
+\DoxyCodeLine{71         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{72         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{73         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{74         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{75         self.assertFalse(db.exists.bank\_account\_bycid(cid))}
+\DoxyCodeLine{76 }
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+email(), and database.\+get\+\_\+name().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_a907489a3fcc63a12b5da6cffc0c4d4ce_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_a9623bc8062c3d0a1b5f8c5245d144a3e}\label{classdatabase_1_1_server_database_test_a9623bc8062c3d0a1b5f8c5245d144a3e}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_banking\_byemail@{test\_banking\_byemail}}
+\index{test\_banking\_byemail@{test\_banking\_byemail}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_banking\_byemail()}{test\_banking\_byemail()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+banking\+\_\+byemail (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53     \textcolor{keyword}{def }test\_banking\_byemail(self):}
+\DoxyCodeLine{54         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{55         self.assertTrue(db.exists.account\_byemail(email))}
+\DoxyCodeLine{56         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{57         self.assertTrue(db.exists.client\_exists(cid))}
+\DoxyCodeLine{58 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_aaf0c2f070e584254ab662f50502c3c7c}\label{classdatabase_1_1_server_database_test_aaf0c2f070e584254ab662f50502c3c7c}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_banking\_byname@{test\_banking\_byname}}
+\index{test\_banking\_byname@{test\_banking\_byname}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_banking\_byname()}{test\_banking\_byname()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+banking\+\_\+byname (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59     \textcolor{keyword}{def }test\_banking\_byname(self):}
+\DoxyCodeLine{60         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{61         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{62         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{63         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{64         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{65         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{66         self.assertTrue(db.exists.account\_byname(name, passcode))}
+\DoxyCodeLine{67         cid=db.gets.get\_client\_id\_byname(name, passcode)}
+\DoxyCodeLine{68         self.assertTrue(db.exists.client\_exists(cid))}
+\DoxyCodeLine{69 }
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_aaf0c2f070e584254ab662f50502c3c7c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_a47192eae9d5d69403964cf09f31d0008}\label{classdatabase_1_1_server_database_test_a47192eae9d5d69403964cf09f31d0008}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_bid\_cid\_conversion@{test\_bid\_cid\_conversion}}
+\index{test\_bid\_cid\_conversion@{test\_bid\_cid\_conversion}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_bid\_cid\_conversion()}{test\_bid\_cid\_conversion()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+bid\+\_\+cid\+\_\+conversion (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}bid_cid conversion testing
+
+convert, and cross-reference from client id, to bank id
+\end{DoxyVerb}
+ 
+
+Definition at line 110 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110     \textcolor{keyword}{def }test\_bid\_cid\_conversion(self):}
+\DoxyCodeLine{111         \textcolor{stringliteral}{""" bid\_cid conversion testing}}
+\DoxyCodeLine{112 \textcolor{stringliteral}{}}
+\DoxyCodeLine{113 \textcolor{stringliteral}{        convert, and cross-\/reference from client id, to bank id}}
+\DoxyCodeLine{114 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{115         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{116         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{117         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{118         banalce=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
+\DoxyCodeLine{119         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{120         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{121         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{122         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{123         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{124         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{125         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference)}
+\DoxyCodeLine{126         cid\_eq=db.gets.get\_client\_id(bid)}
+\DoxyCodeLine{127         bid\_eq=db.gets.get\_banking\_id(cid\_eq)}
+\DoxyCodeLine{128         self.assertEqual(cid\_eq, cid)}
+\DoxyCodeLine{129         self.assertEqual(bid\_eq, bid)}
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_a47192eae9d5d69403964cf09f31d0008_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_aff371e1da020a9f44f0c8d0968d1963c}\label{classdatabase_1_1_server_database_test_aff371e1da020a9f44f0c8d0968d1963c}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_client\_exists@{test\_client\_exists}}
+\index{test\_client\_exists@{test\_client\_exists}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_client\_exists()}{test\_client\_exists()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+client\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77     \textcolor{keyword}{def }test\_client\_exists(self):}
+\DoxyCodeLine{78         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{79         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{80         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{81         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{82         self.assertTrue(db.exists.client\_exists(cid))}
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+email(), and database.\+get\+\_\+name().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_aff371e1da020a9f44f0c8d0968d1963c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_acaf50537a1442a19c8c907976342a6ef}\label{classdatabase_1_1_server_database_test_acaf50537a1442a19c8c907976342a6ef}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_credential\_exists@{test\_credential\_exists}}
+\index{test\_credential\_exists@{test\_credential\_exists}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_credential\_exists()}{test\_credential\_exists()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+credential\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 83 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83     \textcolor{keyword}{def }test\_credential\_exists(self):}
+\DoxyCodeLine{84         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{85         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{86         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{87         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{88         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{89         db.commit()}
+\DoxyCodeLine{90         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{91         db.commit()}
+\DoxyCodeLine{92         self.assertFalse(db.exists.credential\_exists(0))}
+\DoxyCodeLine{93         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{94         cid=db.gets.get\_client\_id\_byname(name, passcode)}
+\DoxyCodeLine{95         db.commit()}
+\DoxyCodeLine{96         self.assertTrue(db.exists.credential\_exists(cid))}
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_acaf50537a1442a19c8c907976342a6ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_a10f7732f3ce5b85197d9b8bf97c3a214}\label{classdatabase_1_1_server_database_test_a10f7732f3ce5b85197d9b8bf97c3a214}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_credid2cid@{test\_credid2cid}}
+\index{test\_credid2cid@{test\_credid2cid}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_credid2cid()}{test\_credid2cid()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+credid2cid (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 163 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163     \textcolor{keyword}{def }test\_credid2cid(self):}
+\DoxyCodeLine{164         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{165         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{166         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{167         \textcolor{comment}{\# add new client}}
+\DoxyCodeLine{168         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{169         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{170         \textcolor{comment}{\# register client's credentials}}
+\DoxyCodeLine{171         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{172         \textcolor{comment}{\# credid2cid conversion}}
+\DoxyCodeLine{173         cid\_eq=db.gets.credid2cid(credid)}
+\DoxyCodeLine{174         self.assertEqual(cid, cid\_eq)}
+\DoxyCodeLine{175         credid\_eq=db.gets.cid2credid(cid)}
+\DoxyCodeLine{176         self.assertEqual(credid, credid\_eq)}
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+credid(), database.\+get\+\_\+email(), and database.\+get\+\_\+rand\+\_\+pass().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_a10f7732f3ce5b85197d9b8bf97c3a214_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_aa6e782c291a261aaf97f95bfb3009a36}\label{classdatabase_1_1_server_database_test_aa6e782c291a261aaf97f95bfb3009a36}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_password@{test\_password}}
+\index{test\_password@{test\_password}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_password()}{test\_password()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+password (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{177     \textcolor{keyword}{def }test\_password(self):}
+\DoxyCodeLine{178         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{179         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{180         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{181         banalce=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
+\DoxyCodeLine{182         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{183         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{184         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{185         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{186         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{187         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{188         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference)}
+\DoxyCodeLine{189         passcode\_eq=db.gets.get\_password(credid)}
+\DoxyCodeLine{190         self.assertEqual(passcode, passcode\_eq)}
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_aa6e782c291a261aaf97f95bfb3009a36_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_a41e3628ffcad40e12a039d790f52ad00}\label{classdatabase_1_1_server_database_test_a41e3628ffcad40e12a039d790f52ad00}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_transaction@{test\_transaction}}
+\index{test\_transaction@{test\_transaction}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_transaction()}{test\_transaction()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+transaction (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}create two clients, client_1, client_2
+
+procedure:
+- client_1 sends 10k to client_2
+- client_1 sends 20k to client_2
+- client_2 sends 5k to client_1
+- transaction sum 35k sent/received
+\end{DoxyVerb}
+ 
+
+Definition at line 191 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{191     \textcolor{keyword}{def }test\_transaction(self):}
+\DoxyCodeLine{192         \textcolor{stringliteral}{""" create two clients, client\_1, client\_2}}
+\DoxyCodeLine{193 \textcolor{stringliteral}{}}
+\DoxyCodeLine{194 \textcolor{stringliteral}{        procedure:}}
+\DoxyCodeLine{195 \textcolor{stringliteral}{        -\/ client\_1 sends 10k to client\_2}}
+\DoxyCodeLine{196 \textcolor{stringliteral}{        -\/ client\_1 sends 20k to client\_2}}
+\DoxyCodeLine{197 \textcolor{stringliteral}{        -\/ client\_2 sends 5k to client\_1}}
+\DoxyCodeLine{198 \textcolor{stringliteral}{        -\/ transaction sum 35k sent/received}}
+\DoxyCodeLine{199 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{200         c1\_name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{201         c1\_email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{202         c1\_passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{203         c1\_credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{204         c1\_bank\_name=\mbox{\hyperlink{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344}{get\_bank\_name}}()}
+\DoxyCodeLine{205         c1\_branch\_number=\mbox{\hyperlink{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36}{get\_branch\_number}}()}
+\DoxyCodeLine{206         c1\_account\_number=\mbox{\hyperlink{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1}{get\_account\_number}}()}
+\DoxyCodeLine{207         c1\_name\_reference=\mbox{\hyperlink{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197}{get\_name\_reference}}()}
+\DoxyCodeLine{208         c1\_balance=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
+\DoxyCodeLine{209         db.inserts.add\_client(c1\_name, c1\_email)}
+\DoxyCodeLine{210         db.commit()}
+\DoxyCodeLine{211         c1\_cid=db.gets.get\_client\_id\_byemail(c1\_email)}
+\DoxyCodeLine{212         db.inserts.register(c1\_cid, c1\_passcode, c1\_credid)}
+\DoxyCodeLine{213         db.commit()}
+\DoxyCodeLine{214         db.inserts.add\_bank\_account(c1\_cid, c1\_balance, c1\_bank\_name, c1\_branch\_number, c1\_account\_number, c1\_name\_reference)}
+\DoxyCodeLine{215         db.commit()}
+\DoxyCodeLine{216         \textcolor{comment}{\#}}
+\DoxyCodeLine{217         c2\_name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{218         c2\_email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{219         c2\_passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{220         c2\_credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{221         c2\_bank\_name=\mbox{\hyperlink{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344}{get\_bank\_name}}()}
+\DoxyCodeLine{222         c2\_branch\_number=\mbox{\hyperlink{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36}{get\_branch\_number}}()}
+\DoxyCodeLine{223         c2\_account\_number=\mbox{\hyperlink{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1}{get\_account\_number}}()}
+\DoxyCodeLine{224         c2\_name\_reference=\mbox{\hyperlink{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197}{get\_name\_reference}}()}
+\DoxyCodeLine{225         c2\_balance=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
+\DoxyCodeLine{226         db.inserts.add\_client(c2\_name, c2\_email)}
+\DoxyCodeLine{227         db.commit()}
+\DoxyCodeLine{228         c2\_cid=db.gets.get\_client\_id\_byemail(c2\_email)}
+\DoxyCodeLine{229         db.inserts.register(c2\_cid, c2\_passcode, c2\_credid)}
+\DoxyCodeLine{230         db.commit()}
+\DoxyCodeLine{231         db.inserts.add\_bank\_account(c2\_cid, c2\_balance, c2\_bank\_name, c2\_branch\_number, c2\_account\_number, c2\_name\_reference)}
+\DoxyCodeLine{232         db.commit()}
+\DoxyCodeLine{233         \textcolor{comment}{\#}}
+\DoxyCodeLine{234         }
+\DoxyCodeLine{237         costs=[10000, 20000, 5000]}
+\DoxyCodeLine{238         trx\_st\_0=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+\DoxyCodeLine{239         db.inserts.insert\_trx(c2\_credid, c1\_credid, costs[0])}
+\DoxyCodeLine{240         db.commit()}
+\DoxyCodeLine{241         trx\_st\_1=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+\DoxyCodeLine{242         db.inserts.insert\_trx(c2\_credid, c1\_credid, costs[1])}
+\DoxyCodeLine{243         db.commit()}
+\DoxyCodeLine{244         trx\_st\_2=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+\DoxyCodeLine{245         db.inserts.insert\_trx(c1\_credid, c2\_credid, costs[2])}
+\DoxyCodeLine{246         db.commit()}
+\DoxyCodeLine{247         trx\_st\_3=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+\DoxyCodeLine{248         }
+\DoxyCodeLine{252         c1\_trx\_sum\_0=db.gets.get\_transactions\_sum(c1\_credid, trx\_st\_0)}
+\DoxyCodeLine{253         db.commit()}
+\DoxyCodeLine{254         self.assertEqual(sum(costs), c1\_trx\_sum\_0)}
+\DoxyCodeLine{255         \textcolor{comment}{\#epoch 2}}
+\DoxyCodeLine{256         c1\_trx\_sum\_1=db.gets.get\_transactions\_sum(c1\_credid, trx\_st\_1)}
+\DoxyCodeLine{257         db.commit()}
+\DoxyCodeLine{258         self.assertEqual(sum(costs[1:]), c1\_trx\_sum\_1)}
+\DoxyCodeLine{259         \textcolor{comment}{\#epoch 3}}
+\DoxyCodeLine{260         c1\_trx\_sum\_2=db.gets.get\_transactions\_sum(c1\_credid, trx\_st\_2)}
+\DoxyCodeLine{261         db.commit()}
+\DoxyCodeLine{262         self.assertEqual(sum(costs[2:]), c1\_trx\_sum\_2)}
+\DoxyCodeLine{263         }
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267 \textcolor{comment}{\#TODO client side}}
+\DoxyCodeLine{268 \textcolor{comment}{\# exists.contact\_exists}}
+\DoxyCodeLine{269 }
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+account\+\_\+number(), database.\+get\+\_\+balance(), database.\+get\+\_\+bank\+\_\+name(), database.\+get\+\_\+branch\+\_\+number(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), database.\+get\+\_\+name\+\_\+reference(), and database.\+get\+\_\+rand\+\_\+pass().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_a41e3628ffcad40e12a039d790f52ad00_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_a949cf63fa0d447c810fa8263ca209bdd}\label{classdatabase_1_1_server_database_test_a949cf63fa0d447c810fa8263ca209bdd}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_update\_balance@{test\_update\_balance}}
+\index{test\_update\_balance@{test\_update\_balance}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_update\_balance()}{test\_update\_balance()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+update\+\_\+balance (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 144 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{144     \textcolor{keyword}{def }test\_update\_balance(self):}
+\DoxyCodeLine{145         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
+\DoxyCodeLine{146         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{147         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
+\DoxyCodeLine{148         balance=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
+\DoxyCodeLine{149         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
+\DoxyCodeLine{150         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
+\DoxyCodeLine{151         db.inserts.add\_client(name, email)}
+\DoxyCodeLine{152         db.commit()}
+\DoxyCodeLine{153         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{154         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{155         db.commit()}
+\DoxyCodeLine{156         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{157         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference)}
+\DoxyCodeLine{158         db.commit()}
+\DoxyCodeLine{159         db.updates.update\_account(cid, 0)}
+\DoxyCodeLine{160         balance\_cur=db.gets.get\_balance\_by\_cid(cid)}
+\DoxyCodeLine{161         self.assertEqual(balance\_cur, 0)}
+
+\end{DoxyCode}
+
+
+References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_a949cf63fa0d447c810fa8263ca209bdd_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{core_2tests_2database_8py}{database.\+py}}\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@ import random
 import os
 import string
 import datetime
-from core.utils import TIMESTAMP_FORMAT
+from core.utils import TIMESTAMP_FORMAT, Currency, process_cur, EUR, USD, EGP
 
 seed=int.from_bytes(os.urandom(2), "big")
 random.seed(seed)
@@ -40,6 +40,8 @@ email=get_email()
 name=get_name()
 credid=get_credid()
 balance=get_balance()
+ADD_CURRENCY_LOCK=1
+lock=ADD_CURRENCY_LOCK
 
 def get_rand_pass(L=9):
     passcode=''.join(random.choice(string.ascii_uppercase+\
@@ -49,18 +51,42 @@ def get_rand_pass(L=9):
     return passcode
 
 class ServerDatabaseTest(unittest.TestCase):
+    def test_currency(self):
+        #db.init()
+        #db.repeatable_read()
+        #db.lock_advisory(lock)
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        self.assertEqual(rate, 1)
+        #db.rollback(lock)
 
     def test_banking_byemail(self):
-        db.inserts.add_client(name, email)
+        #db.init()
+        #db.repeatable_read()        
+        #db.lock_advisory(lock)
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
+        db.inserts.add_client(name, email, curr_id)
         self.assertTrue(db.exists.account_byemail(email))
         cid=db.gets.get_client_id_byemail(email)
         self.assertTrue(db.exists.client_exists(cid))
+        #db.rollback(lock)
 
     def test_banking_byname(self):
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
         name=get_name()
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         cid=db.gets.get_client_id_byemail(email)
         db.inserts.register(cid, passcode, credid)
         self.assertTrue(db.exists.account_byname(name, passcode))
@@ -68,24 +94,39 @@ class ServerDatabaseTest(unittest.TestCase):
         self.assertTrue(db.exists.client_exists(cid))
 
     def test_bank_account_exist_by_cid(self):
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         name=get_name()
         email=get_email()
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         cid=db.gets.get_client_id_byemail(email)
         self.assertFalse(db.exists.bank_account_bycid(cid))
 
     def test_client_exists(self):
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         name=get_name()
         email=get_email()
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         cid=db.gets.get_client_id_byemail(email)
         self.assertTrue(db.exists.client_exists(cid))
     def test_credential_exists(self):
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         name=get_name()
         email=get_email()
         passcode=get_rand_pass()
         credid=get_credid()
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         db.commit()
         cid=db.gets.get_client_id_byemail(email)
         db.commit()
@@ -94,78 +135,108 @@ class ServerDatabaseTest(unittest.TestCase):
         cid=db.gets.get_client_id_byname(name, passcode)
         db.commit()
         self.assertTrue(db.exists.credential_exists(cid))
+
     def test_add_bank_account(self):
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
         credid=get_credid()
         banalce=get_balance()
         email=get_email()
         name=get_name()
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         cid=db.gets.get_client_id_byemail(email)
         db.inserts.register(cid, passcode, credid)
         #add_bank_addount
-        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference)
+        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference, curr_id)
         self.assertTrue(db.exists.bank_account_bycid(cid))
     def test_bid_cid_conversion(self):
         """ bid_cid conversion testing
 
         convert, and cross-reference from client id, to bank id
         """
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
         credid=get_credid()
         banalce=get_balance()
         email=get_email()
         name=get_name()
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         cid=db.gets.get_client_id_byemail(email)
         db.inserts.register(cid, passcode, credid)
         #add_bank_addount
-        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference)
+        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference, curr_id)
         cid_eq=db.gets.get_client_id(bid)
         bid_eq=db.gets.get_banking_id(cid_eq)
         self.assertEqual(cid_eq, cid)
         self.assertEqual(bid_eq, bid)
+
     def test_balance(self):
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
         credid=get_credid()
         banalce=get_balance()
         email=get_email()
         name=get_name()
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         cid=db.gets.get_client_id_byemail(email)
         db.inserts.register(cid, passcode, credid)
         #add_bank_addount
-        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference)
-        balance_cur=db.gets.get_balance_by_cid(cid)
+        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference, curr_id)
+        bank_exists=db.exists.bank_account_bycid(cid)
+        self.assertTrue(bank_exists)
+        print('cid: ', cid)
+        balance_cur=db.gets.get_balance_by_cid(cid)['balance']
         self.assertEqual(balance_cur, balance)
     def test_update_balance(self):
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
         credid=get_credid()
         balance=get_balance()
         email=get_email()
         name=get_name()
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         db.commit()
         cid=db.gets.get_client_id_byemail(email)
         db.inserts.register(cid, passcode, credid)
         db.commit()
         #add_bank_addount
-        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference)
+        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference, curr_id)
         db.commit()
         db.updates.update_account(cid, 0)
-        balance_cur=db.gets.get_balance_by_cid(cid)
+        balance_cur=db.gets.get_balance_by_cid(cid)['balance']
         self.assertEqual(balance_cur, 0)
-    #TODO (fix) fails!
+    #TODO (fix) fails
     def test_credid2cid(self):
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
         credid=get_credid()
         # add new client
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         cid=db.gets.get_client_id_byemail(email)
         # register client's credentials
         db.inserts.register(cid, passcode, credid)
@@ -174,20 +245,27 @@ class ServerDatabaseTest(unittest.TestCase):
         self.assertEqual(cid, cid_eq)
         credid_eq=db.gets.cid2credid(cid)
         self.assertEqual(credid, credid_eq)
+
     def test_password(self):
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
         credid=get_credid()
         banalce=get_balance()
         email=get_email()
         name=get_name()
-        db.inserts.add_client(name, email)
+        db.inserts.add_client(name, email, curr_id)
         cid=db.gets.get_client_id_byemail(email)
         db.inserts.register(cid, passcode, credid)
         #add_bank_addount
-        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference)
+        bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference, curr_id)
         passcode_eq=db.gets.get_password(credid)
         self.assertEqual(passcode, passcode_eq)
+
     def test_transaction(self):
         """ create two clients, client_1, client_2
 
@@ -197,6 +275,11 @@ class ServerDatabaseTest(unittest.TestCase):
         - client_2 sends 5k to client_1
         - transaction sum 35k sent/received
         """
+        exchange=Currency(EUR)
+        rate=exchange.rate
+        if not db.exists.currency(EUR):
+            db.inserts.add_currency(EUR, rate)
+        curr_id=db.gets.get_currency_id(EUR)
         c1_name=get_name()
         c1_email=get_email()
         c1_passcode=get_rand_pass()
@@ -206,12 +289,12 @@ class ServerDatabaseTest(unittest.TestCase):
         c1_account_number=get_account_number()
         c1_name_reference=get_name_reference()
         c1_balance=get_balance()
-        db.inserts.add_client(c1_name, c1_email)
+        db.inserts.add_client(c1_name, c1_email, curr_id)
         db.commit()
         c1_cid=db.gets.get_client_id_byemail(c1_email)
         db.inserts.register(c1_cid, c1_passcode, c1_credid)
         db.commit()
-        db.inserts.add_bank_account(c1_cid, c1_balance, c1_bank_name, c1_branch_number, c1_account_number, c1_name_reference)
+        db.inserts.add_bank_account(c1_cid, c1_balance, c1_bank_name, c1_branch_number, c1_account_number, c1_name_reference, curr_id)
         db.commit()
         #
         c2_name=get_name()
@@ -223,12 +306,12 @@ class ServerDatabaseTest(unittest.TestCase):
         c2_account_number=get_account_number()
         c2_name_reference=get_name_reference()
         c2_balance=get_balance()
-        db.inserts.add_client(c2_name, c2_email)
+        db.inserts.add_client(c2_name, c2_email, curr_id)
         db.commit()
         c2_cid=db.gets.get_client_id_byemail(c2_email)
         db.inserts.register(c2_cid, c2_passcode, c2_credid)
         db.commit()
-        db.inserts.add_bank_account(c2_cid, c2_balance, c2_bank_name, c2_branch_number, c2_account_number, c2_name_reference)
+        db.inserts.add_bank_account(c2_cid, c2_balance, c2_bank_name, c2_branch_number, c2_account_number, c2_name_reference, curr_id)
         db.commit()
         #
         ################
@@ -236,13 +319,13 @@ class ServerDatabaseTest(unittest.TestCase):
         ################
         costs=[10000, 20000, 5000]
         trx_st_0=datetime.datetime.now().strftime(TIMESTAMP_FORMAT)
-        db.inserts.insert_trx(c2_credid, c1_credid, costs[0])
+        db.inserts.insert_trx(c2_credid, c1_credid, costs[0], curr_id, 'transaction1')
         db.commit()
         trx_st_1=datetime.datetime.now().strftime(TIMESTAMP_FORMAT)
-        db.inserts.insert_trx(c2_credid, c1_credid, costs[1])
+        db.inserts.insert_trx(c2_credid, c1_credid, costs[1], curr_id, 'transaction2')
         db.commit()
         trx_st_2=datetime.datetime.now().strftime(TIMESTAMP_FORMAT)
-        db.inserts.insert_trx(c1_credid, c2_credid, costs[2])
+        db.inserts.insert_trx(c1_credid, c2_credid, costs[2], curr_id, 'transaction3')
         db.commit()
         trx_st_3=datetime.datetime.now().strftime(TIMESTAMP_FORMAT)
         ##################
@@ -261,11 +344,7 @@ class ServerDatabaseTest(unittest.TestCase):
         db.commit()
         self.assertEqual(sum(costs[2:]), c1_trx_sum_2)
         #######################
-        # viola tahweela works!
+        # viola tahweela database works!
         #######################
-
-#TODO client side
-# exists.contact_exists
-
 if __name__=='__main__':
     unittest.main()

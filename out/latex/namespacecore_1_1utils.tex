@@ -1,0 +1,751 @@
+\hypertarget{namespacecore_1_1utils}{}\doxysection{core.\+utils Namespace Reference}
+\label{namespacecore_1_1utils}\index{core.utils@{core.utils}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcore_1_1utils_1_1_currency}{Currency}}
+\item 
+class \mbox{\hyperlink{classcore_1_1utils_1_1_payment_gate}{Payment\+Gate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca}{exchangerate\+\_\+rate}} (base, pref)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b}{fixer\+\_\+rate}} (base, pref)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}} (base, pref)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_ac13f32df1a27f40f8f3c89c01e40e18c}{daily\+\_\+limit}} (pref=\mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{E\+UR}})
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_ace7833d9faa7284d9efbb4081fa80f11}{weekly\+\_\+limit}} (pref=\mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{E\+UR}})
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}{process\+\_\+cur}} (cur)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\+\_\+cur}} (cur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_a6a7e0440a2beea6620ee3168f2333b83}{seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a014ec7ca779f32f62cdaf93bd227b56a}{T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+F\+O\+R\+M\+AT}} = \char`\"{}\%Y-\/\%m-\/\%d \%H\+:\%M\+:\%S.\%f\char`\"{}
+\item 
+float \mbox{\hyperlink{namespacecore_1_1utils_a2c4a415f35f12afb96cffc32812104ff}{F\+EE}} = 0.\+01
+\item 
+float \mbox{\hyperlink{namespacecore_1_1utils_afa1fcbb79b33061d51ebbc040db1e9fa}{Q\+U\+A\+L\+I\+T\+Y\+\_\+\+R\+E\+D\+U\+C\+T\+I\+ON}} = 0.\+1
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_aeb6eccc58477f2fddde912dc76ccf940}{M\+A\+X\+\_\+\+C\+O\+ST}} = 1000000
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_a8703e6bfde946d4c5e1d8b771bea5882}{M\+A\+X\+\_\+\+G\+O\+O\+DS}} = 100
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a37adb3629251f374911f9a5b5b91984d}{R\+E\+G\+I\+S\+T\+ER}} = \char`\"{}/api/v0.\+1/register\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a9e1eedc69bed488000a389ba281c334d}{L\+E\+D\+G\+ER}} = \char`\"{}/api/v0.\+1/ledger\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a0997cde2e65cbd63e3ead150a67fb30b}{C\+O\+N\+T\+A\+C\+TS}} = \char`\"{}/api/v0.\+1/contacts\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_ae77a279ae4204bb59c699e995c257fec}{P\+U\+R\+C\+H\+A\+SE}} = \char`\"{}/api/v0.\+1/purchase\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a5eab2d894a9c95f3b16b9e5af18261f5}{G\+O\+O\+DS}} = \char`\"{}/api/v0.\+1/goods\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a8fe8d82568a35a95541bd476be058300}{G\+O\+O\+D\+S\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/goods\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a0d86ced3754761f6594c03dee0eaf55e}{B\+A\+L\+A\+N\+C\+E\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/balance\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_ae97978e2270dab09224699fe41d0450d}{B\+A\+L\+A\+N\+CE}} = \char`\"{}/api/v0.\+1/balance\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a93098b497cd66fc2ad84fbd38661e580}{C\+U\+R\+R\+E\+N\+C\+Y\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/currency\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a670665c06aeaa476adadabd5e085cc68}{C\+U\+R\+R\+E\+N\+CY}} = \char`\"{}/api/v0.\+1/currency\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_aee923bae66ee1562d466cb1c9a707bc5}{C\+O\+N\+T\+A\+C\+T\+S\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/contacts\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a6c55682d63a56f227e5385aa498a42a4}{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/register\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_aa6a6520c85902e89cc54f34e4caee86e}{L\+E\+D\+G\+E\+R\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/ledger\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a682cfc562c6878450ce895363702c63a}{P\+U\+R\+C\+H\+A\+S\+E\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/purchase\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_ab6dd3584a9c6e0f5286ffa4bfc028535}{A\+D\+D\+\_\+\+B\+A\+N\+K\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/addbank\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a88de3cced98f0902714c19bd9f604ea8}{A\+D\+D\+\_\+\+B\+A\+N\+K\+\_\+\+A\+C\+C\+O\+U\+NT}} = \char`\"{}/api/v0.\+1/addbank\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a27257fb18c899d4509f1c09c64c7b225}{T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/transaction\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a293e1f7985c1851c1abc4ea51b49b46d}{T\+R\+A\+N\+S\+A\+C\+T\+I\+ON}} = \char`\"{}/api/v0.\+1/transaction\char`\"{}
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_afeec3566a7f124093fbf4fe9f8aa2f9f}{M\+A\+X\+\_\+\+C\+R\+E\+D\+\_\+\+ID}} = 9223372036854775807
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_a182b6a555b59fdf17069cdb0b9954a8c}{M\+A\+X\+\_\+\+B\+A\+L\+A\+N\+CE}} = \mbox{\hyperlink{namespacecore_1_1utils_aeb6eccc58477f2fddde912dc76ccf940}{M\+A\+X\+\_\+\+C\+O\+ST}}$\ast$10
+\item 
+float \mbox{\hyperlink{namespacecore_1_1utils_adcabc1c9523db5a486f106119d79f96c}{S\+T\+O\+C\+H\+A\+S\+T\+I\+C\+\_\+\+T\+R\+A\+D\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 0.\+9
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_a2de43731c61fd3f73646aec2a92bee71}{D\+A\+I\+L\+Y\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+GP}} = 10000
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_a403e04efd62b792ce24c059dba242924}{W\+E\+E\+K\+L\+Y\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+GP}} = 50000
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{E\+UR}} = \textquotesingle{}E\+UR\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a2da89483b243a02ca9ab2077e07e6b1d}{E\+GP}} = \textquotesingle{}E\+GP\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a8a26be253e2f178c5f6ec28f0acad76c}{U\+SD}} = \textquotesingle{}U\+SD\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_ab39dff30b40c415dd8def9690ef3c088}{db\+\_\+configs}} = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_acc1defa8f2afef711123e6608e807fc2}{filename}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_aa8ab0e7e791ad81073211f9dbe00cb73}{filemode}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_aeb684e0a844297878e2ede052e870e64}{log}} = logging.\+get\+Logger()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1utils_ac13f32df1a27f40f8f3c89c01e40e18c}\label{namespacecore_1_1utils_ac13f32df1a27f40f8f3c89c01e40e18c}} 
+\index{core.utils@{core.utils}!daily\_limit@{daily\_limit}}
+\index{daily\_limit@{daily\_limit}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{daily\_limit()}{daily\_limit()}}
+{\footnotesize\ttfamily def core.\+utils.\+daily\+\_\+limit (\begin{DoxyParamCaption}\item[{}]{pref = {\ttfamily \mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{E\+UR}}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}daily transaction limits\end{DoxyVerb}
+ 
+
+Definition at line 134 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_ac13f32df1a27f40f8f3c89c01e40e18c}{daily\_limit}}(pref=EUR):}
+\DoxyCodeLine{135     \textcolor{stringliteral}{""" daily transaction limits}}
+\DoxyCodeLine{136 \textcolor{stringliteral}{}}
+\DoxyCodeLine{137 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{138     currency = Currency(pref, EGP)}
+\DoxyCodeLine{139     \textcolor{keywordflow}{return} currency.exchange(DAILY\_LIMIT\_EGP)}
+\DoxyCodeLine{140 }
+
+\end{DoxyCode}
+
+
+Referenced by core.\+utils.\+Payment\+Gate.\+get\+\_\+balance(), and core.\+server.\+server.\+make\+\_\+transaction().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1utils_ac13f32df1a27f40f8f3c89c01e40e18c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}\label{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}} 
+\index{core.utils@{core.utils}!exchange@{exchange}}
+\index{exchange@{exchange}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{exchange()}{exchange()}}
+{\footnotesize\ttfamily def core.\+utils.\+exchange (\begin{DoxyParamCaption}\item[{}]{base,  }\item[{}]{pref }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(base, pref):}
+\DoxyCodeLine{85     rate=0}
+\DoxyCodeLine{86     \textcolor{keywordflow}{while} rate==0:}
+\DoxyCodeLine{87         rate=\mbox{\hyperlink{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca}{exchangerate\_rate}}(base, pref)}
+\DoxyCodeLine{88         \textcolor{keywordflow}{if} rate==0:}
+\DoxyCodeLine{89             rate=\mbox{\hyperlink{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b}{fixer\_rate}}(base, pref)}
+\DoxyCodeLine{90         sleep(1)}
+\DoxyCodeLine{91         print(\textcolor{stringliteral}{"make sure there is internet connection!"})}
+\DoxyCodeLine{92     \textcolor{keywordflow}{return} rate}
+\DoxyCodeLine{93     }
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+exchangerate\+\_\+rate(), and core.\+utils.\+fixer\+\_\+rate().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca}\label{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca}} 
+\index{core.utils@{core.utils}!exchangerate\_rate@{exchangerate\_rate}}
+\index{exchangerate\_rate@{exchangerate\_rate}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{exchangerate\_rate()}{exchangerate\_rate()}}
+{\footnotesize\ttfamily def core.\+utils.\+exchangerate\+\_\+rate (\begin{DoxyParamCaption}\item[{}]{base,  }\item[{}]{pref }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca}{exchangerate\_rate}}(base, pref):}
+\DoxyCodeLine{59     site=\textcolor{stringliteral}{'https://api.exchangeratesapi.io/latest?base=\{\}'}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(\mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\_cur}}(base))}
+\DoxyCodeLine{60     res=requests.get(site)}
+\DoxyCodeLine{61     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{62         response=res.json()}
+\DoxyCodeLine{63         \textcolor{keyword}{assert} res.status\_code<300 , \textcolor{stringliteral}{'exchange currency failed'}}
+\DoxyCodeLine{64         rate=response[\textcolor{stringliteral}{'rates'}][\mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\_cur}}(pref)]}
+\DoxyCodeLine{65     \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{66         log.critical(\textcolor{stringliteral}{'exchange rate fetch failed base: \{\}, pref: \{\}'}. \mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(base, pref))}
+\DoxyCodeLine{67         rate=0}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} rate}
+\DoxyCodeLine{69 }
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+format, and core.\+utils.\+unwrap\+\_\+cur().
+
+
+
+Referenced by core.\+utils.\+exchange().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b}\label{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b}} 
+\index{core.utils@{core.utils}!fixer\_rate@{fixer\_rate}}
+\index{fixer\_rate@{fixer\_rate}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{fixer\_rate()}{fixer\_rate()}}
+{\footnotesize\ttfamily def core.\+utils.\+fixer\+\_\+rate (\begin{DoxyParamCaption}\item[{}]{base,  }\item[{}]{pref }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b}{fixer\_rate}}(base, pref):}
+\DoxyCodeLine{71     site=\textcolor{stringliteral}{'http://data.fixer.io/api/latest?access\_key=9c87591ccfb9716f0850e500ceceef7a'}}
+\DoxyCodeLine{72     res=requests.get(site)}
+\DoxyCodeLine{73     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{74         response=res.json()}
+\DoxyCodeLine{75         \textcolor{keyword}{assert} res.status\_code<300 , \textcolor{stringliteral}{'exchange currency failed'}}
+\DoxyCodeLine{76         base\_rate=response[\textcolor{stringliteral}{'rates'}][\mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\_cur}}(base)]}
+\DoxyCodeLine{77         pref\_rate=response[\textcolor{stringliteral}{'rates'}][\mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\_cur}}(pref)]}
+\DoxyCodeLine{78         rate=base\_rate/pref\_rate}
+\DoxyCodeLine{79     \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{80         log.critical(\textcolor{stringliteral}{'fixer.io rate fetch failed base: \{\}, pref: \{\}'}. \mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(base, pref))}
+\DoxyCodeLine{81         rate=0}
+\DoxyCodeLine{82     \textcolor{keywordflow}{return} rate}
+\DoxyCodeLine{83 }
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+format, and core.\+utils.\+unwrap\+\_\+cur().
+
+
+
+Referenced by core.\+utils.\+exchange().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}\label{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}} 
+\index{core.utils@{core.utils}!process\_cur@{process\_cur}}
+\index{process\_cur@{process\_cur}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{process\_cur()}{process\_cur()}}
+{\footnotesize\ttfamily def core.\+utils.\+process\+\_\+cur (\begin{DoxyParamCaption}\item[{}]{cur }\end{DoxyParamCaption})}
+
+
+
+Definition at line 148 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{148 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}{process\_cur}}(cur):}
+\DoxyCodeLine{149     cur.strip(\textcolor{stringliteral}{"'"})}
+\DoxyCodeLine{150     cur.replace(\textcolor{stringliteral}{"'"}, \textcolor{stringliteral}{''})}
+\DoxyCodeLine{151     \textcolor{keywordflow}{return} \textcolor{stringliteral}{'\(\backslash\)'\{\}\(\backslash\)''}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(cur)}
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+format.
+
+
+
+Referenced by core.\+queries.\+database.\+inserts.\+add\+\_\+currency(), core.\+queries.\+database.\+exists.\+currency(), core.\+utils.\+Payment\+Gate.\+get\+\_\+balance(), and core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+id().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}\label{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}} 
+\index{core.utils@{core.utils}!unwrap\_cur@{unwrap\_cur}}
+\index{unwrap\_cur@{unwrap\_cur}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{unwrap\_cur()}{unwrap\_cur()}}
+{\footnotesize\ttfamily def core.\+utils.\+unwrap\+\_\+cur (\begin{DoxyParamCaption}\item[{}]{cur }\end{DoxyParamCaption})}
+
+
+
+Definition at line 152 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\_cur}}(cur):}
+\DoxyCodeLine{153     \textcolor{keywordflow}{return} cur.replace(\textcolor{stringliteral}{"'"}, \textcolor{stringliteral}{''})}
+
+\end{DoxyCode}
+
+
+Referenced by core.\+utils.\+exchangerate\+\_\+rate(), core.\+utils.\+fixer\+\_\+rate(), core.\+utils.\+Payment\+Gate.\+get\+\_\+balance(), and core\+\_\+test.\+Restful\+Test.\+test\+\_\+get\+\_\+balance().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1utils_ace7833d9faa7284d9efbb4081fa80f11}\label{namespacecore_1_1utils_ace7833d9faa7284d9efbb4081fa80f11}} 
+\index{core.utils@{core.utils}!weekly\_limit@{weekly\_limit}}
+\index{weekly\_limit@{weekly\_limit}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{weekly\_limit()}{weekly\_limit()}}
+{\footnotesize\ttfamily def core.\+utils.\+weekly\+\_\+limit (\begin{DoxyParamCaption}\item[{}]{pref = {\ttfamily \mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{E\+UR}}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}daily transaction limits\end{DoxyVerb}
+ 
+
+Definition at line 141 of file utils.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_ace7833d9faa7284d9efbb4081fa80f11}{weekly\_limit}}(pref=EUR):}
+\DoxyCodeLine{142     \textcolor{stringliteral}{""" daily transaction limits}}
+\DoxyCodeLine{143 \textcolor{stringliteral}{}}
+\DoxyCodeLine{144 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{145     currency = Currency(pref, EGP)}
+\DoxyCodeLine{146     \textcolor{keywordflow}{return} currency.exchange(WEEKLY\_LIMIT\_EGP)}
+\DoxyCodeLine{147 }
+
+\end{DoxyCode}
+
+
+Referenced by core.\+utils.\+Payment\+Gate.\+get\+\_\+balance(), and core.\+server.\+server.\+make\+\_\+transaction().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1utils_ace7833d9faa7284d9efbb4081fa80f11_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecore_1_1utils_a88de3cced98f0902714c19bd9f604ea8}\label{namespacecore_1_1utils_a88de3cced98f0902714c19bd9f604ea8}} 
+\index{core.utils@{core.utils}!ADD\_BANK\_ACCOUNT@{ADD\_BANK\_ACCOUNT}}
+\index{ADD\_BANK\_ACCOUNT@{ADD\_BANK\_ACCOUNT}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{ADD\_BANK\_ACCOUNT}{ADD\_BANK\_ACCOUNT}}
+{\footnotesize\ttfamily string core.\+utils.\+A\+D\+D\+\_\+\+B\+A\+N\+K\+\_\+\+A\+C\+C\+O\+U\+NT = \char`\"{}/api/v0.\+1/addbank\char`\"{}}
+
+
+
+Definition at line 36 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_ab6dd3584a9c6e0f5286ffa4bfc028535}\label{namespacecore_1_1utils_ab6dd3584a9c6e0f5286ffa4bfc028535}} 
+\index{core.utils@{core.utils}!ADD\_BANK\_ACCOUNT\_URL@{ADD\_BANK\_ACCOUNT\_URL}}
+\index{ADD\_BANK\_ACCOUNT\_URL@{ADD\_BANK\_ACCOUNT\_URL}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{ADD\_BANK\_ACCOUNT\_URL}{ADD\_BANK\_ACCOUNT\_URL}}
+{\footnotesize\ttfamily string core.\+utils.\+A\+D\+D\+\_\+\+B\+A\+N\+K\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+U\+RL = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/addbank\char`\"{}}
+
+
+
+Definition at line 35 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_ae97978e2270dab09224699fe41d0450d}\label{namespacecore_1_1utils_ae97978e2270dab09224699fe41d0450d}} 
+\index{core.utils@{core.utils}!BALANCE@{BALANCE}}
+\index{BALANCE@{BALANCE}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{BALANCE}{BALANCE}}
+{\footnotesize\ttfamily string core.\+utils.\+B\+A\+L\+A\+N\+CE = \char`\"{}/api/v0.\+1/balance\char`\"{}}
+
+
+
+Definition at line 25 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a0d86ced3754761f6594c03dee0eaf55e}\label{namespacecore_1_1utils_a0d86ced3754761f6594c03dee0eaf55e}} 
+\index{core.utils@{core.utils}!BALANCE\_URL@{BALANCE\_URL}}
+\index{BALANCE\_URL@{BALANCE\_URL}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{BALANCE\_URL}{BALANCE\_URL}}
+{\footnotesize\ttfamily string core.\+utils.\+B\+A\+L\+A\+N\+C\+E\+\_\+\+U\+RL = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/balance\char`\"{}}
+
+
+
+Definition at line 24 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a0997cde2e65cbd63e3ead150a67fb30b}\label{namespacecore_1_1utils_a0997cde2e65cbd63e3ead150a67fb30b}} 
+\index{core.utils@{core.utils}!CONTACTS@{CONTACTS}}
+\index{CONTACTS@{CONTACTS}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{CONTACTS}{CONTACTS}}
+{\footnotesize\ttfamily string core.\+utils.\+C\+O\+N\+T\+A\+C\+TS = \char`\"{}/api/v0.\+1/contacts\char`\"{}}
+
+
+
+Definition at line 18 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_aee923bae66ee1562d466cb1c9a707bc5}\label{namespacecore_1_1utils_aee923bae66ee1562d466cb1c9a707bc5}} 
+\index{core.utils@{core.utils}!CONTACTS\_URL@{CONTACTS\_URL}}
+\index{CONTACTS\_URL@{CONTACTS\_URL}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{CONTACTS\_URL}{CONTACTS\_URL}}
+{\footnotesize\ttfamily string core.\+utils.\+C\+O\+N\+T\+A\+C\+T\+S\+\_\+\+U\+RL = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/contacts\char`\"{}}
+
+
+
+Definition at line 30 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a670665c06aeaa476adadabd5e085cc68}\label{namespacecore_1_1utils_a670665c06aeaa476adadabd5e085cc68}} 
+\index{core.utils@{core.utils}!CURRENCY@{CURRENCY}}
+\index{CURRENCY@{CURRENCY}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{CURRENCY}{CURRENCY}}
+{\footnotesize\ttfamily string core.\+utils.\+C\+U\+R\+R\+E\+N\+CY = \char`\"{}/api/v0.\+1/currency\char`\"{}}
+
+
+
+Definition at line 28 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a93098b497cd66fc2ad84fbd38661e580}\label{namespacecore_1_1utils_a93098b497cd66fc2ad84fbd38661e580}} 
+\index{core.utils@{core.utils}!CURRENCY\_URL@{CURRENCY\_URL}}
+\index{CURRENCY\_URL@{CURRENCY\_URL}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{CURRENCY\_URL}{CURRENCY\_URL}}
+{\footnotesize\ttfamily string core.\+utils.\+C\+U\+R\+R\+E\+N\+C\+Y\+\_\+\+U\+RL = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/currency\char`\"{}}
+
+
+
+Definition at line 27 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a2de43731c61fd3f73646aec2a92bee71}\label{namespacecore_1_1utils_a2de43731c61fd3f73646aec2a92bee71}} 
+\index{core.utils@{core.utils}!DAILY\_LIMIT\_EGP@{DAILY\_LIMIT\_EGP}}
+\index{DAILY\_LIMIT\_EGP@{DAILY\_LIMIT\_EGP}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{DAILY\_LIMIT\_EGP}{DAILY\_LIMIT\_EGP}}
+{\footnotesize\ttfamily int core.\+utils.\+D\+A\+I\+L\+Y\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+GP = 10000}
+
+
+
+Definition at line 43 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_ab39dff30b40c415dd8def9690ef3c088}\label{namespacecore_1_1utils_ab39dff30b40c415dd8def9690ef3c088}} 
+\index{core.utils@{core.utils}!db\_configs@{db\_configs}}
+\index{db\_configs@{db\_configs}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{db\_configs}{db\_configs}}
+{\footnotesize\ttfamily string core.\+utils.\+db\+\_\+configs = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}}
+
+
+
+Definition at line 50 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a2da89483b243a02ca9ab2077e07e6b1d}\label{namespacecore_1_1utils_a2da89483b243a02ca9ab2077e07e6b1d}} 
+\index{core.utils@{core.utils}!EGP@{EGP}}
+\index{EGP@{EGP}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{EGP}{EGP}}
+{\footnotesize\ttfamily string core.\+utils.\+E\+GP = \textquotesingle{}E\+GP\textquotesingle{}}
+
+
+
+Definition at line 47 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}\label{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}} 
+\index{core.utils@{core.utils}!EUR@{EUR}}
+\index{EUR@{EUR}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{EUR}{EUR}}
+{\footnotesize\ttfamily string core.\+utils.\+E\+UR = \textquotesingle{}E\+UR\textquotesingle{}}
+
+
+
+Definition at line 46 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a2c4a415f35f12afb96cffc32812104ff}\label{namespacecore_1_1utils_a2c4a415f35f12afb96cffc32812104ff}} 
+\index{core.utils@{core.utils}!FEE@{FEE}}
+\index{FEE@{FEE}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{FEE}{FEE}}
+{\footnotesize\ttfamily float core.\+utils.\+F\+EE = 0.\+01}
+
+
+
+Definition at line 11 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_aa8ab0e7e791ad81073211f9dbe00cb73}\label{namespacecore_1_1utils_aa8ab0e7e791ad81073211f9dbe00cb73}} 
+\index{core.utils@{core.utils}!filemode@{filemode}}
+\index{filemode@{filemode}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{filemode}{filemode}}
+{\footnotesize\ttfamily core.\+utils.\+filemode}
+
+
+
+Definition at line 54 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_acc1defa8f2afef711123e6608e807fc2}\label{namespacecore_1_1utils_acc1defa8f2afef711123e6608e807fc2}} 
+\index{core.utils@{core.utils}!filename@{filename}}
+\index{filename@{filename}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily core.\+utils.\+filename}
+
+
+
+Definition at line 52 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}\label{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}} 
+\index{core.utils@{core.utils}!format@{format}}
+\index{format@{format}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily core.\+utils.\+format}
+
+
+
+Definition at line 53 of file utils.\+py.
+
+
+
+Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Currency.\+exchange(), core.\+utils.\+Currency.\+exchange\+\_\+back(), core.\+utils.\+exchangerate\+\_\+rate(), core.\+utils.\+fixer\+\_\+rate(), core.\+utils.\+Payment\+Gate.\+get\+\_\+balance(), and core.\+utils.\+process\+\_\+cur().
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a5eab2d894a9c95f3b16b9e5af18261f5}\label{namespacecore_1_1utils_a5eab2d894a9c95f3b16b9e5af18261f5}} 
+\index{core.utils@{core.utils}!GOODS@{GOODS}}
+\index{GOODS@{GOODS}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{GOODS}{GOODS}}
+{\footnotesize\ttfamily string core.\+utils.\+G\+O\+O\+DS = \char`\"{}/api/v0.\+1/goods\char`\"{}}
+
+
+
+Definition at line 21 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a8fe8d82568a35a95541bd476be058300}\label{namespacecore_1_1utils_a8fe8d82568a35a95541bd476be058300}} 
+\index{core.utils@{core.utils}!GOODS\_URL@{GOODS\_URL}}
+\index{GOODS\_URL@{GOODS\_URL}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{GOODS\_URL}{GOODS\_URL}}
+{\footnotesize\ttfamily string core.\+utils.\+G\+O\+O\+D\+S\+\_\+\+U\+RL = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/goods\char`\"{}}
+
+
+
+Definition at line 22 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a9e1eedc69bed488000a389ba281c334d}\label{namespacecore_1_1utils_a9e1eedc69bed488000a389ba281c334d}} 
+\index{core.utils@{core.utils}!LEDGER@{LEDGER}}
+\index{LEDGER@{LEDGER}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{LEDGER}{LEDGER}}
+{\footnotesize\ttfamily string core.\+utils.\+L\+E\+D\+G\+ER = \char`\"{}/api/v0.\+1/ledger\char`\"{}}
+
+
+
+Definition at line 17 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_aa6a6520c85902e89cc54f34e4caee86e}\label{namespacecore_1_1utils_aa6a6520c85902e89cc54f34e4caee86e}} 
+\index{core.utils@{core.utils}!LEDGER\_URL@{LEDGER\_URL}}
+\index{LEDGER\_URL@{LEDGER\_URL}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{LEDGER\_URL}{LEDGER\_URL}}
+{\footnotesize\ttfamily string core.\+utils.\+L\+E\+D\+G\+E\+R\+\_\+\+U\+RL = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/ledger\char`\"{}}
+
+
+
+Definition at line 32 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_aeb684e0a844297878e2ede052e870e64}\label{namespacecore_1_1utils_aeb684e0a844297878e2ede052e870e64}} 
+\index{core.utils@{core.utils}!log@{log}}
+\index{log@{log}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily core.\+utils.\+log = logging.\+get\+Logger()}
+
+
+
+Definition at line 55 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a182b6a555b59fdf17069cdb0b9954a8c}\label{namespacecore_1_1utils_a182b6a555b59fdf17069cdb0b9954a8c}} 
+\index{core.utils@{core.utils}!MAX\_BALANCE@{MAX\_BALANCE}}
+\index{MAX\_BALANCE@{MAX\_BALANCE}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{MAX\_BALANCE}{MAX\_BALANCE}}
+{\footnotesize\ttfamily int core.\+utils.\+M\+A\+X\+\_\+\+B\+A\+L\+A\+N\+CE = \mbox{\hyperlink{namespacecore_1_1utils_aeb6eccc58477f2fddde912dc76ccf940}{M\+A\+X\+\_\+\+C\+O\+ST}}$\ast$10}
+
+
+
+Definition at line 41 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_aeb6eccc58477f2fddde912dc76ccf940}\label{namespacecore_1_1utils_aeb6eccc58477f2fddde912dc76ccf940}} 
+\index{core.utils@{core.utils}!MAX\_COST@{MAX\_COST}}
+\index{MAX\_COST@{MAX\_COST}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{MAX\_COST}{MAX\_COST}}
+{\footnotesize\ttfamily int core.\+utils.\+M\+A\+X\+\_\+\+C\+O\+ST = 1000000}
+
+
+
+Definition at line 13 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_afeec3566a7f124093fbf4fe9f8aa2f9f}\label{namespacecore_1_1utils_afeec3566a7f124093fbf4fe9f8aa2f9f}} 
+\index{core.utils@{core.utils}!MAX\_CRED\_ID@{MAX\_CRED\_ID}}
+\index{MAX\_CRED\_ID@{MAX\_CRED\_ID}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{MAX\_CRED\_ID}{MAX\_CRED\_ID}}
+{\footnotesize\ttfamily int core.\+utils.\+M\+A\+X\+\_\+\+C\+R\+E\+D\+\_\+\+ID = 9223372036854775807}
+
+
+
+Definition at line 40 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a8703e6bfde946d4c5e1d8b771bea5882}\label{namespacecore_1_1utils_a8703e6bfde946d4c5e1d8b771bea5882}} 
+\index{core.utils@{core.utils}!MAX\_GOODS@{MAX\_GOODS}}
+\index{MAX\_GOODS@{MAX\_GOODS}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{MAX\_GOODS}{MAX\_GOODS}}
+{\footnotesize\ttfamily int core.\+utils.\+M\+A\+X\+\_\+\+G\+O\+O\+DS = 100}
+
+
+
+Definition at line 14 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_ae77a279ae4204bb59c699e995c257fec}\label{namespacecore_1_1utils_ae77a279ae4204bb59c699e995c257fec}} 
+\index{core.utils@{core.utils}!PURCHASE@{PURCHASE}}
+\index{PURCHASE@{PURCHASE}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{PURCHASE}{PURCHASE}}
+{\footnotesize\ttfamily string core.\+utils.\+P\+U\+R\+C\+H\+A\+SE = \char`\"{}/api/v0.\+1/purchase\char`\"{}}
+
+
+
+Definition at line 19 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a682cfc562c6878450ce895363702c63a}\label{namespacecore_1_1utils_a682cfc562c6878450ce895363702c63a}} 
+\index{core.utils@{core.utils}!PURCHASE\_URL@{PURCHASE\_URL}}
+\index{PURCHASE\_URL@{PURCHASE\_URL}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{PURCHASE\_URL}{PURCHASE\_URL}}
+{\footnotesize\ttfamily string core.\+utils.\+P\+U\+R\+C\+H\+A\+S\+E\+\_\+\+U\+RL = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/purchase\char`\"{}}
+
+
+
+Definition at line 33 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_afa1fcbb79b33061d51ebbc040db1e9fa}\label{namespacecore_1_1utils_afa1fcbb79b33061d51ebbc040db1e9fa}} 
+\index{core.utils@{core.utils}!QUALITY\_REDUCTION@{QUALITY\_REDUCTION}}
+\index{QUALITY\_REDUCTION@{QUALITY\_REDUCTION}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{QUALITY\_REDUCTION}{QUALITY\_REDUCTION}}
+{\footnotesize\ttfamily float core.\+utils.\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+R\+E\+D\+U\+C\+T\+I\+ON = 0.\+1}
+
+
+
+Definition at line 12 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a37adb3629251f374911f9a5b5b91984d}\label{namespacecore_1_1utils_a37adb3629251f374911f9a5b5b91984d}} 
+\index{core.utils@{core.utils}!REGISTER@{REGISTER}}
+\index{REGISTER@{REGISTER}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{REGISTER}{REGISTER}}
+{\footnotesize\ttfamily string core.\+utils.\+R\+E\+G\+I\+S\+T\+ER = \char`\"{}/api/v0.\+1/register\char`\"{}}
+
+
+
+Definition at line 16 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a6c55682d63a56f227e5385aa498a42a4}\label{namespacecore_1_1utils_a6c55682d63a56f227e5385aa498a42a4}} 
+\index{core.utils@{core.utils}!REGISTER\_URL@{REGISTER\_URL}}
+\index{REGISTER\_URL@{REGISTER\_URL}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{REGISTER\_URL}{REGISTER\_URL}}
+{\footnotesize\ttfamily string core.\+utils.\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+U\+RL = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/register\char`\"{}}
+
+
+
+Definition at line 31 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a6a7e0440a2beea6620ee3168f2333b83}\label{namespacecore_1_1utils_a6a7e0440a2beea6620ee3168f2333b83}} 
+\index{core.utils@{core.utils}!seed@{seed}}
+\index{seed@{seed}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{seed}{seed}}
+{\footnotesize\ttfamily core.\+utils.\+seed = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})}
+
+
+
+Definition at line 7 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_adcabc1c9523db5a486f106119d79f96c}\label{namespacecore_1_1utils_adcabc1c9523db5a486f106119d79f96c}} 
+\index{core.utils@{core.utils}!STOCHASTIC\_TRADE\_THRESHOLD@{STOCHASTIC\_TRADE\_THRESHOLD}}
+\index{STOCHASTIC\_TRADE\_THRESHOLD@{STOCHASTIC\_TRADE\_THRESHOLD}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{STOCHASTIC\_TRADE\_THRESHOLD}{STOCHASTIC\_TRADE\_THRESHOLD}}
+{\footnotesize\ttfamily float core.\+utils.\+S\+T\+O\+C\+H\+A\+S\+T\+I\+C\+\_\+\+T\+R\+A\+D\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD = 0.\+9}
+
+
+
+Definition at line 42 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a014ec7ca779f32f62cdaf93bd227b56a}\label{namespacecore_1_1utils_a014ec7ca779f32f62cdaf93bd227b56a}} 
+\index{core.utils@{core.utils}!TIMESTAMP\_FORMAT@{TIMESTAMP\_FORMAT}}
+\index{TIMESTAMP\_FORMAT@{TIMESTAMP\_FORMAT}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{TIMESTAMP\_FORMAT}{TIMESTAMP\_FORMAT}}
+{\footnotesize\ttfamily string core.\+utils.\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+F\+O\+R\+M\+AT = \char`\"{}\%Y-\/\%m-\/\%d \%H\+:\%M\+:\%S.\%f\char`\"{}}
+
+
+
+Definition at line 10 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a293e1f7985c1851c1abc4ea51b49b46d}\label{namespacecore_1_1utils_a293e1f7985c1851c1abc4ea51b49b46d}} 
+\index{core.utils@{core.utils}!TRANSACTION@{TRANSACTION}}
+\index{TRANSACTION@{TRANSACTION}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{TRANSACTION}{TRANSACTION}}
+{\footnotesize\ttfamily string core.\+utils.\+T\+R\+A\+N\+S\+A\+C\+T\+I\+ON = \char`\"{}/api/v0.\+1/transaction\char`\"{}}
+
+
+
+Definition at line 38 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a27257fb18c899d4509f1c09c64c7b225}\label{namespacecore_1_1utils_a27257fb18c899d4509f1c09c64c7b225}} 
+\index{core.utils@{core.utils}!TRANSACTION\_URL@{TRANSACTION\_URL}}
+\index{TRANSACTION\_URL@{TRANSACTION\_URL}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{TRANSACTION\_URL}{TRANSACTION\_URL}}
+{\footnotesize\ttfamily string core.\+utils.\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+U\+RL = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/transaction\char`\"{}}
+
+
+
+Definition at line 37 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a8a26be253e2f178c5f6ec28f0acad76c}\label{namespacecore_1_1utils_a8a26be253e2f178c5f6ec28f0acad76c}} 
+\index{core.utils@{core.utils}!USD@{USD}}
+\index{USD@{USD}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{USD}{USD}}
+{\footnotesize\ttfamily string core.\+utils.\+U\+SD = \textquotesingle{}U\+SD\textquotesingle{}}
+
+
+
+Definition at line 48 of file utils.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1utils_a403e04efd62b792ce24c059dba242924}\label{namespacecore_1_1utils_a403e04efd62b792ce24c059dba242924}} 
+\index{core.utils@{core.utils}!WEEKLY\_LIMIT\_EGP@{WEEKLY\_LIMIT\_EGP}}
+\index{WEEKLY\_LIMIT\_EGP@{WEEKLY\_LIMIT\_EGP}!core.utils@{core.utils}}
+\doxysubsubsection{\texorpdfstring{WEEKLY\_LIMIT\_EGP}{WEEKLY\_LIMIT\_EGP}}
+{\footnotesize\ttfamily int core.\+utils.\+W\+E\+E\+K\+L\+Y\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+GP = 50000}
+
+
+
+Definition at line 44 of file utils.\+py.
+

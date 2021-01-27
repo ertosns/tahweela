@@ -1,0 +1,44 @@
+\hypertarget{namespacequeries_1_1inserts_1_1owners}{}\doxysection{queries.\+inserts.\+owners Namespace Reference}
+\label{namespacequeries_1_1inserts_1_1owners}\index{queries.inserts.owners@{queries.inserts.owners}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1inserts_1_1owners_af611b7e756f6906d5114f862f80d6f35}{add\+\_\+owner}} (oid, gid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacequeries_1_1inserts_1_1owners_af611b7e756f6906d5114f862f80d6f35}\label{namespacequeries_1_1inserts_1_1owners_af611b7e756f6906d5114f862f80d6f35}} 
+\index{queries.inserts.owners@{queries.inserts.owners}!add\_owner@{add\_owner}}
+\index{add\_owner@{add\_owner}!queries.inserts.owners@{queries.inserts.owners}}
+\doxysubsubsection{\texorpdfstring{add\_owner()}{add\_owner()}}
+{\footnotesize\ttfamily def queries.\+inserts.\+owners.\+add\+\_\+owner (\begin{DoxyParamCaption}\item[{}]{oid,  }\item[{}]{gid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}assign ownership of owner with id (oid) to the good with id (gid)
+
+@param oid: owner id
+@param gid: good id
+\end{DoxyVerb}
+ 
+
+Definition at line 5 of file owners.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1inserts_1_1owners_ace4e638a842c53ef651834fbf72f6b6f}{add\_owner}}(oid, gid):}
+\DoxyCodeLine{6     \textcolor{stringliteral}{"""assign ownership of owner with id (oid) to the good with id (gid)}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{    @param oid: owner id}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    @param gid: good id}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{11     stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO owners (owner\_id, good\_id) VALUES (\{oid\}, \{gid\})"}).\(\backslash\)}
+\DoxyCodeLine{12         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(oid=sql.Literal(oid), \(\backslash\)}
+\DoxyCodeLine{13                gid=sql.Literal(gid))}
+\DoxyCodeLine{14     db.log(stat)}
+\DoxyCodeLine{15     cur.execute(stat)}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

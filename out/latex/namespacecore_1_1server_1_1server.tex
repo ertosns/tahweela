@@ -1,0 +1,962 @@
+\hypertarget{namespacecore_1_1server_1_1server}{}\doxysection{core.\+server.\+server Namespace Reference}
+\label{namespacecore_1_1server_1_1server}\index{core.server.server@{core.server.server}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a9ed4334dbfb6933ba31561c62a326811}{get\+\_\+credid}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a96466dc42f56cae7d190d0a32d235556}{is\+\_\+email}} (email)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a971d8b7372b9e3548a266ff9373e0ad5}{authenticate}} (user, passcode)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_ae03340bacb313931ea21ed616bf75cf0}{unauthorized}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a7abed3618dce8dfc82db88504621e7fa}{register\+\_\+client}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_aa6df1567622a40f24e74f1daa3c424e9}{add\+\_\+bank\+\_\+account}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a2ccd3f4fc783a6da9115970238b12230}{add\+\_\+contact}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_af238ee0ce6d5e29834c8f207b7cd7c41}{get\+\_\+balance}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a5c1e2c8a284854a7b27c4fbf7144b038}{update\+\_\+balance\+\_\+preference}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_a97a5fcbe887022d384ea97f7d3b7dc47}{update\+\_\+ledger}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1server_aaa1ff2a38465c5ade1f235cf197dde62}{make\+\_\+transaction}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_ad2bf3b7601bca535e854bac189410f0b}{seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacecore_1_1server_1_1server_aacc32d3c57c3b577b7e2647528baaf8c}{db\+\_\+configs}} = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a39c673ca728dfb59e5fa8e3da0dd8be9}{db}} = \mbox{\hyperlink{classcore_1_1queries_1_1database_1_1database}{database}}(\mbox{\hyperlink{namespacecore_1_1server_1_1server_aacc32d3c57c3b577b7e2647528baaf8c}{db\+\_\+configs}})
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a4cc77d0b54229e293423876599326ce9}{filename}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}{format}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_adb9ec4bde84331664eb52b6412cb09fd}{filemode}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a015041a18162a9c613c7321dd94c440e}{level}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a826f85e804e434c97db7e6738226d717}{logger}} = logging.\+get\+Logger()
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a67e902b543f6cff982320c5d78af065e}{app}} = Flask(\textquotesingle{}tahweela\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_a43a2e2d9bdeff715032f6df4b5396792}{auth}} = H\+T\+T\+P\+Basic\+Auth()
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_acb92592041332fb2b9ba60483b370a64}{client\+\_\+passcode}} = None
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_aaab15fe49e5cba7d460578def43c0d0c}{client\+\_\+cred\+\_\+id}} = None
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1server_af424e5a3aad0db0c0b8cd014a17f2f5a}{debug}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_aa6df1567622a40f24e74f1daa3c424e9}\label{namespacecore_1_1server_1_1server_aa6df1567622a40f24e74f1daa3c424e9}} 
+\index{core.server.server@{core.server.server}!add\_bank\_account@{add\_bank\_account}}
+\index{add\_bank\_account@{add\_bank\_account}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{add\_bank\_account()}{add\_bank\_account()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+add\+\_\+bank\+\_\+account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}register bank account for the authenticated client of the current session
+
+@param: the post body is expect to be json with keys ["bank_name", branch_number", "account_number", "name_reference"], a client can register more than one bank account for tahweela account.
+@return return bid (banking id), since multiple bank accounts are supported, bid need to be sent for each transaction so that, the transactions are done with it.
+\end{DoxyVerb}
+ 
+
+Definition at line 194 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{194 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_aa6df1567622a40f24e74f1daa3c424e9}{add\_bank\_account}}():}
+\DoxyCodeLine{195   \textcolor{stringliteral}{""" register bank account for the authenticated client of the current session}}
+\DoxyCodeLine{196 \textcolor{stringliteral}{}}
+\DoxyCodeLine{197 \textcolor{stringliteral}{  @param: the post body is expect to be json with keys ["bank\_name", branch\_number", "account\_number", "name\_reference"], a client can register more than one bank account for tahweela account.}}
+\DoxyCodeLine{198 \textcolor{stringliteral}{  @return return bid (banking id), since multiple bank accounts are supported, bid need to be sent for each transaction so that, the transactions are done with it.}}
+\DoxyCodeLine{199 \textcolor{stringliteral}{  """}}
+\DoxyCodeLine{200   req=request.get\_json(force=\textcolor{keyword}{True})}
+\DoxyCodeLine{201   bank\_name=req.get(\textcolor{stringliteral}{"bank\_name"}, \textcolor{keywordtype}{None})}
+\DoxyCodeLine{202   branch\_number=req.get(\textcolor{stringliteral}{"branch\_number"}, \textcolor{keywordtype}{None})}
+\DoxyCodeLine{203   account\_number=req.get(\textcolor{stringliteral}{"account\_number"}, \textcolor{keywordtype}{None})}
+\DoxyCodeLine{204   name\_reference=req.get(\textcolor{stringliteral}{"name\_reference"}, \textcolor{stringliteral}{""})}
+\DoxyCodeLine{205   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} req \textcolor{keywordflow}{or} bank\_name==\textcolor{keywordtype}{None} \textcolor{keywordflow}{or} branch\_number==\textcolor{keywordtype}{None} \textcolor{keywordflow}{or} account\_number==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{206     logger.critical(\textcolor{stringliteral}{"incomplete request"})}
+\DoxyCodeLine{207     abort(401)}
+\DoxyCodeLine{208   db.init()}
+\DoxyCodeLine{209   ADD\_BANK\_ACCOUNT\_LOCK=7}
+\DoxyCodeLine{210   lock=ADD\_BANK\_ACCOUNT\_LOCK}
+\DoxyCodeLine{211   \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{212     db.lock\_advisory(lock)}
+\DoxyCodeLine{213     cid=db.gets.credid2cid(client\_cred\_id)}
+\DoxyCodeLine{214     logger.debug(\textcolor{stringliteral}{"client added"})}
+\DoxyCodeLine{215     bank=PaymentGate(bank\_name, branch\_number, account\_number, name\_reference)}
+\DoxyCodeLine{216     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} bank.authenticated():}
+\DoxyCodeLine{217         \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{'payment gate authentication failure!'})}
+\DoxyCodeLine{218     balance\_dt=bank.get\_balance()}
+\DoxyCodeLine{219     balance=balance\_dt[\textcolor{stringliteral}{'balance'}]}
+\DoxyCodeLine{220     base\_currency=balance\_dt[\textcolor{stringliteral}{'base'}]}
+\DoxyCodeLine{221     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(base\_currency):}
+\DoxyCodeLine{222         currency=Currency(base\_currency)}
+\DoxyCodeLine{223         db.inserts.add\_currency(base\_currency, currency.rate)}
+\DoxyCodeLine{224     base\_currency\_id=db.gets.get\_currency\_id(base\_currency)}
+\DoxyCodeLine{225     db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, base\_currency\_id)}
+\DoxyCodeLine{226     db.commit(lock)}
+\DoxyCodeLine{227   \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{228     print(\textcolor{stringliteral}{'err1'})}
+\DoxyCodeLine{229     db.rollback(lock)}
+\DoxyCodeLine{230     logger.critical(\textcolor{stringliteral}{"assigning bank account failed, error: "}+str(error))}
+\DoxyCodeLine{231     abort(300)}
+\DoxyCodeLine{232   \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} error:}
+\DoxyCodeLine{233     print(\textcolor{stringliteral}{'err2'})}
+\DoxyCodeLine{234     db.rollback(lock)}
+\DoxyCodeLine{235     logger.critical(\textcolor{stringliteral}{"adding bank account failed, error: "}, str(error))}
+\DoxyCodeLine{236     abort(300)}
+\DoxyCodeLine{237   \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{238     db.close()}
+\DoxyCodeLine{239   \textcolor{keywordflow}{return} jsonify(\{\textcolor{stringliteral}{'balance'}:balance, \textcolor{stringliteral}{'base'}: base\_currency\}), 201}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241 @app.route(CONTACTS, methods=[\textcolor{stringliteral}{'POST'}])}
+\DoxyCodeLine{242 @auth.login\_required}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a2ccd3f4fc783a6da9115970238b12230}\label{namespacecore_1_1server_1_1server_a2ccd3f4fc783a6da9115970238b12230}} 
+\index{core.server.server@{core.server.server}!add\_contact@{add\_contact}}
+\index{add\_contact@{add\_contact}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{add\_contact()}{add\_contact()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+add\+\_\+contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get the credential for the given contact
+\end{DoxyVerb}
+ 
+
+Definition at line 243 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{243 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_a2ccd3f4fc783a6da9115970238b12230}{add\_contact}}():}
+\DoxyCodeLine{244     \textcolor{stringliteral}{"""get the credential for the given contact}}
+\DoxyCodeLine{245 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{246     req=request.get\_json(force=\textcolor{keyword}{True})}
+\DoxyCodeLine{247     email=req.get(\textcolor{stringliteral}{'email'}, \textcolor{keywordtype}{None})}
+\DoxyCodeLine{248     logger.info(\textcolor{stringliteral}{"requesting contact"})}
+\DoxyCodeLine{249     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} req \textcolor{keywordflow}{or} email==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{250         logger.debug(\textcolor{stringliteral}{"incomplete URL"})}
+\DoxyCodeLine{251         abort(401)}
+\DoxyCodeLine{252     payload=\{\}}
+\DoxyCodeLine{253     db.init()}
+\DoxyCodeLine{254     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{255         db.repeatable\_read()}
+\DoxyCodeLine{256         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.account\_byemail(email):}
+\DoxyCodeLine{257             logger.critical(\textcolor{stringliteral}{"contact doesn't exist"})}
+\DoxyCodeLine{258             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"contact doesn't exists!"})}
+\DoxyCodeLine{259         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{260         credid=db.gets.cid2credid(cid)}
+\DoxyCodeLine{261         \textcolor{comment}{\# get name given cid}}
+\DoxyCodeLine{262         name=db.gets.get\_name(cid)}
+\DoxyCodeLine{263         payload = \{\textcolor{stringliteral}{"credid"}: credid\}}
+\DoxyCodeLine{264         db.commit()}
+\DoxyCodeLine{265     \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{266         db.rollback()}
+\DoxyCodeLine{267         logger.critical(\textcolor{stringliteral}{"request failed, error:"}+str(error))}
+\DoxyCodeLine{268         abort(300)}
+\DoxyCodeLine{269     \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} error:}
+\DoxyCodeLine{270         db.rollback()}
+\DoxyCodeLine{271         logger.critical(\textcolor{stringliteral}{"requesting failed"}+str(error))}
+\DoxyCodeLine{272         print(\textcolor{stringliteral}{'FAILURE, err: '}, str(error))}
+\DoxyCodeLine{273         abort(400)}
+\DoxyCodeLine{274     \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{275         db.close()}
+\DoxyCodeLine{276     \textcolor{keywordflow}{return} jsonify(payload), 201}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{278 @app.route(BALANCE, methods=[\textcolor{stringliteral}{'GET'}])}
+\DoxyCodeLine{279 @auth.login\_required}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a971d8b7372b9e3548a266ff9373e0ad5}\label{namespacecore_1_1server_1_1server_a971d8b7372b9e3548a266ff9373e0ad5}} 
+\index{core.server.server@{core.server.server}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+authenticate (\begin{DoxyParamCaption}\item[{}]{user,  }\item[{}]{passcode }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}authenticate user, with username/password
+
+user can be user's email, or registered name
+\end{DoxyVerb}
+ 
+
+Definition at line 49 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_a971d8b7372b9e3548a266ff9373e0ad5}{authenticate}}(user, passcode):}
+\DoxyCodeLine{50     \textcolor{stringliteral}{"""authenticate user, with username/password}}
+\DoxyCodeLine{51 \textcolor{stringliteral}{}}
+\DoxyCodeLine{52 \textcolor{stringliteral}{    user can be user's email, or registered name}}
+\DoxyCodeLine{53 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{54     print(\textcolor{stringliteral}{"AUTHENTICATING....."})}
+\DoxyCodeLine{55     \textcolor{stringliteral}{'''}}
+\DoxyCodeLine{56 \textcolor{stringliteral}{    \#TODO (fix) it seams that is\_email isn't strong enough, it fails for some emails}}
+\DoxyCodeLine{57 \textcolor{stringliteral}{    if is\_email(user):}}
+\DoxyCodeLine{58 \textcolor{stringliteral}{      print('authenticating user by email: ', user)}}
+\DoxyCodeLine{59 \textcolor{stringliteral}{      if db.exists.account\_byemail(user):}}
+\DoxyCodeLine{60 \textcolor{stringliteral}{        cid=db.gets.get\_client\_id\_byemail(user)}}
+\DoxyCodeLine{61 \textcolor{stringliteral}{      else:}}
+\DoxyCodeLine{62 \textcolor{stringliteral}{        cid=-\/1}}
+\DoxyCodeLine{63 \textcolor{stringliteral}{    else:}}
+\DoxyCodeLine{64 \textcolor{stringliteral}{      print('authenticating user by name', user)}}
+\DoxyCodeLine{65 \textcolor{stringliteral}{      if db.exists.account\_byname(user, passcode):}}
+\DoxyCodeLine{66 \textcolor{stringliteral}{        cid=db.gets.get\_client\_id\_byname(user)}}
+\DoxyCodeLine{67 \textcolor{stringliteral}{      else:}}
+\DoxyCodeLine{68 \textcolor{stringliteral}{        cid=-\/1}}
+\DoxyCodeLine{69 \textcolor{stringliteral}{    '''}}
+\DoxyCodeLine{70     print(\textcolor{stringliteral}{'authenticating [\{\}+\{\}]...'}.\mbox{\hyperlink{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}{format}}(user, passcode))}
+\DoxyCodeLine{71     print(\textcolor{stringliteral}{'authenticating user by email: '}, user)}
+\DoxyCodeLine{72     \textcolor{keywordflow}{if} db.exists.account\_byemail(user):}
+\DoxyCodeLine{73       cid=db.gets.get\_client\_id\_byemail(user)}
+\DoxyCodeLine{74     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{75       print(\textcolor{stringliteral}{'doesnt exist!'})}
+\DoxyCodeLine{76       cid=-\/1}
+\DoxyCodeLine{77     \textcolor{keywordflow}{if} cid==-\/1:}
+\DoxyCodeLine{78       print(\textcolor{stringliteral}{'authenticating user by name'}, user)}
+\DoxyCodeLine{79       \textcolor{keywordflow}{if} db.exists.account\_byname(user, passcode):}
+\DoxyCodeLine{80         cid=db.gets.get\_client\_id\_byname(user)}
+\DoxyCodeLine{81       \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{82         print(\textcolor{stringliteral}{'doesnt exist!'})}
+\DoxyCodeLine{83         cid=-\/1}
+\DoxyCodeLine{84     \textcolor{comment}{\#TODO support user as credid itself}}
+\DoxyCodeLine{85     \textcolor{keywordflow}{if} cid==-\/1: \textcolor{comment}{\#doesn't exists}}
+\DoxyCodeLine{86         logger.critical(\textcolor{stringliteral}{"authentication failed"})}
+\DoxyCodeLine{87         print(\textcolor{stringliteral}{'authentication failed ,doesnt exist'})}
+\DoxyCodeLine{88         \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}}
+\DoxyCodeLine{89     print(\textcolor{stringliteral}{'SET GLOBAL!'})}
+\DoxyCodeLine{90     \textcolor{comment}{\#TODO HOW TO MAKE SURE THAT CREDID IS UNIQUE?}}
+\DoxyCodeLine{91     \textcolor{comment}{\# brute force, keep trying new values that does exist,}}
+\DoxyCodeLine{92     \textcolor{comment}{\# is the simplest, otherwise use conguential generator}}
+\DoxyCodeLine{93     \textcolor{keyword}{global} client\_cred\_id, client\_passcode}
+\DoxyCodeLine{94     credid=db.gets.cid2credid(cid)}
+\DoxyCodeLine{95     \textcolor{comment}{\#TODO implement cid2credid}}
+\DoxyCodeLine{96     logger.debug(\textcolor{stringliteral}{"authenticating client with cred \{\}:\{\}"}. \mbox{\hyperlink{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}{format}}(user, passcode))}
+\DoxyCodeLine{97     print(\textcolor{stringliteral}{'credid: '}, credid)}
+\DoxyCodeLine{98     print(\textcolor{stringliteral}{"username: "}, user)}
+\DoxyCodeLine{99     print(\textcolor{stringliteral}{"password: "}, passcode)}
+\DoxyCodeLine{100     db.init()}
+\DoxyCodeLine{101     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{102       db.repeatable\_read()}
+\DoxyCodeLine{103       passcode\_eq= db.gets.get\_password(credid)}
+\DoxyCodeLine{104       print(\textcolor{stringliteral}{"pass\_code: "}, passcode\_eq)}
+\DoxyCodeLine{105       logger.info(\textcolor{stringliteral}{"username:"}+str(user)+\textcolor{stringliteral}{", passcode:"}+str(passcode))}
+\DoxyCodeLine{106       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} passcode==passcode\_eq:}
+\DoxyCodeLine{107         print(\textcolor{stringliteral}{'FAILURE PASSOWRD MISMATCH'})}
+\DoxyCodeLine{108         \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"password mismatch!"})}
+\DoxyCodeLine{109       db.commit()}
+\DoxyCodeLine{110       print(\textcolor{stringliteral}{'AUTHENTICATION SUCCESS....'})}
+\DoxyCodeLine{111     \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{112       print(\textcolor{stringliteral}{'AUTHENTICATION FAILURE'})}
+\DoxyCodeLine{113       db.rollback()}
+\DoxyCodeLine{114       logger.critical(\textcolor{stringliteral}{"authentication failed with error: "}+str(error))}
+\DoxyCodeLine{115       abort(300)}
+\DoxyCodeLine{116       \textcolor{keywordflow}{return} \textcolor{keywordtype}{None} \textcolor{comment}{\#doesn't reach here}}
+\DoxyCodeLine{117     \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{118       print(\textcolor{stringliteral}{'AUTHENTICATION FAILURE'})}
+\DoxyCodeLine{119       db.rollback()}
+\DoxyCodeLine{120       logger.critical(\textcolor{stringliteral}{"authentication failed "})}
+\DoxyCodeLine{121       abort(300)}
+\DoxyCodeLine{122       \textcolor{keywordflow}{return} \textcolor{keywordtype}{None} \textcolor{comment}{\#doesn't reach here!}}
+\DoxyCodeLine{123     \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{124       db.close()}
+\DoxyCodeLine{125     client\_cred\_id=credid}
+\DoxyCodeLine{126     client\_passcode=passcode}
+\DoxyCodeLine{127     \textcolor{keywordflow}{return} user}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 @auth.error\_handler}
+
+\end{DoxyCode}
+
+
+References core.\+server.\+server.\+format.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_af238ee0ce6d5e29834c8f207b7cd7c41}\label{namespacecore_1_1server_1_1server_af238ee0ce6d5e29834c8f207b7cd7c41}} 
+\index{core.server.server@{core.server.server}!get\_balance@{get\_balance}}
+\index{get\_balance@{get\_balance}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{get\_balance()}{get\_balance()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+get\+\_\+balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get balance of the current client
+
+@return {'balance': balance, 'base': base}
+\end{DoxyVerb}
+ 
+
+Definition at line 280 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{280 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_af238ee0ce6d5e29834c8f207b7cd7c41}{get\_balance}}():}
+\DoxyCodeLine{281     \textcolor{stringliteral}{""" get balance of the current client}}
+\DoxyCodeLine{282 \textcolor{stringliteral}{}}
+\DoxyCodeLine{283 \textcolor{stringliteral}{    @return \{'balance': balance, 'base': base\}}}
+\DoxyCodeLine{284 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{285     balance=\textcolor{keywordtype}{None}}
+\DoxyCodeLine{286     logger.info(\textcolor{stringliteral}{"balance requested"})}
+\DoxyCodeLine{287     db.init()}
+\DoxyCodeLine{288     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{289         db.repeatable\_read()}
+\DoxyCodeLine{290         cid=db.gets.credid2cid(client\_cred\_id)}
+\DoxyCodeLine{291         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.bank\_account\_bycid(cid):}
+\DoxyCodeLine{292             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"no bank account added yet!"})}
+\DoxyCodeLine{293         \textcolor{comment}{\#this would return balance in bank base}}
+\DoxyCodeLine{294         balance=db.gets.get\_balance\_by\_credid(client\_cred\_id)}
+\DoxyCodeLine{295         \textcolor{comment}{\# transform balance to user preference}}
+\DoxyCodeLine{296         pref\_cur=db.gets.get\_preference\_currency\_bycid(cid)}
+\DoxyCodeLine{297         amount=balance[\textcolor{stringliteral}{'balance'}]}
+\DoxyCodeLine{298         print(\textcolor{stringliteral}{'|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/> amount \{\}'}.\mbox{\hyperlink{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}{format}}(amount))}
+\DoxyCodeLine{299         base=balance[\textcolor{stringliteral}{'base'}]}
+\DoxyCodeLine{300         currency=Currency(pref\_cur, base)}
+\DoxyCodeLine{301         pref\_balance=currency.exchange(amount)}
+\DoxyCodeLine{302         print(\textcolor{stringliteral}{'|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/> pref\_balance \{\}'}.\mbox{\hyperlink{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}{format}}(pref\_balance))}
+\DoxyCodeLine{303         payload=\{\textcolor{stringliteral}{'balance'}: pref\_balance, \textcolor{stringliteral}{'base'}:pref\_cur\}}
+\DoxyCodeLine{304         db.commit()}
+\DoxyCodeLine{305     \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{306         db.rollback()}
+\DoxyCodeLine{307         logger.critical(\textcolor{stringliteral}{"failed request, error: "}+str(error))}
+\DoxyCodeLine{308         abort(300)}
+\DoxyCodeLine{309     \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{310         db.rollback()}
+\DoxyCodeLine{311         logger.critical(\textcolor{stringliteral}{"failed request"})}
+\DoxyCodeLine{312         abort(300)}
+\DoxyCodeLine{313     \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{314         db.close()}
+\DoxyCodeLine{315     \textcolor{keywordflow}{return} jsonify(payload), 201}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{317 @app.route(CURRENCY, methods=[\textcolor{stringliteral}{'POST'}])}
+\DoxyCodeLine{318 @auth.login\_required}
+
+\end{DoxyCode}
+
+
+References core.\+server.\+server.\+format.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a9ed4334dbfb6933ba31561c62a326811}\label{namespacecore_1_1server_1_1server_a9ed4334dbfb6933ba31561c62a326811}} 
+\index{core.server.server@{core.server.server}!get\_credid@{get\_credid}}
+\index{get\_credid@{get\_credid}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{get\_credid()}{get\_credid()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+get\+\_\+credid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_a9ed4334dbfb6933ba31561c62a326811}{get\_credid}}():}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} int(3333333333333*random.random())}
+\DoxyCodeLine{43 }
+
+\end{DoxyCode}
+
+
+Referenced by core.\+server.\+server.\+register\+\_\+client().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1server_1_1server_a9ed4334dbfb6933ba31561c62a326811_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a96466dc42f56cae7d190d0a32d235556}\label{namespacecore_1_1server_1_1server_a96466dc42f56cae7d190d0a32d235556}} 
+\index{core.server.server@{core.server.server}!is\_email@{is\_email}}
+\index{is\_email@{is\_email}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{is\_email()}{is\_email()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+is\+\_\+email (\begin{DoxyParamCaption}\item[{}]{email }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_a96466dc42f56cae7d190d0a32d235556}{is\_email}}(email):}
+\DoxyCodeLine{45   \textcolor{keywordflow}{return} bool(re.search(\textcolor{stringliteral}{r"\string^[\(\backslash\)w\(\backslash\).\(\backslash\)+\(\backslash\)-\/]+\(\backslash\)@[\(\backslash\)w]+\(\backslash\).[a-\/z]\{2,3\}\$"}, email))}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 @auth.verify\_password}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_aaa1ff2a38465c5ade1f235cf197dde62}\label{namespacecore_1_1server_1_1server_aaa1ff2a38465c5ade1f235cf197dde62}} 
+\index{core.server.server@{core.server.server}!make\_transaction@{make\_transaction}}
+\index{make\_transaction@{make\_transaction}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{make\_transaction()}{make\_transaction()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+make\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 389 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{389 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_aaa1ff2a38465c5ade1f235cf197dde62}{make\_transaction}}():}
+\DoxyCodeLine{390     req=request.get\_json(force=\textcolor{keyword}{True})}
+\DoxyCodeLine{391     recipt\_credid=req[\textcolor{stringliteral}{'credid'}]}
+\DoxyCodeLine{392     \textcolor{comment}{\# the amount of transaction in Euro}}
+\DoxyCodeLine{393     orig\_amount=req[\textcolor{stringliteral}{'amount'}]}
+\DoxyCodeLine{394     currency\_base=req.get(\textcolor{stringliteral}{'currency'}, EUR)}
+\DoxyCodeLine{395     \textcolor{comment}{\#exchange amount to euro for processing}}
+\DoxyCodeLine{396     to\_euro = Currency(EUR, currency\_base)}
+\DoxyCodeLine{397     amount=to\_euro.exchange(orig\_amount)}
+\DoxyCodeLine{398     trx\_name=req.get(\textcolor{stringliteral}{'trx\_name'}, \textcolor{stringliteral}{''})}
+\DoxyCodeLine{399     \textcolor{comment}{\#TRANSACTION LIMITS IN EUROS}}
+\DoxyCodeLine{400     max\_daily=\mbox{\hyperlink{namespacecore_1_1utils_ac13f32df1a27f40f8f3c89c01e40e18c}{daily\_limit}}()}
+\DoxyCodeLine{401     max\_weekly=\mbox{\hyperlink{namespacecore_1_1utils_ace7833d9faa7284d9efbb4081fa80f11}{weekly\_limit}}()}
+\DoxyCodeLine{402     \textcolor{comment}{\#here the weekly/daily conditions are pivoted by the current moment only, note that the bank system can have specific pivot hour (the first momemnt of the day, it's specific for the bank system, and need to be known before hand)}}
+\DoxyCodeLine{403     week\_past=datetime.datetime.now()-\/datetime.timedelta(days=7)}
+\DoxyCodeLine{404     day\_past=datetime.datetime.now()-\/datetime.timedelta(days=1)}
+\DoxyCodeLine{405     \textcolor{comment}{\#TODO abide to the  the constrains}}
+\DoxyCodeLine{406     logger.info(\textcolor{stringliteral}{"making purchase"})}
+\DoxyCodeLine{407     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} req \textcolor{keywordflow}{or} amount==\textcolor{keywordtype}{None} \textcolor{keywordflow}{or} recipt\_credid==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{408         logger.critical(\textcolor{stringliteral}{"incomplete URL empty request"})}
+\DoxyCodeLine{409         abort(401)}
+\DoxyCodeLine{410     \textcolor{comment}{\#gid=req['id']}}
+\DoxyCodeLine{411     db.init()}
+\DoxyCodeLine{412     MAKE\_TRANSACTION\_LOCK=9}
+\DoxyCodeLine{413     lock=MAKE\_TRANSACTION\_LOCK}
+\DoxyCodeLine{414     print(\textcolor{stringliteral}{'start transaction'})}
+\DoxyCodeLine{415     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{416         db.lock\_advisory(lock)}
+\DoxyCodeLine{417         \textcolor{comment}{\#if this client have a bank account yet}}
+\DoxyCodeLine{418         cid=db.gets.credid2cid(client\_cred\_id)}
+\DoxyCodeLine{419         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.bank\_account\_bycid(cid):}
+\DoxyCodeLine{420             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"client doesn't have any associated bank account!"})}
+\DoxyCodeLine{421         \textcolor{comment}{\#balance in bank base}}
+\DoxyCodeLine{422         src\_balance=db.gets.get\_balance\_by\_credid(client\_cred\_id)}
+\DoxyCodeLine{423         src\_balance\_exchange=Currency(EUR, src\_balance[\textcolor{stringliteral}{'base'}])}
+\DoxyCodeLine{424         src\_balance\_euro=src\_balance\_exchange.exchange(src\_balance[\textcolor{stringliteral}{'balance'}])}
+\DoxyCodeLine{425         \textcolor{keywordflow}{if} src\_balance\_euro<amount+FEE:}
+\DoxyCodeLine{426             logger.info(\textcolor{stringliteral}{"client doesn't have enough credit to make transaction"})}
+\DoxyCodeLine{427             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"no enough balance to make transaction"})}
+\DoxyCodeLine{428         \textcolor{comment}{\#get transaction sum in euro}}
+\DoxyCodeLine{429         weekly\_trx\_sum=db.gets.get\_transactions\_sum(client\_cred\_id, week\_past)}
+\DoxyCodeLine{430         daily\_trx\_sum=db.gets.get\_transactions\_sum(client\_cred\_id, day\_past)}
+\DoxyCodeLine{431         print(\textcolor{stringliteral}{'got trx sum! weekly: \{\}, daily\{\}'}.\mbox{\hyperlink{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}{format}}(weekly\_trx\_sum, daily\_trx\_sum))}
+\DoxyCodeLine{432         \textcolor{keywordflow}{if} weekly\_trx\_sum+amount>max\_weekly \textcolor{keywordflow}{or} daily\_trx\_sum+amount>max\_daily:}
+\DoxyCodeLine{433             logger.info(\textcolor{stringliteral}{"client passed the daily/weekly limit"})}
+\DoxyCodeLine{434             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"client passed the daily/weekly limits"})}
+\DoxyCodeLine{435         cur\_id=db.gets.get\_currency\_id(currency\_base)}
+\DoxyCodeLine{436         \textcolor{comment}{\#add transaction}}
+\DoxyCodeLine{437         db.inserts.insert\_trx(recipt\_credid, client\_cred\_id, amount, cur\_id, trx\_name)}
+\DoxyCodeLine{438         \textcolor{comment}{\#TODO this can be minimized directly by credid}}
+\DoxyCodeLine{439         \textcolor{comment}{\#dest balance in bank base}}
+\DoxyCodeLine{440         dest\_balance=db.gets.get\_balance\_by\_credid(recipt\_credid)}
+\DoxyCodeLine{441         dest\_balance\_exchange=Currency(EUR, dest\_balance[\textcolor{stringliteral}{'base'}])}
+\DoxyCodeLine{442         dest\_balance\_euro=dest\_balance\_exchange.exchange(dest\_balance[\textcolor{stringliteral}{'balance'}])}
+\DoxyCodeLine{443         src\_balance\_new=src\_balance\_euro-\/(amount+FEE)}
+\DoxyCodeLine{444         dest\_balance\_new=dest\_balance\_euro+amount}
+\DoxyCodeLine{445         \textcolor{comment}{\#exchange back to bank bas}}
+\DoxyCodeLine{446         src\_balance\_new=src\_balance\_exchange.exchange\_back(src\_balance\_new)}
+\DoxyCodeLine{447         dest\_balance\_new=dest\_balance\_exchange.exchange\_back(dest\_balance\_new)}
+\DoxyCodeLine{448         src\_cid=db.gets.credid2cid(client\_cred\_id)}
+\DoxyCodeLine{449         des\_cid=db.gets.credid2cid(recipt\_credid)}
+\DoxyCodeLine{450         \textcolor{keywordflow}{if} src\_cid==des\_cid:}
+\DoxyCodeLine{451             logger.critical(\textcolor{stringliteral}{"you can't make transaction with oneself!"})}
+\DoxyCodeLine{452             abort(403)}
+\DoxyCodeLine{453             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"you can't make transaction with oneself!"})}
+\DoxyCodeLine{454         db.updates.update\_account(src\_cid, src\_balance\_new)}
+\DoxyCodeLine{455         db.updates.update\_account(des\_cid, dest\_balance\_new)}
+\DoxyCodeLine{456         trx = \{\textcolor{stringliteral}{'trx\_dest'}: recipt\_credid,  \(\backslash\)}
+\DoxyCodeLine{457                \textcolor{stringliteral}{'trx\_src'}: client\_cred\_id, \(\backslash\)}
+\DoxyCodeLine{458                \textcolor{stringliteral}{'trx\_cost'}: orig\_amount, \(\backslash\)}
+\DoxyCodeLine{459                \textcolor{stringliteral}{'trx\_name'}:trx\_name\}}
+\DoxyCodeLine{460         payload=\{\textcolor{stringliteral}{'balance'}: src\_balance\_new, \(\backslash\)}
+\DoxyCodeLine{461                  \textcolor{stringliteral}{'transactions'}: trx\}}
+\DoxyCodeLine{462         db.commit()}
+\DoxyCodeLine{463     \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{464         db.rollback()}
+\DoxyCodeLine{465         logger.critical(\textcolor{stringliteral}{"transaction failed, error: "}+str(error))}
+\DoxyCodeLine{466         abort(300)}
+\DoxyCodeLine{467     \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{468         db.rollback()}
+\DoxyCodeLine{469         logger.critical(\textcolor{stringliteral}{"transaction failed"})}
+\DoxyCodeLine{470         abort(300)}
+\DoxyCodeLine{471     \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{472         db.unlock\_advisory(lock)}
+\DoxyCodeLine{473         db.close()}
+\DoxyCodeLine{474     \textcolor{keywordflow}{return} jsonify(payload), 201}
+\DoxyCodeLine{475 \textcolor{stringliteral}{'''}}
+\DoxyCodeLine{476 \textcolor{stringliteral}{@app.route(GOODS, methods=['POST'])}}
+\DoxyCodeLine{477 \textcolor{stringliteral}{@auth.login\_required}}
+\DoxyCodeLine{478 \textcolor{stringliteral}{def add\_goods():}}
+\DoxyCodeLine{479 \textcolor{stringliteral}{    req=request.get\_json(force=True)}}
+\DoxyCodeLine{480 \textcolor{stringliteral}{    logger.info("adding new good to the market")}}
+\DoxyCodeLine{481 \textcolor{stringliteral}{    \#TODO goods should be passed with authentication,}}
+\DoxyCodeLine{482 \textcolor{stringliteral}{    \# how to authenticate both in requests, and in flask}}
+\DoxyCodeLine{483 \textcolor{stringliteral}{    if not req or 'goods' not in req:}}
+\DoxyCodeLine{484 \textcolor{stringliteral}{        logger.critical("URL is incomplete missing goods")}}
+\DoxyCodeLine{485 \textcolor{stringliteral}{        abort(401)}}
+\DoxyCodeLine{486 \textcolor{stringliteral}{    goods=\{\}}}
+\DoxyCodeLine{487 \textcolor{stringliteral}{    db.init()}}
+\DoxyCodeLine{488 \textcolor{stringliteral}{    lock=1}}
+\DoxyCodeLine{489 \textcolor{stringliteral}{    try:}}
+\DoxyCodeLine{490 \textcolor{stringliteral}{        db.lock\_advisory(lock)}}
+\DoxyCodeLine{491 \textcolor{stringliteral}{        cid=db.gets.credid2cid(client\_cred\_id)}}
+\DoxyCodeLine{492 \textcolor{stringliteral}{        if cid==None:}}
+\DoxyCodeLine{493 \textcolor{stringliteral}{            logger.critical("client not found associated with given id")}}
+\DoxyCodeLine{494 \textcolor{stringliteral}{            abort(403)}}
+\DoxyCodeLine{495 \textcolor{stringliteral}{            raise Exception("invalid client")}}
+\DoxyCodeLine{496 \textcolor{stringliteral}{        goods=req['goods']}}
+\DoxyCodeLine{497 \textcolor{stringliteral}{        for good in goods:}}
+\DoxyCodeLine{498 \textcolor{stringliteral}{            print("good", good[0], good[1], good[2])}}
+\DoxyCodeLine{499 \textcolor{stringliteral}{            gid=db.inserts.add\_good(good[0], good[1], good[2])}}
+\DoxyCodeLine{500 \textcolor{stringliteral}{            db.inserts.add\_owner(cid, gid)}}
+\DoxyCodeLine{501 \textcolor{stringliteral}{        db.commit(lock)}}
+\DoxyCodeLine{502 \textcolor{stringliteral}{    except psycopg2.DatabaseError as error:}}
+\DoxyCodeLine{503 \textcolor{stringliteral}{        db.rollback(lock)}}
+\DoxyCodeLine{504 \textcolor{stringliteral}{        logger.critical("error adding good, error: "+str(error))}}
+\DoxyCodeLine{505 \textcolor{stringliteral}{        abort(300)}}
+\DoxyCodeLine{506 \textcolor{stringliteral}{    except:}}
+\DoxyCodeLine{507 \textcolor{stringliteral}{        db.rollback(lock)}}
+\DoxyCodeLine{508 \textcolor{stringliteral}{        logger.critical("error adding good")}}
+\DoxyCodeLine{509 \textcolor{stringliteral}{        abort(300)}}
+\DoxyCodeLine{510 \textcolor{stringliteral}{    finally:}}
+\DoxyCodeLine{511 \textcolor{stringliteral}{        db.close()}}
+\DoxyCodeLine{512 \textcolor{stringliteral}{    return jsonify(\{'goods':goods\}), 201}}
+\DoxyCodeLine{513 \textcolor{stringliteral}{}}
+\DoxyCodeLine{514 \textcolor{stringliteral}{@app.route(GOODS, methods=['GET'])}}
+\DoxyCodeLine{515 \textcolor{stringliteral}{@auth.login\_required}}
+\DoxyCodeLine{516 \textcolor{stringliteral}{def get\_goods():}}
+\DoxyCodeLine{517 \textcolor{stringliteral}{    logger.info("requesting good")}}
+\DoxyCodeLine{518 \textcolor{stringliteral}{    goods=\{\}}}
+\DoxyCodeLine{519 \textcolor{stringliteral}{    db.init()}}
+\DoxyCodeLine{520 \textcolor{stringliteral}{    try:}}
+\DoxyCodeLine{521 \textcolor{stringliteral}{        db.repeatable\_read()}}
+\DoxyCodeLine{522 \textcolor{stringliteral}{        goods = db.gets.get\_all\_goods()}}
+\DoxyCodeLine{523 \textcolor{stringliteral}{        print('goods:', goods)}}
+\DoxyCodeLine{524 \textcolor{stringliteral}{        db.commit()}}
+\DoxyCodeLine{525 \textcolor{stringliteral}{    except psycopg2.DatabaseError as error:}}
+\DoxyCodeLine{526 \textcolor{stringliteral}{        print('db except!')}}
+\DoxyCodeLine{527 \textcolor{stringliteral}{        db.rollback()}}
+\DoxyCodeLine{528 \textcolor{stringliteral}{        logger.critical("process failed, error: "+str(error))}}
+\DoxyCodeLine{529 \textcolor{stringliteral}{        abort(300)}}
+\DoxyCodeLine{530 \textcolor{stringliteral}{    except:}}
+\DoxyCodeLine{531 \textcolor{stringliteral}{        print("except")}}
+\DoxyCodeLine{532 \textcolor{stringliteral}{        db.rollback()}}
+\DoxyCodeLine{533 \textcolor{stringliteral}{        logger.critical("process failed")}}
+\DoxyCodeLine{534 \textcolor{stringliteral}{        abort(300)}}
+\DoxyCodeLine{535 \textcolor{stringliteral}{    finally:}}
+\DoxyCodeLine{536 \textcolor{stringliteral}{        db.close()}}
+\DoxyCodeLine{537 \textcolor{stringliteral}{        \#TODO change column names}}
+\DoxyCodeLine{538 \textcolor{stringliteral}{    return jsonify(\{"goods": goods\}), 201}}
+\DoxyCodeLine{539 \textcolor{stringliteral}{@app.route(PURCHASE, methods=['POST'])}}
+\DoxyCodeLine{540 \textcolor{stringliteral}{@auth.login\_required}}
+\DoxyCodeLine{541 \textcolor{stringliteral}{def make\_purchase():}}
+\DoxyCodeLine{542 \textcolor{stringliteral}{    req=request.get\_json(force=True)}}
+\DoxyCodeLine{543 \textcolor{stringliteral}{    logger.info("making purchase")}}
+\DoxyCodeLine{544 \textcolor{stringliteral}{    if not req:}}
+\DoxyCodeLine{545 \textcolor{stringliteral}{        logger.critical("incomplete URL empty request")}}
+\DoxyCodeLine{546 \textcolor{stringliteral}{        abort(401)}}
+\DoxyCodeLine{547 \textcolor{stringliteral}{    gid=req['id']}}
+\DoxyCodeLine{548 \textcolor{stringliteral}{    db.init()}}
+\DoxyCodeLine{549 \textcolor{stringliteral}{    lock=4}}
+\DoxyCodeLine{550 \textcolor{stringliteral}{    try:}}
+\DoxyCodeLine{551 \textcolor{stringliteral}{        db.lock\_advisory(lock)}}
+\DoxyCodeLine{552 \textcolor{stringliteral}{        \# cross reference owner\_id, with good\_id, with credentials}}
+\DoxyCodeLine{553 \textcolor{stringliteral}{        \# return credential id of the owner}}
+\DoxyCodeLine{554 \textcolor{stringliteral}{        credid=db.gets.get\_credid\_with\_gid(gid)}}
+\DoxyCodeLine{555 \textcolor{stringliteral}{        \# make, and add new transaction such that increase,}}
+\DoxyCodeLine{556 \textcolor{stringliteral}{        \# and decrease of the src/des balance need to be performed in single transaction, then add the transactioin to the ledger, if failed rollback}}
+\DoxyCodeLine{557 \textcolor{stringliteral}{        cost=db.gets.get\_new\_price(gid)+FEE}}
+\DoxyCodeLine{558 \textcolor{stringliteral}{        src\_balance=db.gets.get\_balance\_by\_credid(client\_cred\_id)-\/(cost+FEE)}}
+\DoxyCodeLine{559 \textcolor{stringliteral}{        des\_balance=db.gets.get\_balance\_by\_credid(credid)+cost}}
+\DoxyCodeLine{560 \textcolor{stringliteral}{        src\_cid=db.gets.credid2cid(client\_cred\_id)}}
+\DoxyCodeLine{561 \textcolor{stringliteral}{        des\_cid=db.gets.credid2cid(credid)}}
+\DoxyCodeLine{562 \textcolor{stringliteral}{        if src\_cid==des\_cid:}}
+\DoxyCodeLine{563 \textcolor{stringliteral}{            logger.critical("you can't make purchase with oneself!")}}
+\DoxyCodeLine{564 \textcolor{stringliteral}{            abort(403)}}
+\DoxyCodeLine{565 \textcolor{stringliteral}{            raise Exception("you can't make purchase with oneself!")}}
+\DoxyCodeLine{566 \textcolor{stringliteral}{        db.updates.update\_account(src\_cid, src\_balance)}}
+\DoxyCodeLine{567 \textcolor{stringliteral}{        db.updates.update\_account(des\_cid, des\_balance)}}
+\DoxyCodeLine{568 \textcolor{stringliteral}{        \#TODO the ownership in the client side need to be updated as well,}}
+\DoxyCodeLine{569 \textcolor{stringliteral}{        \# in the database, and in the stateful list in memory}}
+\DoxyCodeLine{570 \textcolor{stringliteral}{        \# also fetch corresponding oid!}}
+\DoxyCodeLine{571 \textcolor{stringliteral}{        \#update\_owner(oid, gid)}}
+\DoxyCodeLine{572 \textcolor{stringliteral}{        trx = \{'trx\_dest': credid,}}
+\DoxyCodeLine{573 \textcolor{stringliteral}{               'trx\_src': client\_cred\_id,}}
+\DoxyCodeLine{574 \textcolor{stringliteral}{               'good\_id': gid\}}}
+\DoxyCodeLine{575 \textcolor{stringliteral}{        payload=\{'balance': src\_balance,}}
+\DoxyCodeLine{576 \textcolor{stringliteral}{                 'transactions': trx\}}}
+\DoxyCodeLine{577 \textcolor{stringliteral}{        db.commit()}}
+\DoxyCodeLine{578 \textcolor{stringliteral}{    except psycopg2.DatabaseError as error:}}
+\DoxyCodeLine{579 \textcolor{stringliteral}{        db.rollback()}}
+\DoxyCodeLine{580 \textcolor{stringliteral}{        logger.critical("purchase failed, error: "+str(error))}}
+\DoxyCodeLine{581 \textcolor{stringliteral}{        abort(300)}}
+\DoxyCodeLine{582 \textcolor{stringliteral}{    except:}}
+\DoxyCodeLine{583 \textcolor{stringliteral}{        db.rollback()}}
+\DoxyCodeLine{584 \textcolor{stringliteral}{        logger.critical("purchase failed")}}
+\DoxyCodeLine{585 \textcolor{stringliteral}{        abort(300)}}
+\DoxyCodeLine{586 \textcolor{stringliteral}{    finally:}}
+\DoxyCodeLine{587 \textcolor{stringliteral}{        db.unlock\_advisory(lock)}}
+\DoxyCodeLine{588 \textcolor{stringliteral}{        db.close()}}
+\DoxyCodeLine{589 \textcolor{stringliteral}{    return jsonify(payload), 201}}
+\DoxyCodeLine{590 \textcolor{stringliteral}{'''}}
+\DoxyCodeLine{591 }
+
+\end{DoxyCode}
+
+
+References core.\+utils.\+daily\+\_\+limit(), core.\+server.\+server.\+format, and core.\+utils.\+weekly\+\_\+limit().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1server_1_1server_aaa1ff2a38465c5ade1f235cf197dde62_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a7abed3618dce8dfc82db88504621e7fa}\label{namespacecore_1_1server_1_1server_a7abed3618dce8dfc82db88504621e7fa}} 
+\index{core.server.server@{core.server.server}!register\_client@{register\_client}}
+\index{register\_client@{register\_client}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{register\_client()}{register\_client()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+register\+\_\+client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}register new client with email/name + password, expected json body would have keys ["name", "email", "passcode"]\end{DoxyVerb}
+ 
+
+Definition at line 135 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{135 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_a7abed3618dce8dfc82db88504621e7fa}{register\_client}}():}
+\DoxyCodeLine{136   \textcolor{stringliteral}{"""register new client with email/name + password, expected json body would have keys ["name", "email", "passcode"]}}
+\DoxyCodeLine{137 \textcolor{stringliteral}{}}
+\DoxyCodeLine{138 \textcolor{stringliteral}{  """}}
+\DoxyCodeLine{139   \textcolor{comment}{\#TODO this can through exception, need to handle it}}
+\DoxyCodeLine{140   req=request.get\_json(force=\textcolor{keyword}{True})}
+\DoxyCodeLine{141   print(\textcolor{stringliteral}{'req: '}, req)}
+\DoxyCodeLine{142   name=req.get(\textcolor{stringliteral}{'name'}, \textcolor{keywordtype}{None})}
+\DoxyCodeLine{143   passcode=req.get(\textcolor{stringliteral}{'passcode'}, \textcolor{keywordtype}{None})}
+\DoxyCodeLine{144   email=req.get(\textcolor{stringliteral}{'email'}, \textcolor{keywordtype}{None})}
+\DoxyCodeLine{145   cur\_pref=req.get(\textcolor{stringliteral}{'cur\_pref'}, EUR)}
+\DoxyCodeLine{146   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} req \textcolor{keywordflow}{or} name==\textcolor{keywordtype}{None} \textcolor{keywordflow}{or} email==\textcolor{keywordtype}{None} \textcolor{keywordflow}{or} passcode==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{147     logger.critical(\textcolor{stringliteral}{"url is incomplete missing name"})}
+\DoxyCodeLine{148     print(\textcolor{stringliteral}{"incomplete!!!"})}
+\DoxyCodeLine{149     abort(400)}
+\DoxyCodeLine{150   \textcolor{comment}{\#TODO add constraint, and verification for the name/email, and passcode (at least not None!)}}
+\DoxyCodeLine{151   cred\_id=\mbox{\hyperlink{namespacecore_1_1server_1_1server_a9ed4334dbfb6933ba31561c62a326811}{get\_credid}}()}
+\DoxyCodeLine{152   logger.info(\textcolor{stringliteral}{"registering trader for client: "}+ name)}
+\DoxyCodeLine{153   bid=0}
+\DoxyCodeLine{154   db.init()}
+\DoxyCodeLine{155   lock=2}
+\DoxyCodeLine{156   \textcolor{comment}{\#TODO generalize get\_credid}}
+\DoxyCodeLine{157   \textcolor{comment}{\#TODO add errors to response code}}
+\DoxyCodeLine{158   \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{159       db.lock\_advisory(lock)}
+\DoxyCodeLine{160       email\_exists=db.exists.account\_byemail(email)}
+\DoxyCodeLine{161       \textcolor{keywordflow}{if} email\_exists:}
+\DoxyCodeLine{162           print(\textcolor{stringliteral}{'email exists'})}
+\DoxyCodeLine{163           abort(400)}
+\DoxyCodeLine{164           logger.debug(\textcolor{stringliteral}{"account \{\}/\{\} + \{\} already exists"}.\(\backslash\)}
+\DoxyCodeLine{165                        \mbox{\hyperlink{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}{format}}(name, email, passcode))}
+\DoxyCodeLine{166           \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"account already exists!"})}
+\DoxyCodeLine{167       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(cur\_pref):}
+\DoxyCodeLine{168           currency=Currency(cur\_pref)}
+\DoxyCodeLine{169           \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} currency.valid():}
+\DoxyCodeLine{170               \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"currency isn't supported!"})}
+\DoxyCodeLine{171           db.inserts.add\_currency(cur\_pref, currency.rate)}
+\DoxyCodeLine{172       cur\_pref\_id=db.gets.get\_currency\_id(cur\_pref)}
+\DoxyCodeLine{173       cid=db.inserts.add\_client(req[\textcolor{stringliteral}{'name'}], req[\textcolor{stringliteral}{'email'}], cur\_pref\_id)}
+\DoxyCodeLine{174       logger.debug(\textcolor{stringliteral}{"client added"})}
+\DoxyCodeLine{175       db.inserts.register(cid, passcode, cred\_id)}
+\DoxyCodeLine{176       db.commit(lock)}
+\DoxyCodeLine{177   \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{178     print(\textcolor{stringliteral}{'REGISTRATION FAILURE'})}
+\DoxyCodeLine{179     db.rollback(lock)}
+\DoxyCodeLine{180     logger.critical(\textcolor{stringliteral}{"registering failed, error: "}+str(error))}
+\DoxyCodeLine{181     abort(300)}
+\DoxyCodeLine{182   \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{183     print(\textcolor{stringliteral}{'REGISTRATION FAILURE'})}
+\DoxyCodeLine{184     db.rollback(lock)}
+\DoxyCodeLine{185     logger.critical(\textcolor{stringliteral}{"registering failed"})}
+\DoxyCodeLine{186     abort(400)}
+\DoxyCodeLine{187   \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{188     db.close()}
+\DoxyCodeLine{189     res = \{\textcolor{stringliteral}{'cred\_id'}: cred\_id\}}
+\DoxyCodeLine{190   \textcolor{keywordflow}{return} jsonify(res), 201}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 @app.route(ADD\_BANK\_ACCOUNT, methods=[\textcolor{stringliteral}{'POST'}])}
+\DoxyCodeLine{193 @auth.login\_required}
+
+\end{DoxyCode}
+
+
+References core.\+server.\+server.\+format, and core.\+server.\+server.\+get\+\_\+credid().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1server_1_1server_a7abed3618dce8dfc82db88504621e7fa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_ae03340bacb313931ea21ed616bf75cf0}\label{namespacecore_1_1server_1_1server_ae03340bacb313931ea21ed616bf75cf0}} 
+\index{core.server.server@{core.server.server}!unauthorized@{unauthorized}}
+\index{unauthorized@{unauthorized}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{unauthorized()}{unauthorized()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+unauthorized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_ae03340bacb313931ea21ed616bf75cf0}{unauthorized}}():}
+\DoxyCodeLine{131     \textcolor{keywordflow}{return} make\_response(jsonify(\{\textcolor{stringliteral}{'error'}: \textcolor{stringliteral}{"forbidden access"}\}), 403)}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 \textcolor{comment}{\#TODO add message to status code response}}
+\DoxyCodeLine{134 @app.route(REGISTER, methods=[\textcolor{stringliteral}{'POST'}])}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a5c1e2c8a284854a7b27c4fbf7144b038}\label{namespacecore_1_1server_1_1server_a5c1e2c8a284854a7b27c4fbf7144b038}} 
+\index{core.server.server@{core.server.server}!update\_balance\_preference@{update\_balance\_preference}}
+\index{update\_balance\_preference@{update\_balance\_preference}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{update\_balance\_preference()}{update\_balance\_preference()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+update\+\_\+balance\+\_\+preference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}update balance preference\end{DoxyVerb}
+ 
+
+Definition at line 319 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{319 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_a5c1e2c8a284854a7b27c4fbf7144b038}{update\_balance\_preference}}():}
+\DoxyCodeLine{320     \textcolor{stringliteral}{"""update balance preference}}
+\DoxyCodeLine{321 \textcolor{stringliteral}{}}
+\DoxyCodeLine{322 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{323     req=request.get\_json(force=\textcolor{keyword}{True})}
+\DoxyCodeLine{324     base = req.get(\textcolor{stringliteral}{'base'}, \textcolor{keywordtype}{None})}
+\DoxyCodeLine{325     logger.info(\textcolor{stringliteral}{"updating balance preference"})}
+\DoxyCodeLine{326     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} req \textcolor{keywordflow}{or} base==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{327         logger.cirtical(\textcolor{stringliteral}{'incomplete url'})}
+\DoxyCodeLine{328         abort(401)}
+\DoxyCodeLine{329     CURRENCY\_LOCK=11}
+\DoxyCodeLine{330     lock=CURRENCY\_LOCK}
+\DoxyCodeLine{331     db.init()}
+\DoxyCodeLine{332     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{333         db.lock\_advisory(lock)}
+\DoxyCodeLine{334         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(base):}
+\DoxyCodeLine{335             currency=Currency(base)}
+\DoxyCodeLine{336             db.inserts.add\_currency(basey, currency.rate)}
+\DoxyCodeLine{337         base\_currency\_id=db.gets.get\_currency\_id(base\_currency)}
+\DoxyCodeLine{338         cid=db.gets.credid2cid(client\_cred\_id)}
+\DoxyCodeLine{339         db.updates.currency\_preference(cid, base)}
+\DoxyCodeLine{340         db.commit()}
+\DoxyCodeLine{341     \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{342         db.rollback()}
+\DoxyCodeLine{343         logger.critical(\textcolor{stringliteral}{"request failure, error: "}+ str(error))}
+\DoxyCodeLine{344         abort(300)}
+\DoxyCodeLine{345     \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} error:}
+\DoxyCodeLine{346         db.rollback()}
+\DoxyCodeLine{347         logger.critical(\textcolor{stringliteral}{"request failure, error: "}+ str(error))}
+\DoxyCodeLine{348         abort(300)}
+\DoxyCodeLine{349     \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{350         db.unlock\_advisory(lock)}
+\DoxyCodeLine{351         db.close()}
+\DoxyCodeLine{352 }
+\DoxyCodeLine{353 @app.route(LEDGER, methods=[\textcolor{stringliteral}{'POST'}])}
+\DoxyCodeLine{354 @auth.login\_required}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a97a5fcbe887022d384ea97f7d3b7dc47}\label{namespacecore_1_1server_1_1server_a97a5fcbe887022d384ea97f7d3b7dc47}} 
+\index{core.server.server@{core.server.server}!update\_ledger@{update\_ledger}}
+\index{update\_ledger@{update\_ledger}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{update\_ledger()}{update\_ledger()}}
+{\footnotesize\ttfamily def core.\+server.\+server.\+update\+\_\+ledger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 355 of file server.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{355 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1server_a97a5fcbe887022d384ea97f7d3b7dc47}{update\_ledger}}():}
+\DoxyCodeLine{356     req=request.get\_json(force=\textcolor{keyword}{True})}
+\DoxyCodeLine{357     logger.info(\textcolor{stringliteral}{"requesting ledger update"})}
+\DoxyCodeLine{358     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} req:}
+\DoxyCodeLine{359         logger.critical(\textcolor{stringliteral}{"incomplete URL empty request!"})}
+\DoxyCodeLine{360         abort(401)}
+\DoxyCodeLine{361     st\_dt=req[\textcolor{stringliteral}{'trx\_dt'}]}
+\DoxyCodeLine{362     payload=\{\}}
+\DoxyCodeLine{363     db.init()}
+\DoxyCodeLine{364     lock=3}
+\DoxyCodeLine{365     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{366         db.lock\_advisory(lock)}
+\DoxyCodeLine{367         print(\textcolor{stringliteral}{"getting sells"})}
+\DoxyCodeLine{368         sells\_trax=db.gets.get\_sells(client\_cred\_id, st\_dt).to\_json()}
+\DoxyCodeLine{369         print(\textcolor{stringliteral}{"sells: "}, sells\_trax)}
+\DoxyCodeLine{370         balance=db.gets.get\_balance\_by\_credid(client\_cred\_id)}
+\DoxyCodeLine{371         payload=\{\textcolor{stringliteral}{'transactions'}: sells\_trax, \(\backslash\)}
+\DoxyCodeLine{372                  \textcolor{stringliteral}{'balance'}: balance\}}
+\DoxyCodeLine{373         db.commit()}
+\DoxyCodeLine{374     \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{375         db.rollback()}
+\DoxyCodeLine{376         logger.critical(\textcolor{stringliteral}{"request failure, error: "}+ str(error))}
+\DoxyCodeLine{377         abort(300)}
+\DoxyCodeLine{378     \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{379         db.rollback()}
+\DoxyCodeLine{380         logger.critical(\textcolor{stringliteral}{"request failure"})}
+\DoxyCodeLine{381         abort(300)}
+\DoxyCodeLine{382     \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{383         db.unlock\_advisory(lock)}
+\DoxyCodeLine{384         db.close()}
+\DoxyCodeLine{385     \textcolor{keywordflow}{return} jsonify(payload), 201}
+\DoxyCodeLine{386 }
+\DoxyCodeLine{387 @app.route(TRANSACTION, methods=[\textcolor{stringliteral}{'POST'}])}
+\DoxyCodeLine{388 @auth.login\_required}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a67e902b543f6cff982320c5d78af065e}\label{namespacecore_1_1server_1_1server_a67e902b543f6cff982320c5d78af065e}} 
+\index{core.server.server@{core.server.server}!app@{app}}
+\index{app@{app}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily core.\+server.\+server.\+app = Flask(\textquotesingle{}tahweela\textquotesingle{})}
+
+
+
+Definition at line 32 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a43a2e2d9bdeff715032f6df4b5396792}\label{namespacecore_1_1server_1_1server_a43a2e2d9bdeff715032f6df4b5396792}} 
+\index{core.server.server@{core.server.server}!auth@{auth}}
+\index{auth@{auth}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{auth}{auth}}
+{\footnotesize\ttfamily core.\+server.\+server.\+auth = H\+T\+T\+P\+Basic\+Auth()}
+
+
+
+Definition at line 33 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_aaab15fe49e5cba7d460578def43c0d0c}\label{namespacecore_1_1server_1_1server_aaab15fe49e5cba7d460578def43c0d0c}} 
+\index{core.server.server@{core.server.server}!client\_cred\_id@{client\_cred\_id}}
+\index{client\_cred\_id@{client\_cred\_id}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{client\_cred\_id}{client\_cred\_id}}
+{\footnotesize\ttfamily core.\+server.\+server.\+client\+\_\+cred\+\_\+id = None}
+
+
+
+Definition at line 37 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_acb92592041332fb2b9ba60483b370a64}\label{namespacecore_1_1server_1_1server_acb92592041332fb2b9ba60483b370a64}} 
+\index{core.server.server@{core.server.server}!client\_passcode@{client\_passcode}}
+\index{client\_passcode@{client\_passcode}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{client\_passcode}{client\_passcode}}
+{\footnotesize\ttfamily core.\+server.\+server.\+client\+\_\+passcode = None}
+
+
+
+Definition at line 36 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a39c673ca728dfb59e5fa8e3da0dd8be9}\label{namespacecore_1_1server_1_1server_a39c673ca728dfb59e5fa8e3da0dd8be9}} 
+\index{core.server.server@{core.server.server}!db@{db}}
+\index{db@{db}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily core.\+server.\+server.\+db = \mbox{\hyperlink{classcore_1_1queries_1_1database_1_1database}{database}}(\mbox{\hyperlink{namespacecore_1_1server_1_1server_aacc32d3c57c3b577b7e2647528baaf8c}{db\+\_\+configs}})}
+
+
+
+Definition at line 25 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_aacc32d3c57c3b577b7e2647528baaf8c}\label{namespacecore_1_1server_1_1server_aacc32d3c57c3b577b7e2647528baaf8c}} 
+\index{core.server.server@{core.server.server}!db\_configs@{db\_configs}}
+\index{db\_configs@{db\_configs}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{db\_configs}{db\_configs}}
+{\footnotesize\ttfamily string core.\+server.\+server.\+db\+\_\+configs = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}}
+
+
+
+Definition at line 22 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_af424e5a3aad0db0c0b8cd014a17f2f5a}\label{namespacecore_1_1server_1_1server_af424e5a3aad0db0c0b8cd014a17f2f5a}} 
+\index{core.server.server@{core.server.server}!debug@{debug}}
+\index{debug@{debug}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{debug}{debug}}
+{\footnotesize\ttfamily core.\+server.\+server.\+debug}
+
+
+
+Definition at line 593 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_adb9ec4bde84331664eb52b6412cb09fd}\label{namespacecore_1_1server_1_1server_adb9ec4bde84331664eb52b6412cb09fd}} 
+\index{core.server.server@{core.server.server}!filemode@{filemode}}
+\index{filemode@{filemode}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{filemode}{filemode}}
+{\footnotesize\ttfamily core.\+server.\+server.\+filemode}
+
+
+
+Definition at line 28 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a4cc77d0b54229e293423876599326ce9}\label{namespacecore_1_1server_1_1server_a4cc77d0b54229e293423876599326ce9}} 
+\index{core.server.server@{core.server.server}!filename@{filename}}
+\index{filename@{filename}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily core.\+server.\+server.\+filename}
+
+
+
+Definition at line 26 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}\label{namespacecore_1_1server_1_1server_af52a36a8c5dfa466d4b0ecfe690fbaca}} 
+\index{core.server.server@{core.server.server}!format@{format}}
+\index{format@{format}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily core.\+server.\+server.\+format}
+
+
+
+Definition at line 27 of file server.\+py.
+
+
+
+Referenced by core.\+server.\+server.\+authenticate(), core.\+server.\+server.\+get\+\_\+balance(), core.\+server.\+server.\+make\+\_\+transaction(), and core.\+server.\+server.\+register\+\_\+client().
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a015041a18162a9c613c7321dd94c440e}\label{namespacecore_1_1server_1_1server_a015041a18162a9c613c7321dd94c440e}} 
+\index{core.server.server@{core.server.server}!level@{level}}
+\index{level@{level}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily core.\+server.\+server.\+level}
+
+
+
+Definition at line 29 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_a826f85e804e434c97db7e6738226d717}\label{namespacecore_1_1server_1_1server_a826f85e804e434c97db7e6738226d717}} 
+\index{core.server.server@{core.server.server}!logger@{logger}}
+\index{logger@{logger}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily core.\+server.\+server.\+logger = logging.\+get\+Logger()}
+
+
+
+Definition at line 30 of file server.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1server_ad2bf3b7601bca535e854bac189410f0b}\label{namespacecore_1_1server_1_1server_ad2bf3b7601bca535e854bac189410f0b}} 
+\index{core.server.server@{core.server.server}!seed@{seed}}
+\index{seed@{seed}!core.server.server@{core.server.server}}
+\doxysubsubsection{\texorpdfstring{seed}{seed}}
+{\footnotesize\ttfamily core.\+server.\+server.\+seed = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})}
+
+
+
+Definition at line 11 of file server.\+py.
+

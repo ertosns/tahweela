@@ -1,0 +1,372 @@
+\hypertarget{namespaceclient_1_1client}{}\doxysection{client.\+client Namespace Reference}
+\label{namespaceclient_1_1client}\index{client.client@{client.client}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classclient_1_1client_1_1_client}{Client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_a833ad09ead45e7514e0b86ff1b03ca87}{get\+\_\+bank\+\_\+name}} ()
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_a61a3e8937663f872f16be7e13103ca00}{get\+\_\+branch\+\_\+number}} ()
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_af8556d1f0e3ad687b312802456c5948b}{get\+\_\+account\+\_\+number}} ()
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_aeb04cfa07acf73990acf1b636aac2830}{get\+\_\+name\+\_\+reference}} ()
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\+\_\+name}} ()
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\+\_\+email}} ()
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}{get\+\_\+balance}} ()
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\+\_\+credid}} ()
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\+\_\+rand\+\_\+pass}} (L=9)
+\item 
+def \mbox{\hyperlink{namespaceclient_1_1client_a416f149e3529a5004d3cf2f7f407a6cf}{rand\+\_\+alphanum}} (L=9)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespaceclient_1_1client_abd209b74b0cd829d8c6365fcba6c7b5a}{db\+\_\+configs}} = \char`\"{}dbname=\textquotesingle{}demo\+\_\+client\textquotesingle{} user=\textquotesingle{}tahweela\+\_\+client\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_af52de879bdde4cc320c6400231d482d7}{filename}}
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_aeac728c6ab1426c3c31bab6ae653dd75}{filemode}}
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_a8babe80841f73ea794f63c6ce8eb2e71}{logger}} = logging.\+get\+Logger()
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_a5c99a9fb0c0214b87328e4b6e70d8aa7}{seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_a4d02bf90a6332695dcc4797bdda7f3bb}{faker}} = Faker(\mbox{\hyperlink{namespaceclient_1_1client_a5c99a9fb0c0214b87328e4b6e70d8aa7}{seed}})
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_a6859bbd7b93832b1c7054440e4086741}{parser}} = Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_ad9d896f7f31b547712ee032a1f5cb8c9}{type}}
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_a27fcfd5c6182c10f132c2dd5b6494291}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_af8525b9ee72598ccb6de1097bdd0d01c}{cred\+\_\+id}} = args.\+add\+\_\+contact
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_a52e250968422f7d39fa2ad88837a443d}{trader1}} = \mbox{\hyperlink{classclient_1_1client_1_1_client}{Client}}()
+\item 
+\mbox{\hyperlink{namespaceclient_1_1client_a7e99d26c79306a2dc13a31cd6fb887fa}{trader2}} = \mbox{\hyperlink{classclient_1_1client_1_1_client}{Client}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceclient_1_1client_af8556d1f0e3ad687b312802456c5948b}\label{namespaceclient_1_1client_af8556d1f0e3ad687b312802456c5948b}} 
+\index{client.client@{client.client}!get\_account\_number@{get\_account\_number}}
+\index{get\_account\_number@{get\_account\_number}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{get\_account\_number()}{get\_account\_number()}}
+{\footnotesize\ttfamily def client.\+client.\+get\+\_\+account\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a617f45205e2c92317e87a1daff73bd2d}{get\_account\_number}}():}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} int(3333333*random.random())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}\label{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}} 
+\index{client.client@{client.client}!get\_balance@{get\_balance}}
+\index{get\_balance@{get\_balance}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{get\_balance()}{get\_balance()}}
+{\footnotesize\ttfamily def client.\+client.\+get\+\_\+balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a6e9ad401ede2f1859562a135a9bd1f34}{get\_balance}}():}
+\DoxyCodeLine{55     \textcolor{keywordflow}{return} 333*random.random()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceclient_1_1client_a833ad09ead45e7514e0b86ff1b03ca87}\label{namespaceclient_1_1client_a833ad09ead45e7514e0b86ff1b03ca87}} 
+\index{client.client@{client.client}!get\_bank\_name@{get\_bank\_name}}
+\index{get\_bank\_name@{get\_bank\_name}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{get\_bank\_name()}{get\_bank\_name()}}
+{\footnotesize\ttfamily def client.\+client.\+get\+\_\+bank\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_ae391dd87319abd0006e347bed366e54f}{get\_bank\_name}}():}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} faker.name().split()[0]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceclient_1_1client_a61a3e8937663f872f16be7e13103ca00}\label{namespaceclient_1_1client_a61a3e8937663f872f16be7e13103ca00}} 
+\index{client.client@{client.client}!get\_branch\_number@{get\_branch\_number}}
+\index{get\_branch\_number@{get\_branch\_number}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{get\_branch\_number()}{get\_branch\_number()}}
+{\footnotesize\ttfamily def client.\+client.\+get\+\_\+branch\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_af6c2646f7c1c83126f705e3732a96087}{get\_branch\_number}}():}
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} int(33*random.random())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}\label{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}} 
+\index{client.client@{client.client}!get\_credid@{get\_credid}}
+\index{get\_credid@{get\_credid}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{get\_credid()}{get\_credid()}}
+{\footnotesize\ttfamily def client.\+client.\+get\+\_\+credid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a40e56cc6d17f6a2a983c4e9c3471a94c}{get\_credid}}():}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} int(3333333333333*random.random())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}\label{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}} 
+\index{client.client@{client.client}!get\_email@{get\_email}}
+\index{get\_email@{get\_email}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{get\_email()}{get\_email()}}
+{\footnotesize\ttfamily def client.\+client.\+get\+\_\+email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_af08cc33cc36a975cc6bebf248b6c039e}{get\_email}}():}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} faker.email()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}\label{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}} 
+\index{client.client@{client.client}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily def client.\+client.\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a5b5347659408b837b9f8e82b76cc56b2}{get\_name}}():}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} faker.name()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceclient_1_1client_aeb04cfa07acf73990acf1b636aac2830}\label{namespaceclient_1_1client_aeb04cfa07acf73990acf1b636aac2830}} 
+\index{client.client@{client.client}!get\_name\_reference@{get\_name\_reference}}
+\index{get\_name\_reference@{get\_name\_reference}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{get\_name\_reference()}{get\_name\_reference()}}
+{\footnotesize\ttfamily def client.\+client.\+get\+\_\+name\+\_\+reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a943a822128ad5abd61ba5e3615e89fca}{get\_name\_reference}}():}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} faker.name().split()[1]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}\label{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}} 
+\index{client.client@{client.client}!get\_rand\_pass@{get\_rand\_pass}}
+\index{get\_rand\_pass@{get\_rand\_pass}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{get\_rand\_pass()}{get\_rand\_pass()}}
+{\footnotesize\ttfamily def client.\+client.\+get\+\_\+rand\+\_\+pass (\begin{DoxyParamCaption}\item[{}]{L = {\ttfamily 9} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a039199b8606b2c8fd9ce1bd1c07863ca}{get\_rand\_pass}}(L=9):}
+\DoxyCodeLine{59     passcode=\textcolor{stringliteral}{''}.join(random.choice(string.ascii\_uppercase+\(\backslash\)}
+\DoxyCodeLine{60                                  string.ascii\_lowercase+\(\backslash\)}
+\DoxyCodeLine{61                                  string.digits)\(\backslash\)}
+\DoxyCodeLine{62                      \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(L))}
+\DoxyCodeLine{63     \textcolor{keywordflow}{return} passcode}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceclient_1_1client_a416f149e3529a5004d3cf2f7f407a6cf}\label{namespaceclient_1_1client_a416f149e3529a5004d3cf2f7f407a6cf}} 
+\index{client.client@{client.client}!rand\_alphanum@{rand\_alphanum}}
+\index{rand\_alphanum@{rand\_alphanum}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{rand\_alphanum()}{rand\_alphanum()}}
+{\footnotesize\ttfamily def client.\+client.\+rand\+\_\+alphanum (\begin{DoxyParamCaption}\item[{}]{L = {\ttfamily 9} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_adc0b453b3e14bdcc6f2d59efdb631f84}{rand\_alphanum}}(L=9):}
+\DoxyCodeLine{65     passcode=\textcolor{stringliteral}{''}.join(random.choice(string.ascii\_uppercase+\(\backslash\)}
+\DoxyCodeLine{66                                  string.ascii\_lowercase+\(\backslash\)}
+\DoxyCodeLine{67                                  string.digits)\(\backslash\)}
+\DoxyCodeLine{68                      \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(L))}
+\DoxyCodeLine{69     \textcolor{keywordflow}{return} passcode}
+\DoxyCodeLine{70 }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceclient_1_1client_a27fcfd5c6182c10f132c2dd5b6494291}\label{namespaceclient_1_1client_a27fcfd5c6182c10f132c2dd5b6494291}} 
+\index{client.client@{client.client}!args@{args}}
+\index{args@{args}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily client.\+client.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 339 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_af8525b9ee72598ccb6de1097bdd0d01c}\label{namespaceclient_1_1client_af8525b9ee72598ccb6de1097bdd0d01c}} 
+\index{client.client@{client.client}!cred\_id@{cred\_id}}
+\index{cred\_id@{cred\_id}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{cred\_id}{cred\_id}}
+{\footnotesize\ttfamily client.\+client.\+cred\+\_\+id = args.\+add\+\_\+contact}
+
+
+
+Definition at line 340 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_abd209b74b0cd829d8c6365fcba6c7b5a}\label{namespaceclient_1_1client_abd209b74b0cd829d8c6365fcba6c7b5a}} 
+\index{client.client@{client.client}!db\_configs@{db\_configs}}
+\index{db\_configs@{db\_configs}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{db\_configs}{db\_configs}}
+{\footnotesize\ttfamily string client.\+client.\+db\+\_\+configs = \char`\"{}dbname=\textquotesingle{}demo\+\_\+client\textquotesingle{} user=\textquotesingle{}tahweela\+\_\+client\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}}
+
+
+
+Definition at line 21 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_a4d02bf90a6332695dcc4797bdda7f3bb}\label{namespaceclient_1_1client_a4d02bf90a6332695dcc4797bdda7f3bb}} 
+\index{client.client@{client.client}!faker@{faker}}
+\index{faker@{faker}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{faker}{faker}}
+{\footnotesize\ttfamily client.\+client.\+faker = Faker(\mbox{\hyperlink{namespaceclient_1_1client_a5c99a9fb0c0214b87328e4b6e70d8aa7}{seed}})}
+
+
+
+Definition at line 40 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_aeac728c6ab1426c3c31bab6ae653dd75}\label{namespaceclient_1_1client_aeac728c6ab1426c3c31bab6ae653dd75}} 
+\index{client.client@{client.client}!filemode@{filemode}}
+\index{filemode@{filemode}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{filemode}{filemode}}
+{\footnotesize\ttfamily client.\+client.\+filemode}
+
+
+
+Definition at line 25 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_af52de879bdde4cc320c6400231d482d7}\label{namespaceclient_1_1client_af52de879bdde4cc320c6400231d482d7}} 
+\index{client.client@{client.client}!filename@{filename}}
+\index{filename@{filename}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily client.\+client.\+filename}
+
+
+
+Definition at line 23 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}\label{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}} 
+\index{client.client@{client.client}!format@{format}}
+\index{format@{format}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily client.\+client.\+format}
+
+
+
+Definition at line 24 of file client.\+py.
+
+
+
+Referenced by queries.\+database.\+exists.\+account\+\_\+byemail(), core.\+queries.\+database.\+exists.\+account\+\_\+byemail(), queries.\+database.\+exists.\+account\+\_\+byname(), core.\+queries.\+database.\+exists.\+account\+\_\+byname(), queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), queries.\+database.\+inserts.\+add\+\_\+client(), core.\+queries.\+database.\+inserts.\+add\+\_\+client(), queries.\+inserts.\+goods.\+add\+\_\+good(), core.\+queries.\+inserts.\+goods.\+add\+\_\+good(), queries.\+inserts.\+owners.\+add\+\_\+owner(), core.\+queries.\+inserts.\+owners.\+add\+\_\+owner(), client.\+client.\+Client.\+autotract(), core.\+queries.\+database.\+exists.\+bank\+\_\+account\+\_\+bycid(), queries.\+database.\+exists.\+bank\+\_\+account\+\_\+bycid(), queries.\+database.\+gets.\+cid2credid(), core.\+queries.\+database.\+gets.\+cid2credid(), core.\+queries.\+database.\+exists.\+client\+\_\+exists(), queries.\+database.\+exists.\+client\+\_\+exists(), core.\+queries.\+database.\+exists.\+contact\+\_\+exists(), queries.\+database.\+exists.\+contact\+\_\+exists(), queries.\+database.\+exists.\+credential\+\_\+exists(), core.\+queries.\+database.\+exists.\+credential\+\_\+exists(), queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+exists.\+banking.\+exists(), queries.\+exists.\+clients.\+exists(), core.\+queries.\+exists.\+clients.\+exists(), queries.\+exists.\+contacts.\+exists(), core.\+queries.\+exists.\+contacts.\+exists(), queries.\+exists.\+credentials.\+exists(), core.\+queries.\+exists.\+credentials.\+exists(), queries.\+exists.\+goods.\+exists(), core.\+queries.\+exists.\+goods.\+exists(), queries.\+exists.\+banking.\+exists(), queries.\+gets.\+clients.\+get(), core.\+queries.\+gets.\+clients.\+get(), core.\+queries.\+database.\+gets.\+get(), queries.\+database.\+gets.\+get(), queries.\+gets.\+banking.\+get\+\_\+balance\+\_\+by\+\_\+cid(), core.\+queries.\+gets.\+banking.\+get\+\_\+balance\+\_\+by\+\_\+cid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), queries.\+gets.\+banking.\+get\+\_\+balance\+\_\+by\+\_\+credid(), core.\+queries.\+gets.\+banking.\+get\+\_\+balance\+\_\+by\+\_\+credid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), queries.\+gets.\+contacts.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+gets.\+contacts.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+gets.\+banking.\+get\+\_\+banking\+\_\+id(), queries.\+gets.\+banking.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+gets.\+banking.\+get\+\_\+client\+\_\+id(), queries.\+gets.\+banking.\+get\+\_\+client\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), queries.\+gets.\+goods.\+get\+\_\+commodity(), core.\+queries.\+gets.\+goods.\+get\+\_\+commodity(), queries.\+gets.\+credentials.\+get\+\_\+credential(), core.\+queries.\+gets.\+credentials.\+get\+\_\+credential(), queries.\+database.\+gets.\+get\+\_\+credential(), core.\+queries.\+database.\+gets.\+get\+\_\+credential(), core.\+queries.\+gets.\+credentials.\+get\+\_\+credid\+\_\+with\+\_\+gid(), queries.\+gets.\+credentials.\+get\+\_\+credid\+\_\+with\+\_\+gid(), core.\+queries.\+gets.\+goods.\+get\+\_\+good(), queries.\+gets.\+goods.\+get\+\_\+good(), queries.\+gets.\+owner.\+get\+\_\+good\+\_\+owner(), core.\+queries.\+gets.\+owner.\+get\+\_\+good\+\_\+owner(), queries.\+gets.\+credentials.\+get\+\_\+id(), core.\+queries.\+gets.\+credentials.\+get\+\_\+id(), queries.\+gets.\+owner.\+get\+\_\+owner\+\_\+goods(), core.\+queries.\+gets.\+owner.\+get\+\_\+owner\+\_\+goods(), core.\+queries.\+gets.\+credentials.\+get\+\_\+password(), queries.\+gets.\+credentials.\+get\+\_\+password(), queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+sells(), queries.\+database.\+gets.\+get\+\_\+sells(), queries.\+gets.\+ledger.\+get\+\_\+transactions(), core.\+queries.\+gets.\+ledger.\+get\+\_\+transactions(), queries.\+database.\+gets.\+get\+\_\+transactions(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions(), queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), queries.\+inserts.\+banking.\+insert\+\_\+banking(), core.\+queries.\+inserts.\+banking.\+insert\+\_\+banking(), core.\+queries.\+inserts.\+clients.\+insert\+\_\+client(), queries.\+inserts.\+clients.\+insert\+\_\+client(), core.\+queries.\+inserts.\+contacts.\+insert\+\_\+contact(), queries.\+inserts.\+contacts.\+insert\+\_\+contact(), queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+inserts.\+ledger.\+insert\+\_\+trx(), queries.\+inserts.\+ledger.\+insert\+\_\+trx(), core.\+queries.\+database.\+inserts.\+insert\+\_\+trx(), queries.\+database.\+inserts.\+insert\+\_\+trx(), core.\+queries.\+database.\+database.\+lock\+\_\+advisory(), queries.\+database.\+database.\+lock\+\_\+advisory(), queries.\+inserts.\+credentials.\+new\+\_\+cred(), core.\+queries.\+inserts.\+credentials.\+new\+\_\+cred(), queries.\+inserts.\+credentials.\+register(), core.\+queries.\+inserts.\+credentials.\+register(), client.\+client.\+Client.\+register(), queries.\+database.\+inserts.\+register(), core.\+queries.\+database.\+inserts.\+register(), queries.\+gets.\+currency.\+to\+\_\+dollar(), core.\+queries.\+gets.\+currency.\+to\+\_\+dollar(), core.\+queries.\+database.\+gets.\+to\+\_\+dollar(), queries.\+database.\+gets.\+to\+\_\+dollar(), core.\+queries.\+database.\+database.\+unlock\+\_\+advisory(), queries.\+database.\+database.\+unlock\+\_\+advisory(), queries.\+updates.\+banking.\+update\+\_\+account(), core.\+queries.\+updates.\+banking.\+update\+\_\+account(), queries.\+database.\+updates.\+update\+\_\+account(), core.\+queries.\+database.\+updates.\+update\+\_\+account(), core.\+queries.\+updates.\+owners.\+update\+\_\+owner(), and queries.\+updates.\+owners.\+update\+\_\+owner().
+
+\mbox{\Hypertarget{namespaceclient_1_1client_a8babe80841f73ea794f63c6ce8eb2e71}\label{namespaceclient_1_1client_a8babe80841f73ea794f63c6ce8eb2e71}} 
+\index{client.client@{client.client}!logger@{logger}}
+\index{logger@{logger}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily client.\+client.\+logger = logging.\+get\+Logger()}
+
+
+
+Definition at line 26 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_a6859bbd7b93832b1c7054440e4086741}\label{namespaceclient_1_1client_a6859bbd7b93832b1c7054440e4086741}} 
+\index{client.client@{client.client}!parser@{parser}}
+\index{parser@{parser}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily client.\+client.\+parser = Argument\+Parser()}
+
+
+
+Definition at line 337 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_a5c99a9fb0c0214b87328e4b6e70d8aa7}\label{namespaceclient_1_1client_a5c99a9fb0c0214b87328e4b6e70d8aa7}} 
+\index{client.client@{client.client}!seed@{seed}}
+\index{seed@{seed}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{seed}{seed}}
+{\footnotesize\ttfamily client.\+client.\+seed = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})}
+
+
+
+Definition at line 38 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_a52e250968422f7d39fa2ad88837a443d}\label{namespaceclient_1_1client_a52e250968422f7d39fa2ad88837a443d}} 
+\index{client.client@{client.client}!trader1@{trader1}}
+\index{trader1@{trader1}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{trader1}{trader1}}
+{\footnotesize\ttfamily client.\+client.\+trader1 = \mbox{\hyperlink{classclient_1_1client_1_1_client}{Client}}()}
+
+
+
+Definition at line 341 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_a7e99d26c79306a2dc13a31cd6fb887fa}\label{namespaceclient_1_1client_a7e99d26c79306a2dc13a31cd6fb887fa}} 
+\index{client.client@{client.client}!trader2@{trader2}}
+\index{trader2@{trader2}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{trader2}{trader2}}
+{\footnotesize\ttfamily client.\+client.\+trader2 = \mbox{\hyperlink{classclient_1_1client_1_1_client}{Client}}()}
+
+
+
+Definition at line 342 of file client.\+py.
+
+\mbox{\Hypertarget{namespaceclient_1_1client_ad9d896f7f31b547712ee032a1f5cb8c9}\label{namespaceclient_1_1client_ad9d896f7f31b547712ee032a1f5cb8c9}} 
+\index{client.client@{client.client}!type@{type}}
+\index{type@{type}!client.client@{client.client}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily client.\+client.\+type}
+
+
+
+Definition at line 338 of file client.\+py.
+
+
+
+Referenced by client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+balance(), and core\+\_\+test.\+Restful\+Test.\+test\+\_\+register().
+

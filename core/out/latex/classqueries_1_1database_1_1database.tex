@@ -1,0 +1,423 @@
+\hypertarget{classqueries_1_1database_1_1database}{}\doxysection{queries.\+database.\+database Class Reference}
+\label{classqueries_1_1database_1_1database}\index{queries.database.database@{queries.database.database}}
+
+
+Inheritance diagram for queries.\+database.\+database\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classqueries_1_1database_1_1database__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for queries.\+database.\+database\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classqueries_1_1database_1_1database__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1database_ae773c5c4224f26d3dc9ee13924f0e31c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, dbconfigs)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1database_aef7c828356684ebd5f7dca734a848881}{commit}} (self, lock=None)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1database_a064722c7bf85d50501e2e0437ba5b81e}{rollback}} (self, lock=None)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1database_ab1d63404d9cf661a6ad82ca98b7110a3}{init}} (self)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1database_a1507bc8309a77ce0992df0a942488a35}{repeatable\+\_\+read}} (self)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1database_a09380138dbf502deb10dd9bd093e1fea}{committed\+\_\+read}} (self)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1database_a30c89062a120dd6563646f7c7150c1ea}{lock\+\_\+advisory}} (self, lock)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1database_acaf0150d0b68224d8c07c0ed1f738192}{unlock\+\_\+advisory}} (self, lock)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1database_abf9d91a89fa750840c3c6d61f2321a12}{close}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1database_ac5911f6d9ca0ba8be1c8cf3a10427f4d}{db\+\_\+configs}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1database_a97c1b09e9ea8c01d57f0807a903165e7}{conn}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1database_aeb30b571b0564b7cb3608c7e1b1c9d51}{cur}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1database_a8518b4bde4f27604841948d75c03c588}{logger}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1database_a65998a6e563f7c8ae197e73a48a94df8}{exists}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1database_a89c1813dbadf7ad7cff567eab57a2a59}{gets}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1database_a2c2e6b4ab9a425abb52fd9d1328ea532}{inserts}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1database_ab0c81d39a5802f2ff480e1799ba33406}{updates}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 611 of file database.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_ae773c5c4224f26d3dc9ee13924f0e31c}\label{classqueries_1_1database_1_1database_ae773c5c4224f26d3dc9ee13924f0e31c}} 
+\index{queries.database.database@{queries.database.database}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dbconfigs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 612 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{612     \textcolor{keyword}{def }\_\_init\_\_(self, dbconfigs):}
+\DoxyCodeLine{613         \textcolor{comment}{\#cursor}}
+\DoxyCodeLine{614         self.db\_configs=dbconfigs}
+\DoxyCodeLine{615         self.conn = psycopg2.connect(self.db\_configs)}
+\DoxyCodeLine{616         self.cur = self.conn.cursor()}
+\DoxyCodeLine{617         \textcolor{comment}{\#logger}}
+\DoxyCodeLine{618         logging.basicConfig(filename=\textcolor{stringliteral}{"db.log"}, \(\backslash\)}
+\DoxyCodeLine{619                             format=\textcolor{stringliteral}{'\%(asctime)s \%(message)s'}, \(\backslash\)}
+\DoxyCodeLine{620                             filemode=\textcolor{stringliteral}{'w'})}
+\DoxyCodeLine{621         self.logger=logging.getLogger()}
+\DoxyCodeLine{622         self.logger.setLevel(logging.DEBUG)}
+\DoxyCodeLine{623         self.exists=\mbox{\hyperlink{namespacequeries_1_1exists_1_1banking_a324fd7048117624c78ce9f1693d0be93}{exists}}(self.conn, self.cur)}
+\DoxyCodeLine{624         self.gets=gets(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{625         self.inserts=inserts(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{626         self.updates=updates(self.conn, self.cur, self.logger)}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_abf9d91a89fa750840c3c6d61f2321a12}\label{classqueries_1_1database_1_1database_abf9d91a89fa750840c3c6d61f2321a12}} 
+\index{queries.database.database@{queries.database.database}!close@{close}}
+\index{close@{close}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def queries.\+database.\+database.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 652 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{652     \textcolor{keyword}{def }close(self):}
+\DoxyCodeLine{653         self.conn.close()}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, and queries.\+database.\+database.\+conn.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_aef7c828356684ebd5f7dca734a848881}\label{classqueries_1_1database_1_1database_aef7c828356684ebd5f7dca734a848881}} 
+\index{queries.database.database@{queries.database.database}!commit@{commit}}
+\index{commit@{commit}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily def queries.\+database.\+database.\+commit (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lock = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 627 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{627     \textcolor{keyword}{def }commit(self, lock=None):}
+\DoxyCodeLine{628         self.conn.commit()}
+\DoxyCodeLine{629         self.logger.info(\textcolor{stringliteral}{"database committed"})}
+\DoxyCodeLine{630         \textcolor{comment}{\#self.repeatable\_read()}}
+\DoxyCodeLine{631         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{632             self.unlock\_advisory(lock)}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, queries.\+database.\+database.\+logger, and queries.\+database.\+database.\+unlock\+\_\+advisory().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueries_1_1database_1_1database_aef7c828356684ebd5f7dca734a848881_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_a09380138dbf502deb10dd9bd093e1fea}\label{classqueries_1_1database_1_1database_a09380138dbf502deb10dd9bd093e1fea}} 
+\index{queries.database.database@{queries.database.database}!committed\_read@{committed\_read}}
+\index{committed\_read@{committed\_read}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{committed\_read()}{committed\_read()}}
+{\footnotesize\ttfamily def queries.\+database.\+database.\+committed\+\_\+read (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 644 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{644     \textcolor{keyword}{def }committed\_read(self):}
+\DoxyCodeLine{645         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL READ COMMITTED;"})}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, and queries.\+database.\+database.\+cur.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_ab1d63404d9cf661a6ad82ca98b7110a3}\label{classqueries_1_1database_1_1database_ab1d63404d9cf661a6ad82ca98b7110a3}} 
+\index{queries.database.database@{queries.database.database}!init@{init}}
+\index{init@{init}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily def queries.\+database.\+database.\+init (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 638 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{638     \textcolor{keyword}{def }init(self):}
+\DoxyCodeLine{639         self.conn=psycopg2.connect(self.db\_configs) \textcolor{comment}{\#TODO (res) should it be called?!}}
+\DoxyCodeLine{640         self.cur=self.conn.cursor()}
+\DoxyCodeLine{641         self.logger.info(\textcolor{stringliteral}{"database initialized"})}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+database.\+db\+\_\+configs, and queries.\+database.\+database.\+logger.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_a30c89062a120dd6563646f7c7150c1ea}\label{classqueries_1_1database_1_1database_a30c89062a120dd6563646f7c7150c1ea}} 
+\index{queries.database.database@{queries.database.database}!lock\_advisory@{lock\_advisory}}
+\index{lock\_advisory@{lock\_advisory}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{lock\_advisory()}{lock\_advisory()}}
+{\footnotesize\ttfamily def queries.\+database.\+database.\+lock\+\_\+advisory (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lock }\end{DoxyParamCaption})}
+
+
+
+Definition at line 646 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{646     \textcolor{keyword}{def }lock\_advisory(self, lock):}
+\DoxyCodeLine{647         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_lock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
+\DoxyCodeLine{648         self.cur.execute(stat)}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_a1507bc8309a77ce0992df0a942488a35}\label{classqueries_1_1database_1_1database_a1507bc8309a77ce0992df0a942488a35}} 
+\index{queries.database.database@{queries.database.database}!repeatable\_read@{repeatable\_read}}
+\index{repeatable\_read@{repeatable\_read}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{repeatable\_read()}{repeatable\_read()}}
+{\footnotesize\ttfamily def queries.\+database.\+database.\+repeatable\+\_\+read (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 642 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{642     \textcolor{keyword}{def }repeatable\_read(self):}
+\DoxyCodeLine{643         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;"})}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, and queries.\+database.\+database.\+cur.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_a064722c7bf85d50501e2e0437ba5b81e}\label{classqueries_1_1database_1_1database_a064722c7bf85d50501e2e0437ba5b81e}} 
+\index{queries.database.database@{queries.database.database}!rollback@{rollback}}
+\index{rollback@{rollback}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily def queries.\+database.\+database.\+rollback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lock = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 633 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{633     \textcolor{keyword}{def }rollback(self, lock=None):}
+\DoxyCodeLine{634         self.conn.rollback()}
+\DoxyCodeLine{635         self.logger.info(\textcolor{stringliteral}{"database rollback"})}
+\DoxyCodeLine{636         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{637             self.unlock\_advisory(lock)}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, queries.\+database.\+database.\+logger, and queries.\+database.\+database.\+unlock\+\_\+advisory().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueries_1_1database_1_1database_a064722c7bf85d50501e2e0437ba5b81e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_acaf0150d0b68224d8c07c0ed1f738192}\label{classqueries_1_1database_1_1database_acaf0150d0b68224d8c07c0ed1f738192}} 
+\index{queries.database.database@{queries.database.database}!unlock\_advisory@{unlock\_advisory}}
+\index{unlock\_advisory@{unlock\_advisory}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{unlock\_advisory()}{unlock\_advisory()}}
+{\footnotesize\ttfamily def queries.\+database.\+database.\+unlock\+\_\+advisory (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lock }\end{DoxyParamCaption})}
+
+
+
+Definition at line 649 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{649     \textcolor{keyword}{def }unlock\_advisory(self, lock):}
+\DoxyCodeLine{650         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_unlock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
+\DoxyCodeLine{651         self.cur.execute(stat)}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, and client.\+client.\+format.
+
+
+
+Referenced by queries.\+database.\+database.\+commit(), core.\+queries.\+database.\+database.\+commit(), core.\+queries.\+database.\+database.\+rollback(), and queries.\+database.\+database.\+rollback().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueries_1_1database_1_1database_acaf0150d0b68224d8c07c0ed1f738192_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_a97c1b09e9ea8c01d57f0807a903165e7}\label{classqueries_1_1database_1_1database_a97c1b09e9ea8c01d57f0807a903165e7}} 
+\index{queries.database.database@{queries.database.database}!conn@{conn}}
+\index{conn@{conn}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily queries.\+database.\+database.\+conn}
+
+
+
+Definition at line 615 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+exists.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+database.\+close(), core.\+queries.\+database.\+database.\+close(), queries.\+database.\+database.\+commit(), core.\+queries.\+database.\+database.\+commit(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials(), core.\+queries.\+database.\+gets.\+get\+\_\+credential(), core.\+queries.\+database.\+gets.\+get\+\_\+sells(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions(), core.\+queries.\+database.\+database.\+init(), queries.\+database.\+database.\+init(), queries.\+database.\+database.\+rollback(), core.\+queries.\+database.\+database.\+rollback(), and core.\+queries.\+database.\+gets.\+to\+\_\+dollar().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_aeb30b571b0564b7cb3608c7e1b1c9d51}\label{classqueries_1_1database_1_1database_aeb30b571b0564b7cb3608c7e1b1c9d51}} 
+\index{queries.database.database@{queries.database.database}!cur@{cur}}
+\index{cur@{cur}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{cur}{cur}}
+{\footnotesize\ttfamily queries.\+database.\+database.\+cur}
+
+
+
+Definition at line 616 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+exists.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+exists.\+account\+\_\+byemail(), core.\+queries.\+database.\+exists.\+account\+\_\+byname(), core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), core.\+queries.\+database.\+inserts.\+add\+\_\+client(), core.\+queries.\+database.\+exists.\+bank\+\_\+account\+\_\+bycid(), core.\+queries.\+database.\+gets.\+cid2credid(), core.\+queries.\+database.\+exists.\+client\+\_\+exists(), core.\+queries.\+database.\+database.\+committed\+\_\+read(), queries.\+database.\+database.\+committed\+\_\+read(), core.\+queries.\+database.\+exists.\+contact\+\_\+exists(), core.\+queries.\+database.\+exists.\+credential\+\_\+exists(), core.\+queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+database.\+gets.\+get(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), core.\+queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), core.\+queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp(), core.\+queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), queries.\+database.\+database.\+init(), core.\+queries.\+database.\+database.\+init(), core.\+queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+database.\+inserts.\+insert\+\_\+trx(), queries.\+database.\+database.\+lock\+\_\+advisory(), core.\+queries.\+database.\+database.\+lock\+\_\+advisory(), core.\+queries.\+database.\+inserts.\+register(), queries.\+database.\+database.\+repeatable\+\_\+read(), core.\+queries.\+database.\+database.\+repeatable\+\_\+read(), core.\+queries.\+database.\+database.\+unlock\+\_\+advisory(), queries.\+database.\+database.\+unlock\+\_\+advisory(), and core.\+queries.\+database.\+updates.\+update\+\_\+account().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_ac5911f6d9ca0ba8be1c8cf3a10427f4d}\label{classqueries_1_1database_1_1database_ac5911f6d9ca0ba8be1c8cf3a10427f4d}} 
+\index{queries.database.database@{queries.database.database}!db\_configs@{db\_configs}}
+\index{db\_configs@{db\_configs}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{db\_configs}{db\_configs}}
+{\footnotesize\ttfamily queries.\+database.\+database.\+db\+\_\+configs}
+
+
+
+Definition at line 614 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+database.\+init(), and core.\+queries.\+database.\+database.\+init().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_a65998a6e563f7c8ae197e73a48a94df8}\label{classqueries_1_1database_1_1database_a65998a6e563f7c8ae197e73a48a94df8}} 
+\index{queries.database.database@{queries.database.database}!exists@{exists}}
+\index{exists@{exists}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{exists}{exists}}
+{\footnotesize\ttfamily queries.\+database.\+database.\+exists}
+
+
+
+Definition at line 623 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_a89c1813dbadf7ad7cff567eab57a2a59}\label{classqueries_1_1database_1_1database_a89c1813dbadf7ad7cff567eab57a2a59}} 
+\index{queries.database.database@{queries.database.database}!gets@{gets}}
+\index{gets@{gets}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{gets}{gets}}
+{\footnotesize\ttfamily queries.\+database.\+database.\+gets}
+
+
+
+Definition at line 624 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_a2c2e6b4ab9a425abb52fd9d1328ea532}\label{classqueries_1_1database_1_1database_a2c2e6b4ab9a425abb52fd9d1328ea532}} 
+\index{queries.database.database@{queries.database.database}!inserts@{inserts}}
+\index{inserts@{inserts}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{inserts}{inserts}}
+{\footnotesize\ttfamily queries.\+database.\+database.\+inserts}
+
+
+
+Definition at line 625 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_a8518b4bde4f27604841948d75c03c588}\label{classqueries_1_1database_1_1database_a8518b4bde4f27604841948d75c03c588}} 
+\index{queries.database.database@{queries.database.database}!logger@{logger}}
+\index{logger@{logger}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily queries.\+database.\+database.\+logger}
+
+
+
+Definition at line 621 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+database.\+commit(), queries.\+database.\+database.\+commit(), queries.\+database.\+database.\+init(), core.\+queries.\+database.\+database.\+init(), queries.\+database.\+database.\+rollback(), and core.\+queries.\+database.\+database.\+rollback().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1database_ab0c81d39a5802f2ff480e1799ba33406}\label{classqueries_1_1database_1_1database_ab0c81d39a5802f2ff480e1799ba33406}} 
+\index{queries.database.database@{queries.database.database}!updates@{updates}}
+\index{updates@{updates}!queries.database.database@{queries.database.database}}
+\doxysubsubsection{\texorpdfstring{updates}{updates}}
+{\footnotesize\ttfamily queries.\+database.\+database.\+updates}
+
+
+
+Definition at line 626 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/lib/queries/\mbox{\hyperlink{core_2build_2lib_2queries_2database_8py}{database.\+py}}\end{DoxyCompactItemize}

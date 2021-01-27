@@ -1,0 +1,43 @@
+\hypertarget{namespacequeries_1_1exists_1_1clients}{}\doxysection{queries.\+exists.\+clients Namespace Reference}
+\label{namespacequeries_1_1exists_1_1clients}\index{queries.exists.clients@{queries.exists.clients}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1exists_1_1clients_a096df4440af44b64435c07eb197b8513}{exists}} (cid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacequeries_1_1exists_1_1clients_a096df4440af44b64435c07eb197b8513}\label{namespacequeries_1_1exists_1_1clients_a096df4440af44b64435c07eb197b8513}} 
+\index{queries.exists.clients@{queries.exists.clients}!exists@{exists}}
+\index{exists@{exists}!queries.exists.clients@{queries.exists.clients}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily def queries.\+exists.\+clients.\+exists (\begin{DoxyParamCaption}\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}verify that  a client with given id is available (CALLED AT THE SERVER SIDE)
+
+@param cid: client id
+@return boolean wither the client exists or note
+\end{DoxyVerb}
+ 
+
+Definition at line 4 of file clients.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1exists_1_1clients_a2ca4f645e549d6be155b7ff511e8fd8d}{exists}}(cid):}
+\DoxyCodeLine{5     \textcolor{stringliteral}{"""verify that  a client with given id is available (CALLED AT THE SERVER SIDE)}}
+\DoxyCodeLine{6 \textcolor{stringliteral}{}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{    @param cid: client id}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{    @return boolean wither the client exists or note}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{10     stat=sql.SQL(\textcolor{stringliteral}{"SELECT EXISTS (SELECT 1 FROM clients WHERE id=\{cid\});"}).\(\backslash\)}
+\DoxyCodeLine{11         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{12     cur.execute(stat)}
+\DoxyCodeLine{13     \textcolor{keywordflow}{return} cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

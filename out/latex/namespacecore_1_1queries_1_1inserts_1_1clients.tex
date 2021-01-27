@@ -1,0 +1,44 @@
+\hypertarget{namespacecore_1_1queries_1_1inserts_1_1clients}{}\doxysection{core.\+queries.\+inserts.\+clients Namespace Reference}
+\label{namespacecore_1_1queries_1_1inserts_1_1clients}\index{core.queries.inserts.clients@{core.queries.inserts.clients}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1inserts_1_1clients_a7ac86f09da36c40d89dfe6a0bf6ce273}{insert\+\_\+client}} (name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1inserts_1_1clients_a7ac86f09da36c40d89dfe6a0bf6ce273}\label{namespacecore_1_1queries_1_1inserts_1_1clients_a7ac86f09da36c40d89dfe6a0bf6ce273}} 
+\index{core.queries.inserts.clients@{core.queries.inserts.clients}!insert\_client@{insert\_client}}
+\index{insert\_client@{insert\_client}!core.queries.inserts.clients@{core.queries.inserts.clients}}
+\doxysubsubsection{\texorpdfstring{insert\_client()}{insert\_client()}}
+{\footnotesize\ttfamily def core.\+queries.\+inserts.\+clients.\+insert\+\_\+client (\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}add new client to the network (CALLED AT THE SERVER SIDE),
+
+note that some clients might not have banking id yet
+@param name: client name
+\end{DoxyVerb}
+ 
+
+Definition at line 4 of file clients.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1inserts_1_1clients_a7ac86f09da36c40d89dfe6a0bf6ce273}{insert\_client}}(name):}
+\DoxyCodeLine{5     \textcolor{stringliteral}{""" add new client to the network (CALLED AT THE SERVER SIDE),}}
+\DoxyCodeLine{6 \textcolor{stringliteral}{}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{    note that some clients might not have banking id yet}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{    @param name: client name}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{10     stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO clients (contact\_name) VALUES (\{name\})"}).\(\backslash\)}
+\DoxyCodeLine{11         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(name=sql.Literal(name))}
+\DoxyCodeLine{12     cur.execute(stat)}
+\DoxyCodeLine{13     cur.execute(\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('clients', 'id'));"})}
+\DoxyCodeLine{14     \textcolor{keywordflow}{return} cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

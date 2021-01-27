@@ -1,0 +1,42 @@
+\hypertarget{namespacecore_1_1queries_1_1exists_1_1goods}{}\doxysection{core.\+queries.\+exists.\+goods Namespace Reference}
+\label{namespacecore_1_1queries_1_1exists_1_1goods}\index{core.queries.exists.goods@{core.queries.exists.goods}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1exists_1_1goods_a3b94e923a63c1bb76733c7634873cdcf}{exists}} (gid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1exists_1_1goods_a3b94e923a63c1bb76733c7634873cdcf}\label{namespacecore_1_1queries_1_1exists_1_1goods_a3b94e923a63c1bb76733c7634873cdcf}} 
+\index{core.queries.exists.goods@{core.queries.exists.goods}!exists@{exists}}
+\index{exists@{exists}!core.queries.exists.goods@{core.queries.exists.goods}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily def core.\+queries.\+exists.\+goods.\+exists (\begin{DoxyParamCaption}\item[{}]{gid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}verify that a good with given id is available
+
+@param gid: good id
+@return boolean wither the good exists or note
+\end{DoxyVerb}
+ 
+
+Definition at line 4 of file goods.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1exists_1_1goods_a3b94e923a63c1bb76733c7634873cdcf}{exists}}(gid):}
+\DoxyCodeLine{5     \textcolor{stringliteral}{"""verify that a good with given id is available}}
+\DoxyCodeLine{6 \textcolor{stringliteral}{}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{    @param gid: good id}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{    @return boolean wither the good exists or note}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{10     stat=sql.SQL(\textcolor{stringliteral}{"SELECT EXISTS (SELECT 1 FROM goods WHERE id=\{gid\});"}).\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(gid=sql.Literal(gid))}
+\DoxyCodeLine{11     cur.execute(stat)}
+\DoxyCodeLine{12     \textcolor{keywordflow}{return} cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

@@ -1,0 +1,41 @@
+\hypertarget{namespacecore_1_1queries_1_1updates_1_1owners}{}\doxysection{core.\+queries.\+updates.\+owners Namespace Reference}
+\label{namespacecore_1_1queries_1_1updates_1_1owners}\index{core.queries.updates.owners@{core.queries.updates.owners}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1updates_1_1owners_aad96c83e202ea7ccd23ecf32a1201598}{update\+\_\+owner}} (oid, gid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1updates_1_1owners_aad96c83e202ea7ccd23ecf32a1201598}\label{namespacecore_1_1queries_1_1updates_1_1owners_aad96c83e202ea7ccd23ecf32a1201598}} 
+\index{core.queries.updates.owners@{core.queries.updates.owners}!update\_owner@{update\_owner}}
+\index{update\_owner@{update\_owner}!core.queries.updates.owners@{core.queries.updates.owners}}
+\doxysubsubsection{\texorpdfstring{update\_owner()}{update\_owner()}}
+{\footnotesize\ttfamily def core.\+queries.\+updates.\+owners.\+update\+\_\+owner (\begin{DoxyParamCaption}\item[{}]{oid,  }\item[{}]{gid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}reassign the good's ownership with corresponding gid
+
+@param gid: good id
+\end{DoxyVerb}
+ 
+
+Definition at line 4 of file owners.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1updates_1_1owners_aad96c83e202ea7ccd23ecf32a1201598}{update\_owner}}(oid, gid):}
+\DoxyCodeLine{5     \textcolor{stringliteral}{"""reassign the good's ownership with corresponding gid}}
+\DoxyCodeLine{6 \textcolor{stringliteral}{}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{    @param gid: good id}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{9     stat = sql.SQL(\textcolor{stringliteral}{"UPDATE owners SET (owner\_id) = \{oid\} WHERE good\_id=\{gid\}"}).\(\backslash\)}
+\DoxyCodeLine{10         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(oid=sql.Literal(oid), \(\backslash\)}
+\DoxyCodeLine{11                bid=sql.Literal(gid))}
+\DoxyCodeLine{12     cur.execute(stat)}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

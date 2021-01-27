@@ -1,0 +1,49 @@
+\hypertarget{namespacecore_1_1queries_1_1inserts_1_1banking}{}\doxysection{core.\+queries.\+inserts.\+banking Namespace Reference}
+\label{namespacecore_1_1queries_1_1inserts_1_1banking}\index{core.queries.inserts.banking@{core.queries.inserts.banking}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1inserts_1_1banking_a626eb504ce7d478dda5e01f5687ab0f3}{insert\+\_\+banking}} (cid, balance)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1inserts_1_1banking_a626eb504ce7d478dda5e01f5687ab0f3}\label{namespacecore_1_1queries_1_1inserts_1_1banking_a626eb504ce7d478dda5e01f5687ab0f3}} 
+\index{core.queries.inserts.banking@{core.queries.inserts.banking}!insert\_banking@{insert\_banking}}
+\index{insert\_banking@{insert\_banking}!core.queries.inserts.banking@{core.queries.inserts.banking}}
+\doxysubsubsection{\texorpdfstring{insert\_banking()}{insert\_banking()}}
+{\footnotesize\ttfamily def core.\+queries.\+inserts.\+banking.\+insert\+\_\+banking (\begin{DoxyParamCaption}\item[{}]{cid,  }\item[{}]{balance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)
+
+@param cid: client id
+@param balance: client account balance
+\end{DoxyVerb}
+ 
+
+Definition at line 6 of file banking.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1inserts_1_1banking_a626eb504ce7d478dda5e01f5687ab0f3}{insert\_banking}}(cid, balance):}
+\DoxyCodeLine{7     \textcolor{stringliteral}{""" give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    @param cid: client id}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{    @param balance: client account balance}}
+\DoxyCodeLine{11 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{12     stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO banking (client\_id, balance, balance\_dt) VALUES (\{cid\}, \{balance\}, \{dt\});"}). \(\backslash\)}
+\DoxyCodeLine{13         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid), \(\backslash\)}
+\DoxyCodeLine{14                balance=sql.Literal(balance), \(\backslash\)}
+\DoxyCodeLine{15                dt=sql.Literal(dt.datetime.now().strftime(TIMESTAMP\_FORMAT)))}
+\DoxyCodeLine{16     db\_log.debug(stat)}
+\DoxyCodeLine{17     cur.execute(stat)}
+\DoxyCodeLine{18     stat=\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('banking', 'id'));"}}
+\DoxyCodeLine{19     db\_log.debug(stat)}
+\DoxyCodeLine{20     cur.execute(stat);}
+\DoxyCodeLine{21     \textcolor{keywordflow}{return} cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

@@ -1,6 +1,5 @@
 from flask import request, Flask, jsonify, abort, make_response
 from flask_httpauth import HTTPBasicAuth
-#from flask_httpauth import HTTPDigestAuth
 import datetime
 import json
 import random
@@ -8,10 +7,13 @@ import random as rand
 import psycopg2
 import re
 import os
+#
 seed=int.from_bytes(os.urandom(2), 'big')
 random.seed(seed)
+#
 #from core.connection_cursor import conn, cur
-from core.utils import REGISTER, GOODS, LEDGER, CONTACTS, PURCHASE, BALANCE, MAX_GOODS, MAX_COST, MAX_BALANCE, FEE, ADD_BANK_ACCOUNT, TRANSACTION
+#
+from core.utils import REGISTER, GOODS, LEDGER, CONTACTS, PURCHASE, BALANCE, MAX_GOODS, MAX_COST, MAX_BALANCE, FEE, ADD_BANK_ACCOUNT, TRANSACTION, weekly_limit, daily_limit, PaymentGate, Currency, process_cur, EUR, USD, EGP, CURRENCY
 #from core.queries.inserts import register, add_client, add_good, add_account
 #from core.queries.gets import credid2cid, get_banking_id, get_name, get_good, get_all_goods, get_balance_by_credid, get_new_price, get_password
 #from core.queries.updates import update_account, update_owner
@@ -41,6 +43,7 @@ def get_credid():
 
 def is_email(email):
   return bool(re.search(r"^[\w\.\+\-]+\@[\w]+\.[a-z]{2,3}$", email))
+
 
 @auth.verify_password
 def authenticate(user, passcode):
@@ -139,31 +142,38 @@ def register_client():
   name=req.get('name', None)
   passcode=req.get('passcode', None)
   email=req.get('email', None)
+  cur_pref=req.get('cur_pref', EUR)
   if not req or name==None or email==None or passcode==None:
     logger.critical("url is incomplete missing name")
     print("incomplete!!!")
     abort(400)
   #TODO add constraint, and verification for the name/email, and passcode (at least not None!)
-
   cred_id=get_credid()
   logger.info("registering trader for client: "+ name)
   bid=0
   db.init()
   lock=2
   #TODO generalize get_credid
+  #TODO add errors to response code
   try:
-    db.lock_advisory(lock)
-    email_exists=db.exists.account_byemail(email)
-    if email_exists:
-      print('email exists')
-      abort(400)
-      logger.debug("account {}/{} + {} already exists".\
-                   format(name, email, passcode))
-      raise Exception("account already exists!")
-    cid=db.inserts.add_client(req['name'], req['email'])
-    logger.debug("client added")
-    db.inserts.register(cid, passcode, cred_id)
-    db.commit(lock)
+      db.lock_advisory(lock)
+      email_exists=db.exists.account_byemail(email)
+      if email_exists:
+          print('email exists')
+          abort(400)
+          logger.debug("account {}/{} + {} already exists".\
+                       format(name, email, passcode))
+          raise Exception("account already exists!")
+      if not db.exists.currency(cur_pref):
+          currency=Currency(cur_pref)
+          if not currency.valid():
+              raise Exception("currency isn't supported!")
+          db.inserts.add_currency(cur_pref, currency.rate)
+      cur_pref_id=db.gets.get_currency_id(cur_pref)
+      cid=db.inserts.add_client(req['name'], req['email'], cur_pref_id)
+      logger.debug("client added")
+      db.inserts.register(cid, passcode, cred_id)
+      db.commit(lock)
   except psycopg2.DatabaseError as error:
     print('REGISTRATION FAILURE')
     db.rollback(lock)
@@ -198,29 +208,35 @@ def add_bank_account():
   db.init()
   ADD_BANK_ACCOUNT_LOCK=7
   lock=ADD_BANK_ACCOUNT_LOCK
-  balance={}
   try:
     db.lock_advisory(lock)
     cid=db.gets.credid2cid(client_cred_id)
     logger.debug("client added")
-    #TODO mock the bank to get the balance!
-    balance=rand.random()*MAX_BALANCE
-    db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference)
-    balance=db.gets.get_balance_by_credid(client_cred_id)
+    bank=PaymentGate(bank_name, branch_number, account_number, name_reference)
+    if not bank.authenticated():
+        raise Exception('payment gate authentication failure!')
+    balance_dt=bank.get_balance()
+    balance=balance_dt['balance']
+    base_currency=balance_dt['base']
+    if not db.exists.currency(base_currency):
+        currency=Currency(base_currency)
+        db.inserts.add_currency(base_currency, currency.rate)
+    base_currency_id=db.gets.get_currency_id(base_currency)
+    db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference, base_currency_id)
     db.commit(lock)
   except psycopg2.DatabaseError as error:
     print('err1')
     db.rollback(lock)
     logger.critical("assigning bank account failed, error: "+str(error))
     abort(300)
-  except:
+  except Exception as error:
     print('err2')
     db.rollback(lock)
-    logger.critical("adding bank account failed")
+    logger.critical("adding bank account failed, error: ", str(error))
     abort(300)
   finally:
     db.close()
-  return jsonify({'balance':balance}), 201
+  return jsonify({'balance':balance, 'base': base_currency}), 201
 
 @app.route(CONTACTS, methods=['POST'])
 @auth.login_required
@@ -264,13 +280,27 @@ def add_contact():
 def get_balance():
     """ get balance of the current client
 
+    @return {'balance': balance, 'base': base}
     """
     balance=None
     logger.info("balance requested")
     db.init()
     try:
         db.repeatable_read()
+        cid=db.gets.credid2cid(client_cred_id)
+        if not db.exists.bank_account_bycid(cid):
+            raise Exception("no bank account added yet!")
+        #this would return balance in bank base
         balance=db.gets.get_balance_by_credid(client_cred_id)
+        # transform balance to user preference
+        pref_cur=db.gets.get_preference_currency_bycid(cid)
+        amount=balance['balance']
+        print('|--------------> amount {}'.format(amount))
+        base=balance['base']
+        currency=Currency(pref_cur, base)
+        pref_balance=currency.exchange(amount)
+        print('|--------------> pref_balance {}'.format(pref_balance))
+        payload={'balance': pref_balance, 'base':pref_cur}
         db.commit()
     except psycopg2.DatabaseError as error:
         db.rollback()
@@ -282,7 +312,43 @@ def get_balance():
         abort(300)
     finally:
         db.close()
-    return jsonify({"balance": balance}), 201
+    return jsonify(payload), 201
+
+@app.route(CURRENCY, methods=['POST'])
+@auth.login_required
+def update_balance_preference():
+    """update balance preference
+
+    """
+    req=request.get_json(force=True)
+    base = req.get('base', None)
+    logger.info("updating balance preference")
+    if not req or base==None:
+        logger.cirtical('incomplete url')
+        abort(401)
+    CURRENCY_LOCK=11
+    lock=CURRENCY_LOCK
+    db.init()
+    try:
+        db.lock_advisory(lock)
+        if not db.exists.currency(base):
+            currency=Currency(base)
+            db.inserts.add_currency(basey, currency.rate)
+        base_currency_id=db.gets.get_currency_id(base_currency)
+        cid=db.gets.credid2cid(client_cred_id)
+        db.updates.currency_preference(cid, base)
+        db.commit()
+    except psycopg2.DatabaseError as error:
+        db.rollback()
+        logger.critical("request failure, error: "+ str(error))
+        abort(300)
+    except Exception as error:
+        db.rollback()
+        logger.critical("request failure, error: "+ str(error))
+        abort(300)
+    finally:
+        db.unlock_advisory(lock)
+        db.close()
 
 @app.route(LEDGER, methods=['POST'])
 @auth.login_required
@@ -317,21 +383,22 @@ def update_ledger():
         db.unlock_advisory(lock)
         db.close()
     return jsonify(payload), 201
+
 @app.route(TRANSACTION, methods=['POST'])
 @auth.login_required
 def make_transaction():
     req=request.get_json(force=True)
     recipt_credid=req['credid']
-    amount=req['amount']
-    currency=req.get('currency', 'USD')
-    cur_balance=db.gets.get_balance_by_credid(client_cred_id)
-    if cur_balance<amount+FEE:
-        logger.info("client doesn't have enough credit to make transaction")
-        abort(400)
-    #TODO transform this to the required currency
-    # accept currency in the api
-    MAX_DAILY=10000
-    MAX_WEEKLY=50000
+    # the amount of transaction in Euro
+    orig_amount=req['amount']
+    currency_base=req.get('currency', EUR)
+    #exchange amount to euro for processing
+    to_euro = Currency(EUR, currency_base)
+    amount=to_euro.exchange(orig_amount)
+    trx_name=req.get('trx_name', '')
+    #TRANSACTION LIMITS IN EUROS
+    max_daily=daily_limit()
+    max_weekly=weekly_limit()
     #here the weekly/daily conditions are pivoted by the current moment only, note that the bank system can have specific pivot hour (the first momemnt of the day, it's specific for the bank system, and need to be known before hand)
     week_past=datetime.datetime.now()-datetime.timedelta(days=7)
     day_past=datetime.datetime.now()-datetime.timedelta(days=1)
@@ -347,29 +414,50 @@ def make_transaction():
     print('start transaction')
     try:
         db.lock_advisory(lock)
+        #if this client have a bank account yet
+        cid=db.gets.credid2cid(client_cred_id)
+        if not db.exists.bank_account_bycid(cid):
+            raise Exception("client doesn't have any associated bank account!")
+        #balance in bank base
+        src_balance=db.gets.get_balance_by_credid(client_cred_id)
+        src_balance_exchange=Currency(EUR, src_balance['base'])
+        src_balance_euro=src_balance_exchange.exchange(src_balance['balance'])
+        if src_balance_euro<amount+FEE:
+            logger.info("client doesn't have enough credit to make transaction")
+            raise Exception("no enough balance to make transaction")
+        #get transaction sum in euro
         weekly_trx_sum=db.gets.get_transactions_sum(client_cred_id, week_past)
         daily_trx_sum=db.gets.get_transactions_sum(client_cred_id, day_past)
         print('got trx sum! weekly: {}, daily{}'.format(weekly_trx_sum, daily_trx_sum))
-        if weekly_trx_sum+amount>MAX_WEEKLY or daily_trx_sum+amount>MAX_DAILY:
+        if weekly_trx_sum+amount>max_weekly or daily_trx_sum+amount>max_daily:
             logger.info("client passed the daily/weekly limit")
             raise Exception("client passed the daily/weekly limits")
+        cur_id=db.gets.get_currency_id(currency_base)
         #add transaction
-        db.inserts.insert_trx(recipt_credid, client_cred_id, amount)
+        db.inserts.insert_trx(recipt_credid, client_cred_id, amount, cur_id, trx_name)
         #TODO this can be minimized directly by credid
-        src_balance=db.gets.get_balance_by_credid(client_cred_id)-(amount+FEE)
-        des_balance=db.gets.get_balance_by_credid(recipt_credid)+amount
+        #dest balance in bank base
+        dest_balance=db.gets.get_balance_by_credid(recipt_credid)
+        dest_balance_exchange=Currency(EUR, dest_balance['base'])
+        dest_balance_euro=dest_balance_exchange.exchange(dest_balance['balance'])
+        src_balance_new=src_balance_euro-(amount+FEE)
+        dest_balance_new=dest_balance_euro+amount
+        #exchange back to bank bas
+        src_balance_new=src_balance_exchange.exchange_back(src_balance_new)
+        dest_balance_new=dest_balance_exchange.exchange_back(dest_balance_new)
         src_cid=db.gets.credid2cid(client_cred_id)
         des_cid=db.gets.credid2cid(recipt_credid)
         if src_cid==des_cid:
             logger.critical("you can't make transaction with oneself!")
             abort(403)
             raise Exception("you can't make transaction with oneself!")
-        db.updates.update_account(src_cid, src_balance)
-        db.updates.update_account(des_cid, des_balance)
-        trx = {'trx_dest': recipt_credid,
-               'trx_src': client_cred_id,
-               'trx_cost': amount}
-        payload={'balance': src_balance,
+        db.updates.update_account(src_cid, src_balance_new)
+        db.updates.update_account(des_cid, dest_balance_new)
+        trx = {'trx_dest': recipt_credid,  \
+               'trx_src': client_cred_id, \
+               'trx_cost': orig_amount, \
+               'trx_name':trx_name}
+        payload={'balance': src_balance_new, \
                  'transactions': trx}
         db.commit()
     except psycopg2.DatabaseError as error:

@@ -1,0 +1,44 @@
+\hypertarget{namespacecore_1_1queries_1_1updates_1_1banking}{}\doxysection{core.\+queries.\+updates.\+banking Namespace Reference}
+\label{namespacecore_1_1queries_1_1updates_1_1banking}\index{core.queries.updates.banking@{core.queries.updates.banking}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1updates_1_1banking_a01704b049ef87bbe8b295a3bef2a2a37}{update\+\_\+account}} (cid, balance)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1updates_1_1banking_a01704b049ef87bbe8b295a3bef2a2a37}\label{namespacecore_1_1queries_1_1updates_1_1banking_a01704b049ef87bbe8b295a3bef2a2a37}} 
+\index{core.queries.updates.banking@{core.queries.updates.banking}!update\_account@{update\_account}}
+\index{update\_account@{update\_account}!core.queries.updates.banking@{core.queries.updates.banking}}
+\doxysubsubsection{\texorpdfstring{update\_account()}{update\_account()}}
+{\footnotesize\ttfamily def core.\+queries.\+updates.\+banking.\+update\+\_\+account (\begin{DoxyParamCaption}\item[{}]{cid,  }\item[{}]{balance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}update the banking account with the calculated new balance (CALLED FROM SERVER SIDE)
+
+@param cid: client id
+@param balance: the account balance
+\end{DoxyVerb}
+ 
+
+Definition at line 6 of file banking.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1updates_1_1banking_a01704b049ef87bbe8b295a3bef2a2a37}{update\_account}}(cid, balance):}
+\DoxyCodeLine{7     \textcolor{stringliteral}{"""update the banking account with the calculated new balance (CALLED FROM SERVER SIDE)}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    @param cid: client id}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{    @param balance: the account balance}}
+\DoxyCodeLine{11 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{12     stat = sql.SQL(\textcolor{stringliteral}{"UPDATE banking SET (balance, balance\_dt) = (\{balance\}, \{dt\}) WHERE client\_id=\{cid\}"}).\(\backslash\)}
+\DoxyCodeLine{13         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(balance=sql.Literal(balance), \(\backslash\)}
+\DoxyCodeLine{14                dt=dt.datetime().strftime(TIMESTAMP\_FORMAT), \(\backslash\)}
+\DoxyCodeLine{15                cid=sql.Literal(cid))}
+\DoxyCodeLine{16     cur.execute(stat)}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

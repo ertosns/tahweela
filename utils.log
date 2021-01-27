@@ -1,0 +1,452 @@
+2021-01-27 20:33:25,522 server initialized
+2021-01-27 20:33:25,531 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-27 20:33:25,533 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-27 20:33:25,537 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-27 20:33:25,541 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-27 20:33:25,544 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-27 20:33:25,548 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-27 20:33:25,552 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-27 20:33:25,554 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-27 20:33:25,559 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-27 20:33:25,562 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-27 20:33:25,564 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-27 20:33:25,569 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-27 20:33:25,575 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-27 20:33:25,577 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-27 20:33:25,581 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-27 20:33:25,586 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-27 20:33:25,590 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-27 20:33:25,598 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-27 20:33:25,601 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,603 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-27 20:33:25,603 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-27 20:33:25,604 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-27 20:33:25,610 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-27 20:33:25,614 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,614 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-27 20:33:25,619 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-27 20:33:25,621 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-27 20:33:25,624 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-27 20:33:25,629 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-27 20:33:25,631 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-27 20:33:25,634 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-27 20:33:25,643 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-27 20:33:25,652 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-27 20:33:25,655 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-27 20:33:25,656 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,657 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,659 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-27 20:33:25,669 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-27 20:33:25,670 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,685 client initialized
+2021-01-27 20:33:25,686 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-27 20:33:25,687 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-27 20:33:25,688 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-27 20:33:25,693 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-27 20:33:25,694 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-27 20:33:25,700 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-27 20:33:25,701 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-27 20:33:25,702 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-27 20:33:25,702 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-27 20:33:25,707 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-27 20:33:25,707 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-27 20:33:25,713 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-27 20:33:25,715 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-27 20:33:25,716 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-27 20:33:25,718 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-27 20:33:25,720 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-27 20:33:25,721 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-27 20:33:25,726 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-27 20:33:25,727 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,729 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-27 20:33:25,730 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-27 20:33:25,731 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-27 20:33:25,737 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-27 20:33:25,739 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,740 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-27 20:33:25,745 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-27 20:33:25,745 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-27 20:33:25,750 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-27 20:33:25,751 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-27 20:33:25,754 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-27 20:33:25,754 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-27 20:33:25,763 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-27 20:33:25,764 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-27 20:33:25,773 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-27 20:33:25,773 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,773 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,773 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-27 20:33:25,782 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-27 20:33:25,783 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,797 registering trader for client: Maria Barajas
+2021-01-27 20:33:25,803 database initialized
+2021-01-27 20:33:25,809 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:25,813 client added
+2021-01-27 20:33:25,815 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(215), SQL(', '), Literal('kIpXylfRy'), SQL(', '), Literal(3068769573183), SQL(');')])
+2021-01-27 20:33:25,816 database committed
+2021-01-27 20:33:25,829 user registered with credentials username: Maria Barajas, email: kristen42@yahoo.com, passcode: kIpXylfRy
+2021-01-27 20:33:25,836 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('kristen42@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:25,839 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(215), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:25,842 authenticating client with cred kristen42@yahoo.com:kIpXylfRy
+2021-01-27 20:33:25,851 database initialized
+2021-01-27 20:33:25,853 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(3068769573183), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:25,856 username:kristen42@yahoo.com, passcode:kIpXylfRy
+2021-01-27 20:33:25,856 database committed
+2021-01-27 20:33:25,867 database initialized
+2021-01-27 20:33:25,871 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(3068769573183), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:25,873 client added
+2021-01-27 20:33:25,873 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:25,874 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(215), SQL(', '), Literal(1791430.6738860041), SQL(', '), Literal('Michael'), SQL(', '), Literal(4), SQL(', '), Literal(2290328), SQL(', '), Literal('Li'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:33:25,875 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:33:25,877 database committed
+2021-01-27 20:33:25,886 client initialized
+2021-01-27 20:33:25,890 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-27 20:33:25,903 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-27 20:33:25,905 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-27 20:33:25,910 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-27 20:33:25,910 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-27 20:33:25,911 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-27 20:33:25,911 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-27 20:33:25,914 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-27 20:33:25,914 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-27 20:33:25,922 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-27 20:33:25,924 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-27 20:33:25,937 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-27 20:33:25,938 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-27 20:33:25,940 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-27 20:33:25,942 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-27 20:33:25,947 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-27 20:33:25,948 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-27 20:33:25,958 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-27 20:33:25,958 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,959 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-27 20:33:25,963 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-27 20:33:25,964 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-27 20:33:25,979 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-27 20:33:25,979 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:25,979 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-27 20:33:25,985 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-27 20:33:25,985 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-27 20:33:25,987 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-27 20:33:25,987 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-27 20:33:25,987 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-27 20:33:25,988 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-27 20:33:25,995 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-27 20:33:25,995 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-27 20:33:26,004 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-27 20:33:26,005 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:26,005 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:26,005 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-27 20:33:26,022 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-27 20:33:26,025 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:26,042 registering trader for client: Mr. Timothy Ortiz
+2021-01-27 20:33:26,050 database initialized
+2021-01-27 20:33:26,051 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:26,052 client added
+2021-01-27 20:33:26,052 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(216), SQL(', '), Literal('eVCu7OamJ'), SQL(', '), Literal(781737035665), SQL(');')])
+2021-01-27 20:33:26,053 database committed
+2021-01-27 20:33:26,058 user registered with credentials username: Mr. Timothy Ortiz, email: antonio83@nichols.com, passcode: eVCu7OamJ
+2021-01-27 20:33:26,061 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('antonio83@nichols.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,069 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(216), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,070 authenticating client with cred antonio83@nichols.com:eVCu7OamJ
+2021-01-27 20:33:26,084 database initialized
+2021-01-27 20:33:26,086 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(781737035665), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,089 username:antonio83@nichols.com, passcode:eVCu7OamJ
+2021-01-27 20:33:26,091 database committed
+2021-01-27 20:33:26,102 database initialized
+2021-01-27 20:33:26,106 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(781737035665), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,107 client added
+2021-01-27 20:33:26,107 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:26,108 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(216), SQL(', '), Literal(5348495.033090626), SQL(', '), Literal('Jordan'), SQL(', '), Literal(9), SQL(', '), Literal(717253), SQL(', '), Literal('Heath'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:33:26,110 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:33:26,113 database committed
+2021-01-27 20:33:26,122 client initialized
+2021-01-27 20:33:26,126 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('kristen42@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,128 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(215), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,129 authenticating client with cred kristen42@yahoo.com:kIpXylfRy
+2021-01-27 20:33:26,150 database initialized
+2021-01-27 20:33:26,153 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(3068769573183), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,157 username:kristen42@yahoo.com, passcode:kIpXylfRy
+2021-01-27 20:33:26,158 database committed
+2021-01-27 20:33:26,161 requesting contact
+2021-01-27 20:33:26,176 database initialized
+2021-01-27 20:33:26,177 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('antonio83@nichols.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,177 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(216), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,178 Composed([SQL('SELECT * FROM clients WHERE client_id='), Literal(216), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,179 database committed
+2021-01-27 20:33:26,187 client initialized
+2021-01-27 20:33:26,188 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-27 20:33:26,190 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-27 20:33:26,191 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-27 20:33:26,200 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-27 20:33:26,200 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-27 20:33:26,205 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-27 20:33:26,205 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-27 20:33:26,207 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-27 20:33:26,209 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-27 20:33:26,216 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-27 20:33:26,216 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-27 20:33:26,226 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-27 20:33:26,229 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-27 20:33:26,231 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-27 20:33:26,231 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-27 20:33:26,234 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-27 20:33:26,235 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-27 20:33:26,245 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-27 20:33:26,247 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:26,250 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-27 20:33:26,254 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-27 20:33:26,255 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-27 20:33:26,263 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-27 20:33:26,265 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:26,266 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-27 20:33:26,273 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-27 20:33:26,275 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-27 20:33:26,283 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-27 20:33:26,284 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-27 20:33:26,287 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-27 20:33:26,289 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-27 20:33:26,297 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-27 20:33:26,298 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-27 20:33:26,309 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-27 20:33:26,310 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:26,311 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:26,313 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-27 20:33:26,319 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-27 20:33:26,322 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:26,338 registering trader for client: Rachel Edwards
+2021-01-27 20:33:26,344 database initialized
+2021-01-27 20:33:26,345 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:26,350 client added
+2021-01-27 20:33:26,350 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(217), SQL(', '), Literal('8XyVUMR2k'), SQL(', '), Literal(3030162281581), SQL(');')])
+2021-01-27 20:33:26,351 database committed
+2021-01-27 20:33:26,361 user registered with credentials username: Rachel Edwards, email: monica19@yahoo.com, passcode: 8XyVUMR2k
+2021-01-27 20:33:26,365 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('monica19@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,369 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(217), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,372 authenticating client with cred monica19@yahoo.com:8XyVUMR2k
+2021-01-27 20:33:26,385 database initialized
+2021-01-27 20:33:26,385 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(3030162281581), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,386 username:monica19@yahoo.com, passcode:8XyVUMR2k
+2021-01-27 20:33:26,386 database committed
+2021-01-27 20:33:26,396 database initialized
+2021-01-27 20:33:26,400 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(3030162281581), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,402 client added
+2021-01-27 20:33:26,403 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:26,403 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(217), SQL(', '), Literal(7691620.034237563), SQL(', '), Literal('Christopher'), SQL(', '), Literal(28), SQL(', '), Literal(2907237), SQL(', '), Literal('Williams'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:33:26,404 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:33:26,405 database committed
+2021-01-27 20:33:26,415 client initialized
+2021-01-27 20:33:26,416 verifying balance for Rachel Edwards/monica19@yahoo.com + 8XyVUMR2k with balance 7691620.034237563
+2021-01-27 20:33:26,426 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('monica19@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,427 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(217), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,428 authenticating client with cred monica19@yahoo.com:8XyVUMR2k
+2021-01-27 20:33:26,442 database initialized
+2021-01-27 20:33:26,445 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(3030162281581), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,451 username:monica19@yahoo.com, passcode:8XyVUMR2k
+2021-01-27 20:33:26,451 database committed
+2021-01-27 20:33:26,451 balance requested
+2021-01-27 20:33:26,460 database initialized
+2021-01-27 20:33:26,462 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(3030162281581), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,467 Composed([SQL('SELECT (b.balance, cur.currency_name) FROM banking as b INNER JOIN  credentials AS c ON (c.id=b.client_id) INNER JOIN currency AS cur ON (cur.id=b.currency_id) WHERE c.cred_id='), Literal(3030162281581), SQL(' FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,472 Composed([SQL('SELECT (currency.currency_name) FROM currency  JOIN clients  ON (clients.currency_id=currency.id) WHERE clients.client_id='), Literal(217), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:26,489 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:33:27,531 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:33:27,543 exchange rate fetch failed base: EUR, pref: 'EUR'
+2021-01-27 20:33:27,549 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:33:28,020 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:33:29,034 exchange with rate 1.0
+2021-01-27 20:33:29,034 database committed
+2021-01-27 20:33:29,038 client initialized
+2021-01-27 20:33:29,038 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-27 20:33:29,049 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-27 20:33:29,053 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-27 20:33:29,058 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-27 20:33:29,060 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-27 20:33:29,066 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-27 20:33:29,067 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-27 20:33:29,069 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-27 20:33:29,070 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-27 20:33:29,072 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-27 20:33:29,073 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-27 20:33:29,079 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-27 20:33:29,080 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-27 20:33:29,087 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-27 20:33:29,090 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-27 20:33:29,096 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-27 20:33:29,099 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-27 20:33:29,116 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-27 20:33:29,120 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,122 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-27 20:33:29,124 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-27 20:33:29,125 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-27 20:33:29,142 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-27 20:33:29,143 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,143 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-27 20:33:29,146 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-27 20:33:29,147 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-27 20:33:29,149 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-27 20:33:29,150 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-27 20:33:29,151 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-27 20:33:29,152 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-27 20:33:29,159 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-27 20:33:29,160 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-27 20:33:29,169 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-27 20:33:29,170 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,172 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,173 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-27 20:33:29,183 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-27 20:33:29,183 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,197 registering trader for client: Edgar Hoover
+2021-01-27 20:33:29,205 database initialized
+2021-01-27 20:33:29,208 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:29,210 client added
+2021-01-27 20:33:29,211 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(218), SQL(', '), Literal('WWSw0Xka3'), SQL(', '), Literal(411636059233), SQL(');')])
+2021-01-27 20:33:29,213 database committed
+2021-01-27 20:33:29,218 user registered with credentials username: Edgar Hoover, email: hannah14@hotmail.com, passcode: WWSw0Xka3
+2021-01-27 20:33:29,228 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('hannah14@hotmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,231 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(218), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,234 authenticating client with cred hannah14@hotmail.com:WWSw0Xka3
+2021-01-27 20:33:29,244 database initialized
+2021-01-27 20:33:29,246 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(411636059233), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,247 username:hannah14@hotmail.com, passcode:WWSw0Xka3
+2021-01-27 20:33:29,247 database committed
+2021-01-27 20:33:29,257 database initialized
+2021-01-27 20:33:29,261 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(411636059233), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,263 client added
+2021-01-27 20:33:29,266 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:29,269 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(218), SQL(', '), Literal(8040510.179372654), SQL(', '), Literal('Teresa'), SQL(', '), Literal(12), SQL(', '), Literal(2773544), SQL(', '), Literal('Joseph'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:33:29,272 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:33:29,275 database committed
+2021-01-27 20:33:29,281 client initialized
+2021-01-27 20:33:29,283 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-27 20:33:29,289 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-27 20:33:29,290 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-27 20:33:29,292 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-27 20:33:29,294 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-27 20:33:29,300 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-27 20:33:29,302 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-27 20:33:29,303 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-27 20:33:29,304 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-27 20:33:29,306 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-27 20:33:29,307 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-27 20:33:29,313 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-27 20:33:29,314 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-27 20:33:29,317 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-27 20:33:29,318 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-27 20:33:29,319 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-27 20:33:29,321 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-27 20:33:29,324 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-27 20:33:29,325 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,326 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-27 20:33:29,327 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-27 20:33:29,328 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-27 20:33:29,331 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-27 20:33:29,332 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,334 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-27 20:33:29,342 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-27 20:33:29,343 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-27 20:33:29,349 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-27 20:33:29,351 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-27 20:33:29,354 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-27 20:33:29,356 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-27 20:33:29,367 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-27 20:33:29,369 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-27 20:33:29,375 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-27 20:33:29,375 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,376 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,377 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-27 20:33:29,382 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-27 20:33:29,383 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-27 20:33:29,396 registering trader for client: Samuel Carter
+2021-01-27 20:33:29,405 database initialized
+2021-01-27 20:33:29,411 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:29,416 client added
+2021-01-27 20:33:29,417 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(219), SQL(', '), Literal('Ou2lSlyb6'), SQL(', '), Literal(42931972861), SQL(');')])
+2021-01-27 20:33:29,421 database committed
+2021-01-27 20:33:29,427 user registered with credentials username: Samuel Carter, email: jbrown@gmail.com, passcode: Ou2lSlyb6
+2021-01-27 20:33:29,433 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('jbrown@gmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,435 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(219), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,437 authenticating client with cred jbrown@gmail.com:Ou2lSlyb6
+2021-01-27 20:33:29,444 database initialized
+2021-01-27 20:33:29,445 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(42931972861), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,446 username:jbrown@gmail.com, passcode:Ou2lSlyb6
+2021-01-27 20:33:29,447 database committed
+2021-01-27 20:33:29,462 database initialized
+2021-01-27 20:33:29,466 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(42931972861), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,469 client added
+2021-01-27 20:33:29,471 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:29,474 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(219), SQL(', '), Literal(7941981.9658090165), SQL(', '), Literal('Kelsey'), SQL(', '), Literal(15), SQL(', '), Literal(2108460), SQL(', '), Literal('Clark'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-27 20:33:29,477 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-27 20:33:29,480 database committed
+2021-01-27 20:33:29,486 client initialized
+2021-01-27 20:33:29,490 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('hannah14@hotmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,495 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(218), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,498 authenticating client with cred hannah14@hotmail.com:WWSw0Xka3
+2021-01-27 20:33:29,507 database initialized
+2021-01-27 20:33:29,509 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(411636059233), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,511 username:hannah14@hotmail.com, passcode:WWSw0Xka3
+2021-01-27 20:33:29,513 database committed
+2021-01-27 20:33:29,515 requesting contact
+2021-01-27 20:33:29,531 database initialized
+2021-01-27 20:33:29,536 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('jbrown@gmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,538 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(219), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,540 Composed([SQL('SELECT * FROM clients WHERE client_id='), Literal(219), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,542 database committed
+2021-01-27 20:33:29,555 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('hannah14@hotmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,557 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(218), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,559 authenticating client with cred hannah14@hotmail.com:WWSw0Xka3
+2021-01-27 20:33:29,570 database initialized
+2021-01-27 20:33:29,572 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal(411636059233), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:29,575 username:hannah14@hotmail.com, passcode:WWSw0Xka3
+2021-01-27 20:33:29,577 database committed
+2021-01-27 20:33:29,587 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:33:29,970 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:33:29,983 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:33:29,990 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:33:30,897 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:33:31,922 exchange with rate 1.0
+2021-01-27 20:33:31,925 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:33:33,146 https://api.exchangeratesapi.io:443 "GET /latest?base=EGP HTTP/1.1" 400 40
+2021-01-27 20:33:33,151 exchange rate fetch failed base: EGP, pref: EUR
+2021-01-27 20:33:33,156 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:33:33,755 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:33:34,764 exchange with rate 19.033205
+2021-01-27 20:33:34,769 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:33:54,029 https://api.exchangeratesapi.io:443 "GET /latest?base=EGP HTTP/1.1" 400 40
+2021-01-27 20:33:54,036 exchange rate fetch failed base: EGP, pref: EUR
+2021-01-27 20:33:54,044 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:33:54,743 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:33:55,748 exchange with rate 19.033205
+2021-01-27 20:33:55,749 making purchase
+2021-01-27 20:33:55,761 database initialized
+2021-01-27 20:33:55,764 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(411636059233), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:55,767 Composed([SQL('SELECT (b.balance, cur.currency_name) FROM banking as b INNER JOIN  credentials AS c ON (c.id=b.client_id) INNER JOIN currency AS cur ON (cur.id=b.currency_id) WHERE c.cred_id='), Literal(411636059233), SQL(' FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:55,776 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:33:56,443 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:33:56,451 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:33:56,458 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:33:56,837 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:33:57,843 exchange with rate 1.0
+2021-01-27 20:33:57,844 Composed([SQL('SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dt>='), Literal(datetime.datetime(2021, 1, 20, 20, 33, 55, 749188)), SQL(' AND trx_dt<'), Literal('2021-01-27 20:33:57.843975'), SQL(' AND trx_dest='), Literal(411636059233), SQL(') OR (trx_dt>='), Literal(datetime.datetime(2021, 1, 20, 20, 33, 55, 749188)), SQL(' AND trx_dt<'), Literal('2021-01-27 20:33:57.843975'), SQL(' AND trx_src='), Literal(411636059233), SQL(');')])
+2021-01-27 20:33:57,945 Composed([SQL('SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dt>='), Literal(datetime.datetime(2021, 1, 26, 20, 33, 55, 749231)), SQL(' AND trx_dt<'), Literal('2021-01-27 20:33:57.945883'), SQL(' AND trx_dest='), Literal(411636059233), SQL(') OR (trx_dt>='), Literal(datetime.datetime(2021, 1, 26, 20, 33, 55, 749231)), SQL(' AND trx_dt<'), Literal('2021-01-27 20:33:57.945883'), SQL(' AND trx_src='), Literal(411636059233), SQL(');')])
+2021-01-27 20:33:57,947 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:57,948 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost, trx_cur_id, trx_name) VALUES ('), Literal(42931972861), SQL(', '), Literal(411636059233), SQL(', '), Literal(3279.012036705654), SQL(', '), Literal((1,)), SQL(', '), Literal(''), SQL(');')])
+2021-01-27 20:33:57,952 Composed([SQL('SELECT (b.balance, cur.currency_name) FROM banking as b INNER JOIN  credentials AS c ON (c.id=b.client_id) INNER JOIN currency AS cur ON (cur.id=b.currency_id) WHERE c.cred_id='), Literal(42931972861), SQL(' FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:57,962 Starting new HTTPS connection (1): api.exchangeratesapi.io:443
+2021-01-27 20:33:58,519 https://api.exchangeratesapi.io:443 "GET /latest?base=EUR HTTP/1.1" 200 None
+2021-01-27 20:33:58,524 exchange rate fetch failed base: EUR, pref: EUR
+2021-01-27 20:33:58,530 Starting new HTTP connection (1): data.fixer.io:80
+2021-01-27 20:33:58,881 http://data.fixer.io:80 "GET /api/latest?access_key=9c87591ccfb9716f0850e500ceceef7a HTTP/1.1" 200 None
+2021-01-27 20:33:59,886 exchange with rate 1.0
+2021-01-27 20:33:59,886 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(411636059233), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:59,888 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal(42931972861), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-27 20:33:59,892 database committed
+2021-01-27 20:33:59,903 client initialized
+2021-01-27 20:33:59,909 registering trader for client: Lauren Mathews
+2021-01-27 20:33:59,912 database initialized
+2021-01-27 20:33:59,913 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-27 20:33:59,914 client added
+2021-01-27 20:33:59,914 Composed([SQL('INSERT INTO credentials (id, passcode, cred_id) VALUES ('), Literal(220), SQL(', '), Literal('2Z3UNJ7Jl'), SQL(', '), Literal(1754754380821), SQL(');')])
+2021-01-27 20:33:59,915 database committed
+2021-01-27 20:33:59,916 user registered with credentials username: Lauren Mathews, email: james91@hotmail.com, passcode: 2Z3UNJ7Jl
+2021-01-27 20:33:59,916 client initialized

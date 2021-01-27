@@ -1,0 +1,47 @@
+\hypertarget{namespacecore_1_1queries_1_1inserts_1_1ledger}{}\doxysection{core.\+queries.\+inserts.\+ledger Namespace Reference}
+\label{namespacecore_1_1queries_1_1inserts_1_1ledger}\index{core.queries.inserts.ledger@{core.queries.inserts.ledger}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1inserts_1_1ledger_a801eeb7ac55793ff483c21c7b66db439}{insert\+\_\+trx}} (des, src, gid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1inserts_1_1ledger_a801eeb7ac55793ff483c21c7b66db439}\label{namespacecore_1_1queries_1_1inserts_1_1ledger_a801eeb7ac55793ff483c21c7b66db439}} 
+\index{core.queries.inserts.ledger@{core.queries.inserts.ledger}!insert\_trx@{insert\_trx}}
+\index{insert\_trx@{insert\_trx}!core.queries.inserts.ledger@{core.queries.inserts.ledger}}
+\doxysubsubsection{\texorpdfstring{insert\_trx()}{insert\_trx()}}
+{\footnotesize\ttfamily def core.\+queries.\+inserts.\+ledger.\+insert\+\_\+trx (\begin{DoxyParamCaption}\item[{}]{des,  }\item[{}]{src,  }\item[{}]{gid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}insert transaction from 'src' to 'des' for good with 'gid'
+
+@param des: the transaction destination
+@param src: the transaction source
+@param gid: the good's id
+\end{DoxyVerb}
+ 
+
+Definition at line 5 of file ledger.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1inserts_1_1ledger_a801eeb7ac55793ff483c21c7b66db439}{insert\_trx}}(des, src, gid):}
+\DoxyCodeLine{6     \textcolor{stringliteral}{""" insert transaction from 'src' to 'des' for good with 'gid'}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{    @param des: the transaction destination}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    @param src: the transaction source}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{    @param gid: the good's id}}
+\DoxyCodeLine{11 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{12     stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO ledger (trx\_dest, trx\_src, good\_id) VALUES (\{des\}, \{src\}, \{gid\});"}).\(\backslash\)}
+\DoxyCodeLine{13         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(des=sql.Literal(des), \(\backslash\)}
+\DoxyCodeLine{14                src=sql.Literal(src), \(\backslash\)}
+\DoxyCodeLine{15                gid=sql.Literal(gid))}
+\DoxyCodeLine{16     db\_log.debug(stat)}
+\DoxyCodeLine{17     cur.execute(stat)}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+

@@ -1,0 +1,319 @@
+\hypertarget{classqueries_1_1database_1_1exists}{}\doxysection{queries.\+database.\+exists Class Reference}
+\label{classqueries_1_1database_1_1exists}\index{queries.database.exists@{queries.database.exists}}
+
+
+Inheritance diagram for queries.\+database.\+exists\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classqueries_1_1database_1_1exists__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for queries.\+database.\+exists\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classqueries_1_1database_1_1exists__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1exists_af6a794edd658faf9afc2e89d19fcabd1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classqueries_1_1database_1_1exists_a8c7e2391e77cf8d966e44ea57f6aa5ac}{conn}}, \mbox{\hyperlink{classqueries_1_1database_1_1exists_aa6e1faf00b44da76af5889ac868d96c6}{cur}})
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1exists_a81a9416baa818c5c1217f54bbbc0fca4}{account\+\_\+byemail}} (self, email)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1exists_a87fc148a385a35a97483e8cad00a71cd}{account\+\_\+byname}} (self, name, passcode)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1exists_a77bd24412e5a3e6fae4214eada4726e2}{bank\+\_\+account\+\_\+bycid}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1exists_a0a4a142496d1a05485bdc0398610ef46}{client\+\_\+exists}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1exists_af01974af76be60713d468a0c9d81f255}{contact\+\_\+exists}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1exists_a6b17f38577873f91f26278a4b5de00db}{credential\+\_\+exists}} (self, cid)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1exists_a8c7e2391e77cf8d966e44ea57f6aa5ac}{conn}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1exists_aa6e1faf00b44da76af5889ac868d96c6}{cur}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 11 of file database.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1exists_af6a794edd658faf9afc2e89d19fcabd1}\label{classqueries_1_1database_1_1exists_af6a794edd658faf9afc2e89d19fcabd1}} 
+\index{queries.database.exists@{queries.database.exists}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!queries.database.exists@{queries.database.exists}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def queries.\+database.\+exists.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{conn,  }\item[{}]{cur }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur):}
+\DoxyCodeLine{13         self.conn=conn}
+\DoxyCodeLine{14         self.cur=cur}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1exists_a81a9416baa818c5c1217f54bbbc0fca4}\label{classqueries_1_1database_1_1exists_a81a9416baa818c5c1217f54bbbc0fca4}} 
+\index{queries.database.exists@{queries.database.exists}!account\_byemail@{account\_byemail}}
+\index{account\_byemail@{account\_byemail}!queries.database.exists@{queries.database.exists}}
+\doxysubsubsection{\texorpdfstring{account\_byemail()}{account\_byemail()}}
+{\footnotesize\ttfamily def queries.\+database.\+exists.\+account\+\_\+byemail (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{email }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}verify that account with corresponding email doesn't exists
+
+@param email: client email
+@return boolean for hypothesis test, that it exists
+\end{DoxyVerb}
+ 
+
+Definition at line 15 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15     \textcolor{keyword}{def }account\_byemail(self, email):}
+\DoxyCodeLine{16         \textcolor{stringliteral}{"""verify that account with corresponding email doesn't exists}}
+\DoxyCodeLine{17 \textcolor{stringliteral}{}}
+\DoxyCodeLine{18 \textcolor{stringliteral}{        @param email: client email}}
+\DoxyCodeLine{19 \textcolor{stringliteral}{        @return boolean for hypothesis test, that it exists}}
+\DoxyCodeLine{20 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{21         stat=sql.SQL(\textcolor{stringliteral}{"SELECT EXISTS (SELECT 1 FROM clients WHERE client\_email=\{email\}) FOR UPDATE SKIP LOCKED;"})\(\backslash\)}
+\DoxyCodeLine{22             .\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(email=sql.Literal(email))}
+\DoxyCodeLine{23         self.cur.execute(stat)}
+\DoxyCodeLine{24         fet=self.cur.fetchone()}
+\DoxyCodeLine{25         print(\textcolor{stringliteral}{'exists.account\_byemail \{\} fet: \{\}'}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(email, fet))}
+\DoxyCodeLine{26         \textcolor{keywordflow}{return} fet[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1exists_a87fc148a385a35a97483e8cad00a71cd}\label{classqueries_1_1database_1_1exists_a87fc148a385a35a97483e8cad00a71cd}} 
+\index{queries.database.exists@{queries.database.exists}!account\_byname@{account\_byname}}
+\index{account\_byname@{account\_byname}!queries.database.exists@{queries.database.exists}}
+\doxysubsubsection{\texorpdfstring{account\_byname()}{account\_byname()}}
+{\footnotesize\ttfamily def queries.\+database.\+exists.\+account\+\_\+byname (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{passcode }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}verify that account with corresponding email doesn't exists
+
+@param name: client name
+@param passcode: client passcode
+@return boolean for hypothesis test, that it exists
+\end{DoxyVerb}
+ 
+
+Definition at line 27 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27     \textcolor{keyword}{def }account\_byname(self, name, passcode):}
+\DoxyCodeLine{28         \textcolor{stringliteral}{"""verify that account with corresponding email doesn't exists}}
+\DoxyCodeLine{29 \textcolor{stringliteral}{}}
+\DoxyCodeLine{30 \textcolor{stringliteral}{        @param name: client name}}
+\DoxyCodeLine{31 \textcolor{stringliteral}{        @param passcode: client passcode}}
+\DoxyCodeLine{32 \textcolor{stringliteral}{        @return boolean for hypothesis test, that it exists}}
+\DoxyCodeLine{33 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{34         stat=sql.SQL(\textcolor{stringliteral}{"SELECT EXISTS(SELECT 1 FROM clients AS c JOIN credentials AS cred ON cred.id=c.client\_id WHERE c.client\_name=\{name\} AND cred.passcode=\{passcode\}) FOR UPDATE SKIP LOCKED;"})\(\backslash\)}
+\DoxyCodeLine{35             .\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(name=sql.Literal(name),\(\backslash\)}
+\DoxyCodeLine{36                     passcode=sql.Literal(passcode))}
+\DoxyCodeLine{37         self.cur.execute(stat)}
+\DoxyCodeLine{38         fet=self.cur.fetchone()}
+\DoxyCodeLine{39         print(\textcolor{stringliteral}{'exists.account\_byname \{\} fet: \{\}'}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(name, fet))}
+\DoxyCodeLine{40         \textcolor{keywordflow}{return} fet[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1exists_a77bd24412e5a3e6fae4214eada4726e2}\label{classqueries_1_1database_1_1exists_a77bd24412e5a3e6fae4214eada4726e2}} 
+\index{queries.database.exists@{queries.database.exists}!bank\_account\_bycid@{bank\_account\_bycid}}
+\index{bank\_account\_bycid@{bank\_account\_bycid}!queries.database.exists@{queries.database.exists}}
+\doxysubsubsection{\texorpdfstring{bank\_account\_bycid()}{bank\_account\_bycid()}}
+{\footnotesize\ttfamily def queries.\+database.\+exists.\+bank\+\_\+account\+\_\+bycid (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}verify that a banking account with the given client id is available (CALLED AT THE SERVER SIDE)
+
+@param cid: client id
+@return boolean wither the banking account for give client exists or note
+\end{DoxyVerb}
+ 
+
+Definition at line 41 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41     \textcolor{keyword}{def }bank\_account\_bycid(self, cid):}
+\DoxyCodeLine{42         \textcolor{stringliteral}{"""verify that a banking account with the given client id is available (CALLED AT THE SERVER SIDE)}}
+\DoxyCodeLine{43 \textcolor{stringliteral}{}}
+\DoxyCodeLine{44 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{45 \textcolor{stringliteral}{        @return boolean wither the banking account for give client exists or note}}
+\DoxyCodeLine{46 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{47         stat=sql.SQL(\textcolor{stringliteral}{"SELECT EXISTS (SELECT 1 FROM banking WHERE client\_id=\{cid\}) FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{48             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{49         self.cur.execute(stat)}
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1exists_a0a4a142496d1a05485bdc0398610ef46}\label{classqueries_1_1database_1_1exists_a0a4a142496d1a05485bdc0398610ef46}} 
+\index{queries.database.exists@{queries.database.exists}!client\_exists@{client\_exists}}
+\index{client\_exists@{client\_exists}!queries.database.exists@{queries.database.exists}}
+\doxysubsubsection{\texorpdfstring{client\_exists()}{client\_exists()}}
+{\footnotesize\ttfamily def queries.\+database.\+exists.\+client\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}verify that  a client with given id is available (CALLED AT THE SERVER SIDE)
+
+@param cid: client id
+@return boolean wither the client exists or note
+\end{DoxyVerb}
+ 
+
+Definition at line 51 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51     \textcolor{keyword}{def }client\_exists(self, cid):}
+\DoxyCodeLine{52         \textcolor{stringliteral}{"""verify that  a client with given id is available (CALLED AT THE SERVER SIDE)}}
+\DoxyCodeLine{53 \textcolor{stringliteral}{}}
+\DoxyCodeLine{54 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{55 \textcolor{stringliteral}{        @return boolean wither the client exists or note}}
+\DoxyCodeLine{56 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{57         stat=sql.SQL(\textcolor{stringliteral}{"SELECT EXISTS (SELECT 1 FROM clients WHERE client\_id=\{cid\}) FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{58             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{59         self.cur.execute(stat)}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1exists_af01974af76be60713d468a0c9d81f255}\label{classqueries_1_1database_1_1exists_af01974af76be60713d468a0c9d81f255}} 
+\index{queries.database.exists@{queries.database.exists}!contact\_exists@{contact\_exists}}
+\index{contact\_exists@{contact\_exists}!queries.database.exists@{queries.database.exists}}
+\doxysubsubsection{\texorpdfstring{contact\_exists()}{contact\_exists()}}
+{\footnotesize\ttfamily def queries.\+database.\+exists.\+contact\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}verify that a contact with given id is available (CALLED AT THE CLIENT SIDE)
+
+@param cid: contact id
+@return boolean wither the contact exists or note
+\end{DoxyVerb}
+ 
+
+Definition at line 61 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61     \textcolor{keyword}{def }contact\_exists(self, cid):}
+\DoxyCodeLine{62         \textcolor{stringliteral}{"""verify that a contact with given id is available (CALLED AT THE CLIENT SIDE)}}
+\DoxyCodeLine{63 \textcolor{stringliteral}{}}
+\DoxyCodeLine{64 \textcolor{stringliteral}{        @param cid: contact id}}
+\DoxyCodeLine{65 \textcolor{stringliteral}{        @return boolean wither the contact exists or note}}
+\DoxyCodeLine{66 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{67         stat=sql.SQL(\textcolor{stringliteral}{"SELECT EXISTS (SELECT 1 FROM contacts WHERE contact\_id=\{cid\}) FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{68             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{69         self.cur.execute(stat)}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1exists_a6b17f38577873f91f26278a4b5de00db}\label{classqueries_1_1database_1_1exists_a6b17f38577873f91f26278a4b5de00db}} 
+\index{queries.database.exists@{queries.database.exists}!credential\_exists@{credential\_exists}}
+\index{credential\_exists@{credential\_exists}!queries.database.exists@{queries.database.exists}}
+\doxysubsubsection{\texorpdfstring{credential\_exists()}{credential\_exists()}}
+{\footnotesize\ttfamily def queries.\+database.\+exists.\+credential\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}verify the credential for the client with given cid(CALLED FROM SERVER SIDE),
+or get the single row for client with cid=1 (CALLED FROM CLIENT SIDE)
+
+@param cid: client id, or 1 (in case of call from client side for it's own credential)
+@return boolean for wither the client (with given cid) is registered or not
+\end{DoxyVerb}
+ 
+
+Definition at line 71 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71     \textcolor{keyword}{def }credential\_exists(self, cid):}
+\DoxyCodeLine{72         \textcolor{stringliteral}{""" verify the credential for the client with given cid(CALLED FROM SERVER SIDE),}}
+\DoxyCodeLine{73 \textcolor{stringliteral}{        or get the single row for client with cid=1 (CALLED FROM CLIENT SIDE)}}
+\DoxyCodeLine{74 \textcolor{stringliteral}{}}
+\DoxyCodeLine{75 \textcolor{stringliteral}{        @param cid: client id, or 1 (in case of call from client side for it's own credential)}}
+\DoxyCodeLine{76 \textcolor{stringliteral}{        @return boolean for wither the client (with given cid) is registered or not}}
+\DoxyCodeLine{77 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{78         stat=sql.SQL(\textcolor{stringliteral}{"SELECT EXISTS (SELECT 1 FROM credentials WHERE id=\{cid\}) FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{79             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{80         self.cur.execute(stat)}
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, and client.\+client.\+format.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1exists_a8c7e2391e77cf8d966e44ea57f6aa5ac}\label{classqueries_1_1database_1_1exists_a8c7e2391e77cf8d966e44ea57f6aa5ac}} 
+\index{queries.database.exists@{queries.database.exists}!conn@{conn}}
+\index{conn@{conn}!queries.database.exists@{queries.database.exists}}
+\doxysubsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily queries.\+database.\+exists.\+conn}
+
+
+
+Definition at line 13 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+exists.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+database.\+close(), core.\+queries.\+database.\+database.\+close(), queries.\+database.\+database.\+commit(), core.\+queries.\+database.\+database.\+commit(), queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients(), queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts(), queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials(), queries.\+database.\+gets.\+get\+\_\+credential(), core.\+queries.\+database.\+gets.\+get\+\_\+credential(), queries.\+database.\+gets.\+get\+\_\+sells(), core.\+queries.\+database.\+gets.\+get\+\_\+sells(), queries.\+database.\+gets.\+get\+\_\+transactions(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), queries.\+database.\+database.\+init(), core.\+queries.\+database.\+database.\+init(), queries.\+database.\+database.\+rollback(), core.\+queries.\+database.\+database.\+rollback(), and queries.\+database.\+gets.\+to\+\_\+dollar().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1exists_aa6e1faf00b44da76af5889ac868d96c6}\label{classqueries_1_1database_1_1exists_aa6e1faf00b44da76af5889ac868d96c6}} 
+\index{queries.database.exists@{queries.database.exists}!cur@{cur}}
+\index{cur@{cur}!queries.database.exists@{queries.database.exists}}
+\doxysubsubsection{\texorpdfstring{cur}{cur}}
+{\footnotesize\ttfamily queries.\+database.\+exists.\+cur}
+
+
+
+Definition at line 14 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+exists.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+exists.\+account\+\_\+byemail(), core.\+queries.\+database.\+exists.\+account\+\_\+byemail(), queries.\+database.\+exists.\+account\+\_\+byname(), core.\+queries.\+database.\+exists.\+account\+\_\+byname(), queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), queries.\+database.\+inserts.\+add\+\_\+client(), core.\+queries.\+database.\+inserts.\+add\+\_\+client(), core.\+queries.\+database.\+inserts.\+add\+\_\+currency(), queries.\+database.\+exists.\+bank\+\_\+account\+\_\+bycid(), core.\+queries.\+database.\+exists.\+bank\+\_\+account\+\_\+bycid(), queries.\+database.\+gets.\+cid2credid(), core.\+queries.\+database.\+gets.\+cid2credid(), queries.\+database.\+exists.\+client\+\_\+exists(), core.\+queries.\+database.\+exists.\+client\+\_\+exists(), queries.\+database.\+database.\+committed\+\_\+read(), core.\+queries.\+database.\+database.\+committed\+\_\+read(), queries.\+database.\+exists.\+contact\+\_\+exists(), core.\+queries.\+database.\+exists.\+contact\+\_\+exists(), queries.\+database.\+exists.\+credential\+\_\+exists(), core.\+queries.\+database.\+exists.\+credential\+\_\+exists(), queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+database.\+exists.\+currency(), core.\+queries.\+database.\+updates.\+currency\+\_\+preference(), queries.\+database.\+gets.\+get(), core.\+queries.\+database.\+gets.\+get(), queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+name(), queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp(), core.\+queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp(), queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+preference\+\_\+currency\+\_\+bycid(), queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), queries.\+database.\+database.\+init(), core.\+queries.\+database.\+database.\+init(), queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+database.\+inserts.\+insert\+\_\+contact(), queries.\+database.\+inserts.\+insert\+\_\+trx(), core.\+queries.\+database.\+inserts.\+insert\+\_\+trx(), queries.\+database.\+database.\+lock\+\_\+advisory(), core.\+queries.\+database.\+database.\+lock\+\_\+advisory(), queries.\+database.\+inserts.\+register(), core.\+queries.\+database.\+inserts.\+register(), queries.\+database.\+database.\+repeatable\+\_\+read(), core.\+queries.\+database.\+database.\+repeatable\+\_\+read(), core.\+queries.\+database.\+gets.\+to\+\_\+euro(), queries.\+database.\+database.\+unlock\+\_\+advisory(), core.\+queries.\+database.\+database.\+unlock\+\_\+advisory(), queries.\+database.\+updates.\+update\+\_\+account(), and core.\+queries.\+database.\+updates.\+update\+\_\+account().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/build/lib/queries/\mbox{\hyperlink{core_2build_2lib_2queries_2database_8py}{database.\+py}}\end{DoxyCompactItemize}

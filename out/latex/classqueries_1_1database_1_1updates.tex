@@ -1,0 +1,153 @@
+\hypertarget{classqueries_1_1database_1_1updates}{}\doxysection{queries.\+database.\+updates Class Reference}
+\label{classqueries_1_1database_1_1updates}\index{queries.database.updates@{queries.database.updates}}
+
+
+Inheritance diagram for queries.\+database.\+updates\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classqueries_1_1database_1_1updates__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for queries.\+database.\+updates\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classqueries_1_1database_1_1updates__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1updates_ab3e74f2815621b81a0d2fb08b2a16908}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classqueries_1_1database_1_1updates_ab8ecfeb0e658b79a2d508f9688167b29}{conn}}, \mbox{\hyperlink{classqueries_1_1database_1_1updates_ae4c4335d0e648fcc0dd7df921361a8c3}{cur}}, \mbox{\hyperlink{classqueries_1_1database_1_1database_a8518b4bde4f27604841948d75c03c588}{logger}})
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1updates_a835fe9be7c14e88f0910d835d0f40065}{update\+\_\+account}} (self, cid, balance)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1updates_ab8ecfeb0e658b79a2d508f9688167b29}{conn}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1updates_ae4c4335d0e648fcc0dd7df921361a8c3}{cur}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1updates_ac3302a36562348d0af630b5b5701fb9f}{db\+\_\+log}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 584 of file database.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1updates_ab3e74f2815621b81a0d2fb08b2a16908}\label{classqueries_1_1database_1_1updates_ab3e74f2815621b81a0d2fb08b2a16908}} 
+\index{queries.database.updates@{queries.database.updates}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!queries.database.updates@{queries.database.updates}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{conn,  }\item[{}]{cur,  }\item[{}]{logger }\end{DoxyParamCaption})}
+
+
+
+Definition at line 585 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{585     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
+\DoxyCodeLine{586         self.conn=conn}
+\DoxyCodeLine{587         self.cur=cur}
+\DoxyCodeLine{588         self.db\_log=logger}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1updates_a835fe9be7c14e88f0910d835d0f40065}\label{classqueries_1_1database_1_1updates_a835fe9be7c14e88f0910d835d0f40065}} 
+\index{queries.database.updates@{queries.database.updates}!update\_account@{update\_account}}
+\index{update\_account@{update\_account}!queries.database.updates@{queries.database.updates}}
+\doxysubsubsection{\texorpdfstring{update\_account()}{update\_account()}}
+{\footnotesize\ttfamily def queries.\+database.\+updates.\+update\+\_\+account (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid,  }\item[{}]{balance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}update the banking account with the calculated new balance (CALLED FROM SERVER SIDE)
+
+@param cid: client id
+@param balance: the account balance
+\end{DoxyVerb}
+ 
+
+Definition at line 589 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{589     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1updates_1_1banking_a4b0ffde5930116879e8cf920ceb95efd}{update\_account}}(self, cid, balance):}
+\DoxyCodeLine{590         \textcolor{stringliteral}{"""update the banking account with the calculated new balance (CALLED FROM SERVER SIDE)}}
+\DoxyCodeLine{591 \textcolor{stringliteral}{}}
+\DoxyCodeLine{592 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{593 \textcolor{stringliteral}{        @param balance: the account balance}}
+\DoxyCodeLine{594 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{595         stat = sql.SQL(\textcolor{stringliteral}{"UPDATE banking SET (balance, balance\_dt) = (\{balance\}, \{dt\}) WHERE client\_id=\{cid\}"}).\(\backslash\)}
+\DoxyCodeLine{596             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(balance=sql.Literal(balance), \(\backslash\)}
+\DoxyCodeLine{597                    dt=sql.Literal(dt.datetime.now().strftime(TIMESTAMP\_FORMAT)), \(\backslash\)}
+\DoxyCodeLine{598                    cid=sql.Literal(cid))}
+\DoxyCodeLine{599         self.cur.execute(stat)}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, and client.\+client.\+format.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1updates_ab8ecfeb0e658b79a2d508f9688167b29}\label{classqueries_1_1database_1_1updates_ab8ecfeb0e658b79a2d508f9688167b29}} 
+\index{queries.database.updates@{queries.database.updates}!conn@{conn}}
+\index{conn@{conn}!queries.database.updates@{queries.database.updates}}
+\doxysubsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily queries.\+database.\+updates.\+conn}
+
+
+
+Definition at line 586 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+exists.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+database.\+close(), core.\+queries.\+database.\+database.\+close(), queries.\+database.\+database.\+commit(), core.\+queries.\+database.\+database.\+commit(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials(), core.\+queries.\+database.\+gets.\+get\+\_\+credential(), core.\+queries.\+database.\+gets.\+get\+\_\+sells(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), queries.\+database.\+database.\+init(), core.\+queries.\+database.\+database.\+init(), queries.\+database.\+database.\+rollback(), and core.\+queries.\+database.\+database.\+rollback().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1updates_ae4c4335d0e648fcc0dd7df921361a8c3}\label{classqueries_1_1database_1_1updates_ae4c4335d0e648fcc0dd7df921361a8c3}} 
+\index{queries.database.updates@{queries.database.updates}!cur@{cur}}
+\index{cur@{cur}!queries.database.updates@{queries.database.updates}}
+\doxysubsubsection{\texorpdfstring{cur}{cur}}
+{\footnotesize\ttfamily queries.\+database.\+updates.\+cur}
+
+
+
+Definition at line 587 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+exists.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+exists.\+account\+\_\+byemail(), core.\+queries.\+database.\+exists.\+account\+\_\+byname(), core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), core.\+queries.\+database.\+inserts.\+add\+\_\+client(), core.\+queries.\+database.\+inserts.\+add\+\_\+currency(), core.\+queries.\+database.\+exists.\+bank\+\_\+account\+\_\+bycid(), core.\+queries.\+database.\+gets.\+cid2credid(), core.\+queries.\+database.\+exists.\+client\+\_\+exists(), queries.\+database.\+database.\+committed\+\_\+read(), core.\+queries.\+database.\+database.\+committed\+\_\+read(), core.\+queries.\+database.\+exists.\+contact\+\_\+exists(), core.\+queries.\+database.\+exists.\+credential\+\_\+exists(), core.\+queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+database.\+exists.\+currency(), core.\+queries.\+database.\+updates.\+currency\+\_\+preference(), core.\+queries.\+database.\+gets.\+get(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), core.\+queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+name(), core.\+queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp(), core.\+queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+preference\+\_\+currency\+\_\+bycid(), queries.\+database.\+database.\+init(), core.\+queries.\+database.\+database.\+init(), core.\+queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+database.\+inserts.\+insert\+\_\+trx(), queries.\+database.\+database.\+lock\+\_\+advisory(), core.\+queries.\+database.\+database.\+lock\+\_\+advisory(), core.\+queries.\+database.\+inserts.\+register(), queries.\+database.\+database.\+repeatable\+\_\+read(), core.\+queries.\+database.\+database.\+repeatable\+\_\+read(), core.\+queries.\+database.\+gets.\+to\+\_\+euro(), queries.\+database.\+database.\+unlock\+\_\+advisory(), core.\+queries.\+database.\+database.\+unlock\+\_\+advisory(), queries.\+database.\+updates.\+update\+\_\+account(), and core.\+queries.\+database.\+updates.\+update\+\_\+account().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1updates_ac3302a36562348d0af630b5b5701fb9f}\label{classqueries_1_1database_1_1updates_ac3302a36562348d0af630b5b5701fb9f}} 
+\index{queries.database.updates@{queries.database.updates}!db\_log@{db\_log}}
+\index{db\_log@{db\_log}!queries.database.updates@{queries.database.updates}}
+\doxysubsubsection{\texorpdfstring{db\_log}{db\_log}}
+{\footnotesize\ttfamily queries.\+database.\+updates.\+db\+\_\+log}
+
+
+
+Definition at line 588 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), core.\+queries.\+database.\+gets.\+cid2credid(), core.\+queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+database.\+gets.\+get(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), core.\+queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), core.\+queries.\+database.\+gets.\+get\+\_\+credential(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+name(), core.\+queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp(), core.\+queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+preference\+\_\+currency\+\_\+bycid(), core.\+queries.\+database.\+gets.\+get\+\_\+sells(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), core.\+queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+database.\+inserts.\+insert\+\_\+trx(), core.\+queries.\+database.\+inserts.\+register(), and core.\+queries.\+database.\+gets.\+to\+\_\+euro().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/build/lib/queries/\mbox{\hyperlink{core_2build_2lib_2queries_2database_8py}{database.\+py}}\end{DoxyCompactItemize}

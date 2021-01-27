@@ -1,0 +1,158 @@
+\hypertarget{namespacequeries_1_1gets_1_1goods}{}\doxysection{queries.\+gets.\+goods Namespace Reference}
+\label{namespacequeries_1_1gets_1_1goods}\index{queries.gets.goods@{queries.gets.goods}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1goods_ae7d08a381f17a57bf4c8db2a67e635a7}{get\+\_\+all}} ()
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1goods_a32022d6292dfebdf4affce79232de1df}{get\+\_\+good}} (gid)
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1goods_a2ce86f20f7c8a6728f184fddd291b519}{get\+\_\+commodity}} (gname, quality=0)
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1gets_1_1goods_a1da88436cb4c91b2e810193baee30de2}{get\+\_\+new\+\_\+price}} (gid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1goods_ae7d08a381f17a57bf4c8db2a67e635a7}\label{namespacequeries_1_1gets_1_1goods_ae7d08a381f17a57bf4c8db2a67e635a7}} 
+\index{queries.gets.goods@{queries.gets.goods}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!queries.gets.goods@{queries.gets.goods}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily def queries.\+gets.\+goods.\+get\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file goods.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a318dba694261e9e12c7a73ec2062670f}{get\_all}}():}
+\DoxyCodeLine{7     query=\textcolor{stringliteral}{"SELECT * FROM goods;"}}
+\DoxyCodeLine{8     \textcolor{comment}{\#return pd.read\_sql(query, conn, index\_col='id').to\_json()}}
+\DoxyCodeLine{9     \textcolor{keywordflow}{return} pd.read\_sql(query, conn).to\_json()}
+\DoxyCodeLine{10 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1goods_a2ce86f20f7c8a6728f184fddd291b519}\label{namespacequeries_1_1gets_1_1goods_a2ce86f20f7c8a6728f184fddd291b519}} 
+\index{queries.gets.goods@{queries.gets.goods}!get\_commodity@{get\_commodity}}
+\index{get\_commodity@{get\_commodity}!queries.gets.goods@{queries.gets.goods}}
+\doxysubsubsection{\texorpdfstring{get\_commodity()}{get\_commodity()}}
+{\footnotesize\ttfamily def queries.\+gets.\+goods.\+get\+\_\+commodity (\begin{DoxyParamCaption}\item[{}]{gname,  }\item[{}]{quality = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrive good for the given goods constraints
+
+@param gname: goods name
+@param quality: retrieve goods with quality > given threshold
+@return pandas data frame of the corresponding constrains
+\end{DoxyVerb}
+ 
+
+Definition at line 22 of file goods.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_ab12af44d723f8a291ed2217e895ca231}{get\_commodity}}(gname, quality=0):}
+\DoxyCodeLine{23     \textcolor{stringliteral}{"""retrive good for the given goods constraints}}
+\DoxyCodeLine{24 \textcolor{stringliteral}{}}
+\DoxyCodeLine{25 \textcolor{stringliteral}{    @param gname: goods name}}
+\DoxyCodeLine{26 \textcolor{stringliteral}{    @param quality: retrieve goods with quality > given threshold}}
+\DoxyCodeLine{27 \textcolor{stringliteral}{    @return pandas data frame of the corresponding constrains}}
+\DoxyCodeLine{28 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{29     query = sql.SQL(\textcolor{stringliteral}{"SELECT * FROM goods WHERE good\_name=\{gname\} AND good\_quality>=\{gquality\}"}).\(\backslash\)}
+\DoxyCodeLine{30         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(gname=sql.Literal(gname), \(\backslash\)}
+\DoxyCodeLine{31                quality=sql.Literal(gquality))}
+\DoxyCodeLine{32     db\_log.debug(query)}
+\DoxyCodeLine{33     \textcolor{keywordflow}{return} pd.read\_sql(query, conn)}
+\DoxyCodeLine{34 }
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1goods_a32022d6292dfebdf4affce79232de1df}\label{namespacequeries_1_1gets_1_1goods_a32022d6292dfebdf4affce79232de1df}} 
+\index{queries.gets.goods@{queries.gets.goods}!get\_good@{get\_good}}
+\index{get\_good@{get\_good}!queries.gets.goods@{queries.gets.goods}}
+\doxysubsubsection{\texorpdfstring{get\_good()}{get\_good()}}
+{\footnotesize\ttfamily def queries.\+gets.\+goods.\+get\+\_\+good (\begin{DoxyParamCaption}\item[{}]{gid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrive good for the given goods id (gid)
+
+@param gid: goods id
+@return pandas data series of the corresponding row
+\end{DoxyVerb}
+ 
+
+Definition at line 11 of file goods.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a724a66f496c4af97e418c943f365993c}{get\_good}}(gid):}
+\DoxyCodeLine{12     \textcolor{stringliteral}{"""retrive good for the given goods id (gid)}}
+\DoxyCodeLine{13 \textcolor{stringliteral}{}}
+\DoxyCodeLine{14 \textcolor{stringliteral}{    @param gid: goods id}}
+\DoxyCodeLine{15 \textcolor{stringliteral}{    @return pandas data series of the corresponding row}}
+\DoxyCodeLine{16 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{17     query = sql.SQL(\textcolor{stringliteral}{"SELECT * FROM goods WHERE id=\{gid\};"}).\(\backslash\)}
+\DoxyCodeLine{18         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(gid=sql.Literal(gid))}
+\DoxyCodeLine{19     db\_log.debug(query)}
+\DoxyCodeLine{20     \textcolor{keywordflow}{return} pd.read\_sql(query, conn)}
+\DoxyCodeLine{21 }
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+
+
+
+Referenced by queries.\+gets.\+goods.\+get\+\_\+new\+\_\+price().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacequeries_1_1gets_1_1goods_a32022d6292dfebdf4affce79232de1df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacequeries_1_1gets_1_1goods_a1da88436cb4c91b2e810193baee30de2}\label{namespacequeries_1_1gets_1_1goods_a1da88436cb4c91b2e810193baee30de2}} 
+\index{queries.gets.goods@{queries.gets.goods}!get\_new\_price@{get\_new\_price}}
+\index{get\_new\_price@{get\_new\_price}!queries.gets.goods@{queries.gets.goods}}
+\doxysubsubsection{\texorpdfstring{get\_new\_price()}{get\_new\_price()}}
+{\footnotesize\ttfamily def queries.\+gets.\+goods.\+get\+\_\+new\+\_\+price (\begin{DoxyParamCaption}\item[{}]{gid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get good price with given good's id
+
+@param gid: good's id
+@return price in dollar
+\end{DoxyVerb}
+ 
+
+Definition at line 35 of file goods.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a9bc8d36d821f0515648e881f2c987321}{get\_new\_price}}(gid):}
+\DoxyCodeLine{36     \textcolor{stringliteral}{""" get good price with given good's id}}
+\DoxyCodeLine{37 \textcolor{stringliteral}{}}
+\DoxyCodeLine{38 \textcolor{stringliteral}{    @param gid: good's id}}
+\DoxyCodeLine{39 \textcolor{stringliteral}{    @return price in dollar}}
+\DoxyCodeLine{40 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{41     df = \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a724a66f496c4af97e418c943f365993c}{get\_good}}(gid)}
+\DoxyCodeLine{42     cur\_id = df[\textcolor{stringliteral}{'good\_currency\_id'}].ix[0]}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} df[\textcolor{stringliteral}{'good\_cost'}].ix[0]*\mbox{\hyperlink{namespacequeries_1_1gets_1_1currency_ab3a96eb4cd55d9255081024ba4d7d55c}{to\_dollar}}(cur\_id)}
+
+\end{DoxyCode}
+
+
+References queries.\+gets.\+goods.\+get\+\_\+good(), and queries.\+gets.\+currency.\+to\+\_\+dollar().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacequeries_1_1gets_1_1goods_a1da88436cb4c91b2e810193baee30de2_cgraph}
+\end{center}
+\end{figure}

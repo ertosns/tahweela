@@ -1,0 +1,868 @@
+\hypertarget{classclient_1_1client_1_1_client}{}\doxysection{client.\+client.\+Client Class Reference}
+\label{classclient_1_1client_1_1_client}\index{client.client.Client@{client.client.Client}}
+
+
+Inheritance diagram for client.\+client.\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classclient_1_1client_1_1_client__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for client.\+client.\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classclient_1_1client_1_1_client__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_a03620547168cc4b927cb7f668b0af723}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_a464f2af71e9d2acd62f2b01bff793235}{auth}} (self)
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_a825c9c87f3a092c938f0f15cab67a203}{register}} (self)
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_a7ccfb8f1416e310baaa0ed3d6ccc3ecd}{add\+\_\+contact}} (self, \mbox{\hyperlink{classclient_1_1client_1_1_client_ab2353543969cab0180108492d1bcf0bc}{email}}, \mbox{\hyperlink{classclient_1_1client_1_1_client_ae31d818dee745bd5283046f657a09a17}{name}})
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_adce7cbe9757498b2b90aa0795bd6e630}{autotract}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_a8341059165ea5cd3d84adc5ce699e25d}{faker}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_ae31d818dee745bd5283046f657a09a17}{name}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_ad40cf93af9a2100b42b6a25b75a58cab}{passcode}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_ab2353543969cab0180108492d1bcf0bc}{email}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_ac29018311c5f1810eed0a6775c162a9f}{bank\+\_\+name}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_a85c0dbd2170687058b05136db0cabccf}{branch\+\_\+number}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_a27997654a1942735ff2e82825ecb4aa2}{account\+\_\+number}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_adbc9524318c0bab0b02f93f59e578d5f}{name\+\_\+reference}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_a0c1fa165881ffdc7c5e12b0771304387}{db}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_aa95c425f70249bbc7a4fc52b9dde4999}{my\+\_\+contacts}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_a4abd92a39b493e1de77de0d59fb23933}{uname}}
+\begin{DoxyCompactList}\small\item\em T\+O\+DO credid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_a0c3bba2b71781107fb6d94379e345d7c}{pas}}
+\item 
+\mbox{\hyperlink{classclient_1_1client_1_1_client_a457a40963893b10c62da9271139b7af7}{balance}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_a24392214c5384752136eb98fb609020a}{\+\_\+\+\_\+register\+\_\+bank\+\_\+account}} (self, \mbox{\hyperlink{classclient_1_1client_1_1_client_ac29018311c5f1810eed0a6775c162a9f}{bank\+\_\+name}}=None, \mbox{\hyperlink{classclient_1_1client_1_1_client_a85c0dbd2170687058b05136db0cabccf}{branch\+\_\+number}}=None, \mbox{\hyperlink{classclient_1_1client_1_1_client_a27997654a1942735ff2e82825ecb4aa2}{account\+\_\+number}}=None, \mbox{\hyperlink{classclient_1_1client_1_1_client_adbc9524318c0bab0b02f93f59e578d5f}{name\+\_\+reference}}=None)
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_a753294f2daa6adab8106112cf0af4d65}{\+\_\+\+\_\+transact}} (self, credid, amount, currency=\textquotesingle{}U\+SD\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_a4297498a1038f751717aa5ce6d56e44b}{\+\_\+\+\_\+add\+\_\+trax}} (self, trans)
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_aa9cab8c5ce246ad10bc626b32b08fc63}{\+\_\+\+\_\+update\+\_\+balance}} (self, \mbox{\hyperlink{classclient_1_1client_1_1_client_a457a40963893b10c62da9271139b7af7}{balance}})
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_ab28dc4f83079688d1a4371a810a9ded0}{\+\_\+\+\_\+ledger\+\_\+timestamp}} (self)
+\item 
+def \mbox{\hyperlink{classclient_1_1client_1_1_client_aecb2b77967171497043de815c24da223}{\+\_\+\+\_\+update\+\_\+ledger}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 71 of file client.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a03620547168cc4b927cb7f668b0af723}\label{classclient_1_1client_1_1_client_a03620547168cc4b927cb7f668b0af723}} 
+\index{client.client.Client@{client.client.Client}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72     \textcolor{keyword}{def }\_\_init\_\_(self):}
+\DoxyCodeLine{73         seed=int.from\_bytes(os.urandom(2), \textcolor{stringliteral}{'big'})}
+\DoxyCodeLine{74         self.faker = Faker()}
+\DoxyCodeLine{75         random.seed(seed)}
+\DoxyCodeLine{76         Faker.seed(seed)}
+\DoxyCodeLine{77         \textcolor{comment}{\#}}
+\DoxyCodeLine{78         self.name=\mbox{\hyperlink{namespacecore_1_1client_1_1client_a5b5347659408b837b9f8e82b76cc56b2}{get\_name}}()}
+\DoxyCodeLine{79         self.passcode=\mbox{\hyperlink{namespacecore_1_1client_1_1client_a039199b8606b2c8fd9ce1bd1c07863ca}{get\_rand\_pass}}()}
+\DoxyCodeLine{80         self.email=\mbox{\hyperlink{namespacecore_1_1client_1_1client_af08cc33cc36a975cc6bebf248b6c039e}{get\_email}}()}
+\DoxyCodeLine{81         self.bank\_name=\mbox{\hyperlink{namespacecore_1_1client_1_1client_ae391dd87319abd0006e347bed366e54f}{get\_bank\_name}}()}
+\DoxyCodeLine{82         self.branch\_number=\mbox{\hyperlink{namespacecore_1_1client_1_1client_af6c2646f7c1c83126f705e3732a96087}{get\_branch\_number}}()}
+\DoxyCodeLine{83         self.account\_number=\mbox{\hyperlink{namespacecore_1_1client_1_1client_a617f45205e2c92317e87a1daff73bd2d}{get\_account\_number}}()}
+\DoxyCodeLine{84         self.name\_reference=\mbox{\hyperlink{namespacecore_1_1client_1_1client_a943a822128ad5abd61ba5e3615e89fca}{get\_name\_reference}}()}
+\DoxyCodeLine{85         \textcolor{comment}{\#}}
+\DoxyCodeLine{86         self.db = \mbox{\hyperlink{namespacedatabase}{database}}(db\_configs)}
+\DoxyCodeLine{87         self.my\_contacts = []}
+\DoxyCodeLine{88         \textcolor{comment}{\#Register user int he network}}
+\DoxyCodeLine{89         self.register()}
+\DoxyCodeLine{90         \textcolor{comment}{\#register user with bank account}}
+\DoxyCodeLine{91         self.\_\_register\_bank\_account(self.bank\_name, self.branch\_number, self.account\_number, self.name\_reference)}
+\DoxyCodeLine{92         logger.info(\textcolor{stringliteral}{"client initialized"})}
+\DoxyCodeLine{93         \textcolor{comment}{\#self.all\_goods = []}}
+\DoxyCodeLine{94         \textcolor{comment}{\#self.\_\_init\_goods()}}
+\DoxyCodeLine{95         \textcolor{comment}{\# credentials username:password}}
+\DoxyCodeLine{96 }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a4297498a1038f751717aa5ce6d56e44b}\label{classclient_1_1client_1_1_client_a4297498a1038f751717aa5ce6d56e44b}} 
+\index{client.client.Client@{client.client.Client}!\_\_add\_trax@{\_\_add\_trax}}
+\index{\_\_add\_trax@{\_\_add\_trax}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_add\_trax()}{\_\_add\_trax()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 210 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{210     \textcolor{keyword}{def }\_\_add\_trax(self, trans):}
+\DoxyCodeLine{211         trans=trans[\textcolor{stringliteral}{'transactions'}] \textcolor{comment}{\#TODO (res)}}
+\DoxyCodeLine{212         self.db.init()}
+\DoxyCodeLine{213         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{214             print(\textcolor{stringliteral}{"trans: "}, trans)}
+\DoxyCodeLine{215             \textcolor{comment}{\#self.db.inserts.insert\_trx(trans["trx\_src"], trans['trx\_dest'], trans['trx\_gid'])}}
+\DoxyCodeLine{216             self.db.inserts.insert\_trx(trans[\textcolor{stringliteral}{"trx\_src"}], trans[\textcolor{stringliteral}{'trx\_dest'}], trans[\textcolor{stringliteral}{'trx\_cost'}])}
+\DoxyCodeLine{217             self.db.commit()}
+\DoxyCodeLine{218         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{219             self.db.rollback()}
+\DoxyCodeLine{220         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{221             self.db.close()}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+db.
+
+
+
+Referenced by client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+ledger(), core.\+client.\+client.\+Client.\+autotract(), client.\+client.\+Client.\+autotract(), and core\+\_\+test.\+Restful\+Test.\+autotract().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a4297498a1038f751717aa5ce6d56e44b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_ab28dc4f83079688d1a4371a810a9ded0}\label{classclient_1_1client_1_1_client_ab28dc4f83079688d1a4371a810a9ded0}} 
+\index{client.client.Client@{client.client.Client}!\_\_ledger\_timestamp@{\_\_ledger\_timestamp}}
+\index{\_\_ledger\_timestamp@{\_\_ledger\_timestamp}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_ledger\_timestamp()}{\_\_ledger\_timestamp()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+\_\+\+\_\+ledger\+\_\+timestamp (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 228 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{228     \textcolor{keyword}{def }\_\_ledger\_timestamp(self):}
+\DoxyCodeLine{229         dt=\textcolor{keywordtype}{None}}
+\DoxyCodeLine{230         self.db.init()}
+\DoxyCodeLine{231         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{232             dt=self.db.gets.get\_last\_timestamp()}
+\DoxyCodeLine{233             self.db.commmit()}
+\DoxyCodeLine{234         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{235             logger.critical(\textcolor{stringliteral}{"failed to retrieve ledger time stamp"})}
+\DoxyCodeLine{236             self.db.rollback()}
+\DoxyCodeLine{237         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{238             self.db.close()}
+\DoxyCodeLine{239         print(\textcolor{stringliteral}{"timestamp: "}, dt)}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242         \textcolor{keywordflow}{return} dt \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} dt==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+db.
+
+
+
+Referenced by client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), and core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+ledger().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_ab28dc4f83079688d1a4371a810a9ded0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a24392214c5384752136eb98fb609020a}\label{classclient_1_1client_1_1_client_a24392214c5384752136eb98fb609020a}} 
+\index{client.client.Client@{client.client.Client}!\_\_register\_bank\_account@{\_\_register\_bank\_account}}
+\index{\_\_register\_bank\_account@{\_\_register\_bank\_account}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_register\_bank\_account()}{\_\_register\_bank\_account()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+\_\+\+\_\+register\+\_\+bank\+\_\+account (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bank\+\_\+name = {\ttfamily None},  }\item[{}]{branch\+\_\+number = {\ttfamily None},  }\item[{}]{account\+\_\+number = {\ttfamily None},  }\item[{}]{name\+\_\+reference = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyVerb}check if this client has credentials, if not register\end{DoxyVerb}
+ 
+
+Definition at line 143 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{143     \textcolor{keyword}{def }\_\_register\_bank\_account(self, bank\_name=None, branch\_number=None, account\_number=None, name\_reference=None):}
+\DoxyCodeLine{144         \textcolor{stringliteral}{""" check if this client has credentials, if not register}}
+\DoxyCodeLine{145 \textcolor{stringliteral}{}}
+\DoxyCodeLine{146 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{147         \textcolor{comment}{\#check if user have credentials}}
+\DoxyCodeLine{148         BRANCH\_NUM\_MAX=100}
+\DoxyCodeLine{149         ACCOUNT\_NUMBER\_MAX=10000000000}
+\DoxyCodeLine{150         self.db.init()}
+\DoxyCodeLine{151         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{152             \textcolor{comment}{\#register user}}
+\DoxyCodeLine{153             bank\_name = self.faker.\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}() \textcolor{keywordflow}{if} bank\_name==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} bank\_name}
+\DoxyCodeLine{154             branch\_number = random.random()*BRANCH\_NUM\_MAX \textcolor{keywordflow}{if} branch\_number==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} branch\_number}
+\DoxyCodeLine{155             account\_number= random.random()*ACCOUNT\_NUMBER\_MAX \textcolor{keywordflow}{if} account\_number==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} account\_number}
+\DoxyCodeLine{156             name\_reference= self.faker.\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}() \textcolor{keywordflow}{if} name\_reference==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} name\_reference}
+\DoxyCodeLine{157             payload=\{\textcolor{stringliteral}{'bank\_name'}:bank\_name,}
+\DoxyCodeLine{158                      \textcolor{stringliteral}{'branch\_number'}:branch\_number,}
+\DoxyCodeLine{159                      \textcolor{stringliteral}{'account\_number'}:account\_number,}
+\DoxyCodeLine{160                      \textcolor{stringliteral}{'name\_reference'}:name\_reference\}}
+\DoxyCodeLine{161             res=requests.post(ADD\_BANK\_ACCOUNT\_URL, \(\backslash\)}
+\DoxyCodeLine{162                               data=json.dumps(payload), \(\backslash\)}
+\DoxyCodeLine{163                               auth=self.auth())}
+\DoxyCodeLine{164             response = json.loads(res.text)}
+\DoxyCodeLine{165             scode=res.status\_code}
+\DoxyCodeLine{166             \textcolor{comment}{\#TODO support multiple accounts}}
+\DoxyCodeLine{167             \textcolor{comment}{\#create local client table for banking,}}
+\DoxyCodeLine{168             \textcolor{comment}{\#to insert balance, or each account.}}
+\DoxyCodeLine{169             print(\textcolor{stringliteral}{'response for balance:  '}, response)}
+\DoxyCodeLine{170             self.balance=response[\textcolor{stringliteral}{'balance'}]}
+\DoxyCodeLine{171             self.db.commit()}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{174             logger.critical(\textcolor{stringliteral}{"bank account registration failed!, error: "}+ str(error))}
+\DoxyCodeLine{175             print(\textcolor{stringliteral}{"bank account register failed!, error: "}+str(error))}
+\DoxyCodeLine{176             self.db.rollback()}
+\DoxyCodeLine{177         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{178             self.db.close()}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+auth(), client.\+client.\+Client.\+db, client.\+client.\+Client.\+faker, and client.\+client.\+Client.\+name.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a24392214c5384752136eb98fb609020a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a24392214c5384752136eb98fb609020a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a753294f2daa6adab8106112cf0af4d65}\label{classclient_1_1client_1_1_client_a753294f2daa6adab8106112cf0af4d65}} 
+\index{client.client.Client@{client.client.Client}!\_\_transact@{\_\_transact}}
+\index{\_\_transact@{\_\_transact}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_transact()}{\_\_transact()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+\_\+\+\_\+transact (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{credid,  }\item[{}]{amount,  }\item[{}]{currency = {\ttfamily \textquotesingle{}USD\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 202 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{202     \textcolor{keyword}{def }\_\_transact(self, credid, amount, currency='USD'):}
+\DoxyCodeLine{203         pur\_item = \{\textcolor{stringliteral}{'credid'}: credid,}
+\DoxyCodeLine{204                     \textcolor{stringliteral}{'amount'}:amount,}
+\DoxyCodeLine{205                     \textcolor{stringliteral}{'currency'}: \textcolor{stringliteral}{'USD'}\}}
+\DoxyCodeLine{206         ret=requests.post(PURCHASE\_URL, data=json.dumps(pur\_item), auth=self.auth())}
+\DoxyCodeLine{207         response=ret.text\textcolor{comment}{\#ret.text.decode('utf8')\#.replace('"', "'")}}
+\DoxyCodeLine{208         trx=json.loads(response)}
+\DoxyCodeLine{209         \textcolor{keywordflow}{return} trx}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+auth().
+
+
+
+Referenced by client.\+client.\+Client.\+autotract(), core.\+client.\+client.\+Client.\+autotract(), and core\+\_\+test.\+Restful\+Test.\+autotract().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a753294f2daa6adab8106112cf0af4d65_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a753294f2daa6adab8106112cf0af4d65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_aa9cab8c5ce246ad10bc626b32b08fc63}\label{classclient_1_1client_1_1_client_aa9cab8c5ce246ad10bc626b32b08fc63}} 
+\index{client.client.Client@{client.client.Client}!\_\_update\_balance@{\_\_update\_balance}}
+\index{\_\_update\_balance@{\_\_update\_balance}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_update\_balance()}{\_\_update\_balance()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{balance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 222 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{222     \textcolor{keyword}{def }\_\_update\_balance(self, balance):}
+\DoxyCodeLine{223         \textcolor{comment}{\#TODO fix}}
+\DoxyCodeLine{224         \textcolor{keywordflow}{if} \mbox{\hyperlink{namespacecore_1_1client_1_1client_ad226ea1381b32a2c801e4509f89b7efc}{type}}(balance)==dict:}
+\DoxyCodeLine{225             self.balance=balance[\textcolor{stringliteral}{'balance'}]}
+\DoxyCodeLine{226             \textcolor{keywordflow}{return}}
+\DoxyCodeLine{227         self.balance=balance}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+balance, and client.\+client.\+type.
+
+
+
+Referenced by client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+ledger(), core.\+client.\+client.\+Client.\+autotract(), client.\+client.\+Client.\+autotract(), and core\+\_\+test.\+Restful\+Test.\+autotract().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_aa9cab8c5ce246ad10bc626b32b08fc63_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_aecb2b77967171497043de815c24da223}\label{classclient_1_1client_1_1_client_aecb2b77967171497043de815c24da223}} 
+\index{client.client.Client@{client.client.Client}!\_\_update\_ledger@{\_\_update\_ledger}}
+\index{\_\_update\_ledger@{\_\_update\_ledger}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_update\_ledger()}{\_\_update\_ledger()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyVerb}update ledger with sold goods, and update balance\end{DoxyVerb}
+ 
+
+Definition at line 243 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{243     \textcolor{keyword}{def }\_\_update\_ledger(self):}
+\DoxyCodeLine{244         \textcolor{stringliteral}{"""update ledger with sold goods, and update balance}}
+\DoxyCodeLine{245 \textcolor{stringliteral}{}}
+\DoxyCodeLine{246 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{247         ret=requests.post(LEDGER\_URL, data=json.dumps(\{\textcolor{stringliteral}{'trx\_dt'}: self.\_\_ledger\_timestamp()\}), auth=self.auth())}
+\DoxyCodeLine{248         \textcolor{comment}{\#TODO always process the status code!}}
+\DoxyCodeLine{249         print(\textcolor{stringliteral}{'status code: '}, ret.status\_code)}
+\DoxyCodeLine{250         res = json.loads(ret.text) \textcolor{comment}{\#self.\_\_get\_dict(ret.text)}}
+\DoxyCodeLine{251         print(\textcolor{stringliteral}{'res: '}, res)}
+\DoxyCodeLine{252         print(\textcolor{stringliteral}{"new balance: "}, res[\textcolor{stringliteral}{'balance'}])}
+\DoxyCodeLine{253         self.\_\_update\_balance(res[\textcolor{stringliteral}{'balance'}])}
+\DoxyCodeLine{254         self.db.init()}
+\DoxyCodeLine{255         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{256             new\_trxs=res[\textcolor{stringliteral}{'transactions'}]}
+\DoxyCodeLine{257             print(\textcolor{stringliteral}{"trxs: "}, new\_trxs)}
+\DoxyCodeLine{258             transactions=pd.read\_json(new\_trxs)}
+\DoxyCodeLine{259             print(\textcolor{stringliteral}{"trxs pandas: "}, transactions)}
+\DoxyCodeLine{260             \textcolor{keywordflow}{if} len(transactions)==0:}
+\DoxyCodeLine{261                 logger.info(\textcolor{stringliteral}{"ledger is up to date!"})}
+\DoxyCodeLine{262                 \textcolor{keywordflow}{return}}
+\DoxyCodeLine{263             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(transactions)-\/1):}
+\DoxyCodeLine{264                 self.\_\_add\_trax(transactions.iloc[i])}
+\DoxyCodeLine{265             db.commit()}
+\DoxyCodeLine{266         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{267             print(\textcolor{stringliteral}{'FAILURE LEDGER UPDATE: '}, str(error))}
+\DoxyCodeLine{268             self.db.rollback()}
+\DoxyCodeLine{269         \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} error:}
+\DoxyCodeLine{270             print(\textcolor{stringliteral}{'FAILURE LEDGER UPDATE: '}, str(error))}
+\DoxyCodeLine{271             self.db.rollback()}
+\DoxyCodeLine{272         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{273             self.db.close()}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), client.\+client.\+Client.\+\_\+\+\_\+ledger\+\_\+timestamp(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), client.\+client.\+Client.\+auth(), and client.\+client.\+Client.\+db.
+
+
+
+Referenced by client.\+client.\+Client.\+autotract(), core.\+client.\+client.\+Client.\+autotract(), core\+\_\+test.\+Restful\+Test.\+autotract(), core.\+client.\+client.\+Client.\+register(), and client.\+client.\+Client.\+register().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_aecb2b77967171497043de815c24da223_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_aecb2b77967171497043de815c24da223_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a7ccfb8f1416e310baaa0ed3d6ccc3ecd}\label{classclient_1_1client_1_1_client_a7ccfb8f1416e310baaa0ed3d6ccc3ecd}} 
+\index{client.client.Client@{client.client.Client}!add\_contact@{add\_contact}}
+\index{add\_contact@{add\_contact}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{add\_contact()}{add\_contact()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+add\+\_\+contact (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{email,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fetch the client with given email/name
+
+@param email: contact email
+@param name: contact name
+\end{DoxyVerb}
+ 
+
+Definition at line 179 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{179     \textcolor{keyword}{def }\mbox{\hyperlink{namespaceserver_1_1server_a9543f6165e186fa9fcfdcaae8c3414fd}{add\_contact}}(self, email, name):}
+\DoxyCodeLine{180         \textcolor{stringliteral}{"""Fetch the client with given email/name}}
+\DoxyCodeLine{181 \textcolor{stringliteral}{}}
+\DoxyCodeLine{182 \textcolor{stringliteral}{        @param email: contact email}}
+\DoxyCodeLine{183 \textcolor{stringliteral}{        @param name: contact name}}
+\DoxyCodeLine{184 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{185         \textcolor{comment}{\#get client credential id}}
+\DoxyCodeLine{186         cred=\{\textcolor{stringliteral}{'email'}: email\}}
+\DoxyCodeLine{187         ret=requests.post(CONTACTS\_URL, \(\backslash\)}
+\DoxyCodeLine{188                           data=json.dumps(cred), \(\backslash\)}
+\DoxyCodeLine{189                           auth=self.auth())}
+\DoxyCodeLine{190         response=ret.text\textcolor{comment}{\#.decode('utf8')\#.replace('"', "'")}}
+\DoxyCodeLine{191         print(\textcolor{stringliteral}{'add contact response: '}, response)}
+\DoxyCodeLine{192         res = json.loads(response)}
+\DoxyCodeLine{193         credid = res[\textcolor{stringliteral}{'credid'}]}
+\DoxyCodeLine{194         self.db.init()}
+\DoxyCodeLine{195         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{196             self.db.inserts.insert\_contact(email, name, credid)}
+\DoxyCodeLine{197             self.db.commit()}
+\DoxyCodeLine{198         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{199             self.db.rollback()}
+\DoxyCodeLine{200         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{201             self.db.close()}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+auth(), and client.\+client.\+Client.\+db.
+
+
+
+Referenced by core\+\_\+test.\+Client.\+make\+\_\+transaction().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a7ccfb8f1416e310baaa0ed3d6ccc3ecd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a7ccfb8f1416e310baaa0ed3d6ccc3ecd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a464f2af71e9d2acd62f2b01bff793235}\label{classclient_1_1client_1_1_client_a464f2af71e9d2acd62f2b01bff793235}} 
+\index{client.client.Client@{client.client.Client}!auth@{auth}}
+\index{auth@{auth}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{auth()}{auth()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+auth (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 97 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97     \textcolor{keyword}{def }\mbox{\hyperlink{namespaceserver_1_1server_ab802d8377425f04baff600f81f7d373c}{auth}}(self):}
+\DoxyCodeLine{98         logger.info(\textcolor{stringliteral}{"auth ("}+str(self.email)+\textcolor{stringliteral}{":"}+str(self.passcode)+\textcolor{stringliteral}{")"})}
+\DoxyCodeLine{99         \textcolor{keywordflow}{return} HTTPBasicAuth(self.email, self.passcode)}
+\DoxyCodeLine{100 }
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+email, and client.\+client.\+Client.\+passcode.
+
+
+
+Referenced by client.\+client.\+Client.\+\_\+\+\_\+register\+\_\+bank\+\_\+account(), core.\+client.\+client.\+Client.\+\_\+\+\_\+register\+\_\+bank\+\_\+account(), client.\+client.\+Client.\+\_\+\+\_\+transact(), core.\+client.\+client.\+Client.\+\_\+\+\_\+transact(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+transact(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+ledger(), client.\+client.\+Client.\+add\+\_\+contact(), core.\+client.\+client.\+Client.\+add\+\_\+contact(), and core\+\_\+test.\+Restful\+Test.\+add\+\_\+contact().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a464f2af71e9d2acd62f2b01bff793235_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_adce7cbe9757498b2b90aa0795bd6e630}\label{classclient_1_1client_1_1_client_adce7cbe9757498b2b90aa0795bd6e630}} 
+\index{client.client.Client@{client.client.Client}!autotract@{autotract}}
+\index{autotract@{autotract}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{autotract()}{autotract()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+autotract (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Stochastic fake auto-tracting
+
+trade with randomly with maintained contacts with 0.5 probability for each, and 0.1 probability for all contacts goods, update balance, and goods for each contact
+\end{DoxyVerb}
+ 
+
+Definition at line 274 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{274     \textcolor{keyword}{def }autotract(self):}
+\DoxyCodeLine{275         \textcolor{stringliteral}{"""Stochastic fake auto-\/tracting}}
+\DoxyCodeLine{276 \textcolor{stringliteral}{}}
+\DoxyCodeLine{277 \textcolor{stringliteral}{        trade with randomly with maintained contacts with 0.5 probability for each, and 0.1 probability for all contacts goods, update balance, and goods for each contact}}
+\DoxyCodeLine{278 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{279         \textcolor{comment}{\#update balance, and add new transactions}}
+\DoxyCodeLine{280         MAX\_TRACT\_BALANCE=100000}
+\DoxyCodeLine{281         self.\_\_update\_ledger()}
+\DoxyCodeLine{282         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(contacts\_df-\/1)):}
+\DoxyCodeLine{283             contact\_credid=contacts\_df.iloc[i][\textcolor{stringliteral}{'contact\_id'}]}
+\DoxyCodeLine{284             contact\_name=contacts\_df.iloc[i][\textcolor{stringliteral}{'contact\_name'}]}
+\DoxyCodeLine{285             contact\_email=contacts\_df.iloc[i][\textcolor{stringliteral}{'contact\_email'}]}
+\DoxyCodeLine{286             amount=random.random()*MAX\_TRACT\_BALANCE}
+\DoxyCodeLine{287             logger.info(\textcolor{stringliteral}{"making transaction with \{\}[\{\}] by amount: \{\}"}.\(\backslash\)}
+\DoxyCodeLine{288                         \mbox{\hyperlink{namespacecore_1_1client_1_1client_a540e965cb4baad66c360d087365f30c1}{format}}(contact\_name, contact\_email, amount))}
+\DoxyCodeLine{289             \textcolor{comment}{\#if random.random()> STOCHASTIC\_TRADE\_THRESHOLD and good.cost <= self.balance:}}
+\DoxyCodeLine{290             \textcolor{comment}{\#TODO (fix) doesn't work!}}
+\DoxyCodeLine{291             \textcolor{comment}{\#trx=self.\_\_purchase(good.gid)}}
+\DoxyCodeLine{292             trx=self.\_\_transact(contact\_credid, amount)}
+\DoxyCodeLine{293             self.\_\_add\_trax(trx)}
+\DoxyCodeLine{294             self.\_\_update\_balance(trx)}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), client.\+client.\+Client.\+\_\+\+\_\+transact(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), and client.\+client.\+format.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_adce7cbe9757498b2b90aa0795bd6e630_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a825c9c87f3a092c938f0f15cab67a203}\label{classclient_1_1client_1_1_client_a825c9c87f3a092c938f0f15cab67a203}} 
+\index{client.client.Client@{client.client.Client}!register@{register}}
+\index{register@{register}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily def client.\+client.\+Client.\+register (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}check if this client has credentials, if not register\end{DoxyVerb}
+ 
+
+Definition at line 101 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1credentials_a8c28b189106fd302808937c74f277b6f}{register}}(self):}
+\DoxyCodeLine{102         \textcolor{stringliteral}{""" check if this client has credentials, if not register}}
+\DoxyCodeLine{103 \textcolor{stringliteral}{}}
+\DoxyCodeLine{104 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{105         \textcolor{comment}{\#check if user have credentials}}
+\DoxyCodeLine{106         self.db.init()}
+\DoxyCodeLine{107         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{108             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.db.exists.credential\_exists(1):}
+\DoxyCodeLine{109                 \textcolor{comment}{\#register user}}
+\DoxyCodeLine{110                 \textcolor{comment}{\#my\_goods = [good(self.faker) for i in range(math.ceil(random.random()*MAX\_GOODS))]}}
+\DoxyCodeLine{111                 \textcolor{comment}{\#TODO check repose status\_code makes sure it's request.codes.ok}}
+\DoxyCodeLine{112                 payload=\{\textcolor{stringliteral}{'name'}:self.name, \(\backslash\)}
+\DoxyCodeLine{113                          \textcolor{stringliteral}{'email'}: self.email, \(\backslash\)}
+\DoxyCodeLine{114                          \textcolor{stringliteral}{'passcode'}: self.passcode\}}
+\DoxyCodeLine{115                 print(\textcolor{stringliteral}{'payload: '}, payload)}
+\DoxyCodeLine{116                 res=requests.post(REGISTER\_URL, data=json.dumps(payload))}
+\DoxyCodeLine{117                 response = json.loads(res.text)}
+\DoxyCodeLine{118                 \textcolor{keyword}{assert} res.status\_code==201, \textcolor{stringliteral}{"status code is error \{\} "}.\mbox{\hyperlink{namespacecore_1_1client_1_1client_a540e965cb4baad66c360d087365f30c1}{format}}(res.status\_code)}
+\DoxyCodeLine{119                 print(response)}
+\DoxyCodeLine{120                 credid=response[\textcolor{stringliteral}{'cred\_id'}]}
+\DoxyCodeLine{121                 \textcolor{comment}{\#cid set to 0, since it never matters in the client side}}
+\DoxyCodeLine{122                 }
+\DoxyCodeLine{123                 self.db.inserts.register(0, self.passcode, credid)}
+\DoxyCodeLine{124                 logger.debug(\textcolor{stringliteral}{"user registered with credentials username: \{\}, email: \{\}, passcode: \{\}"}\(\backslash\)}
+\DoxyCodeLine{125                              .\mbox{\hyperlink{namespacecore_1_1client_1_1client_a540e965cb4baad66c360d087365f30c1}{format}}(name, email, passcode))}
+\DoxyCodeLine{126                 }
+\DoxyCodeLine{132             \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{133                 self.\_\_update\_ledger()}
+\DoxyCodeLine{134             self.db.commit()}
+\DoxyCodeLine{135             self.uname=email}
+\DoxyCodeLine{136             self.pas=passcode}
+\DoxyCodeLine{137         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{138             logger.critical(\textcolor{stringliteral}{"registration failed!, error: "}+ str(error))}
+\DoxyCodeLine{139             print(\textcolor{stringliteral}{"register failed!, error: "}+str(error))}
+\DoxyCodeLine{140             self.db.rollback()}
+\DoxyCodeLine{141         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{142             self.db.close()}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), client.\+client.\+Client.\+db, client.\+client.\+Client.\+email, client.\+client.\+format, client.\+client.\+Client.\+name, and client.\+client.\+Client.\+passcode.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a825c9c87f3a092c938f0f15cab67a203_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classclient_1_1client_1_1_client_a825c9c87f3a092c938f0f15cab67a203_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a27997654a1942735ff2e82825ecb4aa2}\label{classclient_1_1client_1_1_client_a27997654a1942735ff2e82825ecb4aa2}} 
+\index{client.client.Client@{client.client.Client}!account\_number@{account\_number}}
+\index{account\_number@{account\_number}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{account\_number}{account\_number}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+account\+\_\+number}
+
+
+
+Definition at line 83 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Payment\+Gate.\+\_\+\+\_\+init\+\_\+\+\_\+(), and core\+\_\+test.\+Client.\+register\+\_\+bank\+\_\+account().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a457a40963893b10c62da9271139b7af7}\label{classclient_1_1client_1_1_client_a457a40963893b10c62da9271139b7af7}} 
+\index{client.client.Client@{client.client.Client}!balance@{balance}}
+\index{balance@{balance}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{balance}{balance}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+balance}
+
+
+
+Definition at line 170 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+register\+\_\+bank\+\_\+account(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+balance(), core.\+utils.\+Payment\+Gate.\+authenticated(), core.\+utils.\+Payment\+Gate.\+get\+\_\+balance(), and core\+\_\+test.\+Client.\+get\+\_\+balance().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_ac29018311c5f1810eed0a6775c162a9f}\label{classclient_1_1client_1_1_client_ac29018311c5f1810eed0a6775c162a9f}} 
+\index{client.client.Client@{client.client.Client}!bank\_name@{bank\_name}}
+\index{bank\_name@{bank\_name}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{bank\_name}{bank\_name}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+bank\+\_\+name}
+
+
+
+Definition at line 81 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Payment\+Gate.\+\_\+\+\_\+init\+\_\+\+\_\+(), and core\+\_\+test.\+Client.\+register\+\_\+bank\+\_\+account().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a85c0dbd2170687058b05136db0cabccf}\label{classclient_1_1client_1_1_client_a85c0dbd2170687058b05136db0cabccf}} 
+\index{client.client.Client@{client.client.Client}!branch\_number@{branch\_number}}
+\index{branch\_number@{branch\_number}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{branch\_number}{branch\_number}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+branch\+\_\+number}
+
+
+
+Definition at line 82 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Payment\+Gate.\+\_\+\+\_\+init\+\_\+\+\_\+(), and core\+\_\+test.\+Client.\+register\+\_\+bank\+\_\+account().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a0c1fa165881ffdc7c5e12b0771304387}\label{classclient_1_1client_1_1_client_a0c1fa165881ffdc7c5e12b0771304387}} 
+\index{client.client.Client@{client.client.Client}!db@{db}}
+\index{db@{db}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+db}
+
+
+
+Definition at line 86 of file client.\+py.
+
+
+
+Referenced by client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), core.\+client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+add\+\_\+trax(), core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), client.\+client.\+Client.\+\_\+\+\_\+ledger\+\_\+timestamp(), core.\+client.\+client.\+Client.\+\_\+\+\_\+ledger\+\_\+timestamp(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+ledger\+\_\+timestamp(), core.\+client.\+client.\+Client.\+\_\+\+\_\+register\+\_\+bank\+\_\+account(), client.\+client.\+Client.\+\_\+\+\_\+register\+\_\+bank\+\_\+account(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+register\+\_\+bank\+\_\+account(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+ledger(), core.\+client.\+client.\+Client.\+add\+\_\+contact(), client.\+client.\+Client.\+add\+\_\+contact(), core\+\_\+test.\+Restful\+Test.\+add\+\_\+contact(), core.\+client.\+client.\+Client.\+register(), and client.\+client.\+Client.\+register().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_ab2353543969cab0180108492d1bcf0bc}\label{classclient_1_1client_1_1_client_ab2353543969cab0180108492d1bcf0bc}} 
+\index{client.client.Client@{client.client.Client}!email@{email}}
+\index{email@{email}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+email}
+
+
+
+Definition at line 80 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), client.\+client.\+Client.\+auth(), core.\+client.\+client.\+Client.\+auth(), core\+\_\+test.\+Client.\+basic\+\_\+auth(), core\+\_\+test.\+Client.\+get\+\_\+balance(), core\+\_\+test.\+Client.\+register(), core.\+client.\+client.\+Client.\+register(), and client.\+client.\+Client.\+register().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a8341059165ea5cd3d84adc5ce699e25d}\label{classclient_1_1client_1_1_client_a8341059165ea5cd3d84adc5ce699e25d}} 
+\index{client.client.Client@{client.client.Client}!faker@{faker}}
+\index{faker@{faker}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{faker}{faker}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+faker}
+
+
+
+Definition at line 74 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+client.\+client.\+Client.\+\_\+\+\_\+register\+\_\+bank\+\_\+account(), client.\+client.\+Client.\+\_\+\+\_\+register\+\_\+bank\+\_\+account(), and core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+register\+\_\+bank\+\_\+account().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_aa95c425f70249bbc7a4fc52b9dde4999}\label{classclient_1_1client_1_1_client_aa95c425f70249bbc7a4fc52b9dde4999}} 
+\index{client.client.Client@{client.client.Client}!my\_contacts@{my\_contacts}}
+\index{my\_contacts@{my\_contacts}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{my\_contacts}{my\_contacts}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+my\+\_\+contacts}
+
+
+
+Definition at line 87 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_ae31d818dee745bd5283046f657a09a17}\label{classclient_1_1client_1_1_client_ae31d818dee745bd5283046f657a09a17}} 
+\index{client.client.Client@{client.client.Client}!name@{name}}
+\index{name@{name}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+name}
+
+
+
+Definition at line 78 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), client.\+client.\+Client.\+\_\+\+\_\+register\+\_\+bank\+\_\+account(), core\+\_\+test.\+Client.\+get\+\_\+balance(), core\+\_\+test.\+Client.\+register(), core.\+client.\+client.\+Client.\+register(), and client.\+client.\+Client.\+register().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_adbc9524318c0bab0b02f93f59e578d5f}\label{classclient_1_1client_1_1_client_adbc9524318c0bab0b02f93f59e578d5f}} 
+\index{client.client.Client@{client.client.Client}!name\_reference@{name\_reference}}
+\index{name\_reference@{name\_reference}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{name\_reference}{name\_reference}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+name\+\_\+reference}
+
+
+
+Definition at line 84 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Payment\+Gate.\+\_\+\+\_\+init\+\_\+\+\_\+(), and core\+\_\+test.\+Client.\+register\+\_\+bank\+\_\+account().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a0c3bba2b71781107fb6d94379e345d7c}\label{classclient_1_1client_1_1_client_a0c3bba2b71781107fb6d94379e345d7c}} 
+\index{client.client.Client@{client.client.Client}!pas@{pas}}
+\index{pas@{pas}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{pas}{pas}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+pas}
+
+
+
+Definition at line 136 of file client.\+py.
+
+
+
+Referenced by core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+auth(), core.\+client.\+client.\+Client.\+register(), and core\+\_\+test.\+Restful\+Test.\+test\+\_\+register().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_ad40cf93af9a2100b42b6a25b75a58cab}\label{classclient_1_1client_1_1_client_ad40cf93af9a2100b42b6a25b75a58cab}} 
+\index{client.client.Client@{client.client.Client}!passcode@{passcode}}
+\index{passcode@{passcode}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{passcode}{passcode}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+passcode}
+
+
+
+Definition at line 79 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), client.\+client.\+Client.\+auth(), core.\+client.\+client.\+Client.\+auth(), core\+\_\+test.\+Client.\+basic\+\_\+auth(), core\+\_\+test.\+Client.\+get\+\_\+balance(), core\+\_\+test.\+Client.\+register(), core.\+client.\+client.\+Client.\+register(), and client.\+client.\+Client.\+register().
+
+\mbox{\Hypertarget{classclient_1_1client_1_1_client_a4abd92a39b493e1de77de0d59fb23933}\label{classclient_1_1client_1_1_client_a4abd92a39b493e1de77de0d59fb23933}} 
+\index{client.client.Client@{client.client.Client}!uname@{uname}}
+\index{uname@{uname}!client.client.Client@{client.client.Client}}
+\doxysubsubsection{\texorpdfstring{uname}{uname}}
+{\footnotesize\ttfamily client.\+client.\+Client.\+uname}
+
+
+
+T\+O\+DO credid. 
+
+post goods \#
+
+payload=json.\+dumps(\{\textquotesingle{}goods\textquotesingle{}\+: \mbox{[}(g.\+name, g.\+cost, g.\+quality) for g in my\+\_\+goods\mbox{]}\}) requests.\+post(G\+O\+O\+D\+S\+\_\+\+U\+RL, data=payload, auth=\mbox{\hyperlink{namespaceserver_1_1server_ab802d8377425f04baff600f81f7d373c}{self.\+auth()}}) T\+O\+DO assert that requests.\+text is equivalent to payload 
+
+Definition at line 135 of file client.\+py.
+
+
+
+Referenced by core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+auth(), core.\+client.\+client.\+Client.\+register(), and core\+\_\+test.\+Restful\+Test.\+test\+\_\+register().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/build/lib/client/\mbox{\hyperlink{core_2build_2lib_2client_2client_8py}{client.\+py}}\end{DoxyCompactItemize}

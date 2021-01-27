@@ -1,0 +1,108 @@
+\hypertarget{core_2utils_8py}{}\doxysection{core/utils.py File Reference}
+\label{core_2utils_8py}\index{core/utils.py@{core/utils.py}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcore_1_1utils_1_1_currency}{core.\+utils.\+Currency}}
+\item 
+class \mbox{\hyperlink{classcore_1_1utils_1_1_payment_gate}{core.\+utils.\+Payment\+Gate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecore_1_1utils}{core.\+utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca}{core.\+utils.\+exchangerate\+\_\+rate}} (base, pref)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b}{core.\+utils.\+fixer\+\_\+rate}} (base, pref)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{core.\+utils.\+exchange}} (base, pref)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_ac13f32df1a27f40f8f3c89c01e40e18c}{core.\+utils.\+daily\+\_\+limit}} (pref=E\+UR)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_ace7833d9faa7284d9efbb4081fa80f11}{core.\+utils.\+weekly\+\_\+limit}} (pref=E\+UR)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}{core.\+utils.\+process\+\_\+cur}} (cur)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{core.\+utils.\+unwrap\+\_\+cur}} (cur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_a6a7e0440a2beea6620ee3168f2333b83}{core.\+utils.\+seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a014ec7ca779f32f62cdaf93bd227b56a}{core.\+utils.\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+F\+O\+R\+M\+AT}} = \char`\"{}\%Y-\/\%m-\/\%d \%H\+:\%M\+:\%S.\%f\char`\"{}
+\item 
+float \mbox{\hyperlink{namespacecore_1_1utils_a2c4a415f35f12afb96cffc32812104ff}{core.\+utils.\+F\+EE}} = 0.\+01
+\item 
+float \mbox{\hyperlink{namespacecore_1_1utils_afa1fcbb79b33061d51ebbc040db1e9fa}{core.\+utils.\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+R\+E\+D\+U\+C\+T\+I\+ON}} = 0.\+1
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_aeb6eccc58477f2fddde912dc76ccf940}{core.\+utils.\+M\+A\+X\+\_\+\+C\+O\+ST}} = 1000000
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_a8703e6bfde946d4c5e1d8b771bea5882}{core.\+utils.\+M\+A\+X\+\_\+\+G\+O\+O\+DS}} = 100
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a37adb3629251f374911f9a5b5b91984d}{core.\+utils.\+R\+E\+G\+I\+S\+T\+ER}} = \char`\"{}/api/v0.\+1/register\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a9e1eedc69bed488000a389ba281c334d}{core.\+utils.\+L\+E\+D\+G\+ER}} = \char`\"{}/api/v0.\+1/ledger\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a0997cde2e65cbd63e3ead150a67fb30b}{core.\+utils.\+C\+O\+N\+T\+A\+C\+TS}} = \char`\"{}/api/v0.\+1/contacts\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_ae77a279ae4204bb59c699e995c257fec}{core.\+utils.\+P\+U\+R\+C\+H\+A\+SE}} = \char`\"{}/api/v0.\+1/purchase\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a5eab2d894a9c95f3b16b9e5af18261f5}{core.\+utils.\+G\+O\+O\+DS}} = \char`\"{}/api/v0.\+1/goods\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a8fe8d82568a35a95541bd476be058300}{core.\+utils.\+G\+O\+O\+D\+S\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/goods\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a0d86ced3754761f6594c03dee0eaf55e}{core.\+utils.\+B\+A\+L\+A\+N\+C\+E\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/balance\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_ae97978e2270dab09224699fe41d0450d}{core.\+utils.\+B\+A\+L\+A\+N\+CE}} = \char`\"{}/api/v0.\+1/balance\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a93098b497cd66fc2ad84fbd38661e580}{core.\+utils.\+C\+U\+R\+R\+E\+N\+C\+Y\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/currency\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a670665c06aeaa476adadabd5e085cc68}{core.\+utils.\+C\+U\+R\+R\+E\+N\+CY}} = \char`\"{}/api/v0.\+1/currency\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_aee923bae66ee1562d466cb1c9a707bc5}{core.\+utils.\+C\+O\+N\+T\+A\+C\+T\+S\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/contacts\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a6c55682d63a56f227e5385aa498a42a4}{core.\+utils.\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/register\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_aa6a6520c85902e89cc54f34e4caee86e}{core.\+utils.\+L\+E\+D\+G\+E\+R\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/ledger\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a682cfc562c6878450ce895363702c63a}{core.\+utils.\+P\+U\+R\+C\+H\+A\+S\+E\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/purchase\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_ab6dd3584a9c6e0f5286ffa4bfc028535}{core.\+utils.\+A\+D\+D\+\_\+\+B\+A\+N\+K\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/addbank\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a88de3cced98f0902714c19bd9f604ea8}{core.\+utils.\+A\+D\+D\+\_\+\+B\+A\+N\+K\+\_\+\+A\+C\+C\+O\+U\+NT}} = \char`\"{}/api/v0.\+1/addbank\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a27257fb18c899d4509f1c09c64c7b225}{core.\+utils.\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/transaction\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a293e1f7985c1851c1abc4ea51b49b46d}{core.\+utils.\+T\+R\+A\+N\+S\+A\+C\+T\+I\+ON}} = \char`\"{}/api/v0.\+1/transaction\char`\"{}
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_afeec3566a7f124093fbf4fe9f8aa2f9f}{core.\+utils.\+M\+A\+X\+\_\+\+C\+R\+E\+D\+\_\+\+ID}} = 9223372036854775807
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_a182b6a555b59fdf17069cdb0b9954a8c}{core.\+utils.\+M\+A\+X\+\_\+\+B\+A\+L\+A\+N\+CE}} = M\+A\+X\+\_\+\+C\+O\+ST$\ast$10
+\item 
+float \mbox{\hyperlink{namespacecore_1_1utils_adcabc1c9523db5a486f106119d79f96c}{core.\+utils.\+S\+T\+O\+C\+H\+A\+S\+T\+I\+C\+\_\+\+T\+R\+A\+D\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 0.\+9
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_a2de43731c61fd3f73646aec2a92bee71}{core.\+utils.\+D\+A\+I\+L\+Y\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+GP}} = 10000
+\item 
+int \mbox{\hyperlink{namespacecore_1_1utils_a403e04efd62b792ce24c059dba242924}{core.\+utils.\+W\+E\+E\+K\+L\+Y\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+GP}} = 50000
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a9fe84882e56b0ed1932498c4891efab4}{core.\+utils.\+E\+UR}} = \textquotesingle{}E\+UR\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a2da89483b243a02ca9ab2077e07e6b1d}{core.\+utils.\+E\+GP}} = \textquotesingle{}E\+GP\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a8a26be253e2f178c5f6ec28f0acad76c}{core.\+utils.\+U\+SD}} = \textquotesingle{}U\+SD\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_ab39dff30b40c415dd8def9690ef3c088}{core.\+utils.\+db\+\_\+configs}} = \char`\"{}dbname=\textquotesingle{}demo\textquotesingle{} user=\textquotesingle{}tahweela\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_acc1defa8f2afef711123e6608e807fc2}{core.\+utils.\+filename}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{core.\+utils.\+format}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_aa8ab0e7e791ad81073211f9dbe00cb73}{core.\+utils.\+filemode}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_aeb684e0a844297878e2ede052e870e64}{core.\+utils.\+log}} = logging.\+get\+Logger()
+\end{DoxyCompactItemize}

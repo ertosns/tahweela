@@ -1,0 +1,903 @@
+\hypertarget{classqueries_1_1database_1_1gets}{}\doxysection{queries.\+database.\+gets Class Reference}
+\label{classqueries_1_1database_1_1gets}\index{queries.database.gets@{queries.database.gets}}
+
+
+Inheritance diagram for queries.\+database.\+gets\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classqueries_1_1database_1_1gets__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for queries.\+database.\+gets\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classqueries_1_1database_1_1gets__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a87093cb1ea53532ecf04961f2e3cd72e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classqueries_1_1database_1_1gets_afa7ec03b910858c0545c1bf4d36171ba}{conn}}, \mbox{\hyperlink{classqueries_1_1database_1_1gets_ac09e07a2bdbe6ac65c221351b6eed79d}{cur}}, \mbox{\hyperlink{classqueries_1_1database_1_1database_a8518b4bde4f27604841948d75c03c588}{logger}})
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_ae33e1515eb9370fd19b8d645285d784c}{get\+\_\+client\+\_\+id\+\_\+byemail}} (self, email)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a6d9f619ad4dadf58031d15e3e90f2baf}{get\+\_\+client\+\_\+id\+\_\+byname}} (self, name, passcode)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a7688f1d3a19e68b163470986081fbcd7}{get\+\_\+client\+\_\+id}} (self, bid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_adbbb5d956fc2467dcb2f8a28876b9bb7}{get\+\_\+banking\+\_\+id}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a2300cd1d5c33f4848e754ad8042a0bbf}{get\+\_\+balance\+\_\+by\+\_\+cid}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a392416e729e1a75578627b6d951036f0}{get\+\_\+balance\+\_\+by\+\_\+credid}} (self, cred\+\_\+id)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_aaf0be1133b710802303a525ae42fb69c}{get\+\_\+all\+\_\+clients}} (self)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a8a5cd02d7c427c71d6ca820c8f6dc43a}{get}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_ad7c5955258c7f3db9442b73eda725bfa}{get\+\_\+name}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_af5bf550bd43a76b1343e86e31fe28f49}{get\+\_\+all\+\_\+contacts}} (self)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_ad2a5a6ec7ad1aa12a39b6db42e9e0b16}{get\+\_\+all\+\_\+credentials}} (self)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a462a7aecb24a210d268c9836f51e6fc1}{get\+\_\+credential}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_ad535f5735e84660b7b9aeb81a5dc951a}{credid2cid}} (self, cred\+\_\+id)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a2317b658a7871c563fd41de64cf1e12a}{cid2credid}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_acba4b61c02c52d86890f4be5067e5fb2}{get\+\_\+password}} (self, cred\+\_\+id)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_ad4d9d29460b341b7b44c9ef9d3d16e9e}{to\+\_\+dollar}} (self, cid)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a139471dd45ec7e48bc432fe8734d2476}{get\+\_\+transactions}} (self, st\+\_\+dt, end\+\_\+dt=dt.\+datetime.\+now())
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a43b0685aa0d221c595fb5dd6a5454e81}{get\+\_\+transactions\+\_\+sum}} (self, trx\+\_\+with\+\_\+credid, st\+\_\+dt=None, end\+\_\+dt=None)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_ac3f4ee1aab66a2d2f052c0f0b42169e6}{get\+\_\+sells}} (self, dest, st\+\_\+dt, end\+\_\+dt=None)
+\item 
+def \mbox{\hyperlink{classqueries_1_1database_1_1gets_a0c025e3dd745e71ae3ff24c39c79b08d}{get\+\_\+last\+\_\+timestamp}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1gets_afa7ec03b910858c0545c1bf4d36171ba}{conn}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1gets_ac09e07a2bdbe6ac65c221351b6eed79d}{cur}}
+\item 
+\mbox{\hyperlink{classqueries_1_1database_1_1gets_aee7ee13bf0f3ea461c5d5a553f99c05c}{db\+\_\+log}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 94 of file database.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a87093cb1ea53532ecf04961f2e3cd72e}\label{classqueries_1_1database_1_1gets_a87093cb1ea53532ecf04961f2e3cd72e}} 
+\index{queries.database.gets@{queries.database.gets}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{conn,  }\item[{}]{cur,  }\item[{}]{logger }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
+\DoxyCodeLine{96         self.conn=conn}
+\DoxyCodeLine{97         self.cur=cur}
+\DoxyCodeLine{98         self.db\_log=logger}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a2317b658a7871c563fd41de64cf1e12a}\label{classqueries_1_1database_1_1gets_a2317b658a7871c563fd41de64cf1e12a}} 
+\index{queries.database.gets@{queries.database.gets}!cid2credid@{cid2credid}}
+\index{cid2credid@{cid2credid}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{cid2credid()}{cid2credid()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+cid2credid (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get credential id
+
+@param cid: client's id
+@return credidid
+\end{DoxyVerb}
+ 
+
+Definition at line 254 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{254     \textcolor{keyword}{def }cid2credid(self, cid):}
+\DoxyCodeLine{255         \textcolor{stringliteral}{""" get credential id}}
+\DoxyCodeLine{256 \textcolor{stringliteral}{}}
+\DoxyCodeLine{257 \textcolor{stringliteral}{        @param cid: client's id}}
+\DoxyCodeLine{258 \textcolor{stringliteral}{        @return credidid}}
+\DoxyCodeLine{259 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{260         query=sql.SQL(\textcolor{stringliteral}{"SELECT cred\_id FROM credentials WHERE id=\{cid\}  FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{261             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{262         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{263         self.cur.execute(query)}
+\DoxyCodeLine{264         fet=self.cur.fetchone()}
+\DoxyCodeLine{265         print(\textcolor{stringliteral}{"cid2credid fet: "}, fet)}
+\DoxyCodeLine{266         \textcolor{keywordflow}{return} fet[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_ad535f5735e84660b7b9aeb81a5dc951a}\label{classqueries_1_1database_1_1gets_ad535f5735e84660b7b9aeb81a5dc951a}} 
+\index{queries.database.gets@{queries.database.gets}!credid2cid@{credid2cid}}
+\index{credid2cid@{credid2cid}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{credid2cid()}{credid2cid()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+credid2cid (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cred\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get client id
+
+@param cred_id: credential id
+@return the id, or None if doesn't exist
+\end{DoxyVerb}
+ 
+
+Definition at line 241 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{241     \textcolor{keyword}{def }credid2cid(self, cred\_id):}
+\DoxyCodeLine{242         \textcolor{stringliteral}{""" get client id}}
+\DoxyCodeLine{243 \textcolor{stringliteral}{}}
+\DoxyCodeLine{244 \textcolor{stringliteral}{        @param cred\_id: credential id}}
+\DoxyCodeLine{245 \textcolor{stringliteral}{        @return the id, or None if doesn't exist}}
+\DoxyCodeLine{246 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{247         query=sql.SQL(\textcolor{stringliteral}{"SELECT id FROM credentials WHERE cred\_id=\{credid\}  FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{248             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(credid=sql.Literal(cred\_id))}
+\DoxyCodeLine{249         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{250         self.cur.execute(query)}
+\DoxyCodeLine{251         fet=self.cur.fetchone()}
+\DoxyCodeLine{252         print(\textcolor{stringliteral}{"cred2cid fet: "}, fet)}
+\DoxyCodeLine{253         \textcolor{keywordflow}{return} fet[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a8a5cd02d7c427c71d6ca820c8f6dc43a}\label{classqueries_1_1database_1_1gets_a8a5cd02d7c427c71d6ca820c8f6dc43a}} 
+\index{queries.database.gets@{queries.database.gets}!get@{get}}
+\index{get@{get}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve client into with given client id (cid)
+
+@param cid: client id
+@return tuple (id, name, join date)
+\end{DoxyVerb}
+ 
+
+Definition at line 188 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{188     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967}{get}}(self, cid):}
+\DoxyCodeLine{189         \textcolor{stringliteral}{"""retrieve client into with given client id (cid)}}
+\DoxyCodeLine{190 \textcolor{stringliteral}{}}
+\DoxyCodeLine{191 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{192 \textcolor{stringliteral}{        @return tuple (id, name, join date)}}
+\DoxyCodeLine{193 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{194         query=sql.SQL(\textcolor{stringliteral}{"SELECT * FROM clients WHERE client\_id=\{cid\} LIMIT 1 FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{195             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{196         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{197         self.cur.execute(query)}
+\DoxyCodeLine{198         \textcolor{keywordflow}{return} self.cur.fetchone()}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+
+
+Referenced by queries.\+database.\+gets.\+get\+\_\+name(), and core.\+queries.\+database.\+gets.\+get\+\_\+name().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueries_1_1database_1_1gets_a8a5cd02d7c427c71d6ca820c8f6dc43a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_aaf0be1133b710802303a525ae42fb69c}\label{classqueries_1_1database_1_1gets_aaf0be1133b710802303a525ae42fb69c}} 
+\index{queries.database.gets@{queries.database.gets}!get\_all\_clients@{get\_all\_clients}}
+\index{get\_all\_clients@{get\_all\_clients}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_all\_clients()}{get\_all\_clients()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve all clients info\end{DoxyVerb}
+ 
+
+Definition at line 181 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{181     \textcolor{keyword}{def }get\_all\_clients(self):}
+\DoxyCodeLine{182         \textcolor{stringliteral}{"""retrieve all clients info}}
+\DoxyCodeLine{183 \textcolor{stringliteral}{}}
+\DoxyCodeLine{184 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{185         query=\textcolor{stringliteral}{"SELECT * FROM clients FOR UPDATE NOWAIT;"}}
+\DoxyCodeLine{186         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{187         \textcolor{keywordflow}{return} pd.read\_sql(query, self.conn).to\_json}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+gets.\+db\+\_\+log, and server.\+server.\+debug.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_af5bf550bd43a76b1343e86e31fe28f49}\label{classqueries_1_1database_1_1gets_af5bf550bd43a76b1343e86e31fe28f49}} 
+\index{queries.database.gets@{queries.database.gets}!get\_all\_contacts@{get\_all\_contacts}}
+\index{get\_all\_contacts@{get\_all\_contacts}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_all\_contacts()}{get\_all\_contacts()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 207 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{207     \textcolor{keyword}{def }get\_all\_contacts(self):}
+\DoxyCodeLine{208         query = \textcolor{stringliteral}{"SELECT * FROM contacts;"}}
+\DoxyCodeLine{209         \textcolor{comment}{\#query = "SELECT * FROM contacts FOR UPDATE NOWAIT;"}}
+\DoxyCodeLine{210         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{211         \textcolor{keywordflow}{return} pd.read\_sql(query, self.conn).to\_json()}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+gets.\+db\+\_\+log, and server.\+server.\+debug.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_ad2a5a6ec7ad1aa12a39b6db42e9e0b16}\label{classqueries_1_1database_1_1gets_ad2a5a6ec7ad1aa12a39b6db42e9e0b16}} 
+\index{queries.database.gets@{queries.database.gets}!get\_all\_credentials@{get\_all\_credentials}}
+\index{get\_all\_credentials@{get\_all\_credentials}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_all\_credentials()}{get\_all\_credentials()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 224 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{224     \textcolor{keyword}{def }get\_all\_credentials(self):}
+\DoxyCodeLine{225         query = \textcolor{stringliteral}{"SELECT * FROM credentials;"}}
+\DoxyCodeLine{226         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{227         ret = pd.read\_sql(query, self.conn)}
+\DoxyCodeLine{228         \textcolor{keywordflow}{return} ret}
+\DoxyCodeLine{229 }
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+gets.\+db\+\_\+log, and server.\+server.\+debug.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a2300cd1d5c33f4848e754ad8042a0bbf}\label{classqueries_1_1database_1_1gets_a2300cd1d5c33f4848e754ad8042a0bbf}} 
+\index{queries.database.gets@{queries.database.gets}!get\_balance\_by\_cid@{get\_balance\_by\_cid}}
+\index{get\_balance\_by\_cid@{get\_balance\_by\_cid}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_balance\_by\_cid()}{get\_balance\_by\_cid()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}called at the server side to retrieve the account balance d of the given client_id (cid)
+
+@param cid: client id
+@return bid: banking id
+\end{DoxyVerb}
+ 
+
+Definition at line 153 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{153     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1banking_a8a7c7f170beca16623673c7ea353fa33}{get\_balance\_by\_cid}}(self, cid):}
+\DoxyCodeLine{154         \textcolor{stringliteral}{"""called at the server side to retrieve the account balance d of the given client\_id (cid)}}
+\DoxyCodeLine{155 \textcolor{stringliteral}{}}
+\DoxyCodeLine{156 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{157 \textcolor{stringliteral}{        @return bid: banking id}}
+\DoxyCodeLine{158 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{159         query=sql.SQL(\textcolor{stringliteral}{"SELECT (balance) FROM banking WHERE client\_id=\{cid\} LIMIT 1 FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{160             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{161         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{162         self.cur.execute(query)}
+\DoxyCodeLine{163         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+\DoxyCodeLine{164         \textcolor{comment}{\#return pd.read\_sql(query, self.conn).ix[0]}}
+\DoxyCodeLine{165 }
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a392416e729e1a75578627b6d951036f0}\label{classqueries_1_1database_1_1gets_a392416e729e1a75578627b6d951036f0}} 
+\index{queries.database.gets@{queries.database.gets}!get\_balance\_by\_credid@{get\_balance\_by\_credid}}
+\index{get\_balance\_by\_credid@{get\_balance\_by\_credid}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_balance\_by\_credid()}{get\_balance\_by\_credid()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cred\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get balance of client with given credential id
+
+@param cred_id: client credential id
+\end{DoxyVerb}
+ 
+
+Definition at line 166 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{166     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1banking_a9726c6f6c2631b4e96e31b1fb305f177}{get\_balance\_by\_credid}}(self, cred\_id):}
+\DoxyCodeLine{167         \textcolor{stringliteral}{""" get balance of client with given credential id}}
+\DoxyCodeLine{168 \textcolor{stringliteral}{}}
+\DoxyCodeLine{169 \textcolor{stringliteral}{        @param cred\_id: client credential id}}
+\DoxyCodeLine{170 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{171         query=sql.SQL(\textcolor{stringliteral}{"SELECT (b.balance) FROM banking as b JOIN  credentials AS c ON c.id=b.client\_id WHERE c.cred\_id=\{credid\} FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{172             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(credid=sql.Literal(cred\_id))}
+\DoxyCodeLine{173         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{174         self.cur.execute(query)}
+\DoxyCodeLine{175         fet=self.cur.fetchone()}
+\DoxyCodeLine{176         print(\textcolor{stringliteral}{"credid fet: "}, fet)}
+\DoxyCodeLine{177         \textcolor{comment}{\#TODO handle none! how to handle this in the transaction itself}}
+\DoxyCodeLine{178         \textcolor{keywordflow}{if} fet==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{179             \textcolor{keywordflow}{return} 0}
+\DoxyCodeLine{180         \textcolor{keywordflow}{return} fet[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_adbbb5d956fc2467dcb2f8a28876b9bb7}\label{classqueries_1_1database_1_1gets_adbbb5d956fc2467dcb2f8a28876b9bb7}} 
+\index{queries.database.gets@{queries.database.gets}!get\_banking\_id@{get\_banking\_id}}
+\index{get\_banking\_id@{get\_banking\_id}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_banking\_id()}{get\_banking\_id()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve the corresponding banking_id of the given  client_id (cid) (called at the server side)
+
+@param cid: client id
+@return bid: banking id
+\end{DoxyVerb}
+ 
+
+Definition at line 140 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1banking_a9fa96648f94cd09613bce9a3d75c44f4}{get\_banking\_id}}(self, cid):}
+\DoxyCodeLine{141         \textcolor{stringliteral}{"""retrieve the corresponding banking\_id of the given  client\_id (cid) (called at the server side)}}
+\DoxyCodeLine{142 \textcolor{stringliteral}{}}
+\DoxyCodeLine{143 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{144 \textcolor{stringliteral}{        @return bid: banking id}}
+\DoxyCodeLine{145 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{146         query=sql.SQL(\textcolor{stringliteral}{"SELECT (id) FROM banking WHERE client\_id=\{cid\} LIMIT 1 FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{147             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{148         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{149         self.cur.execute(query)}
+\DoxyCodeLine{150         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+\DoxyCodeLine{151         \textcolor{comment}{\#return pd.read\_sql(query, self.conn).ix[0]}}
+\DoxyCodeLine{152 }
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a7688f1d3a19e68b163470986081fbcd7}\label{classqueries_1_1database_1_1gets_a7688f1d3a19e68b163470986081fbcd7}} 
+\index{queries.database.gets@{queries.database.gets}!get\_client\_id@{get\_client\_id}}
+\index{get\_client\_id@{get\_client\_id}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_client\_id()}{get\_client\_id()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+client\+\_\+id (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve the corresponding client_id of the given banking_id (bid) (called at the server side)
+
+@param bid: banking id
+@return cid: contact id
+\end{DoxyVerb}
+ 
+
+Definition at line 127 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{127     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1banking_a2197f897962796e5597172f35689e3db}{get\_client\_id}}(self, bid):}
+\DoxyCodeLine{128         \textcolor{stringliteral}{""" retrieve the corresponding client\_id of the given banking\_id (bid) (called at the server side)}}
+\DoxyCodeLine{129 \textcolor{stringliteral}{}}
+\DoxyCodeLine{130 \textcolor{stringliteral}{        @param bid: banking id}}
+\DoxyCodeLine{131 \textcolor{stringliteral}{        @return cid: contact id}}
+\DoxyCodeLine{132 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{133         query=sql.SQL(\textcolor{stringliteral}{"SELECT (client\_id) FROM banking WHERE id=\{bid\} LIMIT 1 FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{134             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(bid=sql.Literal(bid))}
+\DoxyCodeLine{135         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{136         self.cur.execute(query)}
+\DoxyCodeLine{137         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+\DoxyCodeLine{138         \textcolor{comment}{\#return pd.read\_sql(query, self.conn).ix[0]}}
+\DoxyCodeLine{139 }
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_ae33e1515eb9370fd19b8d645285d784c}\label{classqueries_1_1database_1_1gets_ae33e1515eb9370fd19b8d645285d784c}} 
+\index{queries.database.gets@{queries.database.gets}!get\_client\_id\_byemail@{get\_client\_id\_byemail}}
+\index{get\_client\_id\_byemail@{get\_client\_id\_byemail}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_client\_id\_byemail()}{get\_client\_id\_byemail()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{email }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve the corresponding client_id of the given banking_id (bid) (called at the server side)
+
+@param bid: banking id
+@return cid: contact id
+\end{DoxyVerb}
+ 
+
+Definition at line 99 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99     \textcolor{keyword}{def }get\_client\_id\_byemail(self, email):}
+\DoxyCodeLine{100         \textcolor{stringliteral}{""" retrieve the corresponding client\_id of the given banking\_id (bid) (called at the server side)}}
+\DoxyCodeLine{101 \textcolor{stringliteral}{}}
+\DoxyCodeLine{102 \textcolor{stringliteral}{        @param bid: banking id}}
+\DoxyCodeLine{103 \textcolor{stringliteral}{        @return cid: contact id}}
+\DoxyCodeLine{104 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{105         query=sql.SQL(\textcolor{stringliteral}{"SELECT (client\_id) FROM clients WHERE client\_email=\{email\} LIMIT 1 FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{106             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(email=sql.Literal(email))}
+\DoxyCodeLine{107         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{108         self.cur.execute(query)}
+\DoxyCodeLine{109         ret=self.cur.fetchone()}
+\DoxyCodeLine{110         \textcolor{keywordflow}{if} \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{111             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{112         \textcolor{keywordflow}{return} ret[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a6d9f619ad4dadf58031d15e3e90f2baf}\label{classqueries_1_1database_1_1gets_a6d9f619ad4dadf58031d15e3e90f2baf}} 
+\index{queries.database.gets@{queries.database.gets}!get\_client\_id\_byname@{get\_client\_id\_byname}}
+\index{get\_client\_id\_byname@{get\_client\_id\_byname}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_client\_id\_byname()}{get\_client\_id\_byname()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{passcode }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve the corresponding client_id of the given banking_id (bid) (called at the server side)
+
+@param bid: banking id
+@return cid: contact id
+\end{DoxyVerb}
+ 
+
+Definition at line 114 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{114     \textcolor{keyword}{def }get\_client\_id\_byname(self, name, passcode):}
+\DoxyCodeLine{115         \textcolor{stringliteral}{""" retrieve the corresponding client\_id of the given banking\_id (bid) (called at the server side)}}
+\DoxyCodeLine{116 \textcolor{stringliteral}{}}
+\DoxyCodeLine{117 \textcolor{stringliteral}{        @param bid: banking id}}
+\DoxyCodeLine{118 \textcolor{stringliteral}{        @return cid: contact id}}
+\DoxyCodeLine{119 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{120         query=sql.SQL(\textcolor{stringliteral}{"SELECT (c.client\_id) FROM clients AS c INNER JOIN credentials   ON (credentials.id=c.client\_id) WHERE c.client\_name=\{name\} AND credentials.passcode=\{passcode\} LIMIT 1  FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{121             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(name=sql.Literal(name),\(\backslash\)}
+\DoxyCodeLine{122                    passcode=sql.Literal(passcode))}
+\DoxyCodeLine{123         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{124         self.cur.execute(query)}
+\DoxyCodeLine{125         \textcolor{keywordflow}{return} self.cur.fetchone()}
+\DoxyCodeLine{126         \textcolor{comment}{\#return pd.read\_sql(query, self.conn).iloc[0]}}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a462a7aecb24a210d268c9836f51e6fc1}\label{classqueries_1_1database_1_1gets_a462a7aecb24a210d268c9836f51e6fc1}} 
+\index{queries.database.gets@{queries.database.gets}!get\_credential@{get\_credential}}
+\index{get\_credential@{get\_credential}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_credential()}{get\_credential()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+credential (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get the credential for the client with given cid(CALLED FROM SERVER SIDE),
+or get the single row for client with cid=1 (CALLED FROM CLIENT SIDE)
+
+@param cid: client id, or 1 (in case of call from client side for it's own credential)
+\end{DoxyVerb}
+ 
+
+Definition at line 230 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{230     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1credentials_a716239e25ac05d382cadb7ac2c03cf18}{get\_credential}}(self, cid):}
+\DoxyCodeLine{231         \textcolor{stringliteral}{""" get the credential for the client with given cid(CALLED FROM SERVER SIDE),}}
+\DoxyCodeLine{232 \textcolor{stringliteral}{        or get the single row for client with cid=1 (CALLED FROM CLIENT SIDE)}}
+\DoxyCodeLine{233 \textcolor{stringliteral}{}}
+\DoxyCodeLine{234 \textcolor{stringliteral}{        @param cid: client id, or 1 (in case of call from client side for it's own credential)}}
+\DoxyCodeLine{235 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{236         query=sql.SQL(\textcolor{stringliteral}{"SELECT * FROM credentials WHERE id=\{cid\} LIMIT 1 FOR UPDATE SKIP LOCKED;)"}).\(\backslash\)}
+\DoxyCodeLine{237             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{238         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{239         ret = pd.read\_sql(query, self.conn)}
+\DoxyCodeLine{240 }
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a0c025e3dd745e71ae3ff24c39c79b08d}\label{classqueries_1_1database_1_1gets_a0c025e3dd745e71ae3ff24c39c79b08d}} 
+\index{queries.database.gets@{queries.database.gets}!get\_last\_timestamp@{get\_last\_timestamp}}
+\index{get\_last\_timestamp@{get\_last\_timestamp}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_last\_timestamp()}{get\_last\_timestamp()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve the timestamp of the last transaction (CALLED FROM THE CLIENT SIDE)
+
+@return timestamp
+\end{DoxyVerb}
+ 
+
+Definition at line 417 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{417     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1ledger_aaa66a8f003f1814d412cee4d7b3e6b80}{get\_last\_timestamp}}(self):}
+\DoxyCodeLine{418         \textcolor{stringliteral}{""" retrieve the timestamp of the last transaction (CALLED FROM THE CLIENT SIDE)}}
+\DoxyCodeLine{419 \textcolor{stringliteral}{}}
+\DoxyCodeLine{420 \textcolor{stringliteral}{        @return timestamp}}
+\DoxyCodeLine{421 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{422         query=\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('ledger', 'trx\_id')) FOR UPDATE SKIP LOCKED;"}}
+\DoxyCodeLine{423         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{424         self.cur.execute(query)}
+\DoxyCodeLine{425         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, and server.\+server.\+debug.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_ad7c5955258c7f3db9442b73eda725bfa}\label{classqueries_1_1database_1_1gets_ad7c5955258c7f3db9442b73eda725bfa}} 
+\index{queries.database.gets@{queries.database.gets}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retrieve client name corresponding to given client id (cid)
+
+@param cid: client id
+@return client name
+\end{DoxyVerb}
+ 
+
+Definition at line 199 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{199     \textcolor{keyword}{def }\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}(self, cid):}
+\DoxyCodeLine{200         \textcolor{stringliteral}{"""retrieve client name corresponding to given client id (cid)}}
+\DoxyCodeLine{201 \textcolor{stringliteral}{}}
+\DoxyCodeLine{202 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{203 \textcolor{stringliteral}{        @return client name}}
+\DoxyCodeLine{204 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{205         \textcolor{keywordflow}{return} self.get(cid)[1]}
+\DoxyCodeLine{206 }
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+gets.\+get().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueries_1_1database_1_1gets_ad7c5955258c7f3db9442b73eda725bfa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_acba4b61c02c52d86890f4be5067e5fb2}\label{classqueries_1_1database_1_1gets_acba4b61c02c52d86890f4be5067e5fb2}} 
+\index{queries.database.gets@{queries.database.gets}!get\_password@{get\_password}}
+\index{get\_password@{get\_password}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_password()}{get\_password()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+password (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cred\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get user's passcode for authentication
+
+@param cred_id: credential id
+@return list of the id, or empty list of doesn't exist
+\end{DoxyVerb}
+ 
+
+Definition at line 267 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{267     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1credentials_a41dcf2870da8ebe80058a68bed90ccda}{get\_password}}(self, cred\_id):}
+\DoxyCodeLine{268         \textcolor{stringliteral}{""" get user's passcode for authentication}}
+\DoxyCodeLine{269 \textcolor{stringliteral}{}}
+\DoxyCodeLine{270 \textcolor{stringliteral}{        @param cred\_id: credential id}}
+\DoxyCodeLine{271 \textcolor{stringliteral}{        @return list of the id, or empty list of doesn't exist}}
+\DoxyCodeLine{272 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{273         query=sql.SQL(\textcolor{stringliteral}{"SELECT (passcode) FROM credentials WHERE cred\_id=\{credid\}  FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{274             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(credid=sql.Literal(cred\_id))}
+\DoxyCodeLine{275         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{276         self.cur.execute(query)}
+\DoxyCodeLine{277         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_ac3f4ee1aab66a2d2f052c0f0b42169e6}\label{classqueries_1_1database_1_1gets_ac3f4ee1aab66a2d2f052c0f0b42169e6}} 
+\index{queries.database.gets@{queries.database.gets}!get\_sells@{get\_sells}}
+\index{get\_sells@{get\_sells}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_sells()}{get\_sells()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+sells (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dest,  }\item[{}]{st\+\_\+dt,  }\item[{}]{end\+\_\+dt = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get sells transaction within the st_dt, end_dt period, while there destined to dest (CALLED AT SERVER SIDE)
+
+@param dest: the destination credential id
+@return sells transactions
+\end{DoxyVerb}
+ 
+
+Definition at line 395 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{395     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1ledger_abe271b893d7ff70ec6d1f558ffae33a2}{get\_sells}}(self, dest, st\_dt, end\_dt=None):}
+\DoxyCodeLine{396         \textcolor{stringliteral}{""" get sells transaction within the st\_dt, end\_dt period, while there destined to dest (CALLED AT SERVER SIDE)}}
+\DoxyCodeLine{397 \textcolor{stringliteral}{}}
+\DoxyCodeLine{398 \textcolor{stringliteral}{        @param dest: the destination credential id}}
+\DoxyCodeLine{399 \textcolor{stringliteral}{        @return sells transactions}}
+\DoxyCodeLine{400 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{401         }
+\DoxyCodeLine{402         stat = sql.SQL(\textcolor{stringliteral}{"SELECT * FROM ledger WHERE trx\_dest=\{dest\};"})\(\backslash\)}
+\DoxyCodeLine{403                   .\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(dest=sql.Literal(dest))}
+\DoxyCodeLine{404         \textcolor{keywordflow}{if} st\_dt==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{405             stat=sql.SQL(\textcolor{stringliteral}{"SELECT * FROM ledger WHERE trx\_dt>\{st\_dt\} AND trx\_dt<\{end\_dt\} AND trx\_dest=\{dest\} FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{406             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(st\_dt=sql.Literal(st\_dt),\(\backslash\)}
+\DoxyCodeLine{407                    end\_dt=sql.Literal(end\_dt),\(\backslash\)}
+\DoxyCodeLine{408                    dest=dest)}
+\DoxyCodeLine{409         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{410         \textcolor{keywordflow}{return} pd.read\_sql(stat, self.conn)}
+\DoxyCodeLine{411         }
+\DoxyCodeLine{412         trx=self.get\_transactions(st\_dt, end\_dt)}
+\DoxyCodeLine{413         \textcolor{comment}{\#trx.apply(lambda x:x['trx\_dest']==dest, inplace=True)}}
+\DoxyCodeLine{414         trx=trx.apply(\textcolor{keyword}{lambda} x:x[\textcolor{stringliteral}{'trx\_dest'}]==dest)}
+\DoxyCodeLine{415         \textcolor{keywordflow}{return} trx}
+\DoxyCodeLine{416 }
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, and queries.\+database.\+gets.\+get\+\_\+transactions().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueries_1_1database_1_1gets_ac3f4ee1aab66a2d2f052c0f0b42169e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a139471dd45ec7e48bc432fe8734d2476}\label{classqueries_1_1database_1_1gets_a139471dd45ec7e48bc432fe8734d2476}} 
+\index{queries.database.gets@{queries.database.gets}!get\_transactions@{get\_transactions}}
+\index{get\_transactions@{get\_transactions}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_transactions()}{get\_transactions()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+transactions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{st\+\_\+dt,  }\item[{}]{end\+\_\+dt = {\ttfamily dt.datetime.now()} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get the transactions within the given period exclusively
+
+@param st_dt: the start datetime
+@param end_dt: the end datetime
+@return dataframe of the transactions
+\end{DoxyVerb}
+ 
+
+Definition at line 349 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{349     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1ledger_a16a0630590083ad1862ed9345d888147}{get\_transactions}}(self, st\_dt, end\_dt=dt.datetime.now()):}
+\DoxyCodeLine{350         \textcolor{stringliteral}{""" get the transactions within the given period exclusively}}
+\DoxyCodeLine{351 \textcolor{stringliteral}{}}
+\DoxyCodeLine{352 \textcolor{stringliteral}{        @param st\_dt: the start datetime}}
+\DoxyCodeLine{353 \textcolor{stringliteral}{        @param end\_dt: the end datetime}}
+\DoxyCodeLine{354 \textcolor{stringliteral}{        @return dataframe of the transactions}}
+\DoxyCodeLine{355 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{356         stat = \textcolor{stringliteral}{"SELECT * FROM ledger;"}}
+\DoxyCodeLine{357         \textcolor{keywordflow}{if} st\_dt==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{358             stat=sql.SQL(\textcolor{stringliteral}{"SELECT * FROM ledger WHERE trx\_dt>\{st\_dt\} AND trx\_dt<\{end\_dt\}  FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{359             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(st\_dt=sql.Literal(st\_dt), end\_dt=sql.Literal(end\_dt))}
+\DoxyCodeLine{360         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{361         \textcolor{keywordflow}{return} pd.read\_sql(stat, self.conn)}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+
+
+Referenced by queries.\+database.\+gets.\+get\+\_\+sells().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classqueries_1_1database_1_1gets_a139471dd45ec7e48bc432fe8734d2476_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_a43b0685aa0d221c595fb5dd6a5454e81}\label{classqueries_1_1database_1_1gets_a43b0685aa0d221c595fb5dd6a5454e81}} 
+\index{queries.database.gets@{queries.database.gets}!get\_transactions\_sum@{get\_transactions\_sum}}
+\index{get\_transactions\_sum@{get\_transactions\_sum}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{get\_transactions\_sum()}{get\_transactions\_sum()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{trx\+\_\+with\+\_\+credid,  }\item[{}]{st\+\_\+dt = {\ttfamily None},  }\item[{}]{end\+\_\+dt = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get the transactions within the given period inclusively
+
+@param trx_with_credid: the credential id of the client of interest
+@param st_dt: the start datetime
+@param end_dt: the end datetime
+@return dataframe of the transactions
+\end{DoxyVerb}
+ 
+
+Definition at line 363 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{363     \textcolor{keyword}{def }get\_transactions\_sum(self, \(\backslash\)}
+\DoxyCodeLine{364                              trx\_with\_credid, \(\backslash\)}
+\DoxyCodeLine{365                              st\_dt=None, \(\backslash\)}
+\DoxyCodeLine{366                              end\_dt=None):}
+\DoxyCodeLine{367         \textcolor{stringliteral}{""" get the transactions within the given period inclusively}}
+\DoxyCodeLine{368 \textcolor{stringliteral}{}}
+\DoxyCodeLine{369 \textcolor{stringliteral}{        @param trx\_with\_credid: the credential id of the client of interest}}
+\DoxyCodeLine{370 \textcolor{stringliteral}{        @param st\_dt: the start datetime}}
+\DoxyCodeLine{371 \textcolor{stringliteral}{        @param end\_dt: the end datetime}}
+\DoxyCodeLine{372 \textcolor{stringliteral}{        @return dataframe of the transactions}}
+\DoxyCodeLine{373 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{374         \textcolor{keywordflow}{if} end\_dt==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{375             end\_dt=dt.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+\DoxyCodeLine{376 }
+\DoxyCodeLine{377         stat = \textcolor{stringliteral}{"SELECT SUM(trx\_cost) FROM ledger WHERE (trx\_dest=\{to\_credid\} OR trx\_src=\{from\_credid\});"}.\(\backslash\)}
+\DoxyCodeLine{378             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(to\_credid=sql.Literal(trx\_with\_credid),\(\backslash\)}
+\DoxyCodeLine{379                    from\_credid=sql.Literal(trx\_with\_credid))}
+\DoxyCodeLine{380 }
+\DoxyCodeLine{381         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} st\_dt==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{382             \textcolor{comment}{\#note! FOR UPDATE is not allowed with aggregate functions}}
+\DoxyCodeLine{383             stat=sql.SQL(\textcolor{stringliteral}{"SELECT SUM(trx\_cost) FROM ledger WHERE (trx\_dt>=\{st\_dt\} AND trx\_dt<\{end\_dt\} AND trx\_dest=\{to\_credid\}) OR (trx\_dt>=\{st\_dt\} AND trx\_dt<\{end\_dt\} AND trx\_src=\{from\_credid\});"}).\(\backslash\)}
+\DoxyCodeLine{384             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(st\_dt=sql.Literal(st\_dt),\(\backslash\)}
+\DoxyCodeLine{385                    end\_dt=sql.Literal(end\_dt),\(\backslash\)}
+\DoxyCodeLine{386                    to\_credid=sql.Literal(trx\_with\_credid), \(\backslash\)}
+\DoxyCodeLine{387                    from\_credid=sql.Literal(trx\_with\_credid))}
+\DoxyCodeLine{388         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{389         self.cur.execute(stat)}
+\DoxyCodeLine{390         fet=self.cur.fetchone()[0]}
+\DoxyCodeLine{391         \textcolor{keywordflow}{if} fet==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{392             \textcolor{keywordflow}{return} 0}
+\DoxyCodeLine{393         \textcolor{keywordflow}{return} fet}
+\DoxyCodeLine{394         \textcolor{comment}{\#return pd.read\_sql(stat, self.conn)}}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_ad4d9d29460b341b7b44c9ef9d3d16e9e}\label{classqueries_1_1database_1_1gets_ad4d9d29460b341b7b44c9ef9d3d16e9e}} 
+\index{queries.database.gets@{queries.database.gets}!to\_dollar@{to\_dollar}}
+\index{to\_dollar@{to\_dollar}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{to\_dollar()}{to\_dollar()}}
+{\footnotesize\ttfamily def queries.\+database.\+gets.\+to\+\_\+dollar (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}convert currency of the corresponding id to dollar ratio
+
+for example if currency A = 2 dollars, then the conversion would be 0.5,
+for another currency B = 0.5 dollar, then the conversion to dollar would be 2
+such that for given cost of xA, would be 0.5x$.
+@param cid is the id of the corresponding currency
+@return transformation ratio to dollar
+\end{DoxyVerb}
+ 
+
+Definition at line 293 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{293     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1currency_ab3a96eb4cd55d9255081024ba4d7d55c}{to\_dollar}}(self, cid):}
+\DoxyCodeLine{294         \textcolor{stringliteral}{""" convert currency of the corresponding id to dollar ratio}}
+\DoxyCodeLine{295 \textcolor{stringliteral}{}}
+\DoxyCodeLine{296 \textcolor{stringliteral}{        for example if currency A = 2 dollars, then the conversion would be 0.5,}}
+\DoxyCodeLine{297 \textcolor{stringliteral}{        for another currency B = 0.5 dollar, then the conversion to dollar would be 2}}
+\DoxyCodeLine{298 \textcolor{stringliteral}{        such that for given cost of xA, would be 0.5x\$.}}
+\DoxyCodeLine{299 \textcolor{stringliteral}{        @param cid is the id of the corresponding currency}}
+\DoxyCodeLine{300 \textcolor{stringliteral}{        @return transformation ratio to dollar}}
+\DoxyCodeLine{301 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{302         query = sql.SQL(\textcolor{stringliteral}{"SELECT * FROM currency WHERE id=cid FOR UPDATE SKIP LOCKED;"}).\(\backslash\)}
+\DoxyCodeLine{303             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid))}
+\DoxyCodeLine{304         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(query)}
+\DoxyCodeLine{305         ratio = 1.0/pd.read\_sql(query, self.conn)[\textcolor{stringliteral}{'currency\_value'}].ix[0]}
+\DoxyCodeLine{306         \textcolor{keywordflow}{return} ratio}
+
+\end{DoxyCode}
+
+
+References queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, queries.\+database.\+gets.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_afa7ec03b910858c0545c1bf4d36171ba}\label{classqueries_1_1database_1_1gets_afa7ec03b910858c0545c1bf4d36171ba}} 
+\index{queries.database.gets@{queries.database.gets}!conn@{conn}}
+\index{conn@{conn}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily queries.\+database.\+gets.\+conn}
+
+
+
+Definition at line 96 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+exists.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+database.\+close(), core.\+queries.\+database.\+database.\+close(), queries.\+database.\+database.\+commit(), core.\+queries.\+database.\+database.\+commit(), queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients(), queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts(), queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials(), queries.\+database.\+gets.\+get\+\_\+credential(), core.\+queries.\+database.\+gets.\+get\+\_\+credential(), queries.\+database.\+gets.\+get\+\_\+sells(), core.\+queries.\+database.\+gets.\+get\+\_\+sells(), queries.\+database.\+gets.\+get\+\_\+transactions(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), queries.\+database.\+database.\+init(), core.\+queries.\+database.\+database.\+init(), queries.\+database.\+database.\+rollback(), core.\+queries.\+database.\+database.\+rollback(), and queries.\+database.\+gets.\+to\+\_\+dollar().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_ac09e07a2bdbe6ac65c221351b6eed79d}\label{classqueries_1_1database_1_1gets_ac09e07a2bdbe6ac65c221351b6eed79d}} 
+\index{queries.database.gets@{queries.database.gets}!cur@{cur}}
+\index{cur@{cur}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{cur}{cur}}
+{\footnotesize\ttfamily queries.\+database.\+gets.\+cur}
+
+
+
+Definition at line 97 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+exists.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+exists.\+account\+\_\+byemail(), core.\+queries.\+database.\+exists.\+account\+\_\+byname(), queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), queries.\+database.\+inserts.\+add\+\_\+client(), core.\+queries.\+database.\+inserts.\+add\+\_\+client(), core.\+queries.\+database.\+inserts.\+add\+\_\+currency(), core.\+queries.\+database.\+exists.\+bank\+\_\+account\+\_\+bycid(), queries.\+database.\+gets.\+cid2credid(), core.\+queries.\+database.\+gets.\+cid2credid(), core.\+queries.\+database.\+exists.\+client\+\_\+exists(), queries.\+database.\+database.\+committed\+\_\+read(), core.\+queries.\+database.\+database.\+committed\+\_\+read(), core.\+queries.\+database.\+exists.\+contact\+\_\+exists(), core.\+queries.\+database.\+exists.\+credential\+\_\+exists(), queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+database.\+exists.\+currency(), core.\+queries.\+database.\+updates.\+currency\+\_\+preference(), queries.\+database.\+gets.\+get(), core.\+queries.\+database.\+gets.\+get(), queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+name(), queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp(), core.\+queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp(), queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+preference\+\_\+currency\+\_\+bycid(), queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), queries.\+database.\+database.\+init(), core.\+queries.\+database.\+database.\+init(), queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+database.\+inserts.\+insert\+\_\+contact(), queries.\+database.\+inserts.\+insert\+\_\+trx(), core.\+queries.\+database.\+inserts.\+insert\+\_\+trx(), queries.\+database.\+database.\+lock\+\_\+advisory(), core.\+queries.\+database.\+database.\+lock\+\_\+advisory(), queries.\+database.\+inserts.\+register(), core.\+queries.\+database.\+inserts.\+register(), queries.\+database.\+database.\+repeatable\+\_\+read(), core.\+queries.\+database.\+database.\+repeatable\+\_\+read(), core.\+queries.\+database.\+gets.\+to\+\_\+euro(), queries.\+database.\+database.\+unlock\+\_\+advisory(), core.\+queries.\+database.\+database.\+unlock\+\_\+advisory(), queries.\+database.\+updates.\+update\+\_\+account(), and core.\+queries.\+database.\+updates.\+update\+\_\+account().
+
+\mbox{\Hypertarget{classqueries_1_1database_1_1gets_aee7ee13bf0f3ea461c5d5a553f99c05c}\label{classqueries_1_1database_1_1gets_aee7ee13bf0f3ea461c5d5a553f99c05c}} 
+\index{queries.database.gets@{queries.database.gets}!db\_log@{db\_log}}
+\index{db\_log@{db\_log}!queries.database.gets@{queries.database.gets}}
+\doxysubsubsection{\texorpdfstring{db\_log}{db\_log}}
+{\footnotesize\ttfamily queries.\+database.\+gets.\+db\+\_\+log}
+
+
+
+Definition at line 98 of file database.\+py.
+
+
+
+Referenced by core.\+queries.\+database.\+gets.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), queries.\+database.\+gets.\+cid2credid(), core.\+queries.\+database.\+gets.\+cid2credid(), queries.\+database.\+gets.\+credid2cid(), core.\+queries.\+database.\+gets.\+credid2cid(), queries.\+database.\+gets.\+get(), core.\+queries.\+database.\+gets.\+get(), queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+clients(), queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+contacts(), queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials(), core.\+queries.\+database.\+gets.\+get\+\_\+all\+\_\+credentials(), queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+cid(), queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), core.\+queries.\+database.\+gets.\+get\+\_\+balance\+\_\+by\+\_\+credid(), queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+banking\+\_\+id(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byemail(), queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), core.\+queries.\+database.\+gets.\+get\+\_\+client\+\_\+id\+\_\+byname(), queries.\+database.\+gets.\+get\+\_\+credential(), core.\+queries.\+database.\+gets.\+get\+\_\+credential(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+id(), core.\+queries.\+database.\+gets.\+get\+\_\+currency\+\_\+name(), queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp(), core.\+queries.\+database.\+gets.\+get\+\_\+last\+\_\+timestamp(), queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+password(), core.\+queries.\+database.\+gets.\+get\+\_\+preference\+\_\+currency\+\_\+bycid(), queries.\+database.\+gets.\+get\+\_\+sells(), core.\+queries.\+database.\+gets.\+get\+\_\+sells(), queries.\+database.\+gets.\+get\+\_\+transactions(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions(), queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), core.\+queries.\+database.\+gets.\+get\+\_\+transactions\+\_\+sum(), queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+database.\+inserts.\+insert\+\_\+contact(), queries.\+database.\+inserts.\+insert\+\_\+trx(), core.\+queries.\+database.\+inserts.\+insert\+\_\+trx(), queries.\+database.\+inserts.\+register(), core.\+queries.\+database.\+inserts.\+register(), queries.\+database.\+gets.\+to\+\_\+dollar(), and core.\+queries.\+database.\+gets.\+to\+\_\+euro().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/build/lib/queries/\mbox{\hyperlink{core_2build_2lib_2queries_2database_8py}{database.\+py}}\end{DoxyCompactItemize}

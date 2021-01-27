@@ -1,0 +1,117 @@
+\hypertarget{classsetup_1_1_clean_command}{}\doxysection{setup.\+Clean\+Command Class Reference}
+\label{classsetup_1_1_clean_command}\index{setup.CleanCommand@{setup.CleanCommand}}
+
+
+Inheritance diagram for setup.\+Clean\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classsetup_1_1_clean_command__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for setup.\+Clean\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classsetup_1_1_clean_command__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsetup_1_1_clean_command_af831051e0bd128eb332cbd6d4b4a2826}{initialize\+\_\+options}} (self)
+\item 
+def \mbox{\hyperlink{classsetup_1_1_clean_command_a29433ec689fede594088459830e5ea68}{finalize\+\_\+options}} (self)
+\item 
+def \mbox{\hyperlink{classsetup_1_1_clean_command_ab5827de0349ad3f0a0afc1af79f511e1}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classsetup_1_1_clean_command_a83f78fd82814e96fdbe68f67a8fc1b6c}{user\+\_\+options}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Custom clean command to tidy up the project root.\end{DoxyVerb}
+ 
+
+Definition at line 9 of file setup.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsetup_1_1_clean_command_a29433ec689fede594088459830e5ea68}\label{classsetup_1_1_clean_command_a29433ec689fede594088459830e5ea68}} 
+\index{setup.CleanCommand@{setup.CleanCommand}!finalize\_options@{finalize\_options}}
+\index{finalize\_options@{finalize\_options}!setup.CleanCommand@{setup.CleanCommand}}
+\doxysubsubsection{\texorpdfstring{finalize\_options()}{finalize\_options()}}
+{\footnotesize\ttfamily def setup.\+Clean\+Command.\+finalize\+\_\+options (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file setup.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16     \textcolor{keyword}{def }finalize\_options(self):}
+\DoxyCodeLine{17         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{18 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsetup_1_1_clean_command_af831051e0bd128eb332cbd6d4b4a2826}\label{classsetup_1_1_clean_command_af831051e0bd128eb332cbd6d4b4a2826}} 
+\index{setup.CleanCommand@{setup.CleanCommand}!initialize\_options@{initialize\_options}}
+\index{initialize\_options@{initialize\_options}!setup.CleanCommand@{setup.CleanCommand}}
+\doxysubsubsection{\texorpdfstring{initialize\_options()}{initialize\_options()}}
+{\footnotesize\ttfamily def setup.\+Clean\+Command.\+initialize\+\_\+options (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file setup.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13     \textcolor{keyword}{def }initialize\_options(self):}
+\DoxyCodeLine{14         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{15 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsetup_1_1_clean_command_ab5827de0349ad3f0a0afc1af79f511e1}\label{classsetup_1_1_clean_command_ab5827de0349ad3f0a0afc1af79f511e1}} 
+\index{setup.CleanCommand@{setup.CleanCommand}!run@{run}}
+\index{run@{run}!setup.CleanCommand@{setup.CleanCommand}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def setup.\+Clean\+Command.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file setup.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19     \textcolor{keyword}{def }run(self):}
+\DoxyCodeLine{20         os.system(\textcolor{stringliteral}{"rm -\/vrf ./build ./dist ./*.pyc ./*.egg-\/info"})}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classsetup_1_1_clean_command_a83f78fd82814e96fdbe68f67a8fc1b6c}\label{classsetup_1_1_clean_command_a83f78fd82814e96fdbe68f67a8fc1b6c}} 
+\index{setup.CleanCommand@{setup.CleanCommand}!user\_options@{user\_options}}
+\index{user\_options@{user\_options}!setup.CleanCommand@{setup.CleanCommand}}
+\doxysubsubsection{\texorpdfstring{user\_options}{user\_options}}
+{\footnotesize\ttfamily list setup.\+Clean\+Command.\+user\+\_\+options = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 11 of file setup.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/zerin/prj/tahweela/\mbox{\hyperlink{setup_8py}{setup.\+py}}\end{DoxyCompactItemize}

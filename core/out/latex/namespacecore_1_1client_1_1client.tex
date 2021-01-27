@@ -1,0 +1,456 @@
+\hypertarget{namespacecore_1_1client_1_1client}{}\doxysection{core.\+client.\+client Namespace Reference}
+\label{namespacecore_1_1client_1_1client}\index{core.client.client@{core.client.client}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcore_1_1client_1_1client_1_1_client}{Client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_ae391dd87319abd0006e347bed366e54f}{get\+\_\+bank\+\_\+name}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_af6c2646f7c1c83126f705e3732a96087}{get\+\_\+branch\+\_\+number}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_a617f45205e2c92317e87a1daff73bd2d}{get\+\_\+account\+\_\+number}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_a943a822128ad5abd61ba5e3615e89fca}{get\+\_\+name\+\_\+reference}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_a5b5347659408b837b9f8e82b76cc56b2}{get\+\_\+name}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_af08cc33cc36a975cc6bebf248b6c039e}{get\+\_\+email}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_a6e9ad401ede2f1859562a135a9bd1f34}{get\+\_\+balance}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_a40e56cc6d17f6a2a983c4e9c3471a94c}{get\+\_\+credid}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_a039199b8606b2c8fd9ce1bd1c07863ca}{get\+\_\+rand\+\_\+pass}} (L=9)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1client_1_1client_adc0b453b3e14bdcc6f2d59efdb631f84}{rand\+\_\+alphanum}} (L=9)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1client_1_1client_afc5f24da0052d9c8d45f6c6b220c4e32}{db\+\_\+configs}} = \char`\"{}dbname=\textquotesingle{}demo\+\_\+client\textquotesingle{} user=\textquotesingle{}tahweela\+\_\+client\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_a51b7cecaa7e026fed53c9b80ae145421}{filename}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_a540e965cb4baad66c360d087365f30c1}{format}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_ad9cd557e56c47e7eb963d84be05a8132}{filemode}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_ac80930adbc21dc714e46f604f2b51005}{logger}} = logging.\+get\+Logger()
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_aee83ac1f16e14f2591a6fc51f0dc8396}{seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_a37d3b7e3a70686c5db3b8a493cc13007}{faker}} = Faker(\mbox{\hyperlink{namespacecore_1_1client_1_1client_aee83ac1f16e14f2591a6fc51f0dc8396}{seed}})
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_a0a3b8e5a96060a203f644c7058659570}{parser}} = Argument\+Parser()
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_ad226ea1381b32a2c801e4509f89b7efc}{type}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_a26ed1ec7ea3f9496010b82edaa4449d5}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_a54a32547420046577b267dc0fbfd9712}{cred\+\_\+id}} = args.\+add\+\_\+contact
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_a9be4ff83e79d44808bcf68f5b06a030d}{trader1}} = \mbox{\hyperlink{classcore_1_1client_1_1client_1_1_client}{Client}}()
+\item 
+\mbox{\hyperlink{namespacecore_1_1client_1_1client_a761ca1f2f7d3018b8bd64817d0ddaaab}{trader2}} = \mbox{\hyperlink{classcore_1_1client_1_1client_1_1_client}{Client}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a617f45205e2c92317e87a1daff73bd2d}\label{namespacecore_1_1client_1_1client_a617f45205e2c92317e87a1daff73bd2d}} 
+\index{core.client.client@{core.client.client}!get\_account\_number@{get\_account\_number}}
+\index{get\_account\_number@{get\_account\_number}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{get\_account\_number()}{get\_account\_number()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+get\+\_\+account\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a617f45205e2c92317e87a1daff73bd2d}{get\_account\_number}}():}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} int(3333333*random.random())}
+
+\end{DoxyCode}
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1client_1_1client_a617f45205e2c92317e87a1daff73bd2d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a6e9ad401ede2f1859562a135a9bd1f34}\label{namespacecore_1_1client_1_1client_a6e9ad401ede2f1859562a135a9bd1f34}} 
+\index{core.client.client@{core.client.client}!get\_balance@{get\_balance}}
+\index{get\_balance@{get\_balance}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{get\_balance()}{get\_balance()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+get\+\_\+balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a6e9ad401ede2f1859562a135a9bd1f34}{get\_balance}}():}
+\DoxyCodeLine{55     \textcolor{keywordflow}{return} 333*random.random()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_ae391dd87319abd0006e347bed366e54f}\label{namespacecore_1_1client_1_1client_ae391dd87319abd0006e347bed366e54f}} 
+\index{core.client.client@{core.client.client}!get\_bank\_name@{get\_bank\_name}}
+\index{get\_bank\_name@{get\_bank\_name}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{get\_bank\_name()}{get\_bank\_name()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+get\+\_\+bank\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_ae391dd87319abd0006e347bed366e54f}{get\_bank\_name}}():}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} faker.name().split()[0]}
+
+\end{DoxyCode}
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1client_1_1client_ae391dd87319abd0006e347bed366e54f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_af6c2646f7c1c83126f705e3732a96087}\label{namespacecore_1_1client_1_1client_af6c2646f7c1c83126f705e3732a96087}} 
+\index{core.client.client@{core.client.client}!get\_branch\_number@{get\_branch\_number}}
+\index{get\_branch\_number@{get\_branch\_number}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{get\_branch\_number()}{get\_branch\_number()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+get\+\_\+branch\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_af6c2646f7c1c83126f705e3732a96087}{get\_branch\_number}}():}
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} int(33*random.random())}
+
+\end{DoxyCode}
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1client_1_1client_af6c2646f7c1c83126f705e3732a96087_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a40e56cc6d17f6a2a983c4e9c3471a94c}\label{namespacecore_1_1client_1_1client_a40e56cc6d17f6a2a983c4e9c3471a94c}} 
+\index{core.client.client@{core.client.client}!get\_credid@{get\_credid}}
+\index{get\_credid@{get\_credid}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{get\_credid()}{get\_credid()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+get\+\_\+credid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a40e56cc6d17f6a2a983c4e9c3471a94c}{get\_credid}}():}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} int(3333333333333*random.random())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_af08cc33cc36a975cc6bebf248b6c039e}\label{namespacecore_1_1client_1_1client_af08cc33cc36a975cc6bebf248b6c039e}} 
+\index{core.client.client@{core.client.client}!get\_email@{get\_email}}
+\index{get\_email@{get\_email}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{get\_email()}{get\_email()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+get\+\_\+email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_af08cc33cc36a975cc6bebf248b6c039e}{get\_email}}():}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} faker.email()}
+
+\end{DoxyCode}
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1client_1_1client_af08cc33cc36a975cc6bebf248b6c039e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a5b5347659408b837b9f8e82b76cc56b2}\label{namespacecore_1_1client_1_1client_a5b5347659408b837b9f8e82b76cc56b2}} 
+\index{core.client.client@{core.client.client}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a5b5347659408b837b9f8e82b76cc56b2}{get\_name}}():}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} faker.name()}
+
+\end{DoxyCode}
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1client_1_1client_a5b5347659408b837b9f8e82b76cc56b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a943a822128ad5abd61ba5e3615e89fca}\label{namespacecore_1_1client_1_1client_a943a822128ad5abd61ba5e3615e89fca}} 
+\index{core.client.client@{core.client.client}!get\_name\_reference@{get\_name\_reference}}
+\index{get\_name\_reference@{get\_name\_reference}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{get\_name\_reference()}{get\_name\_reference()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+get\+\_\+name\+\_\+reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a943a822128ad5abd61ba5e3615e89fca}{get\_name\_reference}}():}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} faker.name().split()[1]}
+
+\end{DoxyCode}
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1client_1_1client_a943a822128ad5abd61ba5e3615e89fca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a039199b8606b2c8fd9ce1bd1c07863ca}\label{namespacecore_1_1client_1_1client_a039199b8606b2c8fd9ce1bd1c07863ca}} 
+\index{core.client.client@{core.client.client}!get\_rand\_pass@{get\_rand\_pass}}
+\index{get\_rand\_pass@{get\_rand\_pass}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{get\_rand\_pass()}{get\_rand\_pass()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+get\+\_\+rand\+\_\+pass (\begin{DoxyParamCaption}\item[{}]{L = {\ttfamily 9} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_a039199b8606b2c8fd9ce1bd1c07863ca}{get\_rand\_pass}}(L=9):}
+\DoxyCodeLine{59     passcode=\textcolor{stringliteral}{''}.join(random.choice(string.ascii\_uppercase+\(\backslash\)}
+\DoxyCodeLine{60                                  string.ascii\_lowercase+\(\backslash\)}
+\DoxyCodeLine{61                                  string.digits)\(\backslash\)}
+\DoxyCodeLine{62                      \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(L))}
+\DoxyCodeLine{63     \textcolor{keywordflow}{return} passcode}
+
+\end{DoxyCode}
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecore_1_1client_1_1client_a039199b8606b2c8fd9ce1bd1c07863ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_adc0b453b3e14bdcc6f2d59efdb631f84}\label{namespacecore_1_1client_1_1client_adc0b453b3e14bdcc6f2d59efdb631f84}} 
+\index{core.client.client@{core.client.client}!rand\_alphanum@{rand\_alphanum}}
+\index{rand\_alphanum@{rand\_alphanum}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{rand\_alphanum()}{rand\_alphanum()}}
+{\footnotesize\ttfamily def core.\+client.\+client.\+rand\+\_\+alphanum (\begin{DoxyParamCaption}\item[{}]{L = {\ttfamily 9} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file client.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1client_1_1client_adc0b453b3e14bdcc6f2d59efdb631f84}{rand\_alphanum}}(L=9):}
+\DoxyCodeLine{65     passcode=\textcolor{stringliteral}{''}.join(random.choice(string.ascii\_uppercase+\(\backslash\)}
+\DoxyCodeLine{66                                  string.ascii\_lowercase+\(\backslash\)}
+\DoxyCodeLine{67                                  string.digits)\(\backslash\)}
+\DoxyCodeLine{68                      \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(L))}
+\DoxyCodeLine{69     \textcolor{keywordflow}{return} passcode}
+\DoxyCodeLine{70 }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a26ed1ec7ea3f9496010b82edaa4449d5}\label{namespacecore_1_1client_1_1client_a26ed1ec7ea3f9496010b82edaa4449d5}} 
+\index{core.client.client@{core.client.client}!args@{args}}
+\index{args@{args}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily core.\+client.\+client.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 339 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a54a32547420046577b267dc0fbfd9712}\label{namespacecore_1_1client_1_1client_a54a32547420046577b267dc0fbfd9712}} 
+\index{core.client.client@{core.client.client}!cred\_id@{cred\_id}}
+\index{cred\_id@{cred\_id}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{cred\_id}{cred\_id}}
+{\footnotesize\ttfamily core.\+client.\+client.\+cred\+\_\+id = args.\+add\+\_\+contact}
+
+
+
+Definition at line 340 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_afc5f24da0052d9c8d45f6c6b220c4e32}\label{namespacecore_1_1client_1_1client_afc5f24da0052d9c8d45f6c6b220c4e32}} 
+\index{core.client.client@{core.client.client}!db\_configs@{db\_configs}}
+\index{db\_configs@{db\_configs}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{db\_configs}{db\_configs}}
+{\footnotesize\ttfamily string core.\+client.\+client.\+db\+\_\+configs = \char`\"{}dbname=\textquotesingle{}demo\+\_\+client\textquotesingle{} user=\textquotesingle{}tahweela\+\_\+client\textquotesingle{} password=\textquotesingle{}tahweela\textquotesingle{}\char`\"{}}
+
+
+
+Definition at line 21 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a37d3b7e3a70686c5db3b8a493cc13007}\label{namespacecore_1_1client_1_1client_a37d3b7e3a70686c5db3b8a493cc13007}} 
+\index{core.client.client@{core.client.client}!faker@{faker}}
+\index{faker@{faker}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{faker}{faker}}
+{\footnotesize\ttfamily core.\+client.\+client.\+faker = Faker(\mbox{\hyperlink{namespacecore_1_1client_1_1client_aee83ac1f16e14f2591a6fc51f0dc8396}{seed}})}
+
+
+
+Definition at line 40 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_ad9cd557e56c47e7eb963d84be05a8132}\label{namespacecore_1_1client_1_1client_ad9cd557e56c47e7eb963d84be05a8132}} 
+\index{core.client.client@{core.client.client}!filemode@{filemode}}
+\index{filemode@{filemode}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{filemode}{filemode}}
+{\footnotesize\ttfamily core.\+client.\+client.\+filemode}
+
+
+
+Definition at line 25 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a51b7cecaa7e026fed53c9b80ae145421}\label{namespacecore_1_1client_1_1client_a51b7cecaa7e026fed53c9b80ae145421}} 
+\index{core.client.client@{core.client.client}!filename@{filename}}
+\index{filename@{filename}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily core.\+client.\+client.\+filename}
+
+
+
+Definition at line 23 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a540e965cb4baad66c360d087365f30c1}\label{namespacecore_1_1client_1_1client_a540e965cb4baad66c360d087365f30c1}} 
+\index{core.client.client@{core.client.client}!format@{format}}
+\index{format@{format}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily core.\+client.\+client.\+format}
+
+
+
+Definition at line 24 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+autotract(), and core.\+client.\+client.\+Client.\+register().
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_ac80930adbc21dc714e46f604f2b51005}\label{namespacecore_1_1client_1_1client_ac80930adbc21dc714e46f604f2b51005}} 
+\index{core.client.client@{core.client.client}!logger@{logger}}
+\index{logger@{logger}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily core.\+client.\+client.\+logger = logging.\+get\+Logger()}
+
+
+
+Definition at line 26 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a0a3b8e5a96060a203f644c7058659570}\label{namespacecore_1_1client_1_1client_a0a3b8e5a96060a203f644c7058659570}} 
+\index{core.client.client@{core.client.client}!parser@{parser}}
+\index{parser@{parser}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily core.\+client.\+client.\+parser = Argument\+Parser()}
+
+
+
+Definition at line 337 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_aee83ac1f16e14f2591a6fc51f0dc8396}\label{namespacecore_1_1client_1_1client_aee83ac1f16e14f2591a6fc51f0dc8396}} 
+\index{core.client.client@{core.client.client}!seed@{seed}}
+\index{seed@{seed}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{seed}{seed}}
+{\footnotesize\ttfamily core.\+client.\+client.\+seed = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})}
+
+
+
+Definition at line 38 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a9be4ff83e79d44808bcf68f5b06a030d}\label{namespacecore_1_1client_1_1client_a9be4ff83e79d44808bcf68f5b06a030d}} 
+\index{core.client.client@{core.client.client}!trader1@{trader1}}
+\index{trader1@{trader1}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{trader1}{trader1}}
+{\footnotesize\ttfamily core.\+client.\+client.\+trader1 = \mbox{\hyperlink{classcore_1_1client_1_1client_1_1_client}{Client}}()}
+
+
+
+Definition at line 341 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_a761ca1f2f7d3018b8bd64817d0ddaaab}\label{namespacecore_1_1client_1_1client_a761ca1f2f7d3018b8bd64817d0ddaaab}} 
+\index{core.client.client@{core.client.client}!trader2@{trader2}}
+\index{trader2@{trader2}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{trader2}{trader2}}
+{\footnotesize\ttfamily core.\+client.\+client.\+trader2 = \mbox{\hyperlink{classcore_1_1client_1_1client_1_1_client}{Client}}()}
+
+
+
+Definition at line 342 of file client.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1client_1_1client_ad226ea1381b32a2c801e4509f89b7efc}\label{namespacecore_1_1client_1_1client_ad226ea1381b32a2c801e4509f89b7efc}} 
+\index{core.client.client@{core.client.client}!type@{type}}
+\index{type@{type}!core.client.client@{core.client.client}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily core.\+client.\+client.\+type}
+
+
+
+Definition at line 338 of file client.\+py.
+
+
+
+Referenced by core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance().
+

@@ -1,0 +1,942 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ME}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Namespace Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Namespace List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Hierarchical Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class Hierarchy}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Data Structure Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Data Structures}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}File Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}File List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Namespace Documentation}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}client Namespace Reference}{13}{section.6.1}%
+\contentsline {section}{\numberline {6.2}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}client Namespace Reference}{13}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Function Documentation}{14}{subsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.1.1}get\_account\_number()}{14}{subsubsection.6.2.1.1}%
+\contentsline {subsubsection}{\numberline {6.2.1.2}get\_balance()}{14}{subsubsection.6.2.1.2}%
+\contentsline {subsubsection}{\numberline {6.2.1.3}get\_bank\_name()}{14}{subsubsection.6.2.1.3}%
+\contentsline {subsubsection}{\numberline {6.2.1.4}get\_branch\_number()}{14}{subsubsection.6.2.1.4}%
+\contentsline {subsubsection}{\numberline {6.2.1.5}get\_credid()}{14}{subsubsection.6.2.1.5}%
+\contentsline {subsubsection}{\numberline {6.2.1.6}get\_email()}{15}{subsubsection.6.2.1.6}%
+\contentsline {subsubsection}{\numberline {6.2.1.7}get\_name()}{15}{subsubsection.6.2.1.7}%
+\contentsline {subsubsection}{\numberline {6.2.1.8}get\_name\_reference()}{15}{subsubsection.6.2.1.8}%
+\contentsline {subsubsection}{\numberline {6.2.1.9}get\_rand\_pass()}{15}{subsubsection.6.2.1.9}%
+\contentsline {subsubsection}{\numberline {6.2.1.10}rand\_alphanum()}{15}{subsubsection.6.2.1.10}%
+\contentsline {subsection}{\numberline {6.2.2}Variable Documentation}{16}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}args}{16}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}cred\_id}{16}{subsubsection.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.3}db\_configs}{16}{subsubsection.6.2.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.2.4}faker}{16}{subsubsection.6.2.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.2.5}filemode}{16}{subsubsection.6.2.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.2.6}filename}{17}{subsubsection.6.2.2.6}%
+\contentsline {subsubsection}{\numberline {6.2.2.7}format}{17}{subsubsection.6.2.2.7}%
+\contentsline {subsubsection}{\numberline {6.2.2.8}logger}{18}{subsubsection.6.2.2.8}%
+\contentsline {subsubsection}{\numberline {6.2.2.9}parser}{18}{subsubsection.6.2.2.9}%
+\contentsline {subsubsection}{\numberline {6.2.2.10}seed}{18}{subsubsection.6.2.2.10}%
+\contentsline {subsubsection}{\numberline {6.2.2.11}trader1}{18}{subsubsection.6.2.2.11}%
+\contentsline {subsubsection}{\numberline {6.2.2.12}trader2}{18}{subsubsection.6.2.2.12}%
+\contentsline {subsubsection}{\numberline {6.2.2.13}type}{19}{subsubsection.6.2.2.13}%
+\contentsline {section}{\numberline {6.3}core Namespace Reference}{19}{section.6.3}%
+\contentsline {section}{\numberline {6.4}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}client Namespace Reference}{19}{section.6.4}%
+\contentsline {section}{\numberline {6.5}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}client Namespace Reference}{19}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Function Documentation}{20}{subsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.1}get\_account\_number()}{20}{subsubsection.6.5.1.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.2}get\_balance()}{20}{subsubsection.6.5.1.2}%
+\contentsline {subsubsection}{\numberline {6.5.1.3}get\_bank\_name()}{21}{subsubsection.6.5.1.3}%
+\contentsline {subsubsection}{\numberline {6.5.1.4}get\_branch\_number()}{21}{subsubsection.6.5.1.4}%
+\contentsline {subsubsection}{\numberline {6.5.1.5}get\_credid()}{21}{subsubsection.6.5.1.5}%
+\contentsline {subsubsection}{\numberline {6.5.1.6}get\_email()}{22}{subsubsection.6.5.1.6}%
+\contentsline {subsubsection}{\numberline {6.5.1.7}get\_name()}{22}{subsubsection.6.5.1.7}%
+\contentsline {subsubsection}{\numberline {6.5.1.8}get\_name\_reference()}{23}{subsubsection.6.5.1.8}%
+\contentsline {subsubsection}{\numberline {6.5.1.9}get\_rand\_pass()}{23}{subsubsection.6.5.1.9}%
+\contentsline {subsubsection}{\numberline {6.5.1.10}rand\_alphanum()}{24}{subsubsection.6.5.1.10}%
+\contentsline {subsection}{\numberline {6.5.2}Variable Documentation}{24}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}args}{24}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}cred\_id}{24}{subsubsection.6.5.2.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.3}db\_configs}{24}{subsubsection.6.5.2.3}%
+\contentsline {subsubsection}{\numberline {6.5.2.4}faker}{24}{subsubsection.6.5.2.4}%
+\contentsline {subsubsection}{\numberline {6.5.2.5}filemode}{25}{subsubsection.6.5.2.5}%
+\contentsline {subsubsection}{\numberline {6.5.2.6}filename}{25}{subsubsection.6.5.2.6}%
+\contentsline {subsubsection}{\numberline {6.5.2.7}format}{25}{subsubsection.6.5.2.7}%
+\contentsline {subsubsection}{\numberline {6.5.2.8}logger}{25}{subsubsection.6.5.2.8}%
+\contentsline {subsubsection}{\numberline {6.5.2.9}parser}{25}{subsubsection.6.5.2.9}%
+\contentsline {subsubsection}{\numberline {6.5.2.10}seed}{25}{subsubsection.6.5.2.10}%
+\contentsline {subsubsection}{\numberline {6.5.2.11}trader1}{26}{subsubsection.6.5.2.11}%
+\contentsline {subsubsection}{\numberline {6.5.2.12}trader2}{26}{subsubsection.6.5.2.12}%
+\contentsline {subsubsection}{\numberline {6.5.2.13}type}{26}{subsubsection.6.5.2.13}%
+\contentsline {section}{\numberline {6.6}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cursor Namespace Reference}{26}{section.6.6}%
+\contentsline {section}{\numberline {6.7}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries Namespace Reference}{26}{section.6.7}%
+\contentsline {section}{\numberline {6.8}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database Namespace Reference}{26}{section.6.8}%
+\contentsline {section}{\numberline {6.9}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists Namespace Reference}{27}{section.6.9}%
+\contentsline {section}{\numberline {6.10}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banking Namespace Reference}{27}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Function Documentation}{27}{subsection.6.10.1}%
+\contentsline {subsubsection}{\numberline {6.10.1.1}exists()}{27}{subsubsection.6.10.1.1}%
+\contentsline {section}{\numberline {6.11}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}clients Namespace Reference}{27}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Function Documentation}{28}{subsection.6.11.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.1}exists()}{28}{subsubsection.6.11.1.1}%
+\contentsline {section}{\numberline {6.12}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}contacts Namespace Reference}{28}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Function Documentation}{28}{subsection.6.12.1}%
+\contentsline {subsubsection}{\numberline {6.12.1.1}exists()}{28}{subsubsection.6.12.1.1}%
+\contentsline {section}{\numberline {6.13}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}credentials Namespace Reference}{29}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Function Documentation}{29}{subsection.6.13.1}%
+\contentsline {subsubsection}{\numberline {6.13.1.1}exists()}{29}{subsubsection.6.13.1.1}%
+\contentsline {section}{\numberline {6.14}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}goods Namespace Reference}{29}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Function Documentation}{30}{subsection.6.14.1}%
+\contentsline {subsubsection}{\numberline {6.14.1.1}exists()}{30}{subsubsection.6.14.1.1}%
+\contentsline {section}{\numberline {6.15}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}owners Namespace Reference}{30}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Function Documentation}{30}{subsection.6.15.1}%
+\contentsline {subsubsection}{\numberline {6.15.1.1}exists()}{30}{subsubsection.6.15.1.1}%
+\contentsline {section}{\numberline {6.16}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets Namespace Reference}{31}{section.6.16}%
+\contentsline {section}{\numberline {6.17}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banking Namespace Reference}{31}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Function Documentation}{31}{subsection.6.17.1}%
+\contentsline {subsubsection}{\numberline {6.17.1.1}get\_balance\_by\_cid()}{31}{subsubsection.6.17.1.1}%
+\contentsline {subsubsection}{\numberline {6.17.1.2}get\_balance\_by\_credid()}{32}{subsubsection.6.17.1.2}%
+\contentsline {subsubsection}{\numberline {6.17.1.3}get\_banking\_id()}{32}{subsubsection.6.17.1.3}%
+\contentsline {subsubsection}{\numberline {6.17.1.4}get\_client\_id()}{32}{subsubsection.6.17.1.4}%
+\contentsline {section}{\numberline {6.18}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}clients Namespace Reference}{33}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Function Documentation}{33}{subsection.6.18.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.1}get()}{33}{subsubsection.6.18.1.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.2}get\_all()}{34}{subsubsection.6.18.1.2}%
+\contentsline {subsubsection}{\numberline {6.18.1.3}get\_name()}{34}{subsubsection.6.18.1.3}%
+\contentsline {section}{\numberline {6.19}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}contacts Namespace Reference}{34}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Function Documentation}{35}{subsection.6.19.1}%
+\contentsline {subsubsection}{\numberline {6.19.1.1}get\_all()}{35}{subsubsection.6.19.1.1}%
+\contentsline {subsubsection}{\numberline {6.19.1.2}get\_banking\_id()}{35}{subsubsection.6.19.1.2}%
+\contentsline {section}{\numberline {6.20}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}credentials Namespace Reference}{35}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Function Documentation}{35}{subsection.6.20.1}%
+\contentsline {subsubsection}{\numberline {6.20.1.1}get\_all()}{36}{subsubsection.6.20.1.1}%
+\contentsline {subsubsection}{\numberline {6.20.1.2}get\_credential()}{36}{subsubsection.6.20.1.2}%
+\contentsline {subsubsection}{\numberline {6.20.1.3}get\_credid\_with\_gid()}{36}{subsubsection.6.20.1.3}%
+\contentsline {subsubsection}{\numberline {6.20.1.4}get\_id()}{37}{subsubsection.6.20.1.4}%
+\contentsline {subsubsection}{\numberline {6.20.1.5}get\_password()}{37}{subsubsection.6.20.1.5}%
+\contentsline {section}{\numberline {6.21}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}currency Namespace Reference}{37}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Function Documentation}{38}{subsection.6.21.1}%
+\contentsline {subsubsection}{\numberline {6.21.1.1}to\_dollar()}{38}{subsubsection.6.21.1.1}%
+\contentsline {section}{\numberline {6.22}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}goods Namespace Reference}{38}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Function Documentation}{38}{subsection.6.22.1}%
+\contentsline {subsubsection}{\numberline {6.22.1.1}get\_all()}{38}{subsubsection.6.22.1.1}%
+\contentsline {subsubsection}{\numberline {6.22.1.2}get\_commodity()}{39}{subsubsection.6.22.1.2}%
+\contentsline {subsubsection}{\numberline {6.22.1.3}get\_good()}{39}{subsubsection.6.22.1.3}%
+\contentsline {subsubsection}{\numberline {6.22.1.4}get\_new\_price()}{40}{subsubsection.6.22.1.4}%
+\contentsline {section}{\numberline {6.23}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ledger Namespace Reference}{40}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Function Documentation}{40}{subsection.6.23.1}%
+\contentsline {subsubsection}{\numberline {6.23.1.1}get\_last\_timestamp()}{41}{subsubsection.6.23.1.1}%
+\contentsline {subsubsection}{\numberline {6.23.1.2}get\_sells()}{41}{subsubsection.6.23.1.2}%
+\contentsline {subsubsection}{\numberline {6.23.1.3}get\_transactions()}{42}{subsubsection.6.23.1.3}%
+\contentsline {section}{\numberline {6.24}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}owner Namespace Reference}{42}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Function Documentation}{42}{subsection.6.24.1}%
+\contentsline {subsubsection}{\numberline {6.24.1.1}get\_all()}{43}{subsubsection.6.24.1.1}%
+\contentsline {subsubsection}{\numberline {6.24.1.2}get\_good\_owner()}{43}{subsubsection.6.24.1.2}%
+\contentsline {subsubsection}{\numberline {6.24.1.3}get\_owner\_goods()}{43}{subsubsection.6.24.1.3}%
+\contentsline {section}{\numberline {6.25}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts Namespace Reference}{44}{section.6.25}%
+\contentsline {section}{\numberline {6.26}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banking Namespace Reference}{44}{section.6.26}%
+\contentsline {subsection}{\numberline {6.26.1}Function Documentation}{44}{subsection.6.26.1}%
+\contentsline {subsubsection}{\numberline {6.26.1.1}insert\_banking()}{44}{subsubsection.6.26.1.1}%
+\contentsline {section}{\numberline {6.27}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}clients Namespace Reference}{45}{section.6.27}%
+\contentsline {subsection}{\numberline {6.27.1}Function Documentation}{45}{subsection.6.27.1}%
+\contentsline {subsubsection}{\numberline {6.27.1.1}insert\_client()}{45}{subsubsection.6.27.1.1}%
+\contentsline {section}{\numberline {6.28}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}contacts Namespace Reference}{45}{section.6.28}%
+\contentsline {subsection}{\numberline {6.28.1}Function Documentation}{45}{subsection.6.28.1}%
+\contentsline {subsubsection}{\numberline {6.28.1.1}insert\_contact()}{46}{subsubsection.6.28.1.1}%
+\contentsline {section}{\numberline {6.29}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}credentials Namespace Reference}{46}{section.6.29}%
+\contentsline {subsection}{\numberline {6.29.1}Function Documentation}{46}{subsection.6.29.1}%
+\contentsline {subsubsection}{\numberline {6.29.1.1}new\_cred()}{46}{subsubsection.6.29.1.1}%
+\contentsline {subsubsection}{\numberline {6.29.1.2}register()}{47}{subsubsection.6.29.1.2}%
+\contentsline {section}{\numberline {6.30}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}goods Namespace Reference}{47}{section.6.30}%
+\contentsline {subsection}{\numberline {6.30.1}Function Documentation}{47}{subsection.6.30.1}%
+\contentsline {subsubsection}{\numberline {6.30.1.1}add\_good()}{48}{subsubsection.6.30.1.1}%
+\contentsline {section}{\numberline {6.31}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ledger Namespace Reference}{48}{section.6.31}%
+\contentsline {subsection}{\numberline {6.31.1}Function Documentation}{48}{subsection.6.31.1}%
+\contentsline {subsubsection}{\numberline {6.31.1.1}insert\_trx()}{49}{subsubsection.6.31.1.1}%
+\contentsline {section}{\numberline {6.32}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}owners Namespace Reference}{49}{section.6.32}%
+\contentsline {subsection}{\numberline {6.32.1}Function Documentation}{49}{subsection.6.32.1}%
+\contentsline {subsubsection}{\numberline {6.32.1.1}add\_owner()}{49}{subsubsection.6.32.1.1}%
+\contentsline {section}{\numberline {6.33}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}updates Namespace Reference}{50}{section.6.33}%
+\contentsline {section}{\numberline {6.34}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}updates.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banking Namespace Reference}{50}{section.6.34}%
+\contentsline {subsection}{\numberline {6.34.1}Function Documentation}{50}{subsection.6.34.1}%
+\contentsline {subsubsection}{\numberline {6.34.1.1}update\_account()}{50}{subsubsection.6.34.1.1}%
+\contentsline {section}{\numberline {6.35}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}updates.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}owners Namespace Reference}{50}{section.6.35}%
+\contentsline {subsection}{\numberline {6.35.1}Function Documentation}{51}{subsection.6.35.1}%
+\contentsline {subsubsection}{\numberline {6.35.1.1}update\_owner()}{51}{subsubsection.6.35.1.1}%
+\contentsline {section}{\numberline {6.36}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}server Namespace Reference}{51}{section.6.36}%
+\contentsline {section}{\numberline {6.37}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}server.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}server Namespace Reference}{51}{section.6.37}%
+\contentsline {subsection}{\numberline {6.37.1}Function Documentation}{52}{subsection.6.37.1}%
+\contentsline {subsubsection}{\numberline {6.37.1.1}add\_bank\_account()}{52}{subsubsection.6.37.1.1}%
+\contentsline {subsubsection}{\numberline {6.37.1.2}add\_contact()}{53}{subsubsection.6.37.1.2}%
+\contentsline {subsubsection}{\numberline {6.37.1.3}authenticate()}{54}{subsubsection.6.37.1.3}%
+\contentsline {subsubsection}{\numberline {6.37.1.4}get\_balance()}{55}{subsubsection.6.37.1.4}%
+\contentsline {subsubsection}{\numberline {6.37.1.5}get\_credid()}{56}{subsubsection.6.37.1.5}%
+\contentsline {subsubsection}{\numberline {6.37.1.6}is\_email()}{56}{subsubsection.6.37.1.6}%
+\contentsline {subsubsection}{\numberline {6.37.1.7}make\_transaction()}{56}{subsubsection.6.37.1.7}%
+\contentsline {subsubsection}{\numberline {6.37.1.8}register\_client()}{59}{subsubsection.6.37.1.8}%
+\contentsline {subsubsection}{\numberline {6.37.1.9}unauthorized()}{60}{subsubsection.6.37.1.9}%
+\contentsline {subsubsection}{\numberline {6.37.1.10}update\_balance\_preference()}{61}{subsubsection.6.37.1.10}%
+\contentsline {subsubsection}{\numberline {6.37.1.11}update\_ledger()}{61}{subsubsection.6.37.1.11}%
+\contentsline {subsection}{\numberline {6.37.2}Variable Documentation}{62}{subsection.6.37.2}%
+\contentsline {subsubsection}{\numberline {6.37.2.1}app}{62}{subsubsection.6.37.2.1}%
+\contentsline {subsubsection}{\numberline {6.37.2.2}auth}{62}{subsubsection.6.37.2.2}%
+\contentsline {subsubsection}{\numberline {6.37.2.3}client\_cred\_id}{62}{subsubsection.6.37.2.3}%
+\contentsline {subsubsection}{\numberline {6.37.2.4}client\_passcode}{62}{subsubsection.6.37.2.4}%
+\contentsline {subsubsection}{\numberline {6.37.2.5}db}{62}{subsubsection.6.37.2.5}%
+\contentsline {subsubsection}{\numberline {6.37.2.6}db\_configs}{63}{subsubsection.6.37.2.6}%
+\contentsline {subsubsection}{\numberline {6.37.2.7}debug}{63}{subsubsection.6.37.2.7}%
+\contentsline {subsubsection}{\numberline {6.37.2.8}filemode}{63}{subsubsection.6.37.2.8}%
+\contentsline {subsubsection}{\numberline {6.37.2.9}filename}{63}{subsubsection.6.37.2.9}%
+\contentsline {subsubsection}{\numberline {6.37.2.10}format}{63}{subsubsection.6.37.2.10}%
+\contentsline {subsubsection}{\numberline {6.37.2.11}level}{63}{subsubsection.6.37.2.11}%
+\contentsline {subsubsection}{\numberline {6.37.2.12}logger}{64}{subsubsection.6.37.2.12}%
+\contentsline {subsubsection}{\numberline {6.37.2.13}seed}{64}{subsubsection.6.37.2.13}%
+\contentsline {section}{\numberline {6.38}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}utils Namespace Reference}{64}{section.6.38}%
+\contentsline {subsection}{\numberline {6.38.1}Function Documentation}{65}{subsection.6.38.1}%
+\contentsline {subsubsection}{\numberline {6.38.1.1}daily\_limit()}{65}{subsubsection.6.38.1.1}%
+\contentsline {subsubsection}{\numberline {6.38.1.2}exchange()}{66}{subsubsection.6.38.1.2}%
+\contentsline {subsubsection}{\numberline {6.38.1.3}exchangerate\_rate()}{66}{subsubsection.6.38.1.3}%
+\contentsline {subsubsection}{\numberline {6.38.1.4}fixer\_rate()}{67}{subsubsection.6.38.1.4}%
+\contentsline {subsubsection}{\numberline {6.38.1.5}process\_cur()}{68}{subsubsection.6.38.1.5}%
+\contentsline {subsubsection}{\numberline {6.38.1.6}unwrap\_cur()}{69}{subsubsection.6.38.1.6}%
+\contentsline {subsubsection}{\numberline {6.38.1.7}weekly\_limit()}{69}{subsubsection.6.38.1.7}%
+\contentsline {subsection}{\numberline {6.38.2}Variable Documentation}{70}{subsection.6.38.2}%
+\contentsline {subsubsection}{\numberline {6.38.2.1}ADD\_BANK\_ACCOUNT}{70}{subsubsection.6.38.2.1}%
+\contentsline {subsubsection}{\numberline {6.38.2.2}ADD\_BANK\_ACCOUNT\_URL}{70}{subsubsection.6.38.2.2}%
+\contentsline {subsubsection}{\numberline {6.38.2.3}BALANCE}{70}{subsubsection.6.38.2.3}%
+\contentsline {subsubsection}{\numberline {6.38.2.4}BALANCE\_URL}{70}{subsubsection.6.38.2.4}%
+\contentsline {subsubsection}{\numberline {6.38.2.5}CONTACTS}{70}{subsubsection.6.38.2.5}%
+\contentsline {subsubsection}{\numberline {6.38.2.6}CONTACTS\_URL}{71}{subsubsection.6.38.2.6}%
+\contentsline {subsubsection}{\numberline {6.38.2.7}CURRENCY}{71}{subsubsection.6.38.2.7}%
+\contentsline {subsubsection}{\numberline {6.38.2.8}CURRENCY\_URL}{71}{subsubsection.6.38.2.8}%
+\contentsline {subsubsection}{\numberline {6.38.2.9}DAILY\_LIMIT\_EGP}{71}{subsubsection.6.38.2.9}%
+\contentsline {subsubsection}{\numberline {6.38.2.10}db\_configs}{71}{subsubsection.6.38.2.10}%
+\contentsline {subsubsection}{\numberline {6.38.2.11}EGP}{71}{subsubsection.6.38.2.11}%
+\contentsline {subsubsection}{\numberline {6.38.2.12}EUR}{72}{subsubsection.6.38.2.12}%
+\contentsline {subsubsection}{\numberline {6.38.2.13}FEE}{72}{subsubsection.6.38.2.13}%
+\contentsline {subsubsection}{\numberline {6.38.2.14}filemode}{72}{subsubsection.6.38.2.14}%
+\contentsline {subsubsection}{\numberline {6.38.2.15}filename}{72}{subsubsection.6.38.2.15}%
+\contentsline {subsubsection}{\numberline {6.38.2.16}format}{72}{subsubsection.6.38.2.16}%
+\contentsline {subsubsection}{\numberline {6.38.2.17}GOODS}{72}{subsubsection.6.38.2.17}%
+\contentsline {subsubsection}{\numberline {6.38.2.18}GOODS\_URL}{73}{subsubsection.6.38.2.18}%
+\contentsline {subsubsection}{\numberline {6.38.2.19}LEDGER}{73}{subsubsection.6.38.2.19}%
+\contentsline {subsubsection}{\numberline {6.38.2.20}LEDGER\_URL}{73}{subsubsection.6.38.2.20}%
+\contentsline {subsubsection}{\numberline {6.38.2.21}log}{73}{subsubsection.6.38.2.21}%
+\contentsline {subsubsection}{\numberline {6.38.2.22}MAX\_BALANCE}{73}{subsubsection.6.38.2.22}%
+\contentsline {subsubsection}{\numberline {6.38.2.23}MAX\_COST}{73}{subsubsection.6.38.2.23}%
+\contentsline {subsubsection}{\numberline {6.38.2.24}MAX\_CRED\_ID}{74}{subsubsection.6.38.2.24}%
+\contentsline {subsubsection}{\numberline {6.38.2.25}MAX\_GOODS}{74}{subsubsection.6.38.2.25}%
+\contentsline {subsubsection}{\numberline {6.38.2.26}PURCHASE}{74}{subsubsection.6.38.2.26}%
+\contentsline {subsubsection}{\numberline {6.38.2.27}PURCHASE\_URL}{74}{subsubsection.6.38.2.27}%
+\contentsline {subsubsection}{\numberline {6.38.2.28}QUALITY\_REDUCTION}{74}{subsubsection.6.38.2.28}%
+\contentsline {subsubsection}{\numberline {6.38.2.29}REGISTER}{74}{subsubsection.6.38.2.29}%
+\contentsline {subsubsection}{\numberline {6.38.2.30}REGISTER\_URL}{75}{subsubsection.6.38.2.30}%
+\contentsline {subsubsection}{\numberline {6.38.2.31}seed}{75}{subsubsection.6.38.2.31}%
+\contentsline {subsubsection}{\numberline {6.38.2.32}STOCHASTIC\_TRADE\_THRESHOLD}{75}{subsubsection.6.38.2.32}%
+\contentsline {subsubsection}{\numberline {6.38.2.33}TIMESTAMP\_FORMAT}{75}{subsubsection.6.38.2.33}%
+\contentsline {subsubsection}{\numberline {6.38.2.34}TRANSACTION}{75}{subsubsection.6.38.2.34}%
+\contentsline {subsubsection}{\numberline {6.38.2.35}TRANSACTION\_URL}{75}{subsubsection.6.38.2.35}%
+\contentsline {subsubsection}{\numberline {6.38.2.36}USD}{76}{subsubsection.6.38.2.36}%
+\contentsline {subsubsection}{\numberline {6.38.2.37}WEEKLY\_LIMIT\_EGP}{76}{subsubsection.6.38.2.37}%
+\contentsline {section}{\numberline {6.39}core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test Namespace Reference}{76}{section.6.39}%
+\contentsline {subsection}{\numberline {6.39.1}Function Documentation}{76}{subsection.6.39.1}%
+\contentsline {subsubsection}{\numberline {6.39.1.1}get\_account\_number()}{77}{subsubsection.6.39.1.1}%
+\contentsline {subsubsection}{\numberline {6.39.1.2}get\_amount()}{77}{subsubsection.6.39.1.2}%
+\contentsline {subsubsection}{\numberline {6.39.1.3}get\_balance()}{77}{subsubsection.6.39.1.3}%
+\contentsline {subsubsection}{\numberline {6.39.1.4}get\_bank\_name()}{77}{subsubsection.6.39.1.4}%
+\contentsline {subsubsection}{\numberline {6.39.1.5}get\_branch\_number()}{77}{subsubsection.6.39.1.5}%
+\contentsline {subsubsection}{\numberline {6.39.1.6}get\_credid()}{78}{subsubsection.6.39.1.6}%
+\contentsline {subsubsection}{\numberline {6.39.1.7}get\_email()}{78}{subsubsection.6.39.1.7}%
+\contentsline {subsubsection}{\numberline {6.39.1.8}get\_name()}{78}{subsubsection.6.39.1.8}%
+\contentsline {subsubsection}{\numberline {6.39.1.9}get\_name\_reference()}{79}{subsubsection.6.39.1.9}%
+\contentsline {subsubsection}{\numberline {6.39.1.10}get\_rand\_pass()}{79}{subsubsection.6.39.1.10}%
+\contentsline {subsubsection}{\numberline {6.39.1.11}rand\_alphanum()}{79}{subsubsection.6.39.1.11}%
+\contentsline {subsection}{\numberline {6.39.2}Variable Documentation}{79}{subsection.6.39.2}%
+\contentsline {subsubsection}{\numberline {6.39.2.1}db\_configs}{80}{subsubsection.6.39.2.1}%
+\contentsline {subsubsection}{\numberline {6.39.2.2}faker}{80}{subsubsection.6.39.2.2}%
+\contentsline {subsubsection}{\numberline {6.39.2.3}filemode}{80}{subsubsection.6.39.2.3}%
+\contentsline {subsubsection}{\numberline {6.39.2.4}filename}{80}{subsubsection.6.39.2.4}%
+\contentsline {subsubsection}{\numberline {6.39.2.5}format}{80}{subsubsection.6.39.2.5}%
+\contentsline {subsubsection}{\numberline {6.39.2.6}logger}{80}{subsubsection.6.39.2.6}%
+\contentsline {subsubsection}{\numberline {6.39.2.7}seed}{81}{subsubsection.6.39.2.7}%
+\contentsline {section}{\numberline {6.40}database Namespace Reference}{81}{section.6.40}%
+\contentsline {subsection}{\numberline {6.40.1}Function Documentation}{81}{subsection.6.40.1}%
+\contentsline {subsubsection}{\numberline {6.40.1.1}get\_account\_number()}{81}{subsubsection.6.40.1.1}%
+\contentsline {subsubsection}{\numberline {6.40.1.2}get\_balance()}{82}{subsubsection.6.40.1.2}%
+\contentsline {subsubsection}{\numberline {6.40.1.3}get\_bank\_name()}{82}{subsubsection.6.40.1.3}%
+\contentsline {subsubsection}{\numberline {6.40.1.4}get\_branch\_number()}{83}{subsubsection.6.40.1.4}%
+\contentsline {subsubsection}{\numberline {6.40.1.5}get\_credid()}{83}{subsubsection.6.40.1.5}%
+\contentsline {subsubsection}{\numberline {6.40.1.6}get\_email()}{84}{subsubsection.6.40.1.6}%
+\contentsline {subsubsection}{\numberline {6.40.1.7}get\_name()}{85}{subsubsection.6.40.1.7}%
+\contentsline {subsubsection}{\numberline {6.40.1.8}get\_name\_reference()}{86}{subsubsection.6.40.1.8}%
+\contentsline {subsubsection}{\numberline {6.40.1.9}get\_rand\_pass()}{87}{subsubsection.6.40.1.9}%
+\contentsline {subsection}{\numberline {6.40.2}Variable Documentation}{88}{subsection.6.40.2}%
+\contentsline {subsubsection}{\numberline {6.40.2.1}db}{88}{subsubsection.6.40.2.1}%
+\contentsline {subsubsection}{\numberline {6.40.2.2}db\_configs}{88}{subsubsection.6.40.2.2}%
+\contentsline {subsubsection}{\numberline {6.40.2.3}faker}{89}{subsubsection.6.40.2.3}%
+\contentsline {subsubsection}{\numberline {6.40.2.4}seed}{89}{subsubsection.6.40.2.4}%
+\contentsline {section}{\numberline {6.41}queries Namespace Reference}{89}{section.6.41}%
+\contentsline {section}{\numberline {6.42}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database Namespace Reference}{89}{section.6.42}%
+\contentsline {section}{\numberline {6.43}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists Namespace Reference}{89}{section.6.43}%
+\contentsline {section}{\numberline {6.44}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banking Namespace Reference}{90}{section.6.44}%
+\contentsline {subsection}{\numberline {6.44.1}Function Documentation}{90}{subsection.6.44.1}%
+\contentsline {subsubsection}{\numberline {6.44.1.1}exists()}{90}{subsubsection.6.44.1.1}%
+\contentsline {section}{\numberline {6.45}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}clients Namespace Reference}{90}{section.6.45}%
+\contentsline {subsection}{\numberline {6.45.1}Function Documentation}{90}{subsection.6.45.1}%
+\contentsline {subsubsection}{\numberline {6.45.1.1}exists()}{91}{subsubsection.6.45.1.1}%
+\contentsline {section}{\numberline {6.46}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}contacts Namespace Reference}{91}{section.6.46}%
+\contentsline {subsection}{\numberline {6.46.1}Function Documentation}{91}{subsection.6.46.1}%
+\contentsline {subsubsection}{\numberline {6.46.1.1}exists()}{91}{subsubsection.6.46.1.1}%
+\contentsline {section}{\numberline {6.47}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}credentials Namespace Reference}{92}{section.6.47}%
+\contentsline {subsection}{\numberline {6.47.1}Function Documentation}{92}{subsection.6.47.1}%
+\contentsline {subsubsection}{\numberline {6.47.1.1}exists()}{92}{subsubsection.6.47.1.1}%
+\contentsline {section}{\numberline {6.48}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}goods Namespace Reference}{92}{section.6.48}%
+\contentsline {subsection}{\numberline {6.48.1}Function Documentation}{93}{subsection.6.48.1}%
+\contentsline {subsubsection}{\numberline {6.48.1.1}exists()}{93}{subsubsection.6.48.1.1}%
+\contentsline {section}{\numberline {6.49}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}owners Namespace Reference}{93}{section.6.49}%
+\contentsline {subsection}{\numberline {6.49.1}Function Documentation}{93}{subsection.6.49.1}%
+\contentsline {subsubsection}{\numberline {6.49.1.1}exists()}{93}{subsubsection.6.49.1.1}%
+\contentsline {section}{\numberline {6.50}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets Namespace Reference}{94}{section.6.50}%
+\contentsline {section}{\numberline {6.51}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banking Namespace Reference}{94}{section.6.51}%
+\contentsline {subsection}{\numberline {6.51.1}Function Documentation}{94}{subsection.6.51.1}%
+\contentsline {subsubsection}{\numberline {6.51.1.1}get\_balance\_by\_cid()}{94}{subsubsection.6.51.1.1}%
+\contentsline {subsubsection}{\numberline {6.51.1.2}get\_balance\_by\_credid()}{95}{subsubsection.6.51.1.2}%
+\contentsline {subsubsection}{\numberline {6.51.1.3}get\_banking\_id()}{95}{subsubsection.6.51.1.3}%
+\contentsline {subsubsection}{\numberline {6.51.1.4}get\_client\_id()}{95}{subsubsection.6.51.1.4}%
+\contentsline {section}{\numberline {6.52}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}clients Namespace Reference}{96}{section.6.52}%
+\contentsline {subsection}{\numberline {6.52.1}Function Documentation}{96}{subsection.6.52.1}%
+\contentsline {subsubsection}{\numberline {6.52.1.1}get()}{96}{subsubsection.6.52.1.1}%
+\contentsline {subsubsection}{\numberline {6.52.1.2}get\_all()}{97}{subsubsection.6.52.1.2}%
+\contentsline {subsubsection}{\numberline {6.52.1.3}get\_name()}{97}{subsubsection.6.52.1.3}%
+\contentsline {section}{\numberline {6.53}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}contacts Namespace Reference}{97}{section.6.53}%
+\contentsline {subsection}{\numberline {6.53.1}Function Documentation}{98}{subsection.6.53.1}%
+\contentsline {subsubsection}{\numberline {6.53.1.1}get\_all()}{98}{subsubsection.6.53.1.1}%
+\contentsline {subsubsection}{\numberline {6.53.1.2}get\_banking\_id()}{98}{subsubsection.6.53.1.2}%
+\contentsline {section}{\numberline {6.54}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}credentials Namespace Reference}{98}{section.6.54}%
+\contentsline {subsection}{\numberline {6.54.1}Function Documentation}{98}{subsection.6.54.1}%
+\contentsline {subsubsection}{\numberline {6.54.1.1}get\_all()}{99}{subsubsection.6.54.1.1}%
+\contentsline {subsubsection}{\numberline {6.54.1.2}get\_credential()}{99}{subsubsection.6.54.1.2}%
+\contentsline {subsubsection}{\numberline {6.54.1.3}get\_credid\_with\_gid()}{99}{subsubsection.6.54.1.3}%
+\contentsline {subsubsection}{\numberline {6.54.1.4}get\_id()}{100}{subsubsection.6.54.1.4}%
+\contentsline {subsubsection}{\numberline {6.54.1.5}get\_password()}{100}{subsubsection.6.54.1.5}%
+\contentsline {section}{\numberline {6.55}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}currency Namespace Reference}{100}{section.6.55}%
+\contentsline {subsection}{\numberline {6.55.1}Function Documentation}{101}{subsection.6.55.1}%
+\contentsline {subsubsection}{\numberline {6.55.1.1}to\_dollar()}{101}{subsubsection.6.55.1.1}%
+\contentsline {section}{\numberline {6.56}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}goods Namespace Reference}{101}{section.6.56}%
+\contentsline {subsection}{\numberline {6.56.1}Function Documentation}{102}{subsection.6.56.1}%
+\contentsline {subsubsection}{\numberline {6.56.1.1}get\_all()}{102}{subsubsection.6.56.1.1}%
+\contentsline {subsubsection}{\numberline {6.56.1.2}get\_commodity()}{102}{subsubsection.6.56.1.2}%
+\contentsline {subsubsection}{\numberline {6.56.1.3}get\_good()}{103}{subsubsection.6.56.1.3}%
+\contentsline {subsubsection}{\numberline {6.56.1.4}get\_new\_price()}{103}{subsubsection.6.56.1.4}%
+\contentsline {section}{\numberline {6.57}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ledger Namespace Reference}{104}{section.6.57}%
+\contentsline {subsection}{\numberline {6.57.1}Function Documentation}{104}{subsection.6.57.1}%
+\contentsline {subsubsection}{\numberline {6.57.1.1}get\_last\_timestamp()}{104}{subsubsection.6.57.1.1}%
+\contentsline {subsubsection}{\numberline {6.57.1.2}get\_sells()}{105}{subsubsection.6.57.1.2}%
+\contentsline {subsubsection}{\numberline {6.57.1.3}get\_transactions()}{105}{subsubsection.6.57.1.3}%
+\contentsline {section}{\numberline {6.58}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}owner Namespace Reference}{106}{section.6.58}%
+\contentsline {subsection}{\numberline {6.58.1}Function Documentation}{106}{subsection.6.58.1}%
+\contentsline {subsubsection}{\numberline {6.58.1.1}get\_all()}{106}{subsubsection.6.58.1.1}%
+\contentsline {subsubsection}{\numberline {6.58.1.2}get\_good\_owner()}{107}{subsubsection.6.58.1.2}%
+\contentsline {subsubsection}{\numberline {6.58.1.3}get\_owner\_goods()}{107}{subsubsection.6.58.1.3}%
+\contentsline {section}{\numberline {6.59}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts Namespace Reference}{107}{section.6.59}%
+\contentsline {section}{\numberline {6.60}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banking Namespace Reference}{108}{section.6.60}%
+\contentsline {subsection}{\numberline {6.60.1}Function Documentation}{108}{subsection.6.60.1}%
+\contentsline {subsubsection}{\numberline {6.60.1.1}insert\_banking()}{108}{subsubsection.6.60.1.1}%
+\contentsline {section}{\numberline {6.61}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}clients Namespace Reference}{108}{section.6.61}%
+\contentsline {subsection}{\numberline {6.61.1}Function Documentation}{108}{subsection.6.61.1}%
+\contentsline {subsubsection}{\numberline {6.61.1.1}insert\_client()}{109}{subsubsection.6.61.1.1}%
+\contentsline {section}{\numberline {6.62}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}contacts Namespace Reference}{109}{section.6.62}%
+\contentsline {subsection}{\numberline {6.62.1}Function Documentation}{109}{subsection.6.62.1}%
+\contentsline {subsubsection}{\numberline {6.62.1.1}insert\_contact()}{109}{subsubsection.6.62.1.1}%
+\contentsline {section}{\numberline {6.63}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}credentials Namespace Reference}{110}{section.6.63}%
+\contentsline {subsection}{\numberline {6.63.1}Function Documentation}{110}{subsection.6.63.1}%
+\contentsline {subsubsection}{\numberline {6.63.1.1}new\_cred()}{110}{subsubsection.6.63.1.1}%
+\contentsline {subsubsection}{\numberline {6.63.1.2}register()}{110}{subsubsection.6.63.1.2}%
+\contentsline {section}{\numberline {6.64}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}goods Namespace Reference}{111}{section.6.64}%
+\contentsline {subsection}{\numberline {6.64.1}Function Documentation}{111}{subsection.6.64.1}%
+\contentsline {subsubsection}{\numberline {6.64.1.1}add\_good()}{111}{subsubsection.6.64.1.1}%
+\contentsline {section}{\numberline {6.65}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ledger Namespace Reference}{112}{section.6.65}%
+\contentsline {subsection}{\numberline {6.65.1}Function Documentation}{112}{subsection.6.65.1}%
+\contentsline {subsubsection}{\numberline {6.65.1.1}insert\_trx()}{112}{subsubsection.6.65.1.1}%
+\contentsline {section}{\numberline {6.66}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}owners Namespace Reference}{113}{section.6.66}%
+\contentsline {subsection}{\numberline {6.66.1}Function Documentation}{113}{subsection.6.66.1}%
+\contentsline {subsubsection}{\numberline {6.66.1.1}add\_owner()}{113}{subsubsection.6.66.1.1}%
+\contentsline {section}{\numberline {6.67}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}updates Namespace Reference}{113}{section.6.67}%
+\contentsline {section}{\numberline {6.68}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}updates.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banking Namespace Reference}{113}{section.6.68}%
+\contentsline {subsection}{\numberline {6.68.1}Function Documentation}{114}{subsection.6.68.1}%
+\contentsline {subsubsection}{\numberline {6.68.1.1}update\_account()}{114}{subsubsection.6.68.1.1}%
+\contentsline {section}{\numberline {6.69}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}updates.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}owners Namespace Reference}{114}{section.6.69}%
+\contentsline {subsection}{\numberline {6.69.1}Function Documentation}{114}{subsection.6.69.1}%
+\contentsline {subsubsection}{\numberline {6.69.1.1}update\_owner()}{114}{subsubsection.6.69.1.1}%
+\contentsline {section}{\numberline {6.70}server Namespace Reference}{115}{section.6.70}%
+\contentsline {section}{\numberline {6.71}server.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}server Namespace Reference}{115}{section.6.71}%
+\contentsline {subsection}{\numberline {6.71.1}Function Documentation}{115}{subsection.6.71.1}%
+\contentsline {subsubsection}{\numberline {6.71.1.1}add\_bank\_account()}{116}{subsubsection.6.71.1.1}%
+\contentsline {subsubsection}{\numberline {6.71.1.2}add\_contact()}{116}{subsubsection.6.71.1.2}%
+\contentsline {subsubsection}{\numberline {6.71.1.3}authenticate()}{117}{subsubsection.6.71.1.3}%
+\contentsline {subsubsection}{\numberline {6.71.1.4}get\_balance()}{118}{subsubsection.6.71.1.4}%
+\contentsline {subsubsection}{\numberline {6.71.1.5}get\_credid()}{119}{subsubsection.6.71.1.5}%
+\contentsline {subsubsection}{\numberline {6.71.1.6}is\_email()}{119}{subsubsection.6.71.1.6}%
+\contentsline {subsubsection}{\numberline {6.71.1.7}make\_transaction()}{120}{subsubsection.6.71.1.7}%
+\contentsline {subsubsection}{\numberline {6.71.1.8}register\_client()}{122}{subsubsection.6.71.1.8}%
+\contentsline {subsubsection}{\numberline {6.71.1.9}unauthorized()}{123}{subsubsection.6.71.1.9}%
+\contentsline {subsubsection}{\numberline {6.71.1.10}update\_ledger()}{123}{subsubsection.6.71.1.10}%
+\contentsline {subsection}{\numberline {6.71.2}Variable Documentation}{124}{subsection.6.71.2}%
+\contentsline {subsubsection}{\numberline {6.71.2.1}app}{124}{subsubsection.6.71.2.1}%
+\contentsline {subsubsection}{\numberline {6.71.2.2}auth}{124}{subsubsection.6.71.2.2}%
+\contentsline {subsubsection}{\numberline {6.71.2.3}client\_cred\_id}{124}{subsubsection.6.71.2.3}%
+\contentsline {subsubsection}{\numberline {6.71.2.4}client\_passcode}{124}{subsubsection.6.71.2.4}%
+\contentsline {subsubsection}{\numberline {6.71.2.5}db}{124}{subsubsection.6.71.2.5}%
+\contentsline {subsubsection}{\numberline {6.71.2.6}db\_configs}{125}{subsubsection.6.71.2.6}%
+\contentsline {subsubsection}{\numberline {6.71.2.7}debug}{125}{subsubsection.6.71.2.7}%
+\contentsline {subsubsection}{\numberline {6.71.2.8}filemode}{125}{subsubsection.6.71.2.8}%
+\contentsline {subsubsection}{\numberline {6.71.2.9}filename}{125}{subsubsection.6.71.2.9}%
+\contentsline {subsubsection}{\numberline {6.71.2.10}format}{126}{subsubsection.6.71.2.10}%
+\contentsline {subsubsection}{\numberline {6.71.2.11}level}{126}{subsubsection.6.71.2.11}%
+\contentsline {subsubsection}{\numberline {6.71.2.12}logger}{126}{subsubsection.6.71.2.12}%
+\contentsline {subsubsection}{\numberline {6.71.2.13}seed}{126}{subsubsection.6.71.2.13}%
+\contentsline {section}{\numberline {6.72}setup Namespace Reference}{126}{section.6.72}%
+\contentsline {subsection}{\numberline {6.72.1}Function Documentation}{127}{subsection.6.72.1}%
+\contentsline {subsubsection}{\numberline {6.72.1.1}read()}{127}{subsubsection.6.72.1.1}%
+\contentsline {subsection}{\numberline {6.72.2}Variable Documentation}{127}{subsection.6.72.2}%
+\contentsline {subsubsection}{\numberline {6.72.2.1}author}{127}{subsubsection.6.72.2.1}%
+\contentsline {subsubsection}{\numberline {6.72.2.2}author\_email}{127}{subsubsection.6.72.2.2}%
+\contentsline {subsubsection}{\numberline {6.72.2.3}cmdclass}{128}{subsubsection.6.72.2.3}%
+\contentsline {subsubsection}{\numberline {6.72.2.4}description}{128}{subsubsection.6.72.2.4}%
+\contentsline {subsubsection}{\numberline {6.72.2.5}license}{128}{subsubsection.6.72.2.5}%
+\contentsline {subsubsection}{\numberline {6.72.2.6}long\_description}{128}{subsubsection.6.72.2.6}%
+\contentsline {subsubsection}{\numberline {6.72.2.7}name}{128}{subsubsection.6.72.2.7}%
+\contentsline {subsubsection}{\numberline {6.72.2.8}packages}{128}{subsubsection.6.72.2.8}%
+\contentsline {subsubsection}{\numberline {6.72.2.9}version}{128}{subsubsection.6.72.2.9}%
+\contentsline {chapter}{\numberline {7}Data Structure Documentation}{129}{chapter.7}%
+\contentsline {section}{\numberline {7.1}setup.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Clean\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Command Class Reference}{129}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{130}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Member Function Documentation}{130}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}finalize\_options()}{130}{subsubsection.7.1.2.1}%
+\contentsline {subsubsection}{\numberline {7.1.2.2}initialize\_options()}{130}{subsubsection.7.1.2.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.3}run()}{130}{subsubsection.7.1.2.3}%
+\contentsline {subsection}{\numberline {7.1.3}Field Documentation}{131}{subsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.1}user\_options}{131}{subsubsection.7.1.3.1}%
+\contentsline {section}{\numberline {7.2}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Client Class Reference}{131}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{132}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Constructor \& Destructor Documentation}{132}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}\_\_init\_\_()}{133}{subsubsection.7.2.2.1}%
+\contentsline {subsection}{\numberline {7.2.3}Member Function Documentation}{133}{subsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.3.1}\_\_add\_trax()}{133}{subsubsection.7.2.3.1}%
+\contentsline {subsubsection}{\numberline {7.2.3.2}\_\_ledger\_timestamp()}{134}{subsubsection.7.2.3.2}%
+\contentsline {subsubsection}{\numberline {7.2.3.3}\_\_register\_bank\_account()}{135}{subsubsection.7.2.3.3}%
+\contentsline {subsubsection}{\numberline {7.2.3.4}\_\_transact()}{136}{subsubsection.7.2.3.4}%
+\contentsline {subsubsection}{\numberline {7.2.3.5}\_\_update\_balance()}{137}{subsubsection.7.2.3.5}%
+\contentsline {subsubsection}{\numberline {7.2.3.6}\_\_update\_ledger()}{138}{subsubsection.7.2.3.6}%
+\contentsline {subsubsection}{\numberline {7.2.3.7}add\_contact()}{139}{subsubsection.7.2.3.7}%
+\contentsline {subsubsection}{\numberline {7.2.3.8}auth()}{140}{subsubsection.7.2.3.8}%
+\contentsline {subsubsection}{\numberline {7.2.3.9}autotract()}{141}{subsubsection.7.2.3.9}%
+\contentsline {subsubsection}{\numberline {7.2.3.10}register()}{142}{subsubsection.7.2.3.10}%
+\contentsline {subsection}{\numberline {7.2.4}Field Documentation}{143}{subsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.4.1}account\_number}{143}{subsubsection.7.2.4.1}%
+\contentsline {subsubsection}{\numberline {7.2.4.2}balance}{144}{subsubsection.7.2.4.2}%
+\contentsline {subsubsection}{\numberline {7.2.4.3}bank\_name}{144}{subsubsection.7.2.4.3}%
+\contentsline {subsubsection}{\numberline {7.2.4.4}branch\_number}{144}{subsubsection.7.2.4.4}%
+\contentsline {subsubsection}{\numberline {7.2.4.5}db}{144}{subsubsection.7.2.4.5}%
+\contentsline {subsubsection}{\numberline {7.2.4.6}email}{145}{subsubsection.7.2.4.6}%
+\contentsline {subsubsection}{\numberline {7.2.4.7}faker}{145}{subsubsection.7.2.4.7}%
+\contentsline {subsubsection}{\numberline {7.2.4.8}my\_contacts}{145}{subsubsection.7.2.4.8}%
+\contentsline {subsubsection}{\numberline {7.2.4.9}name}{145}{subsubsection.7.2.4.9}%
+\contentsline {subsubsection}{\numberline {7.2.4.10}name\_reference}{145}{subsubsection.7.2.4.10}%
+\contentsline {subsubsection}{\numberline {7.2.4.11}pas}{146}{subsubsection.7.2.4.11}%
+\contentsline {subsubsection}{\numberline {7.2.4.12}passcode}{146}{subsubsection.7.2.4.12}%
+\contentsline {subsubsection}{\numberline {7.2.4.13}uname}{146}{subsubsection.7.2.4.13}%
+\contentsline {section}{\numberline {7.3}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Client Class Reference}{147}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{148}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Constructor \& Destructor Documentation}{148}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{149}{subsubsection.7.3.2.1}%
+\contentsline {subsubsection}{\numberline {7.3.2.2}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{149}{subsubsection.7.3.2.2}%
+\contentsline {subsection}{\numberline {7.3.3}Member Function Documentation}{150}{subsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.3.1}\_\_add\_trax()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{151}{subsubsection.7.3.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.3.2}\_\_add\_trax()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{151}{subsubsection.7.3.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3.3}\_\_ledger\_timestamp()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{152}{subsubsection.7.3.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.3.4}\_\_ledger\_timestamp()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{153}{subsubsection.7.3.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.3.5}\_\_register\_bank\_account()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{153}{subsubsection.7.3.3.5}%
+\contentsline {subsubsection}{\numberline {7.3.3.6}\_\_register\_bank\_account()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{155}{subsubsection.7.3.3.6}%
+\contentsline {subsubsection}{\numberline {7.3.3.7}\_\_transact()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{156}{subsubsection.7.3.3.7}%
+\contentsline {subsubsection}{\numberline {7.3.3.8}\_\_transact()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{157}{subsubsection.7.3.3.8}%
+\contentsline {subsubsection}{\numberline {7.3.3.9}\_\_update\_balance()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{157}{subsubsection.7.3.3.9}%
+\contentsline {subsubsection}{\numberline {7.3.3.10}\_\_update\_balance()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{158}{subsubsection.7.3.3.10}%
+\contentsline {subsubsection}{\numberline {7.3.3.11}\_\_update\_ledger()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{159}{subsubsection.7.3.3.11}%
+\contentsline {subsubsection}{\numberline {7.3.3.12}\_\_update\_ledger()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{160}{subsubsection.7.3.3.12}%
+\contentsline {subsubsection}{\numberline {7.3.3.13}add\_contact()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{162}{subsubsection.7.3.3.13}%
+\contentsline {subsubsection}{\numberline {7.3.3.14}add\_contact()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{163}{subsubsection.7.3.3.14}%
+\contentsline {subsubsection}{\numberline {7.3.3.15}auth()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{164}{subsubsection.7.3.3.15}%
+\contentsline {subsubsection}{\numberline {7.3.3.16}auth()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{165}{subsubsection.7.3.3.16}%
+\contentsline {subsubsection}{\numberline {7.3.3.17}autotract()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{166}{subsubsection.7.3.3.17}%
+\contentsline {subsubsection}{\numberline {7.3.3.18}autotract()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{167}{subsubsection.7.3.3.18}%
+\contentsline {subsubsection}{\numberline {7.3.3.19}register()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{168}{subsubsection.7.3.3.19}%
+\contentsline {subsubsection}{\numberline {7.3.3.20}register()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{170}{subsubsection.7.3.3.20}%
+\contentsline {subsection}{\numberline {7.3.4}Field Documentation}{171}{subsection.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.4.1}account\_number}{171}{subsubsection.7.3.4.1}%
+\contentsline {subsubsection}{\numberline {7.3.4.2}balance}{171}{subsubsection.7.3.4.2}%
+\contentsline {subsubsection}{\numberline {7.3.4.3}bank\_name}{172}{subsubsection.7.3.4.3}%
+\contentsline {subsubsection}{\numberline {7.3.4.4}branch\_number}{172}{subsubsection.7.3.4.4}%
+\contentsline {subsubsection}{\numberline {7.3.4.5}db}{172}{subsubsection.7.3.4.5}%
+\contentsline {subsubsection}{\numberline {7.3.4.6}email}{172}{subsubsection.7.3.4.6}%
+\contentsline {subsubsection}{\numberline {7.3.4.7}faker}{173}{subsubsection.7.3.4.7}%
+\contentsline {subsubsection}{\numberline {7.3.4.8}my\_contacts}{173}{subsubsection.7.3.4.8}%
+\contentsline {subsubsection}{\numberline {7.3.4.9}name}{173}{subsubsection.7.3.4.9}%
+\contentsline {subsubsection}{\numberline {7.3.4.10}name\_reference}{173}{subsubsection.7.3.4.10}%
+\contentsline {subsubsection}{\numberline {7.3.4.11}pas}{173}{subsubsection.7.3.4.11}%
+\contentsline {subsubsection}{\numberline {7.3.4.12}passcode}{174}{subsubsection.7.3.4.12}%
+\contentsline {subsubsection}{\numberline {7.3.4.13}uname}{174}{subsubsection.7.3.4.13}%
+\contentsline {section}{\numberline {7.4}core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Client Class Reference}{174}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{175}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Constructor \& Destructor Documentation}{175}{subsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.1}\_\_init\_\_()}{176}{subsubsection.7.4.2.1}%
+\contentsline {subsection}{\numberline {7.4.3}Member Function Documentation}{176}{subsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.3.1}add\_contact()}{176}{subsubsection.7.4.3.1}%
+\contentsline {subsubsection}{\numberline {7.4.3.2}basic\_auth()}{177}{subsubsection.7.4.3.2}%
+\contentsline {subsubsection}{\numberline {7.4.3.3}get\_balance()}{178}{subsubsection.7.4.3.3}%
+\contentsline {subsubsection}{\numberline {7.4.3.4}headers()}{178}{subsubsection.7.4.3.4}%
+\contentsline {subsubsection}{\numberline {7.4.3.5}make\_transaction()}{179}{subsubsection.7.4.3.5}%
+\contentsline {subsubsection}{\numberline {7.4.3.6}register()}{180}{subsubsection.7.4.3.6}%
+\contentsline {subsubsection}{\numberline {7.4.3.7}register\_bank\_account()}{180}{subsubsection.7.4.3.7}%
+\contentsline {subsection}{\numberline {7.4.4}Field Documentation}{181}{subsection.7.4.4}%
+\contentsline {subsubsection}{\numberline {7.4.4.1}account\_number}{181}{subsubsection.7.4.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.4.2}app}{181}{subsubsection.7.4.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.4.3}balance}{181}{subsubsection.7.4.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.4.4}bank\_name}{182}{subsubsection.7.4.4.4}%
+\contentsline {subsubsection}{\numberline {7.4.4.5}branch\_number}{182}{subsubsection.7.4.4.5}%
+\contentsline {subsubsection}{\numberline {7.4.4.6}credid}{182}{subsubsection.7.4.4.6}%
+\contentsline {subsubsection}{\numberline {7.4.4.7}currency\_pref}{182}{subsubsection.7.4.4.7}%
+\contentsline {subsubsection}{\numberline {7.4.4.8}db}{182}{subsubsection.7.4.4.8}%
+\contentsline {subsubsection}{\numberline {7.4.4.9}email}{183}{subsubsection.7.4.4.9}%
+\contentsline {subsubsection}{\numberline {7.4.4.10}faker}{183}{subsubsection.7.4.4.10}%
+\contentsline {subsubsection}{\numberline {7.4.4.11}my\_contacts}{183}{subsubsection.7.4.4.11}%
+\contentsline {subsubsection}{\numberline {7.4.4.12}name}{183}{subsubsection.7.4.4.12}%
+\contentsline {subsubsection}{\numberline {7.4.4.13}name\_reference}{183}{subsubsection.7.4.4.13}%
+\contentsline {subsubsection}{\numberline {7.4.4.14}passcode}{184}{subsubsection.7.4.4.14}%
+\contentsline {section}{\numberline {7.5}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Currency Class Reference}{184}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{185}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Constructor \& Destructor Documentation}{185}{subsection.7.5.2}%
+\contentsline {subsubsection}{\numberline {7.5.2.1}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{185}{subsubsection.7.5.2.1}%
+\contentsline {subsubsection}{\numberline {7.5.2.2}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{186}{subsubsection.7.5.2.2}%
+\contentsline {subsection}{\numberline {7.5.3}Member Function Documentation}{186}{subsection.7.5.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.1}exchange()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{186}{subsubsection.7.5.3.1}%
+\contentsline {subsubsection}{\numberline {7.5.3.2}exchange()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{187}{subsubsection.7.5.3.2}%
+\contentsline {subsubsection}{\numberline {7.5.3.3}exchange\_back()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{187}{subsubsection.7.5.3.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.4}exchange\_back()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{188}{subsubsection.7.5.3.4}%
+\contentsline {subsubsection}{\numberline {7.5.3.5}valid()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{189}{subsubsection.7.5.3.5}%
+\contentsline {subsubsection}{\numberline {7.5.3.6}valid()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{189}{subsubsection.7.5.3.6}%
+\contentsline {subsection}{\numberline {7.5.4}Field Documentation}{190}{subsection.7.5.4}%
+\contentsline {subsubsection}{\numberline {7.5.4.1}base}{190}{subsubsection.7.5.4.1}%
+\contentsline {subsubsection}{\numberline {7.5.4.2}pref}{190}{subsubsection.7.5.4.2}%
+\contentsline {subsubsection}{\numberline {7.5.4.3}rate}{190}{subsubsection.7.5.4.3}%
+\contentsline {section}{\numberline {7.6}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database Class Reference}{191}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{192}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Constructor \& Destructor Documentation}{192}{subsection.7.6.2}%
+\contentsline {subsubsection}{\numberline {7.6.2.1}\_\_init\_\_()}{192}{subsubsection.7.6.2.1}%
+\contentsline {subsection}{\numberline {7.6.3}Member Function Documentation}{192}{subsection.7.6.3}%
+\contentsline {subsubsection}{\numberline {7.6.3.1}close()}{192}{subsubsection.7.6.3.1}%
+\contentsline {subsubsection}{\numberline {7.6.3.2}commit()}{193}{subsubsection.7.6.3.2}%
+\contentsline {subsubsection}{\numberline {7.6.3.3}committed\_read()}{193}{subsubsection.7.6.3.3}%
+\contentsline {subsubsection}{\numberline {7.6.3.4}init()}{193}{subsubsection.7.6.3.4}%
+\contentsline {subsubsection}{\numberline {7.6.3.5}lock\_advisory()}{194}{subsubsection.7.6.3.5}%
+\contentsline {subsubsection}{\numberline {7.6.3.6}repeatable\_read()}{194}{subsubsection.7.6.3.6}%
+\contentsline {subsubsection}{\numberline {7.6.3.7}rollback()}{194}{subsubsection.7.6.3.7}%
+\contentsline {subsubsection}{\numberline {7.6.3.8}unlock\_advisory()}{195}{subsubsection.7.6.3.8}%
+\contentsline {subsection}{\numberline {7.6.4}Field Documentation}{195}{subsection.7.6.4}%
+\contentsline {subsubsection}{\numberline {7.6.4.1}conn}{195}{subsubsection.7.6.4.1}%
+\contentsline {subsubsection}{\numberline {7.6.4.2}cur}{196}{subsubsection.7.6.4.2}%
+\contentsline {subsubsection}{\numberline {7.6.4.3}db\_configs}{196}{subsubsection.7.6.4.3}%
+\contentsline {subsubsection}{\numberline {7.6.4.4}exists}{196}{subsubsection.7.6.4.4}%
+\contentsline {subsubsection}{\numberline {7.6.4.5}gets}{197}{subsubsection.7.6.4.5}%
+\contentsline {subsubsection}{\numberline {7.6.4.6}inserts}{197}{subsubsection.7.6.4.6}%
+\contentsline {subsubsection}{\numberline {7.6.4.7}logger}{197}{subsubsection.7.6.4.7}%
+\contentsline {subsubsection}{\numberline {7.6.4.8}updates}{197}{subsubsection.7.6.4.8}%
+\contentsline {section}{\numberline {7.7}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database Class Reference}{198}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{199}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Constructor \& Destructor Documentation}{199}{subsection.7.7.2}%
+\contentsline {subsubsection}{\numberline {7.7.2.1}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{199}{subsubsection.7.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.7.2.2}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{200}{subsubsection.7.7.2.2}%
+\contentsline {subsection}{\numberline {7.7.3}Member Function Documentation}{200}{subsection.7.7.3}%
+\contentsline {subsubsection}{\numberline {7.7.3.1}close()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{200}{subsubsection.7.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.7.3.2}close()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{201}{subsubsection.7.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.7.3.3}commit()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{202}{subsubsection.7.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.7.3.4}commit()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{203}{subsubsection.7.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.7.3.5}committed\_read()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{203}{subsubsection.7.7.3.5}%
+\contentsline {subsubsection}{\numberline {7.7.3.6}committed\_read()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{204}{subsubsection.7.7.3.6}%
+\contentsline {subsubsection}{\numberline {7.7.3.7}init()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{204}{subsubsection.7.7.3.7}%
+\contentsline {subsubsection}{\numberline {7.7.3.8}init()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{205}{subsubsection.7.7.3.8}%
+\contentsline {subsubsection}{\numberline {7.7.3.9}lock\_advisory()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{206}{subsubsection.7.7.3.9}%
+\contentsline {subsubsection}{\numberline {7.7.3.10}lock\_advisory()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{206}{subsubsection.7.7.3.10}%
+\contentsline {subsubsection}{\numberline {7.7.3.11}repeatable\_read()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{207}{subsubsection.7.7.3.11}%
+\contentsline {subsubsection}{\numberline {7.7.3.12}repeatable\_read()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{208}{subsubsection.7.7.3.12}%
+\contentsline {subsubsection}{\numberline {7.7.3.13}rollback()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{208}{subsubsection.7.7.3.13}%
+\contentsline {subsubsection}{\numberline {7.7.3.14}rollback()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{209}{subsubsection.7.7.3.14}%
+\contentsline {subsubsection}{\numberline {7.7.3.15}unlock\_advisory()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{209}{subsubsection.7.7.3.15}%
+\contentsline {subsubsection}{\numberline {7.7.3.16}unlock\_advisory()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{210}{subsubsection.7.7.3.16}%
+\contentsline {subsection}{\numberline {7.7.4}Field Documentation}{211}{subsection.7.7.4}%
+\contentsline {subsubsection}{\numberline {7.7.4.1}conn}{211}{subsubsection.7.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.7.4.2}cur}{211}{subsubsection.7.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.7.4.3}db\_configs}{211}{subsubsection.7.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.7.4.4}exists}{211}{subsubsection.7.7.4.4}%
+\contentsline {subsubsection}{\numberline {7.7.4.5}gets}{212}{subsubsection.7.7.4.5}%
+\contentsline {subsubsection}{\numberline {7.7.4.6}inserts}{212}{subsubsection.7.7.4.6}%
+\contentsline {subsubsection}{\numberline {7.7.4.7}logger}{212}{subsubsection.7.7.4.7}%
+\contentsline {subsubsection}{\numberline {7.7.4.8}updates}{212}{subsubsection.7.7.4.8}%
+\contentsline {section}{\numberline {7.8}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists Class Reference}{213}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{214}{subsection.7.8.1}%
+\contentsline {subsection}{\numberline {7.8.2}Constructor \& Destructor Documentation}{214}{subsection.7.8.2}%
+\contentsline {subsubsection}{\numberline {7.8.2.1}\_\_init\_\_()}{214}{subsubsection.7.8.2.1}%
+\contentsline {subsection}{\numberline {7.8.3}Member Function Documentation}{214}{subsection.7.8.3}%
+\contentsline {subsubsection}{\numberline {7.8.3.1}account\_byemail()}{214}{subsubsection.7.8.3.1}%
+\contentsline {subsubsection}{\numberline {7.8.3.2}account\_byname()}{215}{subsubsection.7.8.3.2}%
+\contentsline {subsubsection}{\numberline {7.8.3.3}bank\_account\_bycid()}{215}{subsubsection.7.8.3.3}%
+\contentsline {subsubsection}{\numberline {7.8.3.4}client\_exists()}{216}{subsubsection.7.8.3.4}%
+\contentsline {subsubsection}{\numberline {7.8.3.5}contact\_exists()}{216}{subsubsection.7.8.3.5}%
+\contentsline {subsubsection}{\numberline {7.8.3.6}credential\_exists()}{217}{subsubsection.7.8.3.6}%
+\contentsline {subsection}{\numberline {7.8.4}Field Documentation}{217}{subsection.7.8.4}%
+\contentsline {subsubsection}{\numberline {7.8.4.1}conn}{217}{subsubsection.7.8.4.1}%
+\contentsline {subsubsection}{\numberline {7.8.4.2}cur}{218}{subsubsection.7.8.4.2}%
+\contentsline {section}{\numberline {7.9}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}exists Class Reference}{218}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{219}{subsection.7.9.1}%
+\contentsline {subsection}{\numberline {7.9.2}Constructor \& Destructor Documentation}{219}{subsection.7.9.2}%
+\contentsline {subsubsection}{\numberline {7.9.2.1}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{220}{subsubsection.7.9.2.1}%
+\contentsline {subsubsection}{\numberline {7.9.2.2}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{220}{subsubsection.7.9.2.2}%
+\contentsline {subsection}{\numberline {7.9.3}Member Function Documentation}{221}{subsection.7.9.3}%
+\contentsline {subsubsection}{\numberline {7.9.3.1}account\_byemail()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{221}{subsubsection.7.9.3.1}%
+\contentsline {subsubsection}{\numberline {7.9.3.2}account\_byemail()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{222}{subsubsection.7.9.3.2}%
+\contentsline {subsubsection}{\numberline {7.9.3.3}account\_byname()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{222}{subsubsection.7.9.3.3}%
+\contentsline {subsubsection}{\numberline {7.9.3.4}account\_byname()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{223}{subsubsection.7.9.3.4}%
+\contentsline {subsubsection}{\numberline {7.9.3.5}bank\_account\_bycid()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{224}{subsubsection.7.9.3.5}%
+\contentsline {subsubsection}{\numberline {7.9.3.6}bank\_account\_bycid()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{225}{subsubsection.7.9.3.6}%
+\contentsline {subsubsection}{\numberline {7.9.3.7}client\_exists()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{226}{subsubsection.7.9.3.7}%
+\contentsline {subsubsection}{\numberline {7.9.3.8}client\_exists()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{226}{subsubsection.7.9.3.8}%
+\contentsline {subsubsection}{\numberline {7.9.3.9}contact\_exists()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{227}{subsubsection.7.9.3.9}%
+\contentsline {subsubsection}{\numberline {7.9.3.10}contact\_exists()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{228}{subsubsection.7.9.3.10}%
+\contentsline {subsubsection}{\numberline {7.9.3.11}credential\_exists()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{229}{subsubsection.7.9.3.11}%
+\contentsline {subsubsection}{\numberline {7.9.3.12}credential\_exists()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{229}{subsubsection.7.9.3.12}%
+\contentsline {subsubsection}{\numberline {7.9.3.13}currency()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{230}{subsubsection.7.9.3.13}%
+\contentsline {subsubsection}{\numberline {7.9.3.14}currency()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{231}{subsubsection.7.9.3.14}%
+\contentsline {subsection}{\numberline {7.9.4}Field Documentation}{232}{subsection.7.9.4}%
+\contentsline {subsubsection}{\numberline {7.9.4.1}conn}{232}{subsubsection.7.9.4.1}%
+\contentsline {subsubsection}{\numberline {7.9.4.2}cur}{232}{subsubsection.7.9.4.2}%
+\contentsline {section}{\numberline {7.10}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets Class Reference}{233}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{234}{subsection.7.10.1}%
+\contentsline {subsection}{\numberline {7.10.2}Constructor \& Destructor Documentation}{234}{subsection.7.10.2}%
+\contentsline {subsubsection}{\numberline {7.10.2.1}\_\_init\_\_()}{234}{subsubsection.7.10.2.1}%
+\contentsline {subsection}{\numberline {7.10.3}Member Function Documentation}{234}{subsection.7.10.3}%
+\contentsline {subsubsection}{\numberline {7.10.3.1}cid2credid()}{235}{subsubsection.7.10.3.1}%
+\contentsline {subsubsection}{\numberline {7.10.3.2}credid2cid()}{235}{subsubsection.7.10.3.2}%
+\contentsline {subsubsection}{\numberline {7.10.3.3}get()}{236}{subsubsection.7.10.3.3}%
+\contentsline {subsubsection}{\numberline {7.10.3.4}get\_all\_clients()}{236}{subsubsection.7.10.3.4}%
+\contentsline {subsubsection}{\numberline {7.10.3.5}get\_all\_contacts()}{237}{subsubsection.7.10.3.5}%
+\contentsline {subsubsection}{\numberline {7.10.3.6}get\_all\_credentials()}{237}{subsubsection.7.10.3.6}%
+\contentsline {subsubsection}{\numberline {7.10.3.7}get\_balance\_by\_cid()}{237}{subsubsection.7.10.3.7}%
+\contentsline {subsubsection}{\numberline {7.10.3.8}get\_balance\_by\_credid()}{238}{subsubsection.7.10.3.8}%
+\contentsline {subsubsection}{\numberline {7.10.3.9}get\_banking\_id()}{238}{subsubsection.7.10.3.9}%
+\contentsline {subsubsection}{\numberline {7.10.3.10}get\_client\_id()}{239}{subsubsection.7.10.3.10}%
+\contentsline {subsubsection}{\numberline {7.10.3.11}get\_client\_id\_byemail()}{239}{subsubsection.7.10.3.11}%
+\contentsline {subsubsection}{\numberline {7.10.3.12}get\_client\_id\_byname()}{240}{subsubsection.7.10.3.12}%
+\contentsline {subsubsection}{\numberline {7.10.3.13}get\_credential()}{240}{subsubsection.7.10.3.13}%
+\contentsline {subsubsection}{\numberline {7.10.3.14}get\_last\_timestamp()}{241}{subsubsection.7.10.3.14}%
+\contentsline {subsubsection}{\numberline {7.10.3.15}get\_name()}{241}{subsubsection.7.10.3.15}%
+\contentsline {subsubsection}{\numberline {7.10.3.16}get\_password()}{242}{subsubsection.7.10.3.16}%
+\contentsline {subsubsection}{\numberline {7.10.3.17}get\_sells()}{242}{subsubsection.7.10.3.17}%
+\contentsline {subsubsection}{\numberline {7.10.3.18}get\_transactions()}{243}{subsubsection.7.10.3.18}%
+\contentsline {subsubsection}{\numberline {7.10.3.19}get\_transactions\_sum()}{244}{subsubsection.7.10.3.19}%
+\contentsline {subsubsection}{\numberline {7.10.3.20}to\_dollar()}{244}{subsubsection.7.10.3.20}%
+\contentsline {subsection}{\numberline {7.10.4}Field Documentation}{245}{subsection.7.10.4}%
+\contentsline {subsubsection}{\numberline {7.10.4.1}conn}{245}{subsubsection.7.10.4.1}%
+\contentsline {subsubsection}{\numberline {7.10.4.2}cur}{245}{subsubsection.7.10.4.2}%
+\contentsline {subsubsection}{\numberline {7.10.4.3}db\_log}{246}{subsubsection.7.10.4.3}%
+\contentsline {section}{\numberline {7.11}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gets Class Reference}{247}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{248}{subsection.7.11.1}%
+\contentsline {subsection}{\numberline {7.11.2}Constructor \& Destructor Documentation}{248}{subsection.7.11.2}%
+\contentsline {subsubsection}{\numberline {7.11.2.1}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{249}{subsubsection.7.11.2.1}%
+\contentsline {subsubsection}{\numberline {7.11.2.2}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{249}{subsubsection.7.11.2.2}%
+\contentsline {subsection}{\numberline {7.11.3}Member Function Documentation}{250}{subsection.7.11.3}%
+\contentsline {subsubsection}{\numberline {7.11.3.1}cid2credid()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{250}{subsubsection.7.11.3.1}%
+\contentsline {subsubsection}{\numberline {7.11.3.2}cid2credid()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{251}{subsubsection.7.11.3.2}%
+\contentsline {subsubsection}{\numberline {7.11.3.3}credid2cid()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{251}{subsubsection.7.11.3.3}%
+\contentsline {subsubsection}{\numberline {7.11.3.4}credid2cid()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{252}{subsubsection.7.11.3.4}%
+\contentsline {subsubsection}{\numberline {7.11.3.5}get()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{253}{subsubsection.7.11.3.5}%
+\contentsline {subsubsection}{\numberline {7.11.3.6}get()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{254}{subsubsection.7.11.3.6}%
+\contentsline {subsubsection}{\numberline {7.11.3.7}get\_all\_clients()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{254}{subsubsection.7.11.3.7}%
+\contentsline {subsubsection}{\numberline {7.11.3.8}get\_all\_clients()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{255}{subsubsection.7.11.3.8}%
+\contentsline {subsubsection}{\numberline {7.11.3.9}get\_all\_contacts()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{256}{subsubsection.7.11.3.9}%
+\contentsline {subsubsection}{\numberline {7.11.3.10}get\_all\_contacts()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{257}{subsubsection.7.11.3.10}%
+\contentsline {subsubsection}{\numberline {7.11.3.11}get\_all\_credentials()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{257}{subsubsection.7.11.3.11}%
+\contentsline {subsubsection}{\numberline {7.11.3.12}get\_all\_credentials()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{258}{subsubsection.7.11.3.12}%
+\contentsline {subsubsection}{\numberline {7.11.3.13}get\_balance\_by\_cid()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{259}{subsubsection.7.11.3.13}%
+\contentsline {subsubsection}{\numberline {7.11.3.14}get\_balance\_by\_cid()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{260}{subsubsection.7.11.3.14}%
+\contentsline {subsubsection}{\numberline {7.11.3.15}get\_balance\_by\_credid()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{261}{subsubsection.7.11.3.15}%
+\contentsline {subsubsection}{\numberline {7.11.3.16}get\_balance\_by\_credid()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{261}{subsubsection.7.11.3.16}%
+\contentsline {subsubsection}{\numberline {7.11.3.17}get\_banking\_id()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{262}{subsubsection.7.11.3.17}%
+\contentsline {subsubsection}{\numberline {7.11.3.18}get\_banking\_id()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{263}{subsubsection.7.11.3.18}%
+\contentsline {subsubsection}{\numberline {7.11.3.19}get\_client\_id()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{264}{subsubsection.7.11.3.19}%
+\contentsline {subsubsection}{\numberline {7.11.3.20}get\_client\_id()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{265}{subsubsection.7.11.3.20}%
+\contentsline {subsubsection}{\numberline {7.11.3.21}get\_client\_id\_byemail()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{266}{subsubsection.7.11.3.21}%
+\contentsline {subsubsection}{\numberline {7.11.3.22}get\_client\_id\_byemail()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{267}{subsubsection.7.11.3.22}%
+\contentsline {subsubsection}{\numberline {7.11.3.23}get\_client\_id\_byname()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{267}{subsubsection.7.11.3.23}%
+\contentsline {subsubsection}{\numberline {7.11.3.24}get\_client\_id\_byname()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{268}{subsubsection.7.11.3.24}%
+\contentsline {subsubsection}{\numberline {7.11.3.25}get\_credential()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{269}{subsubsection.7.11.3.25}%
+\contentsline {subsubsection}{\numberline {7.11.3.26}get\_credential()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{270}{subsubsection.7.11.3.26}%
+\contentsline {subsubsection}{\numberline {7.11.3.27}get\_currency\_id()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{271}{subsubsection.7.11.3.27}%
+\contentsline {subsubsection}{\numberline {7.11.3.28}get\_currency\_id()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{272}{subsubsection.7.11.3.28}%
+\contentsline {subsubsection}{\numberline {7.11.3.29}get\_currency\_name()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{273}{subsubsection.7.11.3.29}%
+\contentsline {subsubsection}{\numberline {7.11.3.30}get\_currency\_name()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{273}{subsubsection.7.11.3.30}%
+\contentsline {subsubsection}{\numberline {7.11.3.31}get\_last\_timestamp()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{274}{subsubsection.7.11.3.31}%
+\contentsline {subsubsection}{\numberline {7.11.3.32}get\_last\_timestamp()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{275}{subsubsection.7.11.3.32}%
+\contentsline {subsubsection}{\numberline {7.11.3.33}get\_name()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{276}{subsubsection.7.11.3.33}%
+\contentsline {subsubsection}{\numberline {7.11.3.34}get\_name()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{276}{subsubsection.7.11.3.34}%
+\contentsline {subsubsection}{\numberline {7.11.3.35}get\_password()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{277}{subsubsection.7.11.3.35}%
+\contentsline {subsubsection}{\numberline {7.11.3.36}get\_password()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{278}{subsubsection.7.11.3.36}%
+\contentsline {subsubsection}{\numberline {7.11.3.37}get\_preference\_currency\_bycid()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{279}{subsubsection.7.11.3.37}%
+\contentsline {subsubsection}{\numberline {7.11.3.38}get\_preference\_currency\_bycid()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{280}{subsubsection.7.11.3.38}%
+\contentsline {subsubsection}{\numberline {7.11.3.39}get\_sells()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{280}{subsubsection.7.11.3.39}%
+\contentsline {subsubsection}{\numberline {7.11.3.40}get\_sells()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{281}{subsubsection.7.11.3.40}%
+\contentsline {subsubsection}{\numberline {7.11.3.41}get\_transactions()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{282}{subsubsection.7.11.3.41}%
+\contentsline {subsubsection}{\numberline {7.11.3.42}get\_transactions()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{283}{subsubsection.7.11.3.42}%
+\contentsline {subsubsection}{\numberline {7.11.3.43}get\_transactions\_sum()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{284}{subsubsection.7.11.3.43}%
+\contentsline {subsubsection}{\numberline {7.11.3.44}get\_transactions\_sum()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{285}{subsubsection.7.11.3.44}%
+\contentsline {subsubsection}{\numberline {7.11.3.45}to\_euro()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{287}{subsubsection.7.11.3.45}%
+\contentsline {subsubsection}{\numberline {7.11.3.46}to\_euro()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{287}{subsubsection.7.11.3.46}%
+\contentsline {subsection}{\numberline {7.11.4}Field Documentation}{288}{subsection.7.11.4}%
+\contentsline {subsubsection}{\numberline {7.11.4.1}conn}{288}{subsubsection.7.11.4.1}%
+\contentsline {subsubsection}{\numberline {7.11.4.2}cur}{289}{subsubsection.7.11.4.2}%
+\contentsline {subsubsection}{\numberline {7.11.4.3}db\_log}{289}{subsubsection.7.11.4.3}%
+\contentsline {section}{\numberline {7.12}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts Class Reference}{290}{section.7.12}%
+\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{291}{subsection.7.12.1}%
+\contentsline {subsection}{\numberline {7.12.2}Constructor \& Destructor Documentation}{291}{subsection.7.12.2}%
+\contentsline {subsubsection}{\numberline {7.12.2.1}\_\_init\_\_()}{291}{subsubsection.7.12.2.1}%
+\contentsline {subsection}{\numberline {7.12.3}Member Function Documentation}{291}{subsection.7.12.3}%
+\contentsline {subsubsection}{\numberline {7.12.3.1}add\_bank\_account()}{291}{subsubsection.7.12.3.1}%
+\contentsline {subsubsection}{\numberline {7.12.3.2}add\_client()}{292}{subsubsection.7.12.3.2}%
+\contentsline {subsubsection}{\numberline {7.12.3.3}insert\_contact()}{292}{subsubsection.7.12.3.3}%
+\contentsline {subsubsection}{\numberline {7.12.3.4}insert\_trx()}{293}{subsubsection.7.12.3.4}%
+\contentsline {subsubsection}{\numberline {7.12.3.5}register()}{294}{subsubsection.7.12.3.5}%
+\contentsline {subsection}{\numberline {7.12.4}Field Documentation}{294}{subsection.7.12.4}%
+\contentsline {subsubsection}{\numberline {7.12.4.1}conn}{294}{subsubsection.7.12.4.1}%
+\contentsline {subsubsection}{\numberline {7.12.4.2}cur}{295}{subsubsection.7.12.4.2}%
+\contentsline {subsubsection}{\numberline {7.12.4.3}db\_log}{295}{subsubsection.7.12.4.3}%
+\contentsline {section}{\numberline {7.13}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inserts Class Reference}{296}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{297}{subsection.7.13.1}%
+\contentsline {subsection}{\numberline {7.13.2}Constructor \& Destructor Documentation}{297}{subsection.7.13.2}%
+\contentsline {subsubsection}{\numberline {7.13.2.1}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{297}{subsubsection.7.13.2.1}%
+\contentsline {subsubsection}{\numberline {7.13.2.2}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{298}{subsubsection.7.13.2.2}%
+\contentsline {subsection}{\numberline {7.13.3}Member Function Documentation}{298}{subsection.7.13.3}%
+\contentsline {subsubsection}{\numberline {7.13.3.1}add\_bank\_account()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{298}{subsubsection.7.13.3.1}%
+\contentsline {subsubsection}{\numberline {7.13.3.2}add\_bank\_account()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{299}{subsubsection.7.13.3.2}%
+\contentsline {subsubsection}{\numberline {7.13.3.3}add\_client()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{300}{subsubsection.7.13.3.3}%
+\contentsline {subsubsection}{\numberline {7.13.3.4}add\_client()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{301}{subsubsection.7.13.3.4}%
+\contentsline {subsubsection}{\numberline {7.13.3.5}add\_currency()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{302}{subsubsection.7.13.3.5}%
+\contentsline {subsubsection}{\numberline {7.13.3.6}add\_currency()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{303}{subsubsection.7.13.3.6}%
+\contentsline {subsubsection}{\numberline {7.13.3.7}insert\_contact()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{304}{subsubsection.7.13.3.7}%
+\contentsline {subsubsection}{\numberline {7.13.3.8}insert\_contact()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{305}{subsubsection.7.13.3.8}%
+\contentsline {subsubsection}{\numberline {7.13.3.9}insert\_trx()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{306}{subsubsection.7.13.3.9}%
+\contentsline {subsubsection}{\numberline {7.13.3.10}insert\_trx()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{307}{subsubsection.7.13.3.10}%
+\contentsline {subsubsection}{\numberline {7.13.3.11}register()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{308}{subsubsection.7.13.3.11}%
+\contentsline {subsubsection}{\numberline {7.13.3.12}register()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{309}{subsubsection.7.13.3.12}%
+\contentsline {subsection}{\numberline {7.13.4}Field Documentation}{310}{subsection.7.13.4}%
+\contentsline {subsubsection}{\numberline {7.13.4.1}conn}{310}{subsubsection.7.13.4.1}%
+\contentsline {subsubsection}{\numberline {7.13.4.2}cur}{310}{subsubsection.7.13.4.2}%
+\contentsline {subsubsection}{\numberline {7.13.4.3}db\_log}{311}{subsubsection.7.13.4.3}%
+\contentsline {section}{\numberline {7.14}object Class Reference}{312}{section.7.14}%
+\contentsline {section}{\numberline {7.15}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Payment\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gate Class Reference}{313}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{314}{subsection.7.15.1}%
+\contentsline {subsection}{\numberline {7.15.2}Constructor \& Destructor Documentation}{314}{subsection.7.15.2}%
+\contentsline {subsubsection}{\numberline {7.15.2.1}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{314}{subsubsection.7.15.2.1}%
+\contentsline {subsubsection}{\numberline {7.15.2.2}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{315}{subsubsection.7.15.2.2}%
+\contentsline {subsection}{\numberline {7.15.3}Member Function Documentation}{315}{subsection.7.15.3}%
+\contentsline {subsubsection}{\numberline {7.15.3.1}\_\_get\_balance()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{315}{subsubsection.7.15.3.1}%
+\contentsline {subsubsection}{\numberline {7.15.3.2}\_\_get\_balance()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{316}{subsubsection.7.15.3.2}%
+\contentsline {subsubsection}{\numberline {7.15.3.3}authenticated()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{316}{subsubsection.7.15.3.3}%
+\contentsline {subsubsection}{\numberline {7.15.3.4}authenticated()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{317}{subsubsection.7.15.3.4}%
+\contentsline {subsubsection}{\numberline {7.15.3.5}get\_balance()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{318}{subsubsection.7.15.3.5}%
+\contentsline {subsubsection}{\numberline {7.15.3.6}get\_balance()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{318}{subsubsection.7.15.3.6}%
+\contentsline {subsection}{\numberline {7.15.4}Field Documentation}{319}{subsection.7.15.4}%
+\contentsline {subsubsection}{\numberline {7.15.4.1}account\_number}{319}{subsubsection.7.15.4.1}%
+\contentsline {subsubsection}{\numberline {7.15.4.2}balance}{319}{subsubsection.7.15.4.2}%
+\contentsline {subsubsection}{\numberline {7.15.4.3}bank\_name}{319}{subsubsection.7.15.4.3}%
+\contentsline {subsubsection}{\numberline {7.15.4.4}base}{320}{subsubsection.7.15.4.4}%
+\contentsline {subsubsection}{\numberline {7.15.4.5}branch\_number}{320}{subsubsection.7.15.4.5}%
+\contentsline {subsubsection}{\numberline {7.15.4.6}name\_reference}{320}{subsubsection.7.15.4.6}%
+\contentsline {section}{\numberline {7.16}core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Restful\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{320}{section.7.16}%
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{321}{subsection.7.16.1}%
+\contentsline {subsection}{\numberline {7.16.2}Member Function Documentation}{322}{subsection.7.16.2}%
+\contentsline {subsubsection}{\numberline {7.16.2.1}\_\_add\_trax()}{322}{subsubsection.7.16.2.1}%
+\contentsline {subsubsection}{\numberline {7.16.2.2}\_\_auth()}{322}{subsubsection.7.16.2.2}%
+\contentsline {subsubsection}{\numberline {7.16.2.3}\_\_get\_dict()}{323}{subsubsection.7.16.2.3}%
+\contentsline {subsubsection}{\numberline {7.16.2.4}\_\_ledger\_timestamp()}{323}{subsubsection.7.16.2.4}%
+\contentsline {subsubsection}{\numberline {7.16.2.5}\_\_rand\_alphanum()}{323}{subsubsection.7.16.2.5}%
+\contentsline {subsubsection}{\numberline {7.16.2.6}\_\_register\_bank\_account()}{324}{subsubsection.7.16.2.6}%
+\contentsline {subsubsection}{\numberline {7.16.2.7}\_\_transact()}{324}{subsubsection.7.16.2.7}%
+\contentsline {subsubsection}{\numberline {7.16.2.8}\_\_update\_balance()}{325}{subsubsection.7.16.2.8}%
+\contentsline {subsubsection}{\numberline {7.16.2.9}\_\_update\_ledger()}{326}{subsubsection.7.16.2.9}%
+\contentsline {subsubsection}{\numberline {7.16.2.10}add\_contact()}{328}{subsubsection.7.16.2.10}%
+\contentsline {subsubsection}{\numberline {7.16.2.11}autotract()}{329}{subsubsection.7.16.2.11}%
+\contentsline {subsubsection}{\numberline {7.16.2.12}setUp()}{330}{subsubsection.7.16.2.12}%
+\contentsline {subsubsection}{\numberline {7.16.2.13}test\_add\_contact()}{330}{subsubsection.7.16.2.13}%
+\contentsline {subsubsection}{\numberline {7.16.2.14}test\_get\_balance()}{331}{subsubsection.7.16.2.14}%
+\contentsline {subsubsection}{\numberline {7.16.2.15}test\_make\_transaction()}{331}{subsubsection.7.16.2.15}%
+\contentsline {subsubsection}{\numberline {7.16.2.16}test\_register()}{332}{subsubsection.7.16.2.16}%
+\contentsline {subsubsection}{\numberline {7.16.2.17}test\_udapte\_ledger()}{332}{subsubsection.7.16.2.17}%
+\contentsline {subsection}{\numberline {7.16.3}Field Documentation}{333}{subsection.7.16.3}%
+\contentsline {subsubsection}{\numberline {7.16.3.1}app}{333}{subsubsection.7.16.3.1}%
+\contentsline {subsubsection}{\numberline {7.16.3.2}balance}{333}{subsubsection.7.16.3.2}%
+\contentsline {subsubsection}{\numberline {7.16.3.3}pas}{333}{subsubsection.7.16.3.3}%
+\contentsline {subsubsection}{\numberline {7.16.3.4}uname}{333}{subsubsection.7.16.3.4}%
+\contentsline {section}{\numberline {7.17}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Database\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{334}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{335}{subsection.7.17.1}%
+\contentsline {subsection}{\numberline {7.17.2}Member Function Documentation}{335}{subsection.7.17.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.1}test\_add\_bank\_account()}{335}{subsubsection.7.17.2.1}%
+\contentsline {subsubsection}{\numberline {7.17.2.2}test\_balance()}{336}{subsubsection.7.17.2.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.3}test\_bank\_account\_exist\_by\_cid()}{336}{subsubsection.7.17.2.3}%
+\contentsline {subsubsection}{\numberline {7.17.2.4}test\_banking\_byemail()}{337}{subsubsection.7.17.2.4}%
+\contentsline {subsubsection}{\numberline {7.17.2.5}test\_banking\_byname()}{337}{subsubsection.7.17.2.5}%
+\contentsline {subsubsection}{\numberline {7.17.2.6}test\_bid\_cid\_conversion()}{338}{subsubsection.7.17.2.6}%
+\contentsline {subsubsection}{\numberline {7.17.2.7}test\_client\_exists()}{339}{subsubsection.7.17.2.7}%
+\contentsline {subsubsection}{\numberline {7.17.2.8}test\_credential\_exists()}{340}{subsubsection.7.17.2.8}%
+\contentsline {subsubsection}{\numberline {7.17.2.9}test\_credid2cid()}{340}{subsubsection.7.17.2.9}%
+\contentsline {subsubsection}{\numberline {7.17.2.10}test\_currency()}{341}{subsubsection.7.17.2.10}%
+\contentsline {subsubsection}{\numberline {7.17.2.11}test\_password()}{341}{subsubsection.7.17.2.11}%
+\contentsline {subsubsection}{\numberline {7.17.2.12}test\_transaction()}{342}{subsubsection.7.17.2.12}%
+\contentsline {subsubsection}{\numberline {7.17.2.13}test\_update\_balance()}{344}{subsubsection.7.17.2.13}%
+\contentsline {section}{\numberline {7.18}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}updates Class Reference}{345}{section.7.18}%
+\contentsline {subsection}{\numberline {7.18.1}Detailed Description}{346}{subsection.7.18.1}%
+\contentsline {subsection}{\numberline {7.18.2}Constructor \& Destructor Documentation}{346}{subsection.7.18.2}%
+\contentsline {subsubsection}{\numberline {7.18.2.1}\_\_init\_\_()}{346}{subsubsection.7.18.2.1}%
+\contentsline {subsection}{\numberline {7.18.3}Member Function Documentation}{346}{subsection.7.18.3}%
+\contentsline {subsubsection}{\numberline {7.18.3.1}update\_account()}{347}{subsubsection.7.18.3.1}%
+\contentsline {subsection}{\numberline {7.18.4}Field Documentation}{347}{subsection.7.18.4}%
+\contentsline {subsubsection}{\numberline {7.18.4.1}conn}{347}{subsubsection.7.18.4.1}%
+\contentsline {subsubsection}{\numberline {7.18.4.2}cur}{348}{subsubsection.7.18.4.2}%
+\contentsline {subsubsection}{\numberline {7.18.4.3}db\_log}{348}{subsubsection.7.18.4.3}%
+\contentsline {section}{\numberline {7.19}core.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}queries.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}updates Class Reference}{349}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Detailed Description}{350}{subsection.7.19.1}%
+\contentsline {subsection}{\numberline {7.19.2}Constructor \& Destructor Documentation}{350}{subsection.7.19.2}%
+\contentsline {subsubsection}{\numberline {7.19.2.1}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{350}{subsubsection.7.19.2.1}%
+\contentsline {subsubsection}{\numberline {7.19.2.2}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{350}{subsubsection.7.19.2.2}%
+\contentsline {subsection}{\numberline {7.19.3}Member Function Documentation}{351}{subsection.7.19.3}%
+\contentsline {subsubsection}{\numberline {7.19.3.1}currency\_preference()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{351}{subsubsection.7.19.3.1}%
+\contentsline {subsubsection}{\numberline {7.19.3.2}currency\_preference()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{352}{subsubsection.7.19.3.2}%
+\contentsline {subsubsection}{\numberline {7.19.3.3}update\_account()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{353}{subsubsection.7.19.3.3}%
+\contentsline {subsubsection}{\numberline {7.19.3.4}update\_account()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{353}{subsubsection.7.19.3.4}%
+\contentsline {subsection}{\numberline {7.19.4}Field Documentation}{354}{subsection.7.19.4}%
+\contentsline {subsubsection}{\numberline {7.19.4.1}conn}{354}{subsubsection.7.19.4.1}%
+\contentsline {subsubsection}{\numberline {7.19.4.2}cur}{354}{subsubsection.7.19.4.2}%
+\contentsline {subsubsection}{\numberline {7.19.4.3}db\_log}{355}{subsubsection.7.19.4.3}%
+\contentsline {chapter}{\numberline {8}File Documentation}{357}{chapter.8}%
+\contentsline {section}{\numberline {8.1}core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{357}{section.8.1}%
+\contentsline {section}{\numberline {8.2}core/build/lib/client/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{357}{section.8.2}%
+\contentsline {section}{\numberline {8.3}core/build/lib/queries/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{357}{section.8.3}%
+\contentsline {section}{\numberline {8.4}core/build/lib/queries/exists/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{357}{section.8.4}%
+\contentsline {section}{\numberline {8.5}core/build/lib/queries/gets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{357}{section.8.5}%
+\contentsline {section}{\numberline {8.6}core/build/lib/queries/inserts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{358}{section.8.6}%
+\contentsline {section}{\numberline {8.7}core/build/lib/queries/updates/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{358}{section.8.7}%
+\contentsline {section}{\numberline {8.8}core/build/lib/server/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{358}{section.8.8}%
+\contentsline {section}{\numberline {8.9}core/client/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{358}{section.8.9}%
+\contentsline {section}{\numberline {8.10}core/queries/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{358}{section.8.10}%
+\contentsline {section}{\numberline {8.11}core/queries/exists/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{358}{section.8.11}%
+\contentsline {section}{\numberline {8.12}core/queries/gets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{358}{section.8.12}%
+\contentsline {section}{\numberline {8.13}core/queries/inserts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{359}{section.8.13}%
+\contentsline {section}{\numberline {8.14}core/queries/updates/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{359}{section.8.14}%
+\contentsline {section}{\numberline {8.15}core/server/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{359}{section.8.15}%
+\contentsline {section}{\numberline {8.16}build/lib/core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{359}{section.8.16}%
+\contentsline {section}{\numberline {8.17}build/lib/core/client/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{359}{section.8.17}%
+\contentsline {section}{\numberline {8.18}build/lib/core/queries/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{359}{section.8.18}%
+\contentsline {section}{\numberline {8.19}build/lib/core/queries/exists/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{359}{section.8.19}%
+\contentsline {section}{\numberline {8.20}build/lib/core/queries/gets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{360}{section.8.20}%
+\contentsline {section}{\numberline {8.21}build/lib/core/queries/inserts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{360}{section.8.21}%
+\contentsline {section}{\numberline {8.22}build/lib/core/queries/updates/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{360}{section.8.22}%
+\contentsline {section}{\numberline {8.23}build/lib/core/server/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{360}{section.8.23}%
+\contentsline {section}{\numberline {8.24}core/build/lib/client/client.py File Reference}{360}{section.8.24}%
+\contentsline {section}{\numberline {8.25}core/client/client.py File Reference}{361}{section.8.25}%
+\contentsline {section}{\numberline {8.26}build/lib/core/client/client.py File Reference}{362}{section.8.26}%
+\contentsline {section}{\numberline {8.27}core/build/lib/queries/database.py File Reference}{362}{section.8.27}%
+\contentsline {section}{\numberline {8.28}core/queries/database.py File Reference}{362}{section.8.28}%
+\contentsline {section}{\numberline {8.29}core/tests/database.py File Reference}{363}{section.8.29}%
+\contentsline {section}{\numberline {8.30}build/lib/core/queries/database.py File Reference}{363}{section.8.30}%
+\contentsline {section}{\numberline {8.31}core/build/lib/queries/exists.py File Reference}{364}{section.8.31}%
+\contentsline {section}{\numberline {8.32}core/queries/exists.py File Reference}{364}{section.8.32}%
+\contentsline {section}{\numberline {8.33}build/lib/core/queries/exists.py File Reference}{364}{section.8.33}%
+\contentsline {section}{\numberline {8.34}core/build/lib/queries/exists/banking.py File Reference}{364}{section.8.34}%
+\contentsline {section}{\numberline {8.35}core/build/lib/queries/gets/banking.py File Reference}{364}{section.8.35}%
+\contentsline {section}{\numberline {8.36}core/build/lib/queries/inserts/banking.py File Reference}{365}{section.8.36}%
+\contentsline {section}{\numberline {8.37}core/build/lib/queries/updates/banking.py File Reference}{365}{section.8.37}%
+\contentsline {section}{\numberline {8.38}core/queries/exists/banking.py File Reference}{365}{section.8.38}%
+\contentsline {section}{\numberline {8.39}core/queries/gets/banking.py File Reference}{365}{section.8.39}%
+\contentsline {section}{\numberline {8.40}core/queries/inserts/banking.py File Reference}{366}{section.8.40}%
+\contentsline {section}{\numberline {8.41}core/queries/updates/banking.py File Reference}{366}{section.8.41}%
+\contentsline {section}{\numberline {8.42}build/lib/core/queries/exists/banking.py File Reference}{366}{section.8.42}%
+\contentsline {section}{\numberline {8.43}build/lib/core/queries/gets/banking.py File Reference}{366}{section.8.43}%
+\contentsline {section}{\numberline {8.44}build/lib/core/queries/inserts/banking.py File Reference}{367}{section.8.44}%
+\contentsline {section}{\numberline {8.45}build/lib/core/queries/updates/banking.py File Reference}{367}{section.8.45}%
+\contentsline {section}{\numberline {8.46}core/build/lib/queries/exists/clients.py File Reference}{367}{section.8.46}%
+\contentsline {section}{\numberline {8.47}core/build/lib/queries/gets/clients.py File Reference}{367}{section.8.47}%
+\contentsline {section}{\numberline {8.48}core/build/lib/queries/inserts/clients.py File Reference}{368}{section.8.48}%
+\contentsline {section}{\numberline {8.49}core/queries/exists/clients.py File Reference}{368}{section.8.49}%
+\contentsline {section}{\numberline {8.50}core/queries/gets/clients.py File Reference}{368}{section.8.50}%
+\contentsline {section}{\numberline {8.51}core/queries/inserts/clients.py File Reference}{368}{section.8.51}%
+\contentsline {section}{\numberline {8.52}build/lib/core/queries/exists/clients.py File Reference}{369}{section.8.52}%
+\contentsline {section}{\numberline {8.53}build/lib/core/queries/gets/clients.py File Reference}{369}{section.8.53}%
+\contentsline {section}{\numberline {8.54}build/lib/core/queries/inserts/clients.py File Reference}{369}{section.8.54}%
+\contentsline {section}{\numberline {8.55}core/build/lib/queries/exists/contacts.py File Reference}{369}{section.8.55}%
+\contentsline {section}{\numberline {8.56}core/build/lib/queries/gets/contacts.py File Reference}{370}{section.8.56}%
+\contentsline {section}{\numberline {8.57}core/build/lib/queries/inserts/contacts.py File Reference}{370}{section.8.57}%
+\contentsline {section}{\numberline {8.58}core/queries/exists/contacts.py File Reference}{370}{section.8.58}%
+\contentsline {section}{\numberline {8.59}core/queries/gets/contacts.py File Reference}{370}{section.8.59}%
+\contentsline {section}{\numberline {8.60}core/queries/inserts/contacts.py File Reference}{371}{section.8.60}%
+\contentsline {section}{\numberline {8.61}build/lib/core/queries/exists/contacts.py File Reference}{371}{section.8.61}%
+\contentsline {section}{\numberline {8.62}build/lib/core/queries/gets/contacts.py File Reference}{371}{section.8.62}%
+\contentsline {section}{\numberline {8.63}build/lib/core/queries/inserts/contacts.py File Reference}{371}{section.8.63}%
+\contentsline {section}{\numberline {8.64}core/build/lib/queries/exists/credentials.py File Reference}{372}{section.8.64}%
+\contentsline {section}{\numberline {8.65}core/build/lib/queries/gets/credentials.py File Reference}{372}{section.8.65}%
+\contentsline {section}{\numberline {8.66}core/build/lib/queries/inserts/credentials.py File Reference}{372}{section.8.66}%
+\contentsline {section}{\numberline {8.67}core/queries/exists/credentials.py File Reference}{372}{section.8.67}%
+\contentsline {section}{\numberline {8.68}core/queries/gets/credentials.py File Reference}{373}{section.8.68}%
+\contentsline {section}{\numberline {8.69}core/queries/inserts/credentials.py File Reference}{373}{section.8.69}%
+\contentsline {section}{\numberline {8.70}build/lib/core/queries/exists/credentials.py File Reference}{373}{section.8.70}%
+\contentsline {section}{\numberline {8.71}build/lib/core/queries/gets/credentials.py File Reference}{373}{section.8.71}%
+\contentsline {section}{\numberline {8.72}build/lib/core/queries/inserts/credentials.py File Reference}{374}{section.8.72}%
+\contentsline {section}{\numberline {8.73}core/build/lib/queries/exists/goods.py File Reference}{374}{section.8.73}%
+\contentsline {section}{\numberline {8.74}core/build/lib/queries/gets/goods.py File Reference}{374}{section.8.74}%
+\contentsline {section}{\numberline {8.75}core/build/lib/queries/inserts/goods.py File Reference}{375}{section.8.75}%
+\contentsline {section}{\numberline {8.76}core/queries/exists/goods.py File Reference}{375}{section.8.76}%
+\contentsline {section}{\numberline {8.77}core/queries/gets/goods.py File Reference}{375}{section.8.77}%
+\contentsline {section}{\numberline {8.78}core/queries/inserts/goods.py File Reference}{375}{section.8.78}%
+\contentsline {section}{\numberline {8.79}build/lib/core/queries/exists/goods.py File Reference}{376}{section.8.79}%
+\contentsline {section}{\numberline {8.80}build/lib/core/queries/gets/goods.py File Reference}{376}{section.8.80}%
+\contentsline {section}{\numberline {8.81}build/lib/core/queries/inserts/goods.py File Reference}{376}{section.8.81}%
+\contentsline {section}{\numberline {8.82}core/build/lib/queries/exists/owners.py File Reference}{376}{section.8.82}%
+\contentsline {section}{\numberline {8.83}core/build/lib/queries/inserts/owners.py File Reference}{377}{section.8.83}%
+\contentsline {section}{\numberline {8.84}core/build/lib/queries/updates/owners.py File Reference}{377}{section.8.84}%
+\contentsline {section}{\numberline {8.85}core/queries/exists/owners.py File Reference}{377}{section.8.85}%
+\contentsline {section}{\numberline {8.86}core/queries/inserts/owners.py File Reference}{377}{section.8.86}%
+\contentsline {section}{\numberline {8.87}core/queries/updates/owners.py File Reference}{378}{section.8.87}%
+\contentsline {section}{\numberline {8.88}build/lib/core/queries/exists/owners.py File Reference}{378}{section.8.88}%
+\contentsline {section}{\numberline {8.89}build/lib/core/queries/inserts/owners.py File Reference}{378}{section.8.89}%
+\contentsline {section}{\numberline {8.90}build/lib/core/queries/updates/owners.py File Reference}{378}{section.8.90}%
+\contentsline {section}{\numberline {8.91}core/build/lib/queries/gets/currency.py File Reference}{379}{section.8.91}%
+\contentsline {section}{\numberline {8.92}core/queries/gets/currency.py File Reference}{379}{section.8.92}%
+\contentsline {section}{\numberline {8.93}build/lib/core/queries/gets/currency.py File Reference}{379}{section.8.93}%
+\contentsline {section}{\numberline {8.94}core/build/lib/queries/gets/ledger.py File Reference}{379}{section.8.94}%
+\contentsline {section}{\numberline {8.95}core/build/lib/queries/inserts/ledger.py File Reference}{380}{section.8.95}%
+\contentsline {section}{\numberline {8.96}core/queries/gets/ledger.py File Reference}{380}{section.8.96}%
+\contentsline {section}{\numberline {8.97}core/queries/inserts/ledger.py File Reference}{380}{section.8.97}%
+\contentsline {section}{\numberline {8.98}build/lib/core/queries/gets/ledger.py File Reference}{380}{section.8.98}%
+\contentsline {section}{\numberline {8.99}build/lib/core/queries/inserts/ledger.py File Reference}{381}{section.8.99}%
+\contentsline {section}{\numberline {8.100}core/build/lib/queries/gets/owner.py File Reference}{381}{section.8.100}%
+\contentsline {section}{\numberline {8.101}core/queries/gets/owner.py File Reference}{381}{section.8.101}%
+\contentsline {section}{\numberline {8.102}build/lib/core/queries/gets/owner.py File Reference}{381}{section.8.102}%
+\contentsline {section}{\numberline {8.103}core/build/lib/server/server.py File Reference}{382}{section.8.103}%
+\contentsline {section}{\numberline {8.104}core/server/server.py File Reference}{382}{section.8.104}%
+\contentsline {section}{\numberline {8.105}build/lib/core/server/server.py File Reference}{383}{section.8.105}%
+\contentsline {section}{\numberline {8.106}core/connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cursor.py File Reference}{383}{section.8.106}%
+\contentsline {section}{\numberline {8.107}build/lib/core/connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cursor.py File Reference}{383}{section.8.107}%
+\contentsline {section}{\numberline {8.108}core/tahweela.egg-\/info/dependency\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}links.txt File Reference}{384}{section.8.108}%
+\contentsline {section}{\numberline {8.109}tahweela.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}egg-\/info/dependency\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}links.txt File Reference}{384}{section.8.109}%
+\contentsline {section}{\numberline {8.110}core/tahweela.egg-\/info/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ES.txt File Reference}{384}{section.8.110}%
+\contentsline {section}{\numberline {8.111}tahweela.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}egg-\/info/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ES.txt File Reference}{384}{section.8.111}%
+\contentsline {section}{\numberline {8.112}core/tahweela.egg-\/info/top\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}level.txt File Reference}{384}{section.8.112}%
+\contentsline {section}{\numberline {8.113}tahweela.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}egg-\/info/top\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}level.txt File Reference}{384}{section.8.113}%
+\contentsline {section}{\numberline {8.114}core/tests/core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}test.py File Reference}{384}{section.8.114}%
+\contentsline {section}{\numberline {8.115}core/utils.py File Reference}{385}{section.8.115}%
+\contentsline {section}{\numberline {8.116}build/lib/core/utils.py File Reference}{386}{section.8.116}%
+\contentsline {section}{\numberline {8.117}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{386}{section.8.117}%
+\contentsline {section}{\numberline {8.118}requirements.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}txt File Reference}{386}{section.8.118}%
+\contentsline {section}{\numberline {8.119}setup.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py File Reference}{386}{section.8.119}%

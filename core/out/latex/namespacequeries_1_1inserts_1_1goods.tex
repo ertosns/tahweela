@@ -1,0 +1,54 @@
+\hypertarget{namespacequeries_1_1inserts_1_1goods}{}\doxysection{queries.\+inserts.\+goods Namespace Reference}
+\label{namespacequeries_1_1inserts_1_1goods}\index{queries.inserts.goods@{queries.inserts.goods}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacequeries_1_1inserts_1_1goods_a40a309c94fa6c1be28dcffe22870884f}{add\+\_\+good}} (gname, gquality, gcost, gcid=1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacequeries_1_1inserts_1_1goods_a40a309c94fa6c1be28dcffe22870884f}\label{namespacequeries_1_1inserts_1_1goods_a40a309c94fa6c1be28dcffe22870884f}} 
+\index{queries.inserts.goods@{queries.inserts.goods}!add\_good@{add\_good}}
+\index{add\_good@{add\_good}!queries.inserts.goods@{queries.inserts.goods}}
+\doxysubsubsection{\texorpdfstring{add\_good()}{add\_good()}}
+{\footnotesize\ttfamily def queries.\+inserts.\+goods.\+add\+\_\+good (\begin{DoxyParamCaption}\item[{}]{gname,  }\item[{}]{gquality,  }\item[{}]{gcost,  }\item[{}]{gcid = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}INSERT new good into the goods table
+
+@param gname: good name
+@param gquality: good quality
+@param gcost: good cost
+@param gcid: good currency id
+\end{DoxyVerb}
+ 
+
+Definition at line 5 of file goods.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1inserts_1_1goods_a7de035dad95e84b03e1ccddf0b11b74e}{add\_good}}(gname, gquality, gcost, gcid=1):}
+\DoxyCodeLine{6     \textcolor{stringliteral}{""" INSERT new good into the goods table}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{    @param gname: good name}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{    @param gquality: good quality}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{    @param gcost: good cost}}
+\DoxyCodeLine{11 \textcolor{stringliteral}{    @param gcid: good currency id}}
+\DoxyCodeLine{12 \textcolor{stringliteral}{    """}}
+\DoxyCodeLine{13     stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO goods (good\_name, good\_quality, good\_cost, good\_currency\_id) VALUES (\{gname\}, \{gquality\}, \{gcost\}, \{gcid\});"}).\(\backslash\)}
+\DoxyCodeLine{14         \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(gname=sql.Literal(gname), \(\backslash\)}
+\DoxyCodeLine{15                gquality=sql.Literal(gquality), \(\backslash\)}
+\DoxyCodeLine{16                gcost=sql.Literal(gcost), \(\backslash\)}
+\DoxyCodeLine{17                gcid=sql.Literal(gcid))}
+\DoxyCodeLine{18     db\_log.debug(stat)}
+\DoxyCodeLine{19     cur.execute(stat)}
+\DoxyCodeLine{20     stat=\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('goods', 'id'));"}}
+\DoxyCodeLine{21     cur.execute(stat)}
+\DoxyCodeLine{22     db\_log.debug(stat)}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} cur.fetchone()[0]}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+
