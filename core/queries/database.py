@@ -6,12 +6,13 @@ import pandas as pd
 import datetime as dt
 import random as rand
 import string
-from core.utils import CONTACTS_URL, GOODS_URL, REGISTER_URL, LEDGER_URL, PURCHASE_URL, BALANCE_URL, MAX_GOODS, MAX_COST, STOCHASTIC_TRADE_THRESHOLD, MAX_CRED_ID, TIMESTAMP_FORMAT, Currency, process_cur, EUR, USD, EGP
+from core.utils import CONTACTS_URL, GOODS_URL, REGISTER_URL, LEDGER_URL, PURCHASE_URL, BALANCE_URL, MAX_GOODS, MAX_COST, STOCHASTIC_TRADE_THRESHOLD, MAX_CRED_ID, TIMESTAMP_FORMAT, Currency, process_cur, EUR, USD, EGP, hash
 
 class exists(object):
-    def __init__(self, conn, cur):
+    def __init__(self, conn, cur, logger):
         self.conn=conn
         self.cur=cur
+        self.logger=logger
     def currency(self, name):
         """check wither given currency name exists
 
@@ -20,8 +21,9 @@ class exists(object):
         stat=sql.SQL("SELECT EXISTS (SELECT 1 FROM currency WHERE currency_name={name}) LIMIT 1 FOR UPDATE SKIP LOCKED").format(name=sql.Literal(process_cur(name)))
         self.cur.execute(stat)
         ret=self.cur.fetchone()[0]
-        print('assert that currency exists with name {}, ret: {}'.format(name, ret))
+        self.logger.debug('assert that currency exists with name {}, ret: {}'.format(name, ret))
         return ret
+
     def account_byemail(self, email):
         """verify that account with corresponding email doesn't exists
 
@@ -32,8 +34,8 @@ class exists(object):
             .format(email=sql.Literal(email))
         self.cur.execute(stat)
         fet=self.cur.fetchone()
-        print('exists.account_byemail {} fet: {}'.format(email, fet))
         return fet[0]
+
     def account_byname(self, name, passcode):
         """verify that account with corresponding email doesn't exists
 
@@ -43,10 +45,26 @@ class exists(object):
         """
         stat=sql.SQL("SELECT EXISTS(SELECT 1 FROM clients AS c JOIN credentials AS cred ON cred.id=c.client_id WHERE c.client_name={name} AND cred.passcode={passcode}) FOR UPDATE SKIP LOCKED;")\
             .format(name=sql.Literal(name),\
-                    passcode=sql.Literal(passcode))
+                    passcode=sql.Literal(hash(passcode)))
         self.cur.execute(stat)
         fet=self.cur.fetchone()
-        print('exists.account_byname {} fet: {}'.format(name, fet))
+        self.logger.debug('exists.account_byname {} fet: {}'.format(name, fet))
+        return fet[0]
+
+    def user(self, user, passcode):
+        """verify that account with corresponding email doesn't exists
+
+        @param name: client name
+        @param passcode: client passcode
+        @return boolean for hypothesis test, that it exists
+        """
+        #TODO is the duplicate user1, user2 necessary
+        stat=sql.SQL("SELECT EXISTS (SELECT 1 FROM clients AS c JOIN credentials AS cred ON (cred.id=c.client_id) WHERE (c.client_email={user} AND cred.passcode={passcode}) OR (c.client_name={user} AND cred.passcode={passcode})) FOR UPDATE SKIP LOCKED;")\
+            .format(user=sql.Literal(user),\
+                    passcode=sql.Literal(hash(passcode)))
+        self.cur.execute(stat)
+        fet=self.cur.fetchone()
+        self.logger.debug('exists.account_byname {} fet: {}'.format(user, fet))
         return fet[0]
     def bank_account_bycid(self, cid):
         """verify that a banking account with the given client id is available (CALLED AT THE SERVER SIDE)
@@ -89,6 +107,16 @@ class exists(object):
             format(cid=sql.Literal(cid))
         self.cur.execute(stat)
         return self.cur.fetchone()[0]
+    def credid_exists(self, cidid):
+        """ verify the credential id itself exists (called from server side)
+
+        @param cidid: credential id
+        @return boolean for wither the given credid exists!
+        """
+        stat=sql.SQL("SELECT EXISTS (SELECT 1 FROM credentials WHERE cred_id={cidid}) FOR UPDATE SKIP LOCKED;").\
+            format(cid=sql.Literal(cid))
+        self.cur.execute(stat)
+        return self.cur.fetchone()[0]
     '''
     def exists(self, gid):
         """verify that a good with given id is available
@@ -101,11 +129,13 @@ class exists(object):
         self.cur.execute(stat)
         return self.cur.fetchone()[0]
     '''
+
 class gets(object):
     def __init__(self, conn, cur, logger):
         self.conn=conn
         self.cur=cur
         self.db_log=logger
+    #TODO merge those together as well!
     def get_client_id_byemail(self, email):
         """ retrieve the corresponding client_id of the given banking_id (bid) (called at the server side)
 
@@ -116,10 +146,7 @@ class gets(object):
             format(email=sql.Literal(email))
         self.db_log.debug(query)
         self.cur.execute(query)
-        ret=self.cur.fetchone()
-        if None:
-            return False
-        return ret[0]
+        return self.cur.fetchone()[0]
     #pd.read_sql(query, self.conn).ix[0]
     def get_client_id_byname(self, name, passcode):
         """ retrieve the corresponding client_id of the given banking_id (bid) (called at the server side)
@@ -129,11 +156,24 @@ class gets(object):
         """
         query=sql.SQL("SELECT (c.client_id) FROM clients AS c INNER JOIN credentials   ON (credentials.id=c.client_id) WHERE c.client_name={name} AND credentials.passcode={passcode} LIMIT 1  FOR UPDATE SKIP LOCKED;").\
             format(name=sql.Literal(name),\
-                   passcode=sql.Literal(passcode))
+                   passcode=sql.Literal(hash(passcode)))
         self.db_log.debug(query)
         self.cur.execute(query)
-        return self.cur.fetchone()
+        return self.cur.fetchone()[0]
         #return pd.read_sql(query, self.conn).iloc[0]
+
+    def get_cid(self, user, passcode):
+        """ retrieve the corresponding client_id of the given banking_id (bid) (called at the server side)
+
+        @param user: client name/email
+        @return cid: client id
+        """
+        query=sql.SQL("SELECT (client_id) FROM clients WHERE client_email={user} OR client_name={user} LIMIT 1 FOR UPDATE SKIP LOCKED;").\
+            format(user=sql.Literal(user))
+        self.db_log.debug(query)
+        self.cur.execute(query)
+        return self.cur.fetchone()[0]
+
     def get_client_id(self, bid):
         """ retrieve the corresponding client_id of the given banking_id (bid) (called at the server side)
 
@@ -180,6 +220,7 @@ class gets(object):
         self.db_log.debug(query)
         self.cur.execute(query)
         return self.cur.fetchone()
+
     def get_currency_name(self, id):
         """ get currency name associated with currency id
 
@@ -201,10 +242,7 @@ class gets(object):
             format(cid=sql.Literal(cid))
         self.db_log.debug(query)
         self.cur.execute(query)
-        fet=self.cur.fetchone()
-        print('fet: ', fet)
-        print('fet[0]: ', fet[0])
-        fet=eval(fet[0])
+        fet=eval(self.cur.fetchone()[0])
         balance=fet[0]
         base=fet[1]
         return {'balance':balance, 'base': base}
@@ -294,9 +332,7 @@ class gets(object):
             format(credid=sql.Literal(cred_id))
         self.db_log.debug(query)
         self.cur.execute(query)
-        fet=self.cur.fetchone()
-        print("cred2cid fet: ", fet)
-        return fet[0]
+        return self.cur.fetchone()[0]
     def cid2credid(self, cid):
         """ get credential id
 
@@ -307,9 +343,7 @@ class gets(object):
             format(cid=sql.Literal(cid))
         self.db_log.debug(query)
         self.cur.execute(query)
-        fet=self.cur.fetchone()
-        print("cid2credid fet: ", fet)
-        return fet[0]
+        return self.cur.fetchone()[0]
     def get_password(self, cred_id):
         """ get user's passcode for authentication
 
@@ -334,9 +368,8 @@ class gets(object):
             format(cid=sql.Literal(cid))
         self.db_log.debug(query)
         self.cur.execute(query)
-        fet=self.cur.fetchone()
+        return self.cur.fetchone()[0]
         #ratio = 1.0/pd.read_sql(query, self.conn)['currency_value'].ix[0]
-        return fet[0]
     '''
     def get_credid_with_gid(self, gid):
         """cross reference credential id, with good's id
@@ -523,7 +556,7 @@ class inserts(object):
         stat=sql.SQL("INSERT INTO currency (currency_name, currency_value) VALUES ({cur_name}, {cur_val});").\
             format(cur_name=sql.Literal(process_cur(cur_name)), \
                    cur_val=sql.Literal(cur_rate))
-        print('currency added name: {}, and rate: {}'.format(cur_name, cur_rate))
+        self.db_log.debug('currency added name: {}, and rate: {}'.format(cur_name, cur_rate))
         self.cur.execute(stat)
     def add_bank_account(self, cid, balance, bank_name, branch_number, account_number, name_reference, base_currency_id):
         """ give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)
@@ -582,9 +615,10 @@ class inserts(object):
         @param passcode: client password
         @param cred_id: credential id
         """
-        stat=sql.SQL("INSERT INTO credentials (id, passcode, cred_id) VALUES ({cid}, {passcode}, {credid});").\
+        #, gen_salt('bf',8)
+        stat=sql.SQL("INSERT INTO credentials  (id, passcode, cred_id)  VALUES ({cid}, {passcode}, {credid});").\
             format(cid=sql.Literal(cid),\
-                   passcode=sql.Literal(passcode), \
+                   passcode=sql.Literal(hash(passcode)), \
                    credid=sql.Literal(cred_id))
         self.db_log.debug(stat)
         self.cur.execute(stat)
@@ -702,7 +736,7 @@ class database(object):
                             filemode='w')
         self.logger=logging.getLogger()
         self.logger.setLevel(logging.DEBUG)
-        self.exists=exists(self.conn, self.cur)
+        self.exists=exists(self.conn, self.cur, self.logger)
         self.gets=gets(self.conn, self.cur, self.logger)
         self.inserts=inserts(self.conn, self.cur, self.logger)
         self.updates=updates(self.conn, self.cur, self.logger)

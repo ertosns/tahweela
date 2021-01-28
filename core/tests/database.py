@@ -5,7 +5,7 @@ import random
 import os
 import string
 import datetime
-from core.utils import TIMESTAMP_FORMAT, Currency, process_cur, EUR, USD, EGP
+from core.utils import TIMESTAMP_FORMAT, Currency, process_cur, EUR, USD, EGP, hash, get_credid
 
 seed=int.from_bytes(os.urandom(2), "big")
 random.seed(seed)
@@ -33,12 +33,10 @@ def get_email():
     return faker.email()
 def get_balance():
     return 333*random.random()
-def get_credid():
-    return int(3333333333333*random.random())
 
 email=get_email()
 name=get_name()
-credid=get_credid()
+credid=get_credid(email)
 balance=get_balance()
 ADD_CURRENCY_LOCK=1
 lock=ADD_CURRENCY_LOCK
@@ -64,7 +62,7 @@ class ServerDatabaseTest(unittest.TestCase):
 
     def test_banking_byemail(self):
         #db.init()
-        #db.repeatable_read()        
+        #db.repeatable_read()
         #db.lock_advisory(lock)
         exchange=Currency(EUR)
         rate=exchange.rate
@@ -125,7 +123,7 @@ class ServerDatabaseTest(unittest.TestCase):
         name=get_name()
         email=get_email()
         passcode=get_rand_pass()
-        credid=get_credid()
+        credid=get_credid(email)
         db.inserts.add_client(name, email, curr_id)
         db.commit()
         cid=db.gets.get_client_id_byemail(email)
@@ -144,7 +142,7 @@ class ServerDatabaseTest(unittest.TestCase):
         curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
-        credid=get_credid()
+        credid=get_credid(email)
         banalce=get_balance()
         email=get_email()
         name=get_name()
@@ -166,7 +164,7 @@ class ServerDatabaseTest(unittest.TestCase):
         curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
-        credid=get_credid()
+        credid=get_credid(email)
         banalce=get_balance()
         email=get_email()
         name=get_name()
@@ -188,7 +186,7 @@ class ServerDatabaseTest(unittest.TestCase):
         curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
-        credid=get_credid()
+        credid=get_credid(email)
         banalce=get_balance()
         email=get_email()
         name=get_name()
@@ -210,7 +208,7 @@ class ServerDatabaseTest(unittest.TestCase):
         curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
-        credid=get_credid()
+        credid=get_credid(email)
         balance=get_balance()
         email=get_email()
         name=get_name()
@@ -234,7 +232,7 @@ class ServerDatabaseTest(unittest.TestCase):
         curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
-        credid=get_credid()
+        credid=get_credid(email)
         # add new client
         db.inserts.add_client(name, email, curr_id)
         cid=db.gets.get_client_id_byemail(email)
@@ -254,7 +252,7 @@ class ServerDatabaseTest(unittest.TestCase):
         curr_id=db.gets.get_currency_id(EUR)
         passcode=get_rand_pass()
         email=get_email()
-        credid=get_credid()
+        credid=get_credid(email)
         banalce=get_balance()
         email=get_email()
         name=get_name()
@@ -264,7 +262,7 @@ class ServerDatabaseTest(unittest.TestCase):
         #add_bank_addount
         bid=db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference, curr_id)
         passcode_eq=db.gets.get_password(credid)
-        self.assertEqual(passcode, passcode_eq)
+        self.assertEqual(hash(passcode), passcode_eq)
 
     def test_transaction(self):
         """ create two clients, client_1, client_2
@@ -283,7 +281,7 @@ class ServerDatabaseTest(unittest.TestCase):
         c1_name=get_name()
         c1_email=get_email()
         c1_passcode=get_rand_pass()
-        c1_credid=get_credid()
+        c1_credid=get_credid(c1_email)
         c1_bank_name=get_bank_name()
         c1_branch_number=get_branch_number()
         c1_account_number=get_account_number()
@@ -300,7 +298,7 @@ class ServerDatabaseTest(unittest.TestCase):
         c2_name=get_name()
         c2_email=get_email()
         c2_passcode=get_rand_pass()
-        c2_credid=get_credid()
+        c2_credid=get_credid(c2_email)
         c2_bank_name=get_bank_name()
         c2_branch_number=get_branch_number()
         c2_account_number=get_account_number()

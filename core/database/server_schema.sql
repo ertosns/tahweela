@@ -1,3 +1,6 @@
+-- CREATE extension IF NOT EXISTS pgcrypto;
+-- alter extension pgcrypto set schema public;
+
 -- currency table of the supported currency rates to base dollar
 -- 'currency_value' is the value relative to American dollar.
 -- all calculations in are done in dollar.
@@ -40,12 +43,13 @@ CREATE TABLE IF NOT EXISTS banking (
        name_reference text,
        currency_id int REFERENCES currency(id) NOT NULL
 );
--- 'passcode' authentication is done with name/email and pass-code
--- 'cred_id' cred_id is an extra id, for example public key for encrypted communication, user create this key locally (in case of public-key encryption), or receive it from the server upon registering, or login in new application install.
+
+-- 'passcode' is the hash of the password for authentication is done with name/email and pass-code
+-- 'cred_id' cred_id is an extra id, for example public key for encrypted communication, user create this key locally (in case of public-key encryption), or receive it from the server upon registering, or login in new application install (in single key encryption), also used as session secret key, as well as the transaction key, although this key will be exposed in the ledger, but it never used in authentication, in case of compromised server, the attacker will still need to authenticate with valid username/password combination in order to get the credid. finally it can be extracted as hash of the user email. the following case might  be insecure, for large numbers of known email/credid=hash(email) combination a moderate hash function can be reversed, if the attacker compromised the server, reading the hash tables of the password, with the known hash reverse (cracked), the attacker will get a hold of the password hashs! this can be easily solved by using different hash methods for each case. since this identifier still isn't determined, it's better to be assigned to be random number(as general as possible) for now.
 CREATE TABLE IF NOT EXISTS credentials (
        id  int REFERENCES clients (client_id),
        passcode text UNIQUE NOT NULL,
-       cred_id bigint UNIQUE NOT NULL
+       cred_id text UNIQUE NOT NULL
 );
 -- not that this has changed, trx_dest, trx_src now refers to the credentials(cred_id)
 -- 'trx_cost' is the transaction amount
@@ -53,8 +57,8 @@ CREATE TABLE IF NOT EXISTS credentials (
 -- 'trx name' is the transaction description.
 CREATE TABLE IF NOT EXISTS ledger (
        id SERIAL PRIMARY KEY,
-       trx_dest bigint REFERENCES credentials(cred_id),
-       trx_src bigint REFERENCES credentials(cred_id),
+       trx_dest text REFERENCES credentials(cred_id),
+       trx_src text REFERENCES credentials(cred_id),
        trx_cost int NOT NULL,
 --       good_id int REFERENCES goods(id),
        trx_dt TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,

@@ -3,7 +3,8 @@ import requests
 import os
 import random
 from time import sleep
-
+import hashlib
+import base64
 seed=int.from_bytes(os.urandom(2), 'big')
 random.seed(seed)
 
@@ -49,7 +50,7 @@ USD='USD'
 
 db_configs="dbname='demo'  user='tahweela' password='tahweela'"
 
-logging.basicConfig(filename="utils.log", \
+logging.basicConfig(filename="general.log", \
                     format='%(asctime)s %(message)s',\
                     filemode='w')
 log=logging.getLogger()
@@ -82,7 +83,8 @@ def fixer_rate(base, pref):
     return rate
 
 def exchange(base, pref):
-    rate=0
+    #TODO set rate to 0, i set it to 1 when the internet was off, don't forget!
+    rate=1
     while rate==0:
         rate=exchangerate_rate(base, pref)
         if rate==0:
@@ -90,7 +92,7 @@ def exchange(base, pref):
         sleep(1)
         print("make sure there is internet connection!")
     return rate
-    
+
 class Currency(object):
     def __init__(self, preference, base=EUR):
         self.base=base
@@ -106,7 +108,7 @@ class Currency(object):
         return not self.rate==0
     def exchange(self, amount=1):
         print("making exchange with rate {}".format(self.rate))
-        
+
         return amount*self.rate
     def exchange_back(self, amount=1):
         print("making back exchange with rate {}".format(self.rate))
@@ -151,3 +153,19 @@ def process_cur(cur):
     return '\'{}\''.format(cur)
 def unwrap_cur(cur):
     return cur.replace("'", '')
+
+#TODO HOW TO MAKE SURE THAT CREDID IS UNIQUE?
+# brute force, keep trying new values that does exist,
+# is the simplest, otherwise use conguential generator
+def get_credid(word):
+    #return int(3333333333333*random.random())
+    return hash(word)
+
+#TODO (fix) it seams that is_email isn't strong enough, it fails for some emails, need more robust regex
+def is_email(email):
+  return bool(re.search(r"^[\w\.\+\-]+\@[\w]+\.[a-z]{2,3}$", email))
+
+def hash(word):
+    hf=hashlib.sha256()
+    hf.update(bytes(word, 'utf-8'))
+    return base64.b64encode(hf.digest()).decode('utf-8')

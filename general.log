@@ -1,0 +1,155 @@
+2021-01-28 08:52:31,569 Not in REPL -> leaving logger event level as is.
+2021-01-28 08:52:31,570 Looking for locale `en_US` in provider `faker.providers.address`.
+2021-01-28 08:52:31,571 Provider `faker.providers.address` has been localized to `en_US`.
+2021-01-28 08:52:31,571 Looking for locale `en_US` in provider `faker.providers.automotive`.
+2021-01-28 08:52:31,572 Provider `faker.providers.automotive` has been localized to `en_US`.
+2021-01-28 08:52:31,572 Looking for locale `en_US` in provider `faker.providers.bank`.
+2021-01-28 08:52:31,572 Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2021-01-28 08:52:31,573 Looking for locale `en_US` in provider `faker.providers.barcode`.
+2021-01-28 08:52:31,573 Provider `faker.providers.barcode` has been localized to `en_US`.
+2021-01-28 08:52:31,574 Looking for locale `en_US` in provider `faker.providers.color`.
+2021-01-28 08:52:31,574 Provider `faker.providers.color` has been localized to `en_US`.
+2021-01-28 08:52:31,574 Looking for locale `en_US` in provider `faker.providers.company`.
+2021-01-28 08:52:31,575 Provider `faker.providers.company` has been localized to `en_US`.
+2021-01-28 08:52:31,575 Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2021-01-28 08:52:31,576 Provider `faker.providers.credit_card` has been localized to `en_US`.
+2021-01-28 08:52:31,576 Looking for locale `en_US` in provider `faker.providers.currency`.
+2021-01-28 08:52:31,576 Provider `faker.providers.currency` has been localized to `en_US`.
+2021-01-28 08:52:31,576 Looking for locale `en_US` in provider `faker.providers.date_time`.
+2021-01-28 08:52:31,577 Provider `faker.providers.date_time` has been localized to `en_US`.
+2021-01-28 08:52:31,577 Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-28 08:52:31,577 Looking for locale `en_US` in provider `faker.providers.geo`.
+2021-01-28 08:52:31,577 Provider `faker.providers.geo` has been localized to `en_US`.
+2021-01-28 08:52:31,578 Looking for locale `en_US` in provider `faker.providers.internet`.
+2021-01-28 08:52:31,578 Provider `faker.providers.internet` has been localized to `en_US`.
+2021-01-28 08:52:31,579 Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-28 08:52:31,579 Looking for locale `en_US` in provider `faker.providers.job`.
+2021-01-28 08:52:31,579 Provider `faker.providers.job` has been localized to `en_US`.
+2021-01-28 08:52:31,579 Looking for locale `en_US` in provider `faker.providers.lorem`.
+2021-01-28 08:52:31,580 Provider `faker.providers.lorem` has been localized to `en_US`.
+2021-01-28 08:52:31,580 Looking for locale `en_US` in provider `faker.providers.misc`.
+2021-01-28 08:52:31,580 Provider `faker.providers.misc` has been localized to `en_US`.
+2021-01-28 08:52:31,581 Looking for locale `en_US` in provider `faker.providers.person`.
+2021-01-28 08:52:31,582 Provider `faker.providers.person` has been localized to `en_US`.
+2021-01-28 08:52:31,583 Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2021-01-28 08:52:31,584 Provider `faker.providers.phone_number` has been localized to `en_US`.
+2021-01-28 08:52:31,585 Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-28 08:52:31,585 Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-28 08:52:31,585 Looking for locale `en_US` in provider `faker.providers.ssn`.
+2021-01-28 08:52:31,586 Provider `faker.providers.ssn` has been localized to `en_US`.
+2021-01-28 08:52:31,586 Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2021-01-28 08:52:31,590 exchange with rate 1
+2021-01-28 08:52:31,591 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,591 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,592 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('taylormichael@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,593 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(10), SQL(', '), Literal('P1G+KoilQCfvKUXKGSMWjLapw3QTik/fxfILBvqs7ZA='), SQL(', '), Literal('XjzChH5uNI+j028eMe8y4Go5qb87dG0UQBl8Y2RfrcE='), SQL(');')])
+2021-01-28 08:52:31,593 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(10), SQL(', '), Literal(332.5980412227444), SQL(', '), Literal('Crystal'), SQL(', '), Literal(6), SQL(', '), Literal(61400), SQL(', '), Literal('Arellano'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-28 08:52:31,593 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-28 08:52:31,594 exchange with rate 1
+2021-01-28 08:52:31,594 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,594 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,595 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('john40@proctor.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,595 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(11), SQL(', '), Literal('72JAD3MBqlmlhI/cxRFLI7Dm0HqZSitLVx89de+XMlg='), SQL(', '), Literal('QSrp5bkgErcZtqd46GjmVnRB3/lIzDHYUskd/elCdLA='), SQL(');')])
+2021-01-28 08:52:31,595 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(11), SQL(', '), Literal(332.5980412227444), SQL(', '), Literal('Crystal'), SQL(', '), Literal(6), SQL(', '), Literal(61400), SQL(', '), Literal('Arellano'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-28 08:52:31,595 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-28 08:52:31,596 Composed([SQL('SELECT (banking.balance, cur.currency_name) FROM banking INNER JOIN currency AS cur ON (cur.id=banking.currency_id) WHERE banking.client_id='), Literal(11), SQL(' ;')])
+2021-01-28 08:52:31,596 exchange with rate 1
+2021-01-28 08:52:31,596 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,596 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,597 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('murphyrichard@gmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,597 exchange with rate 1
+2021-01-28 08:52:31,597 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,597 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,598 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('millertammy@brown.net'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,598 exchange with rate 1
+2021-01-28 08:52:31,598 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,598 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,599 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('ericksonjustin@hawkins-garcia.net'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,599 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(14), SQL(', '), Literal('VFNvsrtwkv6yiaJ3ojqVhk7QMDfA3X2CnyPTodW1WHU='), SQL(', '), Literal('iaBT6iIQq8nAzgAAMM5tQMJI8DxOPlRlyby5Vz/5+lw='), SQL(');')])
+2021-01-28 08:52:31,599 exists.account_byname Benjamin Lopez fet: (True,)
+2021-01-28 08:52:31,599 Composed([SQL('SELECT (c.client_id) FROM clients AS c INNER JOIN credentials   ON (credentials.id=c.client_id) WHERE c.client_name='), Literal('Benjamin Lopez'), SQL(' AND credentials.passcode='), Literal('VFNvsrtwkv6yiaJ3ojqVhk7QMDfA3X2CnyPTodW1WHU='), SQL(' LIMIT 1  FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,600 exchange with rate 1
+2021-01-28 08:52:31,600 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,600 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,601 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('nsanchez@yahoo.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,601 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(15), SQL(', '), Literal('XBk93OMdqQEpHTGXk6p8ywKG6pDvychYHCh1hSPQNQo='), SQL(', '), Literal('GkicNWELqXiAEPeCvfPJECZyI7R2tdsmW3Ov7YDDio4='), SQL(');')])
+2021-01-28 08:52:31,601 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(15), SQL(', '), Literal(332.5980412227444), SQL(', '), Literal('Crystal'), SQL(', '), Literal(6), SQL(', '), Literal(61400), SQL(', '), Literal('Arellano'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-28 08:52:31,601 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-28 08:52:31,602 Composed([SQL('SELECT (client_id) FROM banking WHERE id='), Literal(6), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,602 Composed([SQL('SELECT (id) FROM banking WHERE client_id='), Literal(15), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,602 exchange with rate 1
+2021-01-28 08:52:31,602 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,602 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,603 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('ncain@simmons.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,603 exchange with rate 1
+2021-01-28 08:52:31,603 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,603 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,655 database committed
+2021-01-28 08:52:31,655 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('alisha02@henderson-suarez.info'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,741 database committed
+2021-01-28 08:52:31,742 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(17), SQL(', '), Literal('75lgCUBA+j0rfYxLpItdTPbyA9llSwgeF/sJgOWSZtQ='), SQL(', '), Literal('Mp9AZHA0ECkvBnIvS+e/qMxcYmoDf2SmCQ9cTq4eQ40='), SQL(');')])
+2021-01-28 08:52:31,743 Composed([SQL('SELECT (c.client_id) FROM clients AS c INNER JOIN credentials   ON (credentials.id=c.client_id) WHERE c.client_name='), Literal('James Baker'), SQL(' AND credentials.passcode='), Literal('75lgCUBA+j0rfYxLpItdTPbyA9llSwgeF/sJgOWSZtQ='), SQL(' LIMIT 1  FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,851 database committed
+2021-01-28 08:52:31,853 exchange with rate 1
+2021-01-28 08:52:31,854 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,854 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,857 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('alexa24@nielsen.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,858 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(18), SQL(', '), Literal('L1q1cRHy+pyFXvL5XklWYP7zHaS1Yxkw7jABwOLr0sQ='), SQL(', '), Literal('TWQTcBsPfTLxM6EQsGBmWFd5AHL9Wt1WXYDpXq+Si9g='), SQL(');')])
+2021-01-28 08:52:31,859 Composed([SQL('SELECT id FROM credentials WHERE cred_id='), Literal('TWQTcBsPfTLxM6EQsGBmWFd5AHL9Wt1WXYDpXq+Si9g='), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,859 Composed([SQL('SELECT cred_id FROM credentials WHERE id='), Literal(18), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,860 exchange with rate 1
+2021-01-28 08:52:31,861 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,861 exchange with rate 1
+2021-01-28 08:52:31,862 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,862 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,866 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('bpeterson@green.biz'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,866 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(19), SQL(', '), Literal('g7yVjZp9Rseutwc+CHRowTfnPlW8Jd8w981im4esGV0='), SQL(', '), Literal('UQ4y2tmBl5OR3SRl9lMcP9Yuv3iZu2c6OSX9Hf38egk='), SQL(');')])
+2021-01-28 08:52:31,867 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(19), SQL(', '), Literal(332.5980412227444), SQL(', '), Literal('Crystal'), SQL(', '), Literal(6), SQL(', '), Literal(61400), SQL(', '), Literal('Arellano'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-28 08:52:31,867 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-28 08:52:31,868 Composed([SQL('SELECT (passcode) FROM credentials WHERE cred_id='), Literal('UQ4y2tmBl5OR3SRl9lMcP9Yuv3iZu2c6OSX9Hf38egk='), SQL('  FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,868 exchange with rate 1
+2021-01-28 08:52:31,869 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:31,869 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:31,956 database committed
+2021-01-28 08:52:31,956 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('jodihebert@hotmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:31,958 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(20), SQL(', '), Literal('b/M7eDKSKOKPe46Y7Xe5hRLuaMSk2FE4i48sDE+VEyU='), SQL(', '), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(');')])
+2021-01-28 08:52:32,018 database committed
+2021-01-28 08:52:32,018 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(20), SQL(', '), Literal(296.99975597980847), SQL(', '), Literal('Shannon'), SQL(', '), Literal(8), SQL(', '), Literal(2663831), SQL(', '), Literal('Campbell'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-28 08:52:32,020 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-28 08:52:32,079 database committed
+2021-01-28 08:52:32,152 database committed
+2021-01-28 08:52:32,152 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('adam53@gmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:32,152 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(21), SQL(', '), Literal('MNUOfuKb30Qx5zA5wSaor3uCjSQjE6osW2WGGh2sf/w='), SQL(', '), Literal('07kGtkpYdKFu5yS1ulqMcGJcv6TFLf40O2fJtAB7x7A='), SQL(');')])
+2021-01-28 08:52:32,169 database committed
+2021-01-28 08:52:32,169 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(21), SQL(', '), Literal(200.74949518249034), SQL(', '), Literal('Allison'), SQL(', '), Literal(5), SQL(', '), Literal(2905344), SQL(', '), Literal('Mendoza'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-28 08:52:32,171 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-28 08:52:32,253 database committed
+2021-01-28 08:52:32,254 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost, trx_cur_id, trx_name) VALUES ('), Literal('07kGtkpYdKFu5yS1ulqMcGJcv6TFLf40O2fJtAB7x7A='), SQL(', '), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(', '), Literal(10000), SQL(', '), Literal((1,)), SQL(', '), Literal('transaction1'), SQL(');')])
+2021-01-28 08:52:32,332 database committed
+2021-01-28 08:52:32,333 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost, trx_cur_id, trx_name) VALUES ('), Literal('07kGtkpYdKFu5yS1ulqMcGJcv6TFLf40O2fJtAB7x7A='), SQL(', '), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(', '), Literal(20000), SQL(', '), Literal((1,)), SQL(', '), Literal('transaction2'), SQL(');')])
+2021-01-28 08:52:32,405 database committed
+2021-01-28 08:52:32,406 Composed([SQL('INSERT INTO ledger (trx_dest, trx_src, trx_cost, trx_cur_id, trx_name) VALUES ('), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(', '), Literal('07kGtkpYdKFu5yS1ulqMcGJcv6TFLf40O2fJtAB7x7A='), SQL(', '), Literal(5000), SQL(', '), Literal((1,)), SQL(', '), Literal('transaction3'), SQL(');')])
+2021-01-28 08:52:32,422 database committed
+2021-01-28 08:52:32,423 Composed([SQL('SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dt>='), Literal('2021-01-28 08:52:32.253803'), SQL(' AND trx_dt<'), Literal('2021-01-28 08:52:32.423547'), SQL(' AND trx_dest='), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(') OR (trx_dt>='), Literal('2021-01-28 08:52:32.253803'), SQL(' AND trx_dt<'), Literal('2021-01-28 08:52:32.423547'), SQL(' AND trx_src='), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(');')])
+2021-01-28 08:52:32,502 exchange with rate 1
+2021-01-28 08:52:32,502 exchange with rate 1
+2021-01-28 08:52:32,502 exchange with rate 1
+2021-01-28 08:52:32,502 database committed
+2021-01-28 08:52:32,502 Composed([SQL('SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dt>='), Literal('2021-01-28 08:52:32.332847'), SQL(' AND trx_dt<'), Literal('2021-01-28 08:52:32.502820'), SQL(' AND trx_dest='), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(') OR (trx_dt>='), Literal('2021-01-28 08:52:32.332847'), SQL(' AND trx_dt<'), Literal('2021-01-28 08:52:32.502820'), SQL(' AND trx_src='), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(');')])
+2021-01-28 08:52:32,503 exchange with rate 1
+2021-01-28 08:52:32,504 exchange with rate 1
+2021-01-28 08:52:32,504 database committed
+2021-01-28 08:52:32,504 Composed([SQL('SELECT (ledger.trx_cost, cur.currency_name) FROM ledger INNER JOIN currency AS cur ON (cur.id=ledger.trx_cur_id) WHERE (trx_dt>='), Literal('2021-01-28 08:52:32.406434'), SQL(' AND trx_dt<'), Literal('2021-01-28 08:52:32.504378'), SQL(' AND trx_dest='), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(') OR (trx_dt>='), Literal('2021-01-28 08:52:32.406434'), SQL(' AND trx_dt<'), Literal('2021-01-28 08:52:32.504378'), SQL(' AND trx_src='), Literal('XGblNBpYUdvHcwCTLyZ6h9xasKZ3KqaFxke4zHJJoVM='), SQL(');')])
+2021-01-28 08:52:32,505 exchange with rate 1
+2021-01-28 08:52:32,505 database committed
+2021-01-28 08:52:32,505 exchange with rate 1
+2021-01-28 08:52:32,506 assert that currency exists with name EUR, ret: True
+2021-01-28 08:52:32,506 Composed([SQL('SELECT id FROM currency WHERE currency_name='), Literal("'EUR'")])
+2021-01-28 08:52:32,555 database committed
+2021-01-28 08:52:32,555 Composed([SQL('SELECT (client_id) FROM clients WHERE client_email='), Literal('marquezkelli@gmail.com'), SQL(' LIMIT 1 FOR UPDATE SKIP LOCKED;')])
+2021-01-28 08:52:32,557 Composed([SQL('INSERT INTO credentials  (id, passcode, cred_id)  VALUES ('), Literal(22), SQL(', '), Literal('dkQy7l38p2eWabKZ+bnzQQ8vgNCaQNPYDY4ZxpPR0HY='), SQL(', '), Literal('u73XE8dotTEsYMEqhPcGKctfPGD3lUhjrBwutLIrPbc='), SQL(');')])
+2021-01-28 08:52:32,660 database committed
+2021-01-28 08:52:32,661 Composed([SQL('INSERT INTO banking (client_id, balance,  bank_name, branch_number, account_number, name_reference, currency_id) VALUES ('), Literal(22), SQL(', '), Literal(296.7878777499427), SQL(', '), Literal('Crystal'), SQL(', '), Literal(6), SQL(', '), Literal(61400), SQL(', '), Literal('Arellano'), SQL(', '), Literal((1,)), SQL(');')])
+2021-01-28 08:52:32,662 SELECT currval(pg_get_serial_sequence('banking', 'id'));
+2021-01-28 08:52:32,733 database committed
+2021-01-28 08:52:32,734 Composed([SQL('SELECT (banking.balance, cur.currency_name) FROM banking INNER JOIN currency AS cur ON (cur.id=banking.currency_id) WHERE banking.client_id='), Literal(22), SQL(' ;')])
