@@ -13,27 +13,61 @@ random.seed(seed)
 #
 #from core.connection_cursor import conn, cur
 #
-print('------> importing utils')
-from core.utils import REGISTER, GOODS, LEDGER, CONTACTS, PURCHASE, BALANCE, MAX_GOODS, MAX_COST, MAX_BALANCE, FEE, ADD_BANK_ACCOUNT, TRANSACTION, weekly_limit, daily_limit, PaymentGate, Currency, process_cur, EUR, USD, EGP, CURRENCY, get_credid
-print('------> utils imported')
+
+from core.utils import REGISTER, GOODS, LEDGER, CONTACTS, PURCHASE, BALANCE, MAX_GOODS, MAX_COST, MAX_BALANCE, FEE, ADD_BANK_ACCOUNT, TRANSACTION, weekly_limit, daily_limit, PaymentGate, Currency, process_cur, EUR, USD, EGP, CURRENCY, get_credid, TOTAL_BALANCE
+from core.configs import db_configs
 
 import logging
 from core.queries.database import database
-db_configs="dbname='demo'  user='tahweela' password='tahweela'"
+
+#db_configs="dbname='db'  user='postgres" #' password='tahweela'
 #conn = psycopg2.connect(db_configs)
 #cur=conn.cursor()
 db = database(db_configs)
-logging.basicConfig(filename="server.log",\
+logging.basicConfig(filename="/tmp/server.log",\
                  format='%(asctime)s %(levelname)s %(message)s',\
                  filemode='w',
                  level=logging.DEBUG)
 logger=logging.getLogger()
 app = Flask('tahweela')
 app.secret_key=os.urandom(24)
+SESSION_TYPE = 'redis'
+app.config.from_object(__name__)
 auth = HTTPBasicAuth()
 logger.info("server initialized")
 
-print('--------__> all initied')
+'''
+@app.route('/')
+def index():
+    #  view transactions here
+    if 'username' in session:
+        username = session['username']
+        return 'Logged in as ' + username + '<br>' + "<b><a href = '/logout'>click here to log out</a></b>"
+    return "You are not logged in <br><a href = '/login'>" + "click here to log in</a>"
+
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        session['username'] = request.form['username']
+        session['password'] = request.form['password']
+        # authenticate, then store credentials
+        return redirect(url_for('index'))
+    return '''
+    <b>login username</b>
+    <form action="" method="post">
+    <p><input type=text name="username"/></p>
+    <p><input type=text name="password"/></p>
+    <p<<input type=submit value=Login/></p>
+    </form>
+    '''
+
+@app.route('/logout')
+def logout():
+    # remove the username from the session if it is there
+    session.pop('username', None)
+    return redirect(url_for('index'))
+'''
+
 @auth.verify_password
 def authenticate(user, passcode):
     """authenticate user, with username/password
@@ -44,7 +78,6 @@ def authenticate(user, passcode):
     try:
         db.repeatable_read()
         if not db.exists.user(user, passcode):
-            print('XXX--------->authenticating2 failed with {}/{}'.format(user, passcode))
             emsg='FAILURE PASSOWRD MISMATCH'
             logger.info(emsg)
             raise Exception(emsg)
@@ -54,14 +87,12 @@ def authenticate(user, passcode):
         session['credid']=credid
         logger.info('AUTHENTICATION SUCCESS....')
     except psycopg2.DatabaseError as error:
-        print('XXX--------->authenticating2 doesnt exist, error: {}', error)
         db.rollback()
         emsg="authentication failed with error: {}".format(str(error))
         logger.critical(emsg)
         abort(500, emsg)
         return None #doesn't reach here
     except:
-        print('XXX--------->authenticating2 doesnt exist')
         db.rollback()
         emsg
         logger.critical("authentication failed ")
@@ -75,22 +106,23 @@ def authenticate(user, passcode):
 def unauthorized():
     return make_response(jsonify({'error': "forbidden access"}), 403)
 
-#TODO add message to status code response
 @app.route(REGISTER, methods=['POST'])
 def register_client():
   """register new client with email/name + password, expected json body would have keys ["name", "email", "passcode"]
 
+  the expected post keys are ["name", "email", "passcode", "cur_pref"]
+  @param name: client name
+  @param email: client email
+  @param passcode: client password
+  @param cur_pref: is client preference currency [optional]
   """
-  #TODO this can through exception, need to handle it
   req=request.get_json(force=True)
-  #TODO i think the required is to authenticate by email/name
   name=req.get('name', None)
   passcode=req.get('passcode', None)
   email=req.get('email', None)
   cur_pref=req.get('cur_pref', EUR)
   if not req or name==None or email==None or passcode==None:
     logger.critical("url is incomplete")
-    print('incomplete')
     abort(401, 'incomplete post payload')
   cred_id=get_credid(email)
   logger.info("registering trader for client: {}".format(name))
@@ -109,7 +141,6 @@ def register_client():
       if not db.exists.currency(cur_pref):
           currency=Currency(cur_pref)
           if not currency.valid():
-              print('invalid currency')
               raise Exception("currency isn't supported!")
           db.inserts.add_currency(cur_pref, currency.rate)
       cur_pref_id=db.gets.get_currency_id(cur_pref)
@@ -137,8 +168,10 @@ def register_client():
 def add_bank_account():
   """ register bank account for the authenticated client of the current session
 
-  @param: the post body is expect to be json with keys ["bank_name", branch_number", "account_number", "name_reference"], a client can register more than one bank account for tahweela account.
-  @return return bid (banking id), since multiple bank accounts are supported, bid need to be sent for each transaction so that, the transactions are done with it.
+  the post body is expect to be json with keys ["bank_name", branch_number", "account_number", "name_reference"], a client can register more than one bank account for tahweela account.
+  the keys expected are ['bank_name', 'branch_number', 'account_number', 'name_reference']
+
+  @return json with keys ['balance', 'base']
   """
   req=request.get_json(force=True)
   bank_name=req.get("bank_name", None)
@@ -146,7 +179,6 @@ def add_bank_account():
   account_number=req.get("account_number", None)
   name_reference=req.get("name_reference", "")
   if not req or bank_name==None or branch_number==None or account_number==None:
-      print('-1')
       emsg="incomplete request"
       logger.critical(emsg)
       abort(401, emsg)
@@ -157,22 +189,17 @@ def add_bank_account():
     db.lock_advisory(lock)
     cid=db.gets.credid2cid(session['credid'])
     logger.debug("client added")
-    print('0')
     bank=PaymentGate(bank_name, branch_number, account_number, name_reference)
     if not bank.authenticated():
         raise Exception('payment gate authentication failure!')
-    print('1')
     balance_dt=bank.get_balance()
     balance=balance_dt['balance']
-    print('2')
     base_currency=balance_dt['base']
     if not db.exists.currency(base_currency):
         currency=Currency(base_currency)
         db.inserts.add_currency(base_currency, currency.rate)
-    print('3')
     base_currency_id=db.gets.get_currency_id(base_currency)
     db.inserts.add_bank_account(cid, balance, bank_name, branch_number, account_number, name_reference, base_currency_id)
-    print('4')
     db.commit(lock)
   except psycopg2.DatabaseError as error:
     db.rollback(lock)
@@ -180,7 +207,6 @@ def add_bank_account():
     logger.critical(emsg)
     abort(500, emsg)
   except:
-    print('err2')
     db.rollback(lock)
     emsg="adding bank account failed"
     logger.critical(emsg)
@@ -192,7 +218,11 @@ def add_bank_account():
 @app.route(CONTACTS, methods=['POST'])
 @auth.login_required
 def add_contact():
-    """get the credential for the given contact
+    """get the credential for the given contact, it's verification function that a contact exists
+
+    the expected json keys are ['email']
+    @param 'email' is the contact email
+    @return json with key 'credid', which is the credential id used in transaction
     """
     req=request.get_json(force=True)
     email=req.get('email', None)
@@ -245,6 +275,46 @@ def get_balance():
             raise Exception("no bank account added yet!")
         #this would return balance in bank base
         balance=db.gets.get_balance_by_credid(session['credid'])
+        # transform balance to user preference
+        pref_cur=db.gets.get_preference_currency_bycid(cid)
+        amount=balance['balance']
+        base=balance['base']
+        currency=Currency(pref_cur, base)
+        pref_balance=currency.exchange(amount)
+        payload={'balance': pref_balance, 'base':pref_cur}
+        db.commit()
+    except psycopg2.DatabaseError as error:
+        db.rollback()
+        emsg="failed request, error: {} ".format(+str(error))
+        logger.critical()
+        abort(300, emsg)
+    except:
+        db.rollback()
+        emsg="failed request"
+        logger.critical(emsg)
+        abort(300, emsg)
+    finally:
+        db.close()
+    return jsonify(payload), 201
+
+
+@app.route(TOTAL_BALANCE, methods=['GET'])
+@auth.login_required
+def get_total_balance():
+    """ get total balance of the current client
+
+    @return {'balance': balance, 'base': base}
+    """
+    balance=None
+    logger.info("balance requested")
+    db.init()
+    try:
+        db.repeatable_read()
+        cid=db.gets.credid2cid(session['credid'])
+        if not db.exists.bank_account_bycid(cid):
+            raise Exception("no bank account added yet!")
+        #this would return balance in bank base
+        balance=db.gets.get_total_balance_by_credid(session['credid'])
         # transform balance to user preference
         pref_cur=db.gets.get_preference_currency_bycid(cid)
         amount=balance['balance']
@@ -345,7 +415,6 @@ def update_ledger():
 @app.route(TRANSACTION, methods=['POST'])
 @auth.login_required
 def make_transaction():
-    print('XXX ---------- make transaction started')
     req=request.get_json(force=True)
     recipt_credid=req['credid']
     # the amount of transaction in Euro
@@ -399,7 +468,6 @@ def make_transaction():
         db.inserts.insert_trx(recipt_credid, session['credid'], amount, cur_id, trx_name)
         #TODO this can be minimized directly by credid
         #dest balance in bank base
-        print('XXX ---------- start of calculation')
         dest_balance=db.gets.get_balance_by_credid(recipt_credid)
         dest_balance_exchange=Currency(EUR, dest_balance['base'])
         dest_balance_euro=dest_balance_exchange.exchange(dest_balance['balance'])
@@ -410,13 +478,11 @@ def make_transaction():
         dest_balance_new=dest_balance_exchange.exchange_back(dest_balance_new)
         src_cid=db.gets.credid2cid(session['credid'])
         des_cid=db.gets.credid2cid(recipt_credid)
-        print('XXX ---------- end of calculation')
         if src_cid==des_cid:
             print("src/dest {}/{}".format(src_cid, des_cid))
             emsg="you can't make transaction with oneself!"
             logger.critical(emsg)
             raise Exception(emsg)
-        print('XXX ---------- update balance?!')
         db.updates.update_account(src_cid, src_balance_new)
         db.updates.update_account(des_cid, dest_balance_new)
         trx = {'trx_dest': recipt_credid,  \
@@ -425,7 +491,6 @@ def make_transaction():
                'trx_name':trx_name}
         payload={'balance': src_balance_new, \
                  'transactions': trx}
-        print('XXX ---------- finished transaction')
         db.commit()
     except psycopg2.DatabaseError as error:
         db.rollback()

@@ -1,0 +1,218 @@
+\hypertarget{classcore_1_1server_1_1login_1_1_user}{}\doxysection{core.\+server.\+login.\+User Class Reference}
+\label{classcore_1_1server_1_1login_1_1_user}\index{core.server.login.User@{core.server.login.User}}
+
+
+Inheritance diagram for core.\+server.\+login.\+User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classcore_1_1server_1_1login_1_1_user__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for core.\+server.\+login.\+User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classcore_1_1server_1_1login_1_1_user__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_a3599044eb2aca2f78642a3dfafb13e2b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_a1a393d3466c5cbba5cdb07e3dd80cb0b}{username}}, \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_a267e8c9e53b423cab2e3cbf78dcf63bf}{password}}, \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_a08931982ea7865c3463a4f4f119df81d}{credid}}, \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_ac05f6314f02c6084f4f1f56347294110}{active}}=\mbox{\hyperlink{namespacecore_1_1server_1_1login_acc94b5dc22422892ae454dc6a1a00d07}{True}})
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_a61148a8e04f82958081078e67a76f772}{get\+\_\+id}} (self)
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_ac380b22875c745630b41dec4f3deb65f}{is\+\_\+active}} (self)
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_aafe1308da18e8eec69de1789c97d56e2}{get\+\_\+auth\+\_\+token}} (self)
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_acb9c633f6e3b850a8a43433a5ff55f18}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_a1a393d3466c5cbba5cdb07e3dd80cb0b}{username}}
+\item 
+\mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_a267e8c9e53b423cab2e3cbf78dcf63bf}{password}}
+\item 
+\mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_ac05f6314f02c6084f4f1f56347294110}{active}}
+\item 
+\mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user_a08931982ea7865c3463a4f4f119df81d}{credid}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 22 of file login.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_user_a3599044eb2aca2f78642a3dfafb13e2b}\label{classcore_1_1server_1_1login_1_1_user_a3599044eb2aca2f78642a3dfafb13e2b}} 
+\index{core.server.login.User@{core.server.login.User}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!core.server.login.User@{core.server.login.User}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+User.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{username,  }\item[{}]{password,  }\item[{}]{credid,  }\item[{}]{active = {\ttfamily \mbox{\hyperlink{namespacecore_1_1server_1_1login_acc94b5dc22422892ae454dc6a1a00d07}{True}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23     \textcolor{keyword}{def }\_\_init\_\_(self, username, password, credid, active=True):}
+\DoxyCodeLine{24         self.username=username}
+\DoxyCodeLine{25         self.password=password}
+\DoxyCodeLine{26         self.active=active}
+\DoxyCodeLine{27         self.credid=credid}
+\DoxyCodeLine{28         \textcolor{comment}{\#self.name = db.gets\_name\_by\_credid(self.credid)}}
+\DoxyCodeLine{29         \textcolor{comment}{\#self.password = db.gets\_pass\_by\_credid(self.credid)}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_user_acb9c633f6e3b850a8a43433a5ff55f18}\label{classcore_1_1server_1_1login_1_1_user_acb9c633f6e3b850a8a43433a5ff55f18}} 
+\index{core.server.login.User@{core.server.login.User}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!core.server.login.User@{core.server.login.User}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+User.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37     \textcolor{keyword}{def }\_\_repr\_\_(self):}
+\DoxyCodeLine{38         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{39 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_user_aafe1308da18e8eec69de1789c97d56e2}\label{classcore_1_1server_1_1login_1_1_user_aafe1308da18e8eec69de1789c97d56e2}} 
+\index{core.server.login.User@{core.server.login.User}!get\_auth\_token@{get\_auth\_token}}
+\index{get\_auth\_token@{get\_auth\_token}!core.server.login.User@{core.server.login.User}}
+\doxysubsubsection{\texorpdfstring{get\_auth\_token()}{get\_auth\_token()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+User.\+get\+\_\+auth\+\_\+token (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34     \textcolor{keyword}{def }get\_auth\_token(self):}
+\DoxyCodeLine{35         \textcolor{comment}{\#TODO implement make\_secure\_token!!}}
+\DoxyCodeLine{36         \textcolor{keywordflow}{return} make\_secure\_token(self.username, key=\textcolor{stringliteral}{'secret\_key'})}
+
+\end{DoxyCode}
+
+
+References core.\+server.\+login.\+User.\+username.
+
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_user_a61148a8e04f82958081078e67a76f772}\label{classcore_1_1server_1_1login_1_1_user_a61148a8e04f82958081078e67a76f772}} 
+\index{core.server.login.User@{core.server.login.User}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!core.server.login.User@{core.server.login.User}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+User.\+get\+\_\+id (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1gets_1_1credentials_a0101a0c1cb5cb68e213b72d88fc3bce4}{get\_id}}(self):}
+\DoxyCodeLine{31         \textcolor{keywordflow}{return} self.credid}
+
+\end{DoxyCode}
+
+
+References core.\+server.\+login.\+User.\+credid, and core\+\_\+test.\+Client.\+credid.
+
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_user_ac380b22875c745630b41dec4f3deb65f}\label{classcore_1_1server_1_1login_1_1_user_ac380b22875c745630b41dec4f3deb65f}} 
+\index{core.server.login.User@{core.server.login.User}!is\_active@{is\_active}}
+\index{is\_active@{is\_active}!core.server.login.User@{core.server.login.User}}
+\doxysubsubsection{\texorpdfstring{is\_active()}{is\_active()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+User.\+is\+\_\+active (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32     \textcolor{keyword}{def }is\_active(self):}
+\DoxyCodeLine{33         \textcolor{keywordflow}{return} self.active}
+
+\end{DoxyCode}
+
+
+References core.\+server.\+login.\+User.\+active.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_user_ac05f6314f02c6084f4f1f56347294110}\label{classcore_1_1server_1_1login_1_1_user_ac05f6314f02c6084f4f1f56347294110}} 
+\index{core.server.login.User@{core.server.login.User}!active@{active}}
+\index{active@{active}!core.server.login.User@{core.server.login.User}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily core.\+server.\+login.\+User.\+active}
+
+
+
+Definition at line 26 of file login.\+py.
+
+
+
+Referenced by core.\+server.\+login.\+User.\+is\+\_\+active().
+
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_user_a08931982ea7865c3463a4f4f119df81d}\label{classcore_1_1server_1_1login_1_1_user_a08931982ea7865c3463a4f4f119df81d}} 
+\index{core.server.login.User@{core.server.login.User}!credid@{credid}}
+\index{credid@{credid}!core.server.login.User@{core.server.login.User}}
+\doxysubsubsection{\texorpdfstring{credid}{credid}}
+{\footnotesize\ttfamily core.\+server.\+login.\+User.\+credid}
+
+
+
+Definition at line 27 of file login.\+py.
+
+
+
+Referenced by core.\+server.\+login.\+User.\+get\+\_\+id().
+
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_user_a267e8c9e53b423cab2e3cbf78dcf63bf}\label{classcore_1_1server_1_1login_1_1_user_a267e8c9e53b423cab2e3cbf78dcf63bf}} 
+\index{core.server.login.User@{core.server.login.User}!password@{password}}
+\index{password@{password}!core.server.login.User@{core.server.login.User}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily core.\+server.\+login.\+User.\+password}
+
+
+
+Definition at line 25 of file login.\+py.
+
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_user_a1a393d3466c5cbba5cdb07e3dd80cb0b}\label{classcore_1_1server_1_1login_1_1_user_a1a393d3466c5cbba5cdb07e3dd80cb0b}} 
+\index{core.server.login.User@{core.server.login.User}!username@{username}}
+\index{username@{username}!core.server.login.User@{core.server.login.User}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily core.\+server.\+login.\+User.\+username}
+
+
+
+Definition at line 24 of file login.\+py.
+
+
+
+Referenced by core.\+server.\+login.\+User.\+get\+\_\+auth\+\_\+token().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/lib/core/server/\mbox{\hyperlink{login_8py}{login.\+py}}\end{DoxyCompactItemize}

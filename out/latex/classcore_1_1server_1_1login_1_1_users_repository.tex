@@ -1,0 +1,204 @@
+\hypertarget{classcore_1_1server_1_1login_1_1_users_repository}{}\doxysection{core.\+server.\+login.\+Users\+Repository Class Reference}
+\label{classcore_1_1server_1_1login_1_1_users_repository}\index{core.server.login.UsersRepository@{core.server.login.UsersRepository}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository_aa81e3ca6d20ebf14f82eaff4d3d10e84}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository_a5a8b2c91b6304db5f668282f56768838}{save\+\_\+user}} (self, user)
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository_a54f2004ea5875ee77e8094722977afe1}{get\+\_\+user}} (self, username)
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository_a5819dcbb6482708f5fc92260d1b76320}{get\+\_\+user\+\_\+by\+\_\+id}} (self, userid)
+\item 
+def \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository_a76918b07ee0eb736cbf037c99e955ff3}{next\+\_\+index}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository_a2bde1df0b576f022a4147a0356d37327}{users}}
+\item 
+\mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository_a8ec9c40b6ca49e65fac688d204354ec7}{users\+\_\+id\+\_\+dict}}
+\item 
+\mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository_afc7c826ba8063abb1058c1387af5f784}{identifier}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 40 of file login.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_users_repository_aa81e3ca6d20ebf14f82eaff4d3d10e84}\label{classcore_1_1server_1_1login_1_1_users_repository_aa81e3ca6d20ebf14f82eaff4d3d10e84}} 
+\index{core.server.login.UsersRepository@{core.server.login.UsersRepository}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!core.server.login.UsersRepository@{core.server.login.UsersRepository}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+Users\+Repository.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41     \textcolor{keyword}{def }\_\_init\_\_(self):}
+\DoxyCodeLine{42         self.users=dict()}
+\DoxyCodeLine{43         self.users\_id\_dict = dict()}
+\DoxyCodeLine{44         self.identifier = 0}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_users_repository_a54f2004ea5875ee77e8094722977afe1}\label{classcore_1_1server_1_1login_1_1_users_repository_a54f2004ea5875ee77e8094722977afe1}} 
+\index{core.server.login.UsersRepository@{core.server.login.UsersRepository}!get\_user@{get\_user}}
+\index{get\_user@{get\_user}!core.server.login.UsersRepository@{core.server.login.UsersRepository}}
+\doxysubsubsection{\texorpdfstring{get\_user()}{get\_user()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+Users\+Repository.\+get\+\_\+user (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48     \textcolor{keyword}{def }get\_user(self, username):}
+\DoxyCodeLine{49         \textcolor{keywordflow}{return} self.users.\mbox{\hyperlink{namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967}{get}}(username)}
+
+\end{DoxyCode}
+
+
+References queries.\+gets.\+clients.\+get(), and core.\+server.\+login.\+Users\+Repository.\+users.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcore_1_1server_1_1login_1_1_users_repository_a54f2004ea5875ee77e8094722977afe1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_users_repository_a5819dcbb6482708f5fc92260d1b76320}\label{classcore_1_1server_1_1login_1_1_users_repository_a5819dcbb6482708f5fc92260d1b76320}} 
+\index{core.server.login.UsersRepository@{core.server.login.UsersRepository}!get\_user\_by\_id@{get\_user\_by\_id}}
+\index{get\_user\_by\_id@{get\_user\_by\_id}!core.server.login.UsersRepository@{core.server.login.UsersRepository}}
+\doxysubsubsection{\texorpdfstring{get\_user\_by\_id()}{get\_user\_by\_id()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+Users\+Repository.\+get\+\_\+user\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{userid }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50     \textcolor{keyword}{def }get\_user\_by\_id(self, userid):}
+\DoxyCodeLine{51         \textcolor{keywordflow}{return} self.users\_id\_dict.\mbox{\hyperlink{namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967}{get}}(userid)}
+
+\end{DoxyCode}
+
+
+References queries.\+gets.\+clients.\+get(), and core.\+server.\+login.\+Users\+Repository.\+users\+\_\+id\+\_\+dict.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcore_1_1server_1_1login_1_1_users_repository_a5819dcbb6482708f5fc92260d1b76320_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_users_repository_a76918b07ee0eb736cbf037c99e955ff3}\label{classcore_1_1server_1_1login_1_1_users_repository_a76918b07ee0eb736cbf037c99e955ff3}} 
+\index{core.server.login.UsersRepository@{core.server.login.UsersRepository}!next\_index@{next\_index}}
+\index{next\_index@{next\_index}!core.server.login.UsersRepository@{core.server.login.UsersRepository}}
+\doxysubsubsection{\texorpdfstring{next\_index()}{next\_index()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+Users\+Repository.\+next\+\_\+index (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52     \textcolor{keyword}{def }next\_index(self):}
+\DoxyCodeLine{53         self.identifier +=1}
+\DoxyCodeLine{54         \textcolor{keywordflow}{return} self.identifier}
+\DoxyCodeLine{55 }
+
+\end{DoxyCode}
+
+
+References core.\+server.\+login.\+Users\+Repository.\+identifier.
+
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_users_repository_a5a8b2c91b6304db5f668282f56768838}\label{classcore_1_1server_1_1login_1_1_users_repository_a5a8b2c91b6304db5f668282f56768838}} 
+\index{core.server.login.UsersRepository@{core.server.login.UsersRepository}!save\_user@{save\_user}}
+\index{save\_user@{save\_user}!core.server.login.UsersRepository@{core.server.login.UsersRepository}}
+\doxysubsubsection{\texorpdfstring{save\_user()}{save\_user()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+Users\+Repository.\+save\+\_\+user (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{user }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45     \textcolor{keyword}{def }save\_user(self, user):}
+\DoxyCodeLine{46         self.users\_id\_dict.setdefault(user.id, user)}
+\DoxyCodeLine{47         self.users.setdefault(user.username, user)}
+
+\end{DoxyCode}
+
+
+References core.\+server.\+login.\+Users\+Repository.\+users, and core.\+server.\+login.\+Users\+Repository.\+users\+\_\+id\+\_\+dict.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_users_repository_afc7c826ba8063abb1058c1387af5f784}\label{classcore_1_1server_1_1login_1_1_users_repository_afc7c826ba8063abb1058c1387af5f784}} 
+\index{core.server.login.UsersRepository@{core.server.login.UsersRepository}!identifier@{identifier}}
+\index{identifier@{identifier}!core.server.login.UsersRepository@{core.server.login.UsersRepository}}
+\doxysubsubsection{\texorpdfstring{identifier}{identifier}}
+{\footnotesize\ttfamily core.\+server.\+login.\+Users\+Repository.\+identifier}
+
+
+
+Definition at line 44 of file login.\+py.
+
+
+
+Referenced by core.\+server.\+login.\+Users\+Repository.\+next\+\_\+index().
+
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_users_repository_a2bde1df0b576f022a4147a0356d37327}\label{classcore_1_1server_1_1login_1_1_users_repository_a2bde1df0b576f022a4147a0356d37327}} 
+\index{core.server.login.UsersRepository@{core.server.login.UsersRepository}!users@{users}}
+\index{users@{users}!core.server.login.UsersRepository@{core.server.login.UsersRepository}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily core.\+server.\+login.\+Users\+Repository.\+users}
+
+
+
+Definition at line 42 of file login.\+py.
+
+
+
+Referenced by core.\+server.\+login.\+Users\+Repository.\+get\+\_\+user(), and core.\+server.\+login.\+Users\+Repository.\+save\+\_\+user().
+
+\mbox{\Hypertarget{classcore_1_1server_1_1login_1_1_users_repository_a8ec9c40b6ca49e65fac688d204354ec7}\label{classcore_1_1server_1_1login_1_1_users_repository_a8ec9c40b6ca49e65fac688d204354ec7}} 
+\index{core.server.login.UsersRepository@{core.server.login.UsersRepository}!users\_id\_dict@{users\_id\_dict}}
+\index{users\_id\_dict@{users\_id\_dict}!core.server.login.UsersRepository@{core.server.login.UsersRepository}}
+\doxysubsubsection{\texorpdfstring{users\_id\_dict}{users\_id\_dict}}
+{\footnotesize\ttfamily core.\+server.\+login.\+Users\+Repository.\+users\+\_\+id\+\_\+dict}
+
+
+
+Definition at line 43 of file login.\+py.
+
+
+
+Referenced by core.\+server.\+login.\+Users\+Repository.\+get\+\_\+user\+\_\+by\+\_\+id(), and core.\+server.\+login.\+Users\+Repository.\+save\+\_\+user().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/lib/core/server/\mbox{\hyperlink{login_8py}{login.\+py}}\end{DoxyCompactItemize}

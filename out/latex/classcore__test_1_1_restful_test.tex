@@ -2,8 +2,7 @@
 \label{classcore__test_1_1_restful_test}\index{core\_test.RestfulTest@{core\_test.RestfulTest}}
 
 
-Inheritance diagram for core\+\_\+test.\+Restful\+Test\+:
-\nopagebreak
+Inheritance diagram for core\+\_\+test.\+Restful\+Test\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for core\+\_\+test.\+Restful\+Test\+:
 \end{figure}
 
 
-Collaboration diagram for core\+\_\+test.\+Restful\+Test\+:
-\nopagebreak
+Collaboration diagram for core\+\_\+test.\+Restful\+Test\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -76,7 +74,7 @@ def \mbox{\hyperlink{classcore__test_1_1_restful_test_a5afb6692ac056818a9bf6b66d
 \doxysubsection{Detailed Description}
 
 
-Definition at line 170 of file core\+\_\+test.\+py.
+Definition at line 137 of file core\+\_\+test.\+py.
 
 
 
@@ -89,34 +87,33 @@ Definition at line 170 of file core\+\_\+test.\+py.
 
 
 
-Definition at line 394 of file core\+\_\+test.\+py.
+Definition at line 365 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{394     \textcolor{keyword}{def }\_\_add\_trax(self, trans):}
-\DoxyCodeLine{395         trans=trans[\textcolor{stringliteral}{'transactions'}] \textcolor{comment}{\#TODO (res)}}
-\DoxyCodeLine{396         self.db.init()}
-\DoxyCodeLine{397         \textcolor{keywordflow}{try}:}
-\DoxyCodeLine{398             print(\textcolor{stringliteral}{"trans: "}, trans)}
-\DoxyCodeLine{399             \textcolor{comment}{\#self.db.inserts.insert\_trx(trans["trx\_src"], trans['trx\_dest'], trans['trx\_gid'])}}
-\DoxyCodeLine{400             self.db.inserts.insert\_trx(trans[\textcolor{stringliteral}{"trx\_src"}], trans[\textcolor{stringliteral}{'trx\_dest'}], trans[\textcolor{stringliteral}{'trx\_cost'}])}
-\DoxyCodeLine{401             self.db.commit()}
-\DoxyCodeLine{402         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
-\DoxyCodeLine{403             self.db.rollback()}
-\DoxyCodeLine{404         \textcolor{keywordflow}{finally}:}
-\DoxyCodeLine{405             self.db.close()}
+\DoxyCodeLine{365     \textcolor{keyword}{def }\_\_add\_trax(self, trans):}
+\DoxyCodeLine{366         trans=trans[\textcolor{stringliteral}{'transactions'}] \textcolor{comment}{\#TODO (res)}}
+\DoxyCodeLine{367         self.db.init()}
+\DoxyCodeLine{368         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{369             print(\textcolor{stringliteral}{"trans: "}, trans)}
+\DoxyCodeLine{370             \textcolor{comment}{\#self.db.inserts.insert\_trx(trans["trx\_src"], trans['trx\_dest'], trans['trx\_gid'])}}
+\DoxyCodeLine{371             self.db.inserts.insert\_trx(trans[\textcolor{stringliteral}{"trx\_src"}], trans[\textcolor{stringliteral}{'trx\_dest'}], trans[\textcolor{stringliteral}{'trx\_cost'}])}
+\DoxyCodeLine{372             self.db.commit()}
+\DoxyCodeLine{373         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{374             self.db.rollback()}
+\DoxyCodeLine{375         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{376             self.db.close()}
 
 \end{DoxyCode}
 
 
-References core\+\_\+test.\+Client.\+db, client.\+client.\+Client.\+db, and core.\+client.\+client.\+Client.\+db.
+References core\+\_\+test.\+Client.\+db, core.\+client.\+client.\+Client.\+db, client.\+client.\+Client.\+db, and core.\+utils.\+Client.\+db.
 
 
 
 Referenced by core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+ledger(), and core\+\_\+test.\+Restful\+Test.\+autotract().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -131,19 +128,19 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 197 of file core\+\_\+test.\+py.
+Definition at line 167 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{197     \textcolor{keyword}{def }\_\_auth(self):}
-\DoxyCodeLine{198         self.assertFalse(self.uname==\textcolor{keywordtype}{None})}
-\DoxyCodeLine{199         self.assertFalse(self.pas==\textcolor{keywordtype}{None})}
-\DoxyCodeLine{200         valid\_cred = \(\backslash\)}
-\DoxyCodeLine{201             base64.b64encode(bytes(\textcolor{stringliteral}{"\{\}:\{\}"}.\mbox{\hyperlink{namespacecore__test_a97c620d38442bfffbfa43ab3a8575e9c}{format}}(self.uname, \(\backslash\)}
-\DoxyCodeLine{202                                                   self.pas), \(\backslash\)}
-\DoxyCodeLine{203                                    \textcolor{stringliteral}{'utf-\/8'})).decode(\textcolor{stringliteral}{"utf-\/8"})}
-\DoxyCodeLine{204         \textcolor{keywordflow}{return}  valid\_cred}
-\DoxyCodeLine{205 }
+\DoxyCodeLine{167     \textcolor{keyword}{def }\_\_auth(self):}
+\DoxyCodeLine{168         self.assertFalse(self.uname==\textcolor{keywordtype}{None})}
+\DoxyCodeLine{169         self.assertFalse(self.pas==\textcolor{keywordtype}{None})}
+\DoxyCodeLine{170         valid\_cred = \(\backslash\)}
+\DoxyCodeLine{171             base64.b64encode(bytes(\textcolor{stringliteral}{"\{\}:\{\}"}.\mbox{\hyperlink{namespacecore__test_a97c620d38442bfffbfa43ab3a8575e9c}{format}}(self.uname, \(\backslash\)}
+\DoxyCodeLine{172                                                   self.pas), \(\backslash\)}
+\DoxyCodeLine{173                                    \textcolor{stringliteral}{'utf-\/8'})).decode(\textcolor{stringliteral}{"utf-\/8"})}
+\DoxyCodeLine{174         \textcolor{keywordflow}{return}  valid\_cred}
+\DoxyCodeLine{175 }
 
 \end{DoxyCode}
 
@@ -158,13 +155,13 @@ References core\+\_\+test.\+format, core.\+client.\+client.\+Client.\+pas, clien
 
 
 
-Definition at line 321 of file core\+\_\+test.\+py.
+Definition at line 292 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{321     \textcolor{keyword}{def }\_\_get\_dict(self, ret):}
-\DoxyCodeLine{322         res=ret.decode(\textcolor{stringliteral}{'utf8'})\textcolor{comment}{\#.replace('"', "'")}}
-\DoxyCodeLine{323         \textcolor{keywordflow}{return} json.loads(res)}
+\DoxyCodeLine{292     \textcolor{keyword}{def }\_\_get\_dict(self, ret):}
+\DoxyCodeLine{293         res=ret.decode(\textcolor{stringliteral}{'utf8'})\textcolor{comment}{\#.replace('"', "'")}}
+\DoxyCodeLine{294         \textcolor{keywordflow}{return} json.loads(res)}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classcore__test_1_1_restful_test_a5f0cce725eff677b2169a79b4bce6d05}\label{classcore__test_1_1_restful_test_a5f0cce725eff677b2169a79b4bce6d05}} 
@@ -175,35 +172,34 @@ Definition at line 321 of file core\+\_\+test.\+py.
 
 
 
-Definition at line 412 of file core\+\_\+test.\+py.
+Definition at line 383 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{412     \textcolor{keyword}{def }\_\_ledger\_timestamp(self):}
-\DoxyCodeLine{413         dt=\textcolor{keywordtype}{None}}
-\DoxyCodeLine{414         self.db.init()}
-\DoxyCodeLine{415         \textcolor{keywordflow}{try}:}
-\DoxyCodeLine{416             dt=self.db.gets.get\_last\_timestamp()}
-\DoxyCodeLine{417             self.db.commmit()}
-\DoxyCodeLine{418         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
-\DoxyCodeLine{419             logger.critical(\textcolor{stringliteral}{"failed to retrieve ledger time stamp"})}
-\DoxyCodeLine{420             self.db.rollback()}
-\DoxyCodeLine{421         \textcolor{keywordflow}{finally}:}
-\DoxyCodeLine{422             self.db.close()}
-\DoxyCodeLine{423         print(\textcolor{stringliteral}{"timestamp: "}, dt)}
-\DoxyCodeLine{424         \textcolor{keywordflow}{return} dt}
+\DoxyCodeLine{383     \textcolor{keyword}{def }\_\_ledger\_timestamp(self):}
+\DoxyCodeLine{384         dt=\textcolor{keywordtype}{None}}
+\DoxyCodeLine{385         self.db.init()}
+\DoxyCodeLine{386         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{387             dt=self.db.gets.get\_last\_timestamp()}
+\DoxyCodeLine{388             self.db.commmit()}
+\DoxyCodeLine{389         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{390             logger.critical(\textcolor{stringliteral}{"failed to retrieve ledger time stamp"})}
+\DoxyCodeLine{391             self.db.rollback()}
+\DoxyCodeLine{392         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{393             self.db.close()}
+\DoxyCodeLine{394         print(\textcolor{stringliteral}{"timestamp: "}, dt)}
+\DoxyCodeLine{395         \textcolor{keywordflow}{return} dt}
 
 \end{DoxyCode}
 
 
-References core\+\_\+test.\+Client.\+db, client.\+client.\+Client.\+db, and core.\+client.\+client.\+Client.\+db.
+References core\+\_\+test.\+Client.\+db, core.\+client.\+client.\+Client.\+db, client.\+client.\+Client.\+db, and core.\+utils.\+Client.\+db.
 
 
 
 Referenced by core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+ledger().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -218,16 +214,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 324 of file core\+\_\+test.\+py.
+Definition at line 295 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{324     \textcolor{keyword}{def }\_\_rand\_alphanum(self, L=9):}
-\DoxyCodeLine{325         passcode=\textcolor{stringliteral}{''}.join(rand.choice(string.ascii\_uppercase+\(\backslash\)}
-\DoxyCodeLine{326                                      string.ascii\_lowercase+\(\backslash\)}
-\DoxyCodeLine{327                                      string.digits)\(\backslash\)}
-\DoxyCodeLine{328                          \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(L))}
-\DoxyCodeLine{329 }
+\DoxyCodeLine{295     \textcolor{keyword}{def }\_\_rand\_alphanum(self, L=9):}
+\DoxyCodeLine{296         passcode=\textcolor{stringliteral}{''}.join(rand.choice(string.ascii\_uppercase+\(\backslash\)}
+\DoxyCodeLine{297                                      string.ascii\_lowercase+\(\backslash\)}
+\DoxyCodeLine{298                                      string.digits)\(\backslash\)}
+\DoxyCodeLine{299                          \textcolor{keywordflow}{for} \_ \textcolor{keywordflow}{in} range(L))}
+\DoxyCodeLine{300 }
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classcore__test_1_1_restful_test_a863b4ebbca7fef996a6102bd5a807896}\label{classcore__test_1_1_restful_test_a863b4ebbca7fef996a6102bd5a807896}} 
@@ -239,49 +235,49 @@ Definition at line 324 of file core\+\_\+test.\+py.
 \begin{DoxyVerb}check if this client has credentials, if not register\end{DoxyVerb}
  
 
-Definition at line 330 of file core\+\_\+test.\+py.
+Definition at line 301 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{330     \textcolor{keyword}{def }\_\_register\_bank\_account(self, bank\_name=None, branch\_number=None, account\_number=None, name\_reference=None):}
-\DoxyCodeLine{331         \textcolor{stringliteral}{""" check if this client has credentials, if not register}}
-\DoxyCodeLine{332 \textcolor{stringliteral}{}}
-\DoxyCodeLine{333 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{334         \textcolor{comment}{\#check if user have credentials}}
-\DoxyCodeLine{335         BRANCH\_NUM\_MAX=100}
-\DoxyCodeLine{336         ACCOUNT\_NUMBER\_MAX=10000000000}
-\DoxyCodeLine{337         self.db.init()}
-\DoxyCodeLine{338         \textcolor{keywordflow}{try}:}
-\DoxyCodeLine{339             \textcolor{comment}{\#register user}}
-\DoxyCodeLine{340             bank\_name = self.faker.\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}() \textcolor{keywordflow}{if} bank\_name==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} bank\_name}
-\DoxyCodeLine{341             branch\_number = random.random()*BRANCH\_NUM\_MAX \textcolor{keywordflow}{if} branch\_number==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} branch\_number}
-\DoxyCodeLine{342             account\_number= random.random()*ACCOUNT\_NUMBER\_MAX \textcolor{keywordflow}{if} account\_number==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} account\_number}
-\DoxyCodeLine{343             name\_reference= self.faker.\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}() \textcolor{keywordflow}{if} name\_reference==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} anem\_reference}
-\DoxyCodeLine{344             payload=\{\textcolor{stringliteral}{'bank\_name'}:bank\_name,}
-\DoxyCodeLine{345                      \textcolor{stringliteral}{'branch\_number'}:branch\_number,}
-\DoxyCodeLine{346                      \textcolor{stringliteral}{'account\_number'}:account\_number,}
-\DoxyCodeLine{347                      \textcolor{stringliteral}{'name\_reference'}:name\_reference\}}
-\DoxyCodeLine{348             res=requests.post(ADD\_BANK\_ACCOUNT\_URL, \(\backslash\)}
-\DoxyCodeLine{349                               data=json.dumps(payload))}
-\DoxyCodeLine{350             response = json.loads(res.text)}
-\DoxyCodeLine{351             scode=res.status\_code}
-\DoxyCodeLine{352             \textcolor{comment}{\#TODO support multiple accounts}}
-\DoxyCodeLine{353             \textcolor{comment}{\#create local client table for banking,}}
-\DoxyCodeLine{354             \textcolor{comment}{\#to insert balance, or each account.}}
-\DoxyCodeLine{355             self.balance=response[\textcolor{stringliteral}{'balance'}]}
-\DoxyCodeLine{356             self.db.commit()}
-\DoxyCodeLine{357 }
-\DoxyCodeLine{358         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
-\DoxyCodeLine{359             logger.critical(\textcolor{stringliteral}{"bank account registration failed!, error: "}+ str(error))}
-\DoxyCodeLine{360             print(\textcolor{stringliteral}{"bank account register failed!, error: "}+str(error))}
-\DoxyCodeLine{361             self.db.rollback()}
-\DoxyCodeLine{362         \textcolor{keywordflow}{finally}:}
-\DoxyCodeLine{363             self.db.close()}
+\DoxyCodeLine{301     \textcolor{keyword}{def }\_\_register\_bank\_account(self, bank\_name=None, branch\_number=None, account\_number=None, name\_reference=None):}
+\DoxyCodeLine{302         \textcolor{stringliteral}{""" check if this client has credentials, if not register}}
+\DoxyCodeLine{303 \textcolor{stringliteral}{}}
+\DoxyCodeLine{304 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{305         \textcolor{comment}{\#check if user have credentials}}
+\DoxyCodeLine{306         BRANCH\_NUM\_MAX=100}
+\DoxyCodeLine{307         ACCOUNT\_NUMBER\_MAX=10000000000}
+\DoxyCodeLine{308         self.db.init()}
+\DoxyCodeLine{309         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{310             \textcolor{comment}{\#register user}}
+\DoxyCodeLine{311             bank\_name = self.faker.\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}() \textcolor{keywordflow}{if} bank\_name==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} bank\_name}
+\DoxyCodeLine{312             branch\_number = random.random()*BRANCH\_NUM\_MAX \textcolor{keywordflow}{if} branch\_number==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} branch\_number}
+\DoxyCodeLine{313             account\_number= random.random()*ACCOUNT\_NUMBER\_MAX \textcolor{keywordflow}{if} account\_number==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} account\_number}
+\DoxyCodeLine{314             name\_reference= self.faker.\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}() \textcolor{keywordflow}{if} name\_reference==\textcolor{keywordtype}{None} \textcolor{keywordflow}{else} anem\_reference}
+\DoxyCodeLine{315             payload=\{\textcolor{stringliteral}{'bank\_name'}:bank\_name,}
+\DoxyCodeLine{316                      \textcolor{stringliteral}{'branch\_number'}:branch\_number,}
+\DoxyCodeLine{317                      \textcolor{stringliteral}{'account\_number'}:account\_number,}
+\DoxyCodeLine{318                      \textcolor{stringliteral}{'name\_reference'}:name\_reference\}}
+\DoxyCodeLine{319             res=requests.post(ADD\_BANK\_ACCOUNT\_URL, \(\backslash\)}
+\DoxyCodeLine{320                               data=json.dumps(payload))}
+\DoxyCodeLine{321             response = json.loads(res.text)}
+\DoxyCodeLine{322             scode=res.status\_code}
+\DoxyCodeLine{323             \textcolor{comment}{\#TODO support multiple accounts}}
+\DoxyCodeLine{324             \textcolor{comment}{\#create local client table for banking,}}
+\DoxyCodeLine{325             \textcolor{comment}{\#to insert balance, or each account.}}
+\DoxyCodeLine{326             self.balance=response[\textcolor{stringliteral}{'balance'}]}
+\DoxyCodeLine{327             self.db.commit()}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{330             logger.critical(\textcolor{stringliteral}{"bank account registration failed!, error: "}+ str(error))}
+\DoxyCodeLine{331             print(\textcolor{stringliteral}{"bank account register failed!, error: "}+str(error))}
+\DoxyCodeLine{332             self.db.rollback()}
+\DoxyCodeLine{333         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{334             self.db.close()}
 
 \end{DoxyCode}
 
 
-References core\+\_\+test.\+Client.\+db, core.\+client.\+client.\+Client.\+db, client.\+client.\+Client.\+db, core\+\_\+test.\+Client.\+faker, client.\+client.\+Client.\+faker, core.\+client.\+client.\+Client.\+faker, and setup.\+name.
+References core\+\_\+test.\+Client.\+db, core.\+client.\+client.\+Client.\+db, client.\+client.\+Client.\+db, core.\+utils.\+Client.\+db, client.\+client.\+Client.\+faker, core.\+client.\+client.\+Client.\+faker, and database.\+name.
 
 \mbox{\Hypertarget{classcore__test_1_1_restful_test_ac1c4cf976428b1e2ae1a649e9bc2c6f1}\label{classcore__test_1_1_restful_test_ac1c4cf976428b1e2ae1a649e9bc2c6f1}} 
 \index{core\_test.RestfulTest@{core\_test.RestfulTest}!\_\_transact@{\_\_transact}}
@@ -291,18 +287,18 @@ References core\+\_\+test.\+Client.\+db, core.\+client.\+client.\+Client.\+db, c
 
 
 
-Definition at line 386 of file core\+\_\+test.\+py.
+Definition at line 357 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{386     \textcolor{keyword}{def }\_\_transact(self, credid, amount, currency='USD'):}
-\DoxyCodeLine{387         pur\_item = \{\textcolor{stringliteral}{'credid'}: credid,}
-\DoxyCodeLine{388                     \textcolor{stringliteral}{'amount'}:amount,}
-\DoxyCodeLine{389                     \textcolor{stringliteral}{'currency'}: \textcolor{stringliteral}{'USD'}\}}
-\DoxyCodeLine{390         ret=requests.post(PURCHASE\_URL, data=json.dumps(pur\_item), auth=self.auth())}
-\DoxyCodeLine{391         response=ret.text\textcolor{comment}{\#ret.text.decode('utf8')\#.replace('"', "'")}}
-\DoxyCodeLine{392         trx=json.loads(response)}
-\DoxyCodeLine{393         \textcolor{keywordflow}{return} trx}
+\DoxyCodeLine{357     \textcolor{keyword}{def }\_\_transact(self, credid, amount, currency='USD'):}
+\DoxyCodeLine{358         pur\_item = \{\textcolor{stringliteral}{'credid'}: credid,}
+\DoxyCodeLine{359                     \textcolor{stringliteral}{'amount'}:amount,}
+\DoxyCodeLine{360                     \textcolor{stringliteral}{'currency'}: \textcolor{stringliteral}{'USD'}\}}
+\DoxyCodeLine{361         ret=requests.post(PURCHASE\_URL, data=json.dumps(pur\_item), auth=self.auth())}
+\DoxyCodeLine{362         response=ret.text\textcolor{comment}{\#ret.text.decode('utf8')\#.replace('"', "'")}}
+\DoxyCodeLine{363         trx=json.loads(response)}
+\DoxyCodeLine{364         \textcolor{keywordflow}{return} trx}
 
 \end{DoxyCode}
 
@@ -313,16 +309,14 @@ References client.\+client.\+Client.\+auth(), and core.\+client.\+client.\+Clien
 
 Referenced by core\+\_\+test.\+Restful\+Test.\+autotract().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classcore__test_1_1_restful_test_ac1c4cf976428b1e2ae1a649e9bc2c6f1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -337,16 +331,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 406 of file core\+\_\+test.\+py.
+Definition at line 377 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{406     \textcolor{keyword}{def }\_\_update\_balance(self, balance):}
-\DoxyCodeLine{407         \textcolor{comment}{\#TODO fix}}
-\DoxyCodeLine{408         \textcolor{keywordflow}{if} \mbox{\hyperlink{namespaceclient_1_1client_ad9d896f7f31b547712ee032a1f5cb8c9}{type}}(balance)==dict:}
-\DoxyCodeLine{409             self.balance=balance[\textcolor{stringliteral}{'balance'}]}
-\DoxyCodeLine{410             \textcolor{keywordflow}{return}}
-\DoxyCodeLine{411         self.balance=balance}
+\DoxyCodeLine{377     \textcolor{keyword}{def }\_\_update\_balance(self, balance):}
+\DoxyCodeLine{378         \textcolor{comment}{\#TODO fix}}
+\DoxyCodeLine{379         \textcolor{keywordflow}{if} \mbox{\hyperlink{namespaceclient_1_1client_ad9d896f7f31b547712ee032a1f5cb8c9}{type}}(balance)==dict:}
+\DoxyCodeLine{380             self.balance=balance[\textcolor{stringliteral}{'balance'}]}
+\DoxyCodeLine{381             \textcolor{keywordflow}{return}}
+\DoxyCodeLine{382         self.balance=balance}
 
 \end{DoxyCode}
 
@@ -357,8 +351,7 @@ References core\+\_\+test.\+Client.\+balance, client.\+client.\+Client.\+balance
 
 Referenced by core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+ledger(), and core\+\_\+test.\+Restful\+Test.\+autotract().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -375,39 +368,39 @@ Here is the caller graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 425 of file core\+\_\+test.\+py.
+Definition at line 396 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{425     \textcolor{keyword}{def }\_\_update\_ledger(self):}
-\DoxyCodeLine{426         \textcolor{stringliteral}{"""update ledger with sold goods, and update balance}}
-\DoxyCodeLine{427 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{428         ret=requests.post(LEDGER\_URL, data=json.dumps(\{\textcolor{stringliteral}{'trx\_dt'}: self.\_\_ledger\_timestamp()\}), auth=self.auth())}
-\DoxyCodeLine{429         \textcolor{comment}{\#TODO always process the status code!}}
-\DoxyCodeLine{430         res = json.loads(ret.text) \textcolor{comment}{\#self.\_\_get\_dict(ret.text)}}
-\DoxyCodeLine{431         print(\textcolor{stringliteral}{"new balance: "}, res[\textcolor{stringliteral}{'balance'}])}
-\DoxyCodeLine{432         self.\_\_update\_balance(res[\textcolor{stringliteral}{'balance'}])}
-\DoxyCodeLine{433         self.db.init();}
-\DoxyCodeLine{434         \textcolor{keywordflow}{try}:}
-\DoxyCodeLine{435             new\_trxs=res[\textcolor{stringliteral}{'transactions'}]}
-\DoxyCodeLine{436             print(\textcolor{stringliteral}{"trxs: "}, new\_trxs)}
-\DoxyCodeLine{437             transactions=pd.read\_json(new\_trxs)}
-\DoxyCodeLine{438             print(\textcolor{stringliteral}{"trxs pandas: "}, transactions)}
-\DoxyCodeLine{439             \textcolor{keywordflow}{if} len(transactions)==0:}
-\DoxyCodeLine{440                 \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"empty transaction!"})}
-\DoxyCodeLine{441             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(transactions)-\/1):}
-\DoxyCodeLine{442                 self.\_\_add\_trax(transactions.iloc[i])}
-\DoxyCodeLine{443         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
-\DoxyCodeLine{444             self.db.rollback()}
-\DoxyCodeLine{445         \textcolor{keywordflow}{except}:}
-\DoxyCodeLine{446             self.db.rollback()}
-\DoxyCodeLine{447         \textcolor{keywordflow}{finally}:}
-\DoxyCodeLine{448             self.db.close()}
+\DoxyCodeLine{396     \textcolor{keyword}{def }\_\_update\_ledger(self):}
+\DoxyCodeLine{397         \textcolor{stringliteral}{"""update ledger with sold goods, and update balance}}
+\DoxyCodeLine{398 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{399         ret=requests.post(LEDGER\_URL, data=json.dumps(\{\textcolor{stringliteral}{'trx\_dt'}: self.\_\_ledger\_timestamp()\}), auth=self.auth())}
+\DoxyCodeLine{400         \textcolor{comment}{\#TODO always process the status code!}}
+\DoxyCodeLine{401         res = json.loads(ret.text) \textcolor{comment}{\#self.\_\_get\_dict(ret.text)}}
+\DoxyCodeLine{402         print(\textcolor{stringliteral}{"new balance: "}, res[\textcolor{stringliteral}{'balance'}])}
+\DoxyCodeLine{403         self.\_\_update\_balance(res[\textcolor{stringliteral}{'balance'}])}
+\DoxyCodeLine{404         self.db.init();}
+\DoxyCodeLine{405         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{406             new\_trxs=res[\textcolor{stringliteral}{'transactions'}]}
+\DoxyCodeLine{407             print(\textcolor{stringliteral}{"trxs: "}, new\_trxs)}
+\DoxyCodeLine{408             transactions=pd.read\_json(new\_trxs)}
+\DoxyCodeLine{409             print(\textcolor{stringliteral}{"trxs pandas: "}, transactions)}
+\DoxyCodeLine{410             \textcolor{keywordflow}{if} len(transactions)==0:}
+\DoxyCodeLine{411                 \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"empty transaction!"})}
+\DoxyCodeLine{412             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(transactions)-\/1):}
+\DoxyCodeLine{413                 self.\_\_add\_trax(transactions.iloc[i])}
+\DoxyCodeLine{414         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{415             self.db.rollback()}
+\DoxyCodeLine{416         \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{417             self.db.rollback()}
+\DoxyCodeLine{418         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{419             self.db.close()}
 
 \end{DoxyCode}
 
 
-References client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), core.\+client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+add\+\_\+trax(), core.\+client.\+client.\+Client.\+\_\+\+\_\+ledger\+\_\+timestamp(), client.\+client.\+Client.\+\_\+\+\_\+ledger\+\_\+timestamp(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+ledger\+\_\+timestamp(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+balance(), client.\+client.\+Client.\+auth(), core.\+client.\+client.\+Client.\+auth(), core\+\_\+test.\+Client.\+db, core.\+client.\+client.\+Client.\+db, and client.\+client.\+Client.\+db.
+References client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), core.\+client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+add\+\_\+trax(), core.\+client.\+client.\+Client.\+\_\+\+\_\+ledger\+\_\+timestamp(), client.\+client.\+Client.\+\_\+\+\_\+ledger\+\_\+timestamp(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+ledger\+\_\+timestamp(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+balance(), client.\+client.\+Client.\+auth(), core.\+client.\+client.\+Client.\+auth(), core\+\_\+test.\+Client.\+db, core.\+client.\+client.\+Client.\+db, client.\+client.\+Client.\+db, and core.\+utils.\+Client.\+db.
 
 
 
@@ -421,8 +414,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classcore__test_1_1_restful_test_a5afb6692ac056818a9bf6b66d429ed4c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -442,40 +434,39 @@ Here is the caller graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 364 of file core\+\_\+test.\+py.
+Definition at line 335 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{364     \textcolor{keyword}{def }\mbox{\hyperlink{namespaceserver_1_1server_a9543f6165e186fa9fcfdcaae8c3414fd}{add\_contact}}(self, email, name):}
-\DoxyCodeLine{365         \textcolor{stringliteral}{"""Fetch the client with given email/name}}
-\DoxyCodeLine{366 \textcolor{stringliteral}{}}
-\DoxyCodeLine{367 \textcolor{stringliteral}{        @param email: contact email}}
-\DoxyCodeLine{368 \textcolor{stringliteral}{        @param name: contact name}}
-\DoxyCodeLine{369 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{370         \textcolor{comment}{\#get client credential id}}
-\DoxyCodeLine{371         cred=\{\textcolor{stringliteral}{'email'}: email\}}
-\DoxyCodeLine{372         ret=requests.post(CONTACTS\_URL, \(\backslash\)}
-\DoxyCodeLine{373                           data=json.dumps(cred), \(\backslash\)}
-\DoxyCodeLine{374                           auth=self.auth())}
-\DoxyCodeLine{375         respose=ret.text\textcolor{comment}{\#.decode('utf8')\#.replace('"', "'")}}
-\DoxyCodeLine{376         res = json.laods(response)}
-\DoxyCodeLine{377         credid = res[\textcolor{stringliteral}{'credid'}]}
-\DoxyCodeLine{378         self.db.init()}
-\DoxyCodeLine{379         \textcolor{keywordflow}{try}:}
-\DoxyCodeLine{380             self.db.inserts.insert\_contact(email, name, credid)}
-\DoxyCodeLine{381             self.db.commit()}
-\DoxyCodeLine{382         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
-\DoxyCodeLine{383             self.db.rollback()}
-\DoxyCodeLine{384         \textcolor{keywordflow}{finally}:}
-\DoxyCodeLine{385             self.db.close()}
+\DoxyCodeLine{335     \textcolor{keyword}{def }\mbox{\hyperlink{namespaceserver_1_1server_a9543f6165e186fa9fcfdcaae8c3414fd}{add\_contact}}(self, email, name):}
+\DoxyCodeLine{336         \textcolor{stringliteral}{"""Fetch the client with given email/name}}
+\DoxyCodeLine{337 \textcolor{stringliteral}{}}
+\DoxyCodeLine{338 \textcolor{stringliteral}{        @param email: contact email}}
+\DoxyCodeLine{339 \textcolor{stringliteral}{        @param name: contact name}}
+\DoxyCodeLine{340 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{341         \textcolor{comment}{\#get client credential id}}
+\DoxyCodeLine{342         cred=\{\textcolor{stringliteral}{'email'}: email\}}
+\DoxyCodeLine{343         ret=requests.post(CONTACTS\_URL, \(\backslash\)}
+\DoxyCodeLine{344                           data=json.dumps(cred), \(\backslash\)}
+\DoxyCodeLine{345                           auth=self.auth())}
+\DoxyCodeLine{346         respose=ret.text\textcolor{comment}{\#.decode('utf8')\#.replace('"', "'")}}
+\DoxyCodeLine{347         res = json.laods(response)}
+\DoxyCodeLine{348         credid = res[\textcolor{stringliteral}{'credid'}]}
+\DoxyCodeLine{349         self.db.init()}
+\DoxyCodeLine{350         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{351             self.db.inserts.insert\_contact(email, name, credid)}
+\DoxyCodeLine{352             self.db.commit()}
+\DoxyCodeLine{353         \textcolor{keywordflow}{except} psycopg2.DatabaseError \textcolor{keyword}{as} error:}
+\DoxyCodeLine{354             self.db.rollback()}
+\DoxyCodeLine{355         \textcolor{keywordflow}{finally}:}
+\DoxyCodeLine{356             self.db.close()}
 
 \end{DoxyCode}
 
 
-References client.\+client.\+Client.\+auth(), core.\+client.\+client.\+Client.\+auth(), core\+\_\+test.\+Client.\+db, client.\+client.\+Client.\+db, and core.\+client.\+client.\+Client.\+db.
+References client.\+client.\+Client.\+auth(), core.\+client.\+client.\+Client.\+auth(), core\+\_\+test.\+Client.\+db, core.\+client.\+client.\+Client.\+db, client.\+client.\+Client.\+db, and core.\+utils.\+Client.\+db.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -494,41 +485,40 @@ trade with randomly with maintained contacts with 0.5 probability for each, and 
 \end{DoxyVerb}
  
 
-Definition at line 449 of file core\+\_\+test.\+py.
+Definition at line 420 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{449     \textcolor{keyword}{def }autotract(self):}
-\DoxyCodeLine{450         \textcolor{stringliteral}{"""Stochastic fake auto-\/tracting}}
-\DoxyCodeLine{451 \textcolor{stringliteral}{}}
-\DoxyCodeLine{452 \textcolor{stringliteral}{        trade with randomly with maintained contacts with 0.5 probability for each, and 0.1 probability for all contacts goods, update balance, and goods for each contact}}
-\DoxyCodeLine{453 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{454         \textcolor{comment}{\#update balance, and add new transactions}}
-\DoxyCodeLine{455         MAX\_TRACT\_BALANCE=100000}
-\DoxyCodeLine{456         self.\_\_update\_ledger()}
-\DoxyCodeLine{457         contacts\_df=db.gets.get\_all\_contacts()}
-\DoxyCodeLine{458         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(contacts\_df-\/1)):}
-\DoxyCodeLine{459             contact\_credid=contacts\_df.iloc[i][\textcolor{stringliteral}{'contact\_id'}]}
-\DoxyCodeLine{460             contact\_name=contacts\_df.iloc[i][\textcolor{stringliteral}{'contact\_name'}]}
-\DoxyCodeLine{461             contact\_email=contacts\_df.iloc[i][\textcolor{stringliteral}{'contact\_email'}]}
-\DoxyCodeLine{462             amount=random.random()*MAX\_TRACT\_BALANCE}
-\DoxyCodeLine{463             logger.info(\textcolor{stringliteral}{"making transaction with \{\}[\{\}] by amount: \{\}"}.\(\backslash\)}
-\DoxyCodeLine{464                         \mbox{\hyperlink{namespacecore__test_a97c620d38442bfffbfa43ab3a8575e9c}{format}}(contact\_name, contact\_email, amount))}
-\DoxyCodeLine{465             \textcolor{comment}{\#if random.random()> STOCHASTIC\_TRADE\_THRESHOLD and good.cost <= self.balance:}}
-\DoxyCodeLine{466             \textcolor{comment}{\#TODO (fix) doesn't work!}}
-\DoxyCodeLine{467             \textcolor{comment}{\#trx=self.\_\_purchase(good.gid)}}
-\DoxyCodeLine{468             trx=self.\_\_transact(contact\_credid, amount)}
-\DoxyCodeLine{469             self.\_\_add\_trax(trx)}
-\DoxyCodeLine{470             self.\_\_update\_balance(trx)}
-\DoxyCodeLine{471 }
+\DoxyCodeLine{420     \textcolor{keyword}{def }autotract(self):}
+\DoxyCodeLine{421         \textcolor{stringliteral}{"""Stochastic fake auto-\/tracting}}
+\DoxyCodeLine{422 \textcolor{stringliteral}{}}
+\DoxyCodeLine{423 \textcolor{stringliteral}{        trade with randomly with maintained contacts with 0.5 probability for each, and 0.1 probability for all contacts goods, update balance, and goods for each contact}}
+\DoxyCodeLine{424 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{425         \textcolor{comment}{\#update balance, and add new transactions}}
+\DoxyCodeLine{426         MAX\_TRACT\_BALANCE=100000}
+\DoxyCodeLine{427         self.\_\_update\_ledger()}
+\DoxyCodeLine{428         contacts\_df=db.gets.get\_all\_contacts()}
+\DoxyCodeLine{429         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(contacts\_df-\/1)):}
+\DoxyCodeLine{430             contact\_credid=contacts\_df.iloc[i][\textcolor{stringliteral}{'contact\_id'}]}
+\DoxyCodeLine{431             contact\_name=contacts\_df.iloc[i][\textcolor{stringliteral}{'contact\_name'}]}
+\DoxyCodeLine{432             contact\_email=contacts\_df.iloc[i][\textcolor{stringliteral}{'contact\_email'}]}
+\DoxyCodeLine{433             amount=random.random()*MAX\_TRACT\_BALANCE}
+\DoxyCodeLine{434             logger.info(\textcolor{stringliteral}{"making transaction with \{\}[\{\}] by amount: \{\}"}.\(\backslash\)}
+\DoxyCodeLine{435                         \mbox{\hyperlink{namespacecore__test_a97c620d38442bfffbfa43ab3a8575e9c}{format}}(contact\_name, contact\_email, amount))}
+\DoxyCodeLine{436             \textcolor{comment}{\#if random.random()> STOCHASTIC\_TRADE\_THRESHOLD and good.cost <= self.balance:}}
+\DoxyCodeLine{437             \textcolor{comment}{\#TODO (fix)}}
+\DoxyCodeLine{438             \textcolor{comment}{\#trx=self.\_\_purchase(good.gid)}}
+\DoxyCodeLine{439             trx=self.\_\_transact(contact\_credid, amount)}
+\DoxyCodeLine{440             self.\_\_add\_trax(trx)}
+\DoxyCodeLine{441             self.\_\_update\_balance(trx)}
+\DoxyCodeLine{442 }
 
 \end{DoxyCode}
 
 
 References client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), core.\+client.\+client.\+Client.\+\_\+\+\_\+add\+\_\+trax(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+add\+\_\+trax(), client.\+client.\+Client.\+\_\+\+\_\+transact(), core.\+client.\+client.\+Client.\+\_\+\+\_\+transact(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+transact(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+balance(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+balance(), client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), core.\+client.\+client.\+Client.\+\_\+\+\_\+update\+\_\+ledger(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+ledger(), and core\+\_\+test.\+format.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -543,15 +533,15 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 171 of file core\+\_\+test.\+py.
+Definition at line 138 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{171     \textcolor{keyword}{def }setUp(self):}
-\DoxyCodeLine{172         self.app=app.test\_client()}
-\DoxyCodeLine{173         self.uname=\textcolor{keywordtype}{None}}
-\DoxyCodeLine{174         self.pas=\textcolor{keywordtype}{None}}
-\DoxyCodeLine{175         logger.info(\textcolor{stringliteral}{"client initialized"})}
+\DoxyCodeLine{138     \textcolor{keyword}{def }setUp(self):}
+\DoxyCodeLine{139         self.app=app.test\_client()}
+\DoxyCodeLine{140         self.uname=\textcolor{keywordtype}{None}}
+\DoxyCodeLine{141         self.pas=\textcolor{keywordtype}{None}}
+\DoxyCodeLine{142         logger.info(\textcolor{stringliteral}{"client initialized"})}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classcore__test_1_1_restful_test_a17b1baca9caaf76bcc84414c0bb59da9}\label{classcore__test_1_1_restful_test_a17b1baca9caaf76bcc84414c0bb59da9}} 
@@ -562,15 +552,15 @@ Definition at line 171 of file core\+\_\+test.\+py.
 
 
 
-Definition at line 213 of file core\+\_\+test.\+py.
+Definition at line 183 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{213     \textcolor{keyword}{def }test\_add\_contact(self):}
-\DoxyCodeLine{214         src = Client(self.app)}
-\DoxyCodeLine{215         dest = Client(self.app)}
-\DoxyCodeLine{216         credid=src.add\_contact(dest.email, dest.name)}
-\DoxyCodeLine{217         self.assertEqual(credid, dest.credid)}
+\DoxyCodeLine{183     \textcolor{keyword}{def }test\_add\_contact(self):}
+\DoxyCodeLine{184         src = Client(self.app)}
+\DoxyCodeLine{185         dest = Client(self.app)}
+\DoxyCodeLine{186         credid=src.add\_contact(dest.email, dest.name)}
+\DoxyCodeLine{187         self.assertEqual(credid, dest.credid)}
 
 \end{DoxyCode}
 
@@ -585,25 +575,24 @@ References core\+\_\+test.\+Client.\+app, and core\+\_\+test.\+Restful\+Test.\+a
 
 
 
-Definition at line 206 of file core\+\_\+test.\+py.
+Definition at line 176 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{206     \textcolor{keyword}{def }test\_get\_balance(self):}
-\DoxyCodeLine{207         src = Client(self.app)}
-\DoxyCodeLine{208         balance=src.get\_balance()}
-\DoxyCodeLine{209         print(\textcolor{stringliteral}{'|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/>balance: '}, balance)}
-\DoxyCodeLine{210         self.assertEqual(balance[0], src.balance)}
-\DoxyCodeLine{211         self.assertEqual(\mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\_cur}}(balance[1]), \mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\_cur}}(src.currency\_pref))}
-\DoxyCodeLine{212 }
+\DoxyCodeLine{176     \textcolor{keyword}{def }test\_get\_balance(self):}
+\DoxyCodeLine{177         src = Client(self.app)}
+\DoxyCodeLine{178         balance=src.get\_balance()}
+\DoxyCodeLine{179         print(\textcolor{stringliteral}{'|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/>balance: '}, balance)}
+\DoxyCodeLine{180         self.assertEqual(balance[0], src.balance)}
+\DoxyCodeLine{181         self.assertEqual(\mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\_cur}}(balance[1]), \mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{unwrap\_cur}}(src.currency\_pref))}
+\DoxyCodeLine{182 }
 
 \end{DoxyCode}
 
 
 References core\+\_\+test.\+Client.\+app, core\+\_\+test.\+Restful\+Test.\+app, and core.\+utils.\+unwrap\+\_\+cur().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -618,19 +607,20 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 220 of file core\+\_\+test.\+py.
+Definition at line 190 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{220     \textcolor{keyword}{def }test\_make\_transaction(self):}
-\DoxyCodeLine{221         src = Client(self.app)}
-\DoxyCodeLine{222         dest = Client(self.app)}
-\DoxyCodeLine{223         amount=\mbox{\hyperlink{namespacecore__test_a4b1e9e63ced2616f8c2ec4a6893d353c}{get\_amount}}()}
-\DoxyCodeLine{224         old\_balance=src.balance}
-\DoxyCodeLine{225         new\_balance, trxs = src.make\_transaction(dest.email, dest.name, amount)}
-\DoxyCodeLine{226         print(\textcolor{stringliteral}{"transaction made: "}, trxs)}
-\DoxyCodeLine{227         self.assertEqual(new\_balance, old\_balance-\/(amount+FEE))}
-\DoxyCodeLine{228 }
+\DoxyCodeLine{190     \textcolor{keyword}{def }test\_make\_transaction(self):}
+\DoxyCodeLine{191         src = Client(self.app)}
+\DoxyCodeLine{192         dest = Client(self.app)}
+\DoxyCodeLine{193         \textcolor{keyword}{assert} \textcolor{keywordflow}{not} src.email==dest.email \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} src.passcode==dest.passcode}
+\DoxyCodeLine{194         amount=\mbox{\hyperlink{namespacecore_1_1utils_a6977dd5e1ce05503b5972d8778e121cb}{get\_amount}}()}
+\DoxyCodeLine{195         old\_balance=src.balance}
+\DoxyCodeLine{196         new\_balance, trxs = src.make\_transaction(dest.email, dest.name, amount)}
+\DoxyCodeLine{197         print(\textcolor{stringliteral}{"transaction made: "}, trxs)}
+\DoxyCodeLine{198         self.assertEqual(new\_balance, old\_balance-\/(amount+FEE))}
+\DoxyCodeLine{199 }
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classcore__test_1_1_restful_test_a3cd7e5fa0aa388845c139cd288aeae0b}\label{classcore__test_1_1_restful_test_a3cd7e5fa0aa388845c139cd288aeae0b}} 
@@ -642,35 +632,36 @@ Definition at line 220 of file core\+\_\+test.\+py.
 \begin{DoxyVerb}check if this client has credentials, if not register\end{DoxyVerb}
  
 
-Definition at line 176 of file core\+\_\+test.\+py.
+Definition at line 145 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{176     \textcolor{keyword}{def }test\_register(self):}
-\DoxyCodeLine{177         \textcolor{stringliteral}{""" check if this client has credentials, if not register}}
-\DoxyCodeLine{178 \textcolor{stringliteral}{}}
-\DoxyCodeLine{179 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{180         name = \mbox{\hyperlink{namespacecore__test_aa7ce5d11a5f3c59bdfb5c76b6e963d80}{get\_name}}()}
-\DoxyCodeLine{181         email = \mbox{\hyperlink{namespacecore__test_a4ddada31ec653b462e8043ef152380f6}{get\_email}}()}
-\DoxyCodeLine{182         passcode = \mbox{\hyperlink{namespacecore__test_a6addcfcb8b4aca4adab09b90870508c4}{get\_rand\_pass}}()}
-\DoxyCodeLine{183         payload=\{\textcolor{stringliteral}{'name'}:name,\(\backslash\)}
-\DoxyCodeLine{184                  \textcolor{stringliteral}{'email'}: email,\(\backslash\)}
-\DoxyCodeLine{185                  \textcolor{stringliteral}{'passcode'}: passcode\}}
-\DoxyCodeLine{186         res=self.app.post(REGISTER, data=json.dumps(payload))}
-\DoxyCodeLine{187         response = res.json \textcolor{comment}{\#json.loads(res.json)}}
-\DoxyCodeLine{188         credid=response[\textcolor{stringliteral}{'cred\_id'}]}
-\DoxyCodeLine{189         \textcolor{comment}{\#cid set to 0, since it never matters in the client side}}
-\DoxyCodeLine{190         \textcolor{comment}{\#self.db.inserts.register(0, passcode, credid)}}
-\DoxyCodeLine{191         logger.debug(\textcolor{stringliteral}{"user registered with credentials username: \{\}, email: \{\}, passcode: \{\}"}.\mbox{\hyperlink{namespacecore__test_a97c620d38442bfffbfa43ab3a8575e9c}{format}}(name, email, passcode))}
-\DoxyCodeLine{192         self.assertTrue(\mbox{\hyperlink{namespaceclient_1_1client_ad9d896f7f31b547712ee032a1f5cb8c9}{type}}(credid)==int)}
-\DoxyCodeLine{193         self.assertEqual(res.status\_code, 201)}
-\DoxyCodeLine{194         self.uname=email}
-\DoxyCodeLine{195         self.pas=passcode}
+\DoxyCodeLine{145     \textcolor{keyword}{def }test\_register(self):}
+\DoxyCodeLine{146         \textcolor{stringliteral}{""" check if this client has credentials, if not register}}
+\DoxyCodeLine{147 \textcolor{stringliteral}{}}
+\DoxyCodeLine{148 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{149         name = \mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{150         email = \mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{151         passcode = \mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{152         payload=\{\textcolor{stringliteral}{'name'}:name,\(\backslash\)}
+\DoxyCodeLine{153                  \textcolor{stringliteral}{'email'}: email,\(\backslash\)}
+\DoxyCodeLine{154                  \textcolor{stringliteral}{'passcode'}: passcode\}}
+\DoxyCodeLine{155         \textcolor{comment}{\#before register you need to add the client}}
+\DoxyCodeLine{156         res=self.app.post(REGISTER, data=json.dumps(payload))}
+\DoxyCodeLine{157         response = res.json \textcolor{comment}{\#json.loads(res.json)}}
+\DoxyCodeLine{158         self.assertEqual(res.status\_code, 201)}
+\DoxyCodeLine{159         credid=response[\textcolor{stringliteral}{'cred\_id'}]}
+\DoxyCodeLine{160         \textcolor{comment}{\#cid set to 0, since it never matters in the client side}}
+\DoxyCodeLine{161         \textcolor{comment}{\#self.db.inserts.register(0, passcode, credid)}}
+\DoxyCodeLine{162         logger.debug(\textcolor{stringliteral}{"user registered with credentials username: \{\}, email: \{\}, passcode: \{\}"}.\mbox{\hyperlink{namespacecore__test_a97c620d38442bfffbfa43ab3a8575e9c}{format}}(name, email, passcode))}
+\DoxyCodeLine{163         self.uname=email}
+\DoxyCodeLine{164         self.pas=passcode}
+\DoxyCodeLine{165 }
 
 \end{DoxyCode}
 
 
-References core\+\_\+test.\+Client.\+app, core\+\_\+test.\+Restful\+Test.\+app, core\+\_\+test.\+format, core\+\_\+test.\+get\+\_\+email(), core\+\_\+test.\+get\+\_\+name(), core\+\_\+test.\+get\+\_\+rand\+\_\+pass(), client.\+client.\+Client.\+pas, core.\+client.\+client.\+Client.\+pas, core\+\_\+test.\+Restful\+Test.\+pas, client.\+client.\+type, client.\+client.\+Client.\+uname, core.\+client.\+client.\+Client.\+uname, and core\+\_\+test.\+Restful\+Test.\+uname.
+References core\+\_\+test.\+Client.\+app, core\+\_\+test.\+Restful\+Test.\+app, core\+\_\+test.\+format, client.\+client.\+get\+\_\+email(), client.\+client.\+get\+\_\+name(), client.\+client.\+get\+\_\+rand\+\_\+pass(), client.\+client.\+Client.\+pas, core.\+client.\+client.\+Client.\+pas, core\+\_\+test.\+Restful\+Test.\+pas, client.\+client.\+Client.\+uname, core.\+client.\+client.\+Client.\+uname, and core\+\_\+test.\+Restful\+Test.\+uname.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -688,12 +679,12 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 218 of file core\+\_\+test.\+py.
+Definition at line 188 of file core\+\_\+test.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{218     \textcolor{keyword}{def }test\_udapte\_ledger(self):}
-\DoxyCodeLine{219         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{188     \textcolor{keyword}{def }test\_udapte\_ledger(self):}
+\DoxyCodeLine{189         \textcolor{keywordflow}{pass}}
 
 \end{DoxyCode}
 
@@ -707,7 +698,7 @@ Definition at line 218 of file core\+\_\+test.\+py.
 
 
 
-Definition at line 172 of file core\+\_\+test.\+py.
+Definition at line 139 of file core\+\_\+test.\+py.
 
 
 
@@ -721,11 +712,11 @@ Referenced by core\+\_\+test.\+Restful\+Test.\+test\+\_\+add\+\_\+contact(), cor
 
 
 
-Definition at line 355 of file core\+\_\+test.\+py.
+Definition at line 326 of file core\+\_\+test.\+py.
 
 
 
-Referenced by core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+balance(), core.\+utils.\+Payment\+Gate.\+authenticated(), and core.\+utils.\+Payment\+Gate.\+get\+\_\+balance().
+Referenced by core.\+utils.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Payment\+Gate.\+\_\+\+\_\+init\+\_\+\+\_\+(), core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+balance(), and core.\+utils.\+Payment\+Gate.\+get\+\_\+balance().
 
 \mbox{\Hypertarget{classcore__test_1_1_restful_test_a4dc72461b15b6f932432a4db513a866b}\label{classcore__test_1_1_restful_test_a4dc72461b15b6f932432a4db513a866b}} 
 \index{core\_test.RestfulTest@{core\_test.RestfulTest}!pas@{pas}}
@@ -735,7 +726,7 @@ Referenced by core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+update\+\_\+balance(), 
 
 
 
-Definition at line 174 of file core\+\_\+test.\+py.
+Definition at line 141 of file core\+\_\+test.\+py.
 
 
 
@@ -749,7 +740,7 @@ Referenced by core\+\_\+test.\+Restful\+Test.\+\_\+\+\_\+auth(), and core\+\_\+t
 
 
 
-Definition at line 173 of file core\+\_\+test.\+py.
+Definition at line 140 of file core\+\_\+test.\+py.
 
 
 

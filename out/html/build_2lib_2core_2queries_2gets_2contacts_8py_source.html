@@ -69,17 +69,17 @@ $(function() {
 <div class="title">contacts.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="build_2lib_2core_2queries_2gets_2contacts_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div>
+<a href="build_2lib_2core_2queries_2gets_2contacts_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacecore_1_1queries_1_1gets_1_1contacts.html">    1</a></span>&#160;<span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">from</span> <a class="code" href="namespacecore_1_1connection__cursor.html">core.connection_cursor</a> <span class="keyword">import</span> conn</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">from</span> <a class="code" href="namespacecore_1_1utils.html">core.utils</a> <span class="keyword">import</span> db_log</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">from</span> psycopg2 <span class="keyword">import</span> sql</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a863a3b77cb56e4d587f8640fb234de00">get_all</a>():</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aa6e3690d219a1d9d148a410d125a1413">    6</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aa6e3690d219a1d9d148a410d125a1413">get_all</a>():</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    query = <span class="stringliteral">&quot;SELECT * FROM contacts;&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    db_log.debug(query)</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> pd.read_sql(query, conn)</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aaaafe0c43da5c49502c803312a902650">get_banking_id</a>(cid):</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a9b893960d977a4a4b7d1bf7409008792">   11</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a9b893960d977a4a4b7d1bf7409008792">get_banking_id</a>(cid):</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="stringliteral">&quot;&quot;&quot; called at the client side, to retrieve the stored banking id in the contacts</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">    @param cid: contact id</span></div>
@@ -90,14 +90,14 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    db_log.debug(query)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> pd.read_sql(query, conn).ix[0]</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1contacts_html_aaaafe0c43da5c49502c803312a902650"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aaaafe0c43da5c49502c803312a902650">core.queries.gets.contacts.get_banking_id</a></div><div class="ttdeci">def get_banking_id(cid)</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2contacts_8py_source.html#l00011">contacts.py:11</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1contacts_html_a9b893960d977a4a4b7d1bf7409008792"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a9b893960d977a4a4b7d1bf7409008792">core.queries.gets.contacts.get_banking_id</a></div><div class="ttdeci">def get_banking_id(cid)</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2contacts_8py_source.html#l00011">contacts.py:11</a></div></div>
 <div class="ttc" id="anamespacecore_1_1connection__cursor_html"><div class="ttname"><a href="namespacecore_1_1connection__cursor.html">core.connection_cursor</a></div><div class="ttdef"><b>Definition:</b> <a href="core_2connection__cursor_8py_source.html#l00001">connection_cursor.py:1</a></div></div>
 <div class="ttc" id="anamespaceclient_1_1client_html_a28f28b5d621b127269d6035d7a435682"><div class="ttname"><a href="namespaceclient_1_1client.html#a28f28b5d621b127269d6035d7a435682">client.client.format</a></div><div class="ttdeci">format</div><div class="ttdef"><b>Definition:</b> <a href="core_2build_2lib_2client_2client_8py_source.html#l00024">client.py:24</a></div></div>
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1contacts_html_a863a3b77cb56e4d587f8640fb234de00"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a863a3b77cb56e4d587f8640fb234de00">core.queries.gets.contacts.get_all</a></div><div class="ttdeci">def get_all()</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2contacts_8py_source.html#l00006">contacts.py:6</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1contacts_html_aa6e3690d219a1d9d148a410d125a1413"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aa6e3690d219a1d9d148a410d125a1413">core.queries.gets.contacts.get_all</a></div><div class="ttdeci">def get_all()</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2contacts_8py_source.html#l00006">contacts.py:6</a></div></div>
 <div class="ttc" id="anamespacecore_1_1utils_html"><div class="ttname"><a href="namespacecore_1_1utils.html">core.utils</a></div><div class="ttdef"><b>Definition:</b> <a href="core_2utils_8py_source.html#l00001">utils.py:1</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 27 2021 20:38:07 for tahweela by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 28 2021 17:18:04 for tahweela by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

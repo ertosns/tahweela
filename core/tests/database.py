@@ -1,52 +1,28 @@
 import unittest
 from core.queries.database import  database
-from faker import Faker
 import random
 import os
 import string
 import datetime
-from core.utils import TIMESTAMP_FORMAT, Currency, process_cur, EUR, USD, EGP, hash, get_credid
+from core.utils import TIMESTAMP_FORMAT, Currency, process_cur, EUR, USD, EGP, hash, get_credid, get_bank_name, get_branch_number, get_account_number, get_name_reference, get_name, get_email, get_balance, get_rand_pass, get_amount, PaymentGate, Client
+from core.configs import db_configs
 
 seed=int.from_bytes(os.urandom(2), "big")
 random.seed(seed)
-faker=Faker(seed)
-db_configs="dbname='demo'  user='tahweela' password='tahweela'"
+#
+#db_configs="dbname='demo'  user='tahweela' password='tahweela'"
 db=database(db_configs)
-
-def get_bank_name():
-    return faker.name().split()[0]
-def get_branch_number():
-    return int(33*random.random())
-def get_account_number():
-    return int(3333333*random.random())
-def get_name_reference():
-    return faker.name().split()[1]
-
+#
 bank_name=get_bank_name()
 branch_number=get_branch_number()
 account_number=get_account_number()
 name_reference=get_name_reference()
-
-def get_name():
-    return faker.name()
-def get_email():
-    return faker.email()
-def get_balance():
-    return 333*random.random()
-
 email=get_email()
 name=get_name()
 credid=get_credid(email)
 balance=get_balance()
 ADD_CURRENCY_LOCK=1
 lock=ADD_CURRENCY_LOCK
-
-def get_rand_pass(L=9):
-    passcode=''.join(random.choice(string.ascii_uppercase+\
-                                 string.ascii_lowercase+\
-                                 string.digits)\
-                     for _ in range(L))
-    return passcode
 
 class ServerDatabaseTest(unittest.TestCase):
     def test_currency(self):
@@ -200,6 +176,53 @@ class ServerDatabaseTest(unittest.TestCase):
         print('cid: ', cid)
         balance_cur=db.gets.get_balance_by_cid(cid)['balance']
         self.assertEqual(balance_cur, balance)
+    def test_total_balance(self):
+        c1 = Client(db)
+        bank_name=get_bank_name()
+        branch_number=get_branch_number()
+        account_number=get_account_number()
+        name_reference=get_name_reference()
+        pg1=PaymentGate(bank_name,branch_number,account_number, name_reference)
+        c1.add_pg(pg1)
+        c1.add_bank_account(c1.cid, pg1.balance, bank_name, branch_number, account_number, name_reference, c1.curr_id)
+        bank_name=get_bank_name()
+        branch_number=get_branch_number()
+        account_number=get_account_number()
+        name_reference=get_name_reference()
+        pg2=PaymentGate(bank_name,branch_number,account_number, name_reference)
+        c1.add_pg(pg2)
+        c1.add_bank_account(c1.cid, pg2.balance, bank_name, branch_number, account_number, name_reference, c1.curr_id)
+        #
+        bank_exists=db.exists.bank_account_bycid(c1.cid)
+        self.assertTrue(bank_exists)
+        #TODO get number of bank accounts associated with cid
+        credid=db.gets.cid2credid(c1.cid)
+        total_balance=db.gets.get_total_balance_by_credid(credid)['balance']
+        self.assertEqual(total_balance, c1.total_currency())
+    def test_banking_ids(self):
+        c1 = Client(db)
+        bank_name=get_bank_name()
+        branch_number=get_branch_number()
+        account_number=get_account_number()
+        name_reference=get_name_reference()
+        pg1=PaymentGate(bank_name,branch_number,account_number, name_reference)
+        c1.add_pg(pg1)
+        c1.add_bank_account(c1.cid, pg1.balance, bank_name, branch_number, account_number, name_reference, c1.curr_id)
+        bid1=db.gets.get_banking_id(c1.cid)
+        bank_name=get_bank_name()
+        branch_number=get_branch_number()
+        account_number=get_account_number()
+        name_reference=get_name_reference()
+        pg2=PaymentGate(bank_name,branch_number,account_number, name_reference)
+        c1.add_pg(pg2)
+        c1.add_bank_account(c1.cid, pg2.balance, bank_name, branch_number, account_number, name_reference, c1.curr_id)
+        bid2=db.gets.get_banking_id(c1.cid)
+        #
+        bids=db.gets.get_banking_ids(c1.cid)
+        print('bids: ', bids)
+        self.assertEqual(bid1, bids[0])
+        #note this will fail since bid1=bid2, because get_banking_id is limited by 1
+        #self.assertEqual(bid2, bids[1])
     def test_update_balance(self):
         exchange=Currency(EUR)
         rate=exchange.rate

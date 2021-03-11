@@ -2,8 +2,7 @@
 \label{classcore_1_1queries_1_1database_1_1updates}\index{core.queries.database.updates@{core.queries.database.updates}}
 
 
-Inheritance diagram for core.\+queries.\+database.\+updates\+:
-\nopagebreak
+Inheritance diagram for core.\+queries.\+database.\+updates\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for core.\+queries.\+database.\+updates\+:
 \end{figure}
 
 
-Collaboration diagram for core.\+queries.\+database.\+updates\+:
-\nopagebreak
+Collaboration diagram for core.\+queries.\+database.\+updates\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -49,7 +47,7 @@ def \mbox{\hyperlink{classcore_1_1queries_1_1database_1_1updates_af3916eec2be3b3
 \doxysubsection{Detailed Description}
 
 
-Definition at line 656 of file database.\+py.
+Definition at line 746 of file database.\+py.
 
 
 
@@ -62,22 +60,21 @@ Definition at line 656 of file database.\+py.
 
 
 
-Definition at line 657 of file database.\+py.
+Definition at line 747 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{657     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
-\DoxyCodeLine{658         self.conn=conn}
-\DoxyCodeLine{659         self.cur=cur}
-\DoxyCodeLine{660         self.db\_log=logger}
+\DoxyCodeLine{747     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
+\DoxyCodeLine{748         self.conn=conn}
+\DoxyCodeLine{749         self.cur=cur}
+\DoxyCodeLine{750         self.db\_log=logger}
 
 \end{DoxyCode}
 
 
 Referenced by core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -92,22 +89,21 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 657 of file database.\+py.
+Definition at line 747 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{657     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
-\DoxyCodeLine{658         self.conn=conn}
-\DoxyCodeLine{659         self.cur=cur}
-\DoxyCodeLine{660         self.db\_log=logger}
+\DoxyCodeLine{747     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
+\DoxyCodeLine{748         self.conn=conn}
+\DoxyCodeLine{749         self.cur=cur}
+\DoxyCodeLine{750         self.db\_log=logger}
 
 \end{DoxyCode}
 
 
-References core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, and core.\+queries.\+database.\+updates.\+db\+\_\+log.
+References core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, and core.\+queries.\+database.\+updates.\+db\+\_\+log.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -130,32 +126,31 @@ Here is the call graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 672 of file database.\+py.
+Definition at line 762 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{672     \textcolor{keyword}{def }currency\_preference(self, cid, base):}
-\DoxyCodeLine{673         \textcolor{stringliteral}{""" update currency preference (base ) for the client with client id (cid)}}
-\DoxyCodeLine{674 \textcolor{stringliteral}{}}
-\DoxyCodeLine{675 \textcolor{stringliteral}{        @param cid: client id}}
-\DoxyCodeLine{676 \textcolor{stringliteral}{        @param base: base currency of preference}}
-\DoxyCodeLine{677 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{678         stat = sql.SQL(\textcolor{stringliteral}{"update clients SET c.currency\_id = cur.id FROM currency AS cur  JOIN clients AS c WHERE c.client\_id=\{cid\} AND cur.currency\_name=\{cur\_name\}"}).\(\backslash\)}
-\DoxyCodeLine{679             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name=sql.Literal(cur\_name), \(\backslash\)}
-\DoxyCodeLine{680                    cid=sql.Literal(cid))}
-\DoxyCodeLine{681         self.cur.execute(stat)}
+\DoxyCodeLine{762     \textcolor{keyword}{def }currency\_preference(self, cid, base):}
+\DoxyCodeLine{763         \textcolor{stringliteral}{""" update currency preference (base ) for the client with client id (cid)}}
+\DoxyCodeLine{764 \textcolor{stringliteral}{}}
+\DoxyCodeLine{765 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{766 \textcolor{stringliteral}{        @param base: base currency of preference}}
+\DoxyCodeLine{767 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{768         stat = sql.SQL(\textcolor{stringliteral}{"update clients SET c.currency\_id = cur.id FROM currency AS cur  JOIN clients AS c WHERE c.client\_id=\{cid\} AND cur.currency\_name=\{cur\_name\}"}).\(\backslash\)}
+\DoxyCodeLine{769             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name=sql.Literal(cur\_name), \(\backslash\)}
+\DoxyCodeLine{770                    cid=sql.Literal(cid))}
+\DoxyCodeLine{771         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and client.\+client.\+format.
 
 
 
 Referenced by core.\+queries.\+database.\+updates.\+currency\+\_\+preference().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -175,28 +170,27 @@ Here is the caller graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 672 of file database.\+py.
+Definition at line 762 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{672     \textcolor{keyword}{def }currency\_preference(self, cid, base):}
-\DoxyCodeLine{673         \textcolor{stringliteral}{""" update currency preference (base ) for the client with client id (cid)}}
-\DoxyCodeLine{674 \textcolor{stringliteral}{}}
-\DoxyCodeLine{675 \textcolor{stringliteral}{        @param cid: client id}}
-\DoxyCodeLine{676 \textcolor{stringliteral}{        @param base: base currency of preference}}
-\DoxyCodeLine{677 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{678         stat = sql.SQL(\textcolor{stringliteral}{"update clients SET c.currency\_id = cur.id FROM currency AS cur  JOIN clients AS c WHERE c.client\_id=\{cid\} AND cur.currency\_name=\{cur\_name\}"}).\(\backslash\)}
-\DoxyCodeLine{679             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name=sql.Literal(cur\_name), \(\backslash\)}
-\DoxyCodeLine{680                    cid=sql.Literal(cid))}
-\DoxyCodeLine{681         self.cur.execute(stat)}
+\DoxyCodeLine{762     \textcolor{keyword}{def }currency\_preference(self, cid, base):}
+\DoxyCodeLine{763         \textcolor{stringliteral}{""" update currency preference (base ) for the client with client id (cid)}}
+\DoxyCodeLine{764 \textcolor{stringliteral}{}}
+\DoxyCodeLine{765 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{766 \textcolor{stringliteral}{        @param base: base currency of preference}}
+\DoxyCodeLine{767 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{768         stat = sql.SQL(\textcolor{stringliteral}{"update clients SET c.currency\_id = cur.id FROM currency AS cur  JOIN clients AS c WHERE c.client\_id=\{cid\} AND cur.currency\_name=\{cur\_name\}"}).\(\backslash\)}
+\DoxyCodeLine{769             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name=sql.Literal(cur\_name), \(\backslash\)}
+\DoxyCodeLine{770                    cid=sql.Literal(cid))}
+\DoxyCodeLine{771         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+updates.\+currency\+\_\+preference(), and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+updates.\+currency\+\_\+preference(), and client.\+client.\+format.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -216,29 +210,28 @@ Here is the call graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 661 of file database.\+py.
+Definition at line 751 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{661     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1updates_1_1banking_a4b0ffde5930116879e8cf920ceb95efd}{update\_account}}(self, cid, balance):}
-\DoxyCodeLine{662         \textcolor{stringliteral}{"""update the banking account with the calculated new balance (CALLED FROM SERVER SIDE)}}
-\DoxyCodeLine{663 \textcolor{stringliteral}{}}
-\DoxyCodeLine{664 \textcolor{stringliteral}{        @param cid: client id}}
-\DoxyCodeLine{665 \textcolor{stringliteral}{        @param balance: the account balance}}
-\DoxyCodeLine{666 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{667         stat = sql.SQL(\textcolor{stringliteral}{"UPDATE banking SET (balance, balance\_dt) = (\{balance\}, \{dt\}) WHERE client\_id=\{cid\}"}).\(\backslash\)}
-\DoxyCodeLine{668             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(balance=sql.Literal(balance), \(\backslash\)}
-\DoxyCodeLine{669                    dt=sql.Literal(dt.datetime.now().strftime(TIMESTAMP\_FORMAT)), \(\backslash\)}
-\DoxyCodeLine{670                    cid=sql.Literal(cid))}
-\DoxyCodeLine{671         self.cur.execute(stat)}
+\DoxyCodeLine{751     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1updates_1_1banking_a4b0ffde5930116879e8cf920ceb95efd}{update\_account}}(self, cid, balance):}
+\DoxyCodeLine{752         \textcolor{stringliteral}{"""update the banking account with the calculated new balance (CALLED FROM SERVER SIDE)}}
+\DoxyCodeLine{753 \textcolor{stringliteral}{}}
+\DoxyCodeLine{754 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{755 \textcolor{stringliteral}{        @param balance: the account balance}}
+\DoxyCodeLine{756 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{757         stat = sql.SQL(\textcolor{stringliteral}{"UPDATE banking SET (balance, balance\_dt) = (\{balance\}, \{dt\}) WHERE client\_id=\{cid\}"}).\(\backslash\)}
+\DoxyCodeLine{758             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(balance=sql.Literal(balance), \(\backslash\)}
+\DoxyCodeLine{759                    dt=sql.Literal(dt.datetime.now().strftime(TIMESTAMP\_FORMAT)), \(\backslash\)}
+\DoxyCodeLine{760                    cid=sql.Literal(cid))}
+\DoxyCodeLine{761         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, client.\+client.\+format, and core.\+queries.\+database.\+updates.\+update\+\_\+account().
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, client.\+client.\+format, and core.\+queries.\+database.\+updates.\+update\+\_\+account().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -258,33 +251,32 @@ Here is the call graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 661 of file database.\+py.
+Definition at line 751 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{661     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1updates_1_1banking_a4b0ffde5930116879e8cf920ceb95efd}{update\_account}}(self, cid, balance):}
-\DoxyCodeLine{662         \textcolor{stringliteral}{"""update the banking account with the calculated new balance (CALLED FROM SERVER SIDE)}}
-\DoxyCodeLine{663 \textcolor{stringliteral}{}}
-\DoxyCodeLine{664 \textcolor{stringliteral}{        @param cid: client id}}
-\DoxyCodeLine{665 \textcolor{stringliteral}{        @param balance: the account balance}}
-\DoxyCodeLine{666 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{667         stat = sql.SQL(\textcolor{stringliteral}{"UPDATE banking SET (balance, balance\_dt) = (\{balance\}, \{dt\}) WHERE client\_id=\{cid\}"}).\(\backslash\)}
-\DoxyCodeLine{668             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(balance=sql.Literal(balance), \(\backslash\)}
-\DoxyCodeLine{669                    dt=sql.Literal(dt.datetime.now().strftime(TIMESTAMP\_FORMAT)), \(\backslash\)}
-\DoxyCodeLine{670                    cid=sql.Literal(cid))}
-\DoxyCodeLine{671         self.cur.execute(stat)}
+\DoxyCodeLine{751     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1updates_1_1banking_a4b0ffde5930116879e8cf920ceb95efd}{update\_account}}(self, cid, balance):}
+\DoxyCodeLine{752         \textcolor{stringliteral}{"""update the banking account with the calculated new balance (CALLED FROM SERVER SIDE)}}
+\DoxyCodeLine{753 \textcolor{stringliteral}{}}
+\DoxyCodeLine{754 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{755 \textcolor{stringliteral}{        @param balance: the account balance}}
+\DoxyCodeLine{756 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{757         stat = sql.SQL(\textcolor{stringliteral}{"UPDATE banking SET (balance, balance\_dt) = (\{balance\}, \{dt\}) WHERE client\_id=\{cid\}"}).\(\backslash\)}
+\DoxyCodeLine{758             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(balance=sql.Literal(balance), \(\backslash\)}
+\DoxyCodeLine{759                    dt=sql.Literal(dt.datetime.now().strftime(TIMESTAMP\_FORMAT)), \(\backslash\)}
+\DoxyCodeLine{760                    cid=sql.Literal(cid))}
+\DoxyCodeLine{761         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and client.\+client.\+format.
 
 
 
 Referenced by core.\+queries.\+database.\+updates.\+update\+\_\+account().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -302,7 +294,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 658 of file database.\+py.
+Definition at line 748 of file database.\+py.
 
 
 
@@ -316,7 +308,7 @@ Referenced by core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+()
 
 
 
-Definition at line 659 of file database.\+py.
+Definition at line 749 of file database.\+py.
 
 
 
@@ -330,7 +322,7 @@ Referenced by core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+()
 
 
 
-Definition at line 660 of file database.\+py.
+Definition at line 750 of file database.\+py.
 
 
 

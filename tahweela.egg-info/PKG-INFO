@@ -8,5 +8,22 @@ Home-page: UNKNOWN
 Author: mohab metwally
 Author-email: mohab-metwally@riseup.net
 License: Copyright (c) mohab metwally 2021
-Description: UNKNOWN
+Description: # the code is divided into the server ./core/server/server.py, and database ./core/queries/database.py, and tests ./core/tests/
+        
+        
+        # to understand content you can refer to the documentation as well available under ./out/
+        to generate the documentation run 'make docgen' in this directory
+        
+        # to run the server execute sudo -u tahweela python3 ./core/server/server.py.
+        
+        # to run the tests execute 'sudo -u tahweela python3 ./core/tests/database.py for testing the database', (15 test cases) and 'sudo -u tahweela python3 ./core/tests/core_test.py' for testing the core stories (5 test cases)
+        
+        # the code add more features no mentioned in the criteria, specially at the database level, for the rest some of them aren't complete, others are halfway.
+        
+        # preparing the environment, installing necessary libraries, and running the server is by executing 'sudo python3 install.sh'
+        
+        # note that none of the first scripts would run before running the last install command.
+        
+        # there is a client, and market implemented, but both are commented, out,  but aren't included in the test, and duplicated.
+        
 Platform: UNKNOWN

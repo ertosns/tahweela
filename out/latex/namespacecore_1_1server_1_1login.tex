@@ -1,0 +1,263 @@
+\hypertarget{namespacecore_1_1server_1_1login}{}\doxysection{core.\+server.\+login Namespace Reference}
+\label{namespacecore_1_1server_1_1login}\index{core.server.login@{core.server.login}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_user}{User}}
+\item 
+class \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository}{Users\+Repository}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1login_a5a0d38910f9d274d846384663282ee77}{home}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1login_a2d6aff49941207a2c2a38baf01d0d730}{login}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1login_abdd6ce61e468801dad0abc236173b773}{register}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1login_aabea993a6eea604a39fe9952008f92f7}{page\+\_\+not\+\_\+found}} (e)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1login_a73b985c8ec3258c875ff6b22751c5228}{logout}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1server_1_1login_addc293154acf33db170da587d765f16f}{load\+\_\+user}} (userid)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1login_a15145baf05d3659eff00c184c48f065d}{seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1login_a4da43dc027eda2dba884badf4aeae76d}{app}} = Flask(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1login_ad56bfa73cb3644f95105c06c3f1625a1}{D\+E\+B\+UG}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1login_acc94b5dc22422892ae454dc6a1a00d07}{True}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1login_adec83ec35606e4aacb88c8a192ec1a44}{S\+E\+C\+R\+E\+T\+\_\+\+K\+EY}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1login_adc8d62522530da1abb7c5919b33e2087}{login\+\_\+manager}} = Login\+Manager()
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1login_aff59648e678fb77baed79aa33be00da3}{login\+\_\+view}}
+\item 
+\mbox{\hyperlink{namespacecore_1_1server_1_1login_a949635ad92b9ac2ee1c757bef513a377}{users\+\_\+repository}} = \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository}{Users\+Repository}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_a5a0d38910f9d274d846384663282ee77}\label{namespacecore_1_1server_1_1login_a5a0d38910f9d274d846384663282ee77}} 
+\index{core.server.login@{core.server.login}!home@{home}}
+\index{home@{home}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{home()}{home()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1login_a5a0d38910f9d274d846384663282ee77}{home}}():}
+\DoxyCodeLine{62     \textcolor{keywordflow}{return} Response(\textcolor{stringliteral}{"welcome home"})}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 @app.route(\textcolor{stringliteral}{'/home'})}
+\DoxyCodeLine{65 @login\_required}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_addc293154acf33db170da587d765f16f}\label{namespacecore_1_1server_1_1login_addc293154acf33db170da587d765f16f}} 
+\index{core.server.login@{core.server.login}!load\_user@{load\_user}}
+\index{load\_user@{load\_user}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{load\_user()}{load\_user()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+load\+\_\+user (\begin{DoxyParamCaption}\item[{}]{userid }\end{DoxyParamCaption})}
+
+
+
+Definition at line 109 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1login_addc293154acf33db170da587d765f16f}{load\_user}}(userid):}
+\DoxyCodeLine{110     \textcolor{keywordflow}{return} users\_repository.get\_user\_by\_id(userid)}
+\DoxyCodeLine{111 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_a2d6aff49941207a2c2a38baf01d0d730}\label{namespacecore_1_1server_1_1login_a2d6aff49941207a2c2a38baf01d0d730}} 
+\index{core.server.login@{core.server.login}!login@{login}}
+\index{login@{login}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1login_a2d6aff49941207a2c2a38baf01d0d730}{login}}():}
+\DoxyCodeLine{72     \textcolor{keywordflow}{if} request.method ==\textcolor{stringliteral}{'POST'}:}
+\DoxyCodeLine{73         username=request.form[\textcolor{stringliteral}{'username'}]}
+\DoxyCodeLine{74         password = request.form[\textcolor{stringliteral}{'password'}]}
+\DoxyCodeLine{75         registeredUser = users\_repository.get\_user(username)}
+\DoxyCodeLine{76         \textcolor{comment}{\#registered new user here}}
+\DoxyCodeLine{77         \textcolor{keywordflow}{if} registeredUser != \textcolor{keywordtype}{None} \textcolor{keywordflow}{and} registeredUser.password == password:}
+\DoxyCodeLine{78             print(\textcolor{stringliteral}{'logged in'})}
+\DoxyCodeLine{79             login\_user(registeredUser)}
+\DoxyCodeLine{80             \textcolor{keywordflow}{return} redirect(url\_for(\textcolor{stringliteral}{"home"}))}
+\DoxyCodeLine{81         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{82             \textcolor{keywordflow}{return} abort(401)}
+\DoxyCodeLine{83     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{84         \textcolor{comment}{\#TODO add form}}
+\DoxyCodeLine{85         \textcolor{keywordflow}{return} Resposne(\textcolor{stringliteral}{""})}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 @app.route(\textcolor{stringliteral}{"register"}, methods=[\textcolor{stringliteral}{'GET'}, \textcolor{stringliteral}{'POST'}])}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_a73b985c8ec3258c875ff6b22751c5228}\label{namespacecore_1_1server_1_1login_a73b985c8ec3258c875ff6b22751c5228}} 
+\index{core.server.login@{core.server.login}!logout@{logout}}
+\index{logout@{logout}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 104 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1login_a73b985c8ec3258c875ff6b22751c5228}{logout}}():}
+\DoxyCodeLine{105     logout\_user()}
+\DoxyCodeLine{106     \textcolor{keywordflow}{return} Response(\textcolor{stringliteral}{'<p>Logged out</p>'})}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 @login\_manager.user\_loader}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_aabea993a6eea604a39fe9952008f92f7}\label{namespacecore_1_1server_1_1login_aabea993a6eea604a39fe9952008f92f7}} 
+\index{core.server.login@{core.server.login}!page\_not\_found@{page\_not\_found}}
+\index{page\_not\_found@{page\_not\_found}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{page\_not\_found()}{page\_not\_found()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+page\+\_\+not\+\_\+found (\begin{DoxyParamCaption}\item[{}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1login_aabea993a6eea604a39fe9952008f92f7}{page\_not\_found}}(e):}
+\DoxyCodeLine{100     \textcolor{keywordflow}{return} Response(\textcolor{stringliteral}{'<p>Login failed \{\} </p>'}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(e))}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 @app.route(\textcolor{stringliteral}{"/logout"})}
+\DoxyCodeLine{103 @login\_required}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+format.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_abdd6ce61e468801dad0abc236173b773}\label{namespacecore_1_1server_1_1login_abdd6ce61e468801dad0abc236173b773}} 
+\index{core.server.login@{core.server.login}!register@{register}}
+\index{register@{register}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily def core.\+server.\+login.\+register (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file login.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1server_1_1login_abdd6ce61e468801dad0abc236173b773}{register}}():}
+\DoxyCodeLine{89     \textcolor{keywordflow}{if} request.method == \textcolor{stringliteral}{'POST'}:}
+\DoxyCodeLine{90         username = request.form[\textcolor{stringliteral}{'username'}]}
+\DoxyCodeLine{91         password = request.form[\textcolor{stringliteral}{'password'}]}
+\DoxyCodeLine{92         new\_user = User(username, password, users\_repository.next\_index())}
+\DoxyCodeLine{93         users\_repository.save\_user(new\_user)}
+\DoxyCodeLine{94         \textcolor{keywordflow}{return} Response(\textcolor{stringliteral}{'registered successfully'})}
+\DoxyCodeLine{95     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{96         \textcolor{keywordflow}{return} Response(\textcolor{stringliteral}{""})}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 @app.errorhandler(401)}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_a4da43dc027eda2dba884badf4aeae76d}\label{namespacecore_1_1server_1_1login_a4da43dc027eda2dba884badf4aeae76d}} 
+\index{core.server.login@{core.server.login}!app@{app}}
+\index{app@{app}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily core.\+server.\+login.\+app = Flask(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+
+
+
+Definition at line 15 of file login.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_ad56bfa73cb3644f95105c06c3f1625a1}\label{namespacecore_1_1server_1_1login_ad56bfa73cb3644f95105c06c3f1625a1}} 
+\index{core.server.login@{core.server.login}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily core.\+server.\+login.\+D\+E\+B\+UG}
+
+
+
+Definition at line 16 of file login.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_adc8d62522530da1abb7c5919b33e2087}\label{namespacecore_1_1server_1_1login_adc8d62522530da1abb7c5919b33e2087}} 
+\index{core.server.login@{core.server.login}!login\_manager@{login\_manager}}
+\index{login\_manager@{login\_manager}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{login\_manager}{login\_manager}}
+{\footnotesize\ttfamily core.\+server.\+login.\+login\+\_\+manager = Login\+Manager()}
+
+
+
+Definition at line 18 of file login.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_aff59648e678fb77baed79aa33be00da3}\label{namespacecore_1_1server_1_1login_aff59648e678fb77baed79aa33be00da3}} 
+\index{core.server.login@{core.server.login}!login\_view@{login\_view}}
+\index{login\_view@{login\_view}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{login\_view}{login\_view}}
+{\footnotesize\ttfamily core.\+server.\+login.\+login\+\_\+view}
+
+
+
+Definition at line 20 of file login.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_adec83ec35606e4aacb88c8a192ec1a44}\label{namespacecore_1_1server_1_1login_adec83ec35606e4aacb88c8a192ec1a44}} 
+\index{core.server.login@{core.server.login}!SECRET\_KEY@{SECRET\_KEY}}
+\index{SECRET\_KEY@{SECRET\_KEY}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{SECRET\_KEY}{SECRET\_KEY}}
+{\footnotesize\ttfamily core.\+server.\+login.\+S\+E\+C\+R\+E\+T\+\_\+\+K\+EY}
+
+
+
+Definition at line 16 of file login.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_a15145baf05d3659eff00c184c48f065d}\label{namespacecore_1_1server_1_1login_a15145baf05d3659eff00c184c48f065d}} 
+\index{core.server.login@{core.server.login}!seed@{seed}}
+\index{seed@{seed}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{seed}{seed}}
+{\footnotesize\ttfamily core.\+server.\+login.\+seed = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})}
+
+
+
+Definition at line 10 of file login.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_acc94b5dc22422892ae454dc6a1a00d07}\label{namespacecore_1_1server_1_1login_acc94b5dc22422892ae454dc6a1a00d07}} 
+\index{core.server.login@{core.server.login}!True@{True}}
+\index{True@{True}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{True}{True}}
+{\footnotesize\ttfamily core.\+server.\+login.\+True}
+
+
+
+Definition at line 16 of file login.\+py.
+
+\mbox{\Hypertarget{namespacecore_1_1server_1_1login_a949635ad92b9ac2ee1c757bef513a377}\label{namespacecore_1_1server_1_1login_a949635ad92b9ac2ee1c757bef513a377}} 
+\index{core.server.login@{core.server.login}!users\_repository@{users\_repository}}
+\index{users\_repository@{users\_repository}!core.server.login@{core.server.login}}
+\doxysubsubsection{\texorpdfstring{users\_repository}{users\_repository}}
+{\footnotesize\ttfamily core.\+server.\+login.\+users\+\_\+repository = \mbox{\hyperlink{classcore_1_1server_1_1login_1_1_users_repository}{Users\+Repository}}()}
+
+
+
+Definition at line 56 of file login.\+py.
+

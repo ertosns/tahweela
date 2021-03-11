@@ -2,8 +2,7 @@
 \label{classdatabase_1_1_server_database_test}\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}}
 
 
-Inheritance diagram for database.\+Server\+Database\+Test\+:
-\nopagebreak
+Inheritance diagram for database.\+Server\+Database\+Test\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for database.\+Server\+Database\+Test\+:
 \end{figure}
 
 
-Collaboration diagram for database.\+Server\+Database\+Test\+:
-\nopagebreak
+Collaboration diagram for database.\+Server\+Database\+Test\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -41,6 +39,10 @@ def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a47192eae9d5d6940396
 \item 
 def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a78035b38d8dfa943ae2f6433be51eac7}{test\+\_\+balance}} (self)
 \item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_ab7a182e9a784deb11b123340d9f04f42}{test\+\_\+total\+\_\+balance}} (self)
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a8799a5652477f425dfe731475590c36c}{test\+\_\+banking\+\_\+ids}} (self)
+\item 
 def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a949cf63fa0d447c810fa8263ca209bdd}{test\+\_\+update\+\_\+balance}} (self)
 \item 
 def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a10f7732f3ce5b85197d9b8bf97c3a214}{test\+\_\+credid2cid}} (self)
@@ -54,7 +56,7 @@ def \mbox{\hyperlink{classdatabase_1_1_server_database_test_a41e3628ffcad40e12a0
 \doxysubsection{Detailed Description}
 
 
-Definition at line 53 of file database.\+py.
+Definition at line 26 of file database.\+py.
 
 
 
@@ -67,33 +69,33 @@ Definition at line 53 of file database.\+py.
 
 
 
-Definition at line 139 of file database.\+py.
+Definition at line 112 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{139     \textcolor{keyword}{def }test\_add\_bank\_account(self):}
-\DoxyCodeLine{140         exchange=Currency(EUR)}
-\DoxyCodeLine{141         rate=exchange.rate}
-\DoxyCodeLine{142         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{143             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{144         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{145         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{146         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{147         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
-\DoxyCodeLine{148         banalce=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
-\DoxyCodeLine{149         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{150         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{151         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{152         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{153         db.inserts.register(cid, passcode, credid)}
-\DoxyCodeLine{154         \textcolor{comment}{\#add\_bank\_addount}}
-\DoxyCodeLine{155         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
-\DoxyCodeLine{156         self.assertTrue(db.exists.bank\_account\_bycid(cid))}
+\DoxyCodeLine{112     \textcolor{keyword}{def }test\_add\_bank\_account(self):}
+\DoxyCodeLine{113         exchange=Currency(EUR)}
+\DoxyCodeLine{114         rate=exchange.rate}
+\DoxyCodeLine{115         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{116             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{117         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{118         passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{119         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{120         credid=\mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\_credid}}(email)}
+\DoxyCodeLine{121         banalce=\mbox{\hyperlink{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}{get\_balance}}()}
+\DoxyCodeLine{122         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{123         name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{124         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{125         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{126         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{127         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{128         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
+\DoxyCodeLine{129         self.assertTrue(db.exists.bank\_account\_bycid(cid))}
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+References client.\+client.\+get\+\_\+balance(), client.\+client.\+get\+\_\+credid(), client.\+client.\+get\+\_\+email(), client.\+client.\+get\+\_\+name(), and client.\+client.\+get\+\_\+rand\+\_\+pass().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -111,37 +113,37 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 183 of file database.\+py.
+Definition at line 156 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{183     \textcolor{keyword}{def }test\_balance(self):}
-\DoxyCodeLine{184         exchange=Currency(EUR)}
-\DoxyCodeLine{185         rate=exchange.rate}
-\DoxyCodeLine{186         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{187             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{188         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{189         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{190         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{191         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
-\DoxyCodeLine{192         banalce=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
-\DoxyCodeLine{193         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{194         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{195         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{196         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{197         db.inserts.register(cid, passcode, credid)}
-\DoxyCodeLine{198         \textcolor{comment}{\#add\_bank\_addount}}
-\DoxyCodeLine{199         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
-\DoxyCodeLine{200         bank\_exists=db.exists.bank\_account\_bycid(cid)}
-\DoxyCodeLine{201         self.assertTrue(bank\_exists)}
-\DoxyCodeLine{202         print(\textcolor{stringliteral}{'cid: '}, cid)}
-\DoxyCodeLine{203         balance\_cur=db.gets.get\_balance\_by\_cid(cid)[\textcolor{stringliteral}{'balance'}]}
-\DoxyCodeLine{204         self.assertEqual(balance\_cur, balance)}
+\DoxyCodeLine{156     \textcolor{keyword}{def }test\_balance(self):}
+\DoxyCodeLine{157         exchange=Currency(EUR)}
+\DoxyCodeLine{158         rate=exchange.rate}
+\DoxyCodeLine{159         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{160             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{161         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{162         passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{163         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{164         credid=\mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\_credid}}(email)}
+\DoxyCodeLine{165         banalce=\mbox{\hyperlink{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}{get\_balance}}()}
+\DoxyCodeLine{166         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{167         name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{168         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{169         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{170         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{171         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{172         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
+\DoxyCodeLine{173         bank\_exists=db.exists.bank\_account\_bycid(cid)}
+\DoxyCodeLine{174         self.assertTrue(bank\_exists)}
+\DoxyCodeLine{175         print(\textcolor{stringliteral}{'cid: '}, cid)}
+\DoxyCodeLine{176         balance\_cur=db.gets.get\_balance\_by\_cid(cid)[\textcolor{stringliteral}{'balance'}]}
+\DoxyCodeLine{177         self.assertEqual(balance\_cur, balance)}
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+References client.\+client.\+get\+\_\+balance(), client.\+client.\+get\+\_\+credid(), client.\+client.\+get\+\_\+email(), client.\+client.\+get\+\_\+name(), and client.\+client.\+get\+\_\+rand\+\_\+pass().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -159,27 +161,27 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 96 of file database.\+py.
+Definition at line 69 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{96     \textcolor{keyword}{def }test\_bank\_account\_exist\_by\_cid(self):}
-\DoxyCodeLine{97         exchange=Currency(EUR)}
-\DoxyCodeLine{98         rate=exchange.rate}
-\DoxyCodeLine{99         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{100             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{101         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{102         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{103         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{104         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{105         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{106         self.assertFalse(db.exists.bank\_account\_bycid(cid))}
-\DoxyCodeLine{107 }
+\DoxyCodeLine{69     \textcolor{keyword}{def }test\_bank\_account\_exist\_by\_cid(self):}
+\DoxyCodeLine{70         exchange=Currency(EUR)}
+\DoxyCodeLine{71         rate=exchange.rate}
+\DoxyCodeLine{72         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{73             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{74         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{75         name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{76         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{77         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{78         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{79         self.assertFalse(db.exists.bank\_account\_bycid(cid))}
+\DoxyCodeLine{80 }
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+email(), and database.\+get\+\_\+name().
+References client.\+client.\+get\+\_\+email(), and client.\+client.\+get\+\_\+name().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -197,25 +199,25 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 65 of file database.\+py.
+Definition at line 38 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{65     \textcolor{keyword}{def }test\_banking\_byemail(self):}
-\DoxyCodeLine{66         \textcolor{comment}{\#db.init()}}
-\DoxyCodeLine{67         \textcolor{comment}{\#db.repeatable\_read()        }}
-\DoxyCodeLine{68         \textcolor{comment}{\#db.lock\_advisory(lock)}}
-\DoxyCodeLine{69         exchange=Currency(EUR)}
-\DoxyCodeLine{70         rate=exchange.rate}
-\DoxyCodeLine{71         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{72             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{73         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{74         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{75         self.assertTrue(db.exists.account\_byemail(email))}
-\DoxyCodeLine{76         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{77         self.assertTrue(db.exists.client\_exists(cid))}
-\DoxyCodeLine{78         \textcolor{comment}{\#db.rollback(lock)}}
-\DoxyCodeLine{79 }
+\DoxyCodeLine{38     \textcolor{keyword}{def }test\_banking\_byemail(self):}
+\DoxyCodeLine{39         \textcolor{comment}{\#db.init()}}
+\DoxyCodeLine{40         \textcolor{comment}{\#db.repeatable\_read()}}
+\DoxyCodeLine{41         \textcolor{comment}{\#db.lock\_advisory(lock)}}
+\DoxyCodeLine{42         exchange=Currency(EUR)}
+\DoxyCodeLine{43         rate=exchange.rate}
+\DoxyCodeLine{44         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{45             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{46         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{47         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{48         self.assertTrue(db.exists.account\_byemail(email))}
+\DoxyCodeLine{49         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{50         self.assertTrue(db.exists.client\_exists(cid))}
+\DoxyCodeLine{51         \textcolor{comment}{\#db.rollback(lock)}}
+\DoxyCodeLine{52 }
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdatabase_1_1_server_database_test_aaf0c2f070e584254ab662f50502c3c7c}\label{classdatabase_1_1_server_database_test_aaf0c2f070e584254ab662f50502c3c7c}} 
@@ -226,31 +228,31 @@ Definition at line 65 of file database.\+py.
 
 
 
-Definition at line 80 of file database.\+py.
+Definition at line 53 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{80     \textcolor{keyword}{def }test\_banking\_byname(self):}
-\DoxyCodeLine{81         exchange=Currency(EUR)}
-\DoxyCodeLine{82         rate=exchange.rate}
-\DoxyCodeLine{83         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{84             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{85         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{86         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{87         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{88         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{89         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{90         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{91         db.inserts.register(cid, passcode, credid)}
-\DoxyCodeLine{92         self.assertTrue(db.exists.account\_byname(name, passcode))}
-\DoxyCodeLine{93         cid=db.gets.get\_client\_id\_byname(name, passcode)}
-\DoxyCodeLine{94         self.assertTrue(db.exists.client\_exists(cid))}
-\DoxyCodeLine{95 }
+\DoxyCodeLine{53     \textcolor{keyword}{def }test\_banking\_byname(self):}
+\DoxyCodeLine{54         exchange=Currency(EUR)}
+\DoxyCodeLine{55         rate=exchange.rate}
+\DoxyCodeLine{56         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{57             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{58         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{59         passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{60         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{61         name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{62         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{63         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{64         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{65         self.assertTrue(db.exists.account\_byname(name, passcode))}
+\DoxyCodeLine{66         cid=db.gets.get\_client\_id\_byname(name, passcode)}
+\DoxyCodeLine{67         self.assertTrue(db.exists.client\_exists(cid))}
+\DoxyCodeLine{68 }
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+References client.\+client.\+get\+\_\+email(), client.\+client.\+get\+\_\+name(), and client.\+client.\+get\+\_\+rand\+\_\+pass().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -258,6 +260,56 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classdatabase_1_1_server_database_test_aaf0c2f070e584254ab662f50502c3c7c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_a8799a5652477f425dfe731475590c36c}\label{classdatabase_1_1_server_database_test_a8799a5652477f425dfe731475590c36c}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_banking\_ids@{test\_banking\_ids}}
+\index{test\_banking\_ids@{test\_banking\_ids}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_banking\_ids()}{test\_banking\_ids()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+banking\+\_\+ids (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 201 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{201     \textcolor{keyword}{def }test\_banking\_ids(self):}
+\DoxyCodeLine{202         c1 = Client(db)}
+\DoxyCodeLine{203         bank\_name=\mbox{\hyperlink{namespaceclient_1_1client_a833ad09ead45e7514e0b86ff1b03ca87}{get\_bank\_name}}()}
+\DoxyCodeLine{204         branch\_number=\mbox{\hyperlink{namespaceclient_1_1client_a61a3e8937663f872f16be7e13103ca00}{get\_branch\_number}}()}
+\DoxyCodeLine{205         account\_number=\mbox{\hyperlink{namespaceclient_1_1client_af8556d1f0e3ad687b312802456c5948b}{get\_account\_number}}()}
+\DoxyCodeLine{206         name\_reference=\mbox{\hyperlink{namespaceclient_1_1client_aeb04cfa07acf73990acf1b636aac2830}{get\_name\_reference}}()}
+\DoxyCodeLine{207         pg1=PaymentGate(bank\_name,branch\_number,account\_number, name\_reference)}
+\DoxyCodeLine{208         c1.add\_pg(pg1)}
+\DoxyCodeLine{209         c1.add\_bank\_account(c1.cid, pg1.balance, bank\_name, branch\_number, account\_number, name\_reference, c1.curr\_id)}
+\DoxyCodeLine{210         bid1=db.gets.get\_banking\_id(c1.cid)}
+\DoxyCodeLine{211         bank\_name=\mbox{\hyperlink{namespaceclient_1_1client_a833ad09ead45e7514e0b86ff1b03ca87}{get\_bank\_name}}()}
+\DoxyCodeLine{212         branch\_number=\mbox{\hyperlink{namespaceclient_1_1client_a61a3e8937663f872f16be7e13103ca00}{get\_branch\_number}}()}
+\DoxyCodeLine{213         account\_number=\mbox{\hyperlink{namespaceclient_1_1client_af8556d1f0e3ad687b312802456c5948b}{get\_account\_number}}()}
+\DoxyCodeLine{214         name\_reference=\mbox{\hyperlink{namespaceclient_1_1client_aeb04cfa07acf73990acf1b636aac2830}{get\_name\_reference}}()}
+\DoxyCodeLine{215         pg2=PaymentGate(bank\_name,branch\_number,account\_number, name\_reference)}
+\DoxyCodeLine{216         c1.add\_pg(pg2)}
+\DoxyCodeLine{217         c1.add\_bank\_account(c1.cid, pg2.balance, bank\_name, branch\_number, account\_number, name\_reference, c1.curr\_id)}
+\DoxyCodeLine{218         bid2=db.gets.get\_banking\_id(c1.cid)}
+\DoxyCodeLine{219         \textcolor{comment}{\#}}
+\DoxyCodeLine{220         bids=db.gets.get\_banking\_ids(c1.cid)}
+\DoxyCodeLine{221         print(\textcolor{stringliteral}{'bids: '}, bids)}
+\DoxyCodeLine{222         self.assertEqual(bid1, bids[0])}
+\DoxyCodeLine{223         \textcolor{comment}{\#note this will fail since bid1=bid2, because get\_banking\_id is limited by 1}}
+\DoxyCodeLine{224         \textcolor{comment}{\#self.assertEqual(bid2, bids[1])}}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+get\+\_\+account\+\_\+number(), client.\+client.\+get\+\_\+bank\+\_\+name(), client.\+client.\+get\+\_\+branch\+\_\+number(), and client.\+client.\+get\+\_\+name\+\_\+reference().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_a8799a5652477f425dfe731475590c36c_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classdatabase_1_1_server_database_test_a47192eae9d5d69403964cf09f31d0008}\label{classdatabase_1_1_server_database_test_a47192eae9d5d69403964cf09f31d0008}} 
@@ -272,41 +324,41 @@ convert, and cross-reference from client id, to bank id
 \end{DoxyVerb}
  
 
-Definition at line 157 of file database.\+py.
+Definition at line 130 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{157     \textcolor{keyword}{def }test\_bid\_cid\_conversion(self):}
-\DoxyCodeLine{158         \textcolor{stringliteral}{""" bid\_cid conversion testing}}
-\DoxyCodeLine{159 \textcolor{stringliteral}{}}
-\DoxyCodeLine{160 \textcolor{stringliteral}{        convert, and cross-\/reference from client id, to bank id}}
-\DoxyCodeLine{161 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{162         exchange=Currency(EUR)}
-\DoxyCodeLine{163         rate=exchange.rate}
-\DoxyCodeLine{164         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{165             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{166         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{167         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{168         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{169         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
-\DoxyCodeLine{170         banalce=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
-\DoxyCodeLine{171         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{172         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{173         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{174         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{175         db.inserts.register(cid, passcode, credid)}
-\DoxyCodeLine{176         \textcolor{comment}{\#add\_bank\_addount}}
-\DoxyCodeLine{177         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
-\DoxyCodeLine{178         cid\_eq=db.gets.get\_client\_id(bid)}
-\DoxyCodeLine{179         bid\_eq=db.gets.get\_banking\_id(cid\_eq)}
-\DoxyCodeLine{180         self.assertEqual(cid\_eq, cid)}
-\DoxyCodeLine{181         self.assertEqual(bid\_eq, bid)}
-\DoxyCodeLine{182 }
+\DoxyCodeLine{130     \textcolor{keyword}{def }test\_bid\_cid\_conversion(self):}
+\DoxyCodeLine{131         \textcolor{stringliteral}{""" bid\_cid conversion testing}}
+\DoxyCodeLine{132 \textcolor{stringliteral}{}}
+\DoxyCodeLine{133 \textcolor{stringliteral}{        convert, and cross-\/reference from client id, to bank id}}
+\DoxyCodeLine{134 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{135         exchange=Currency(EUR)}
+\DoxyCodeLine{136         rate=exchange.rate}
+\DoxyCodeLine{137         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{138             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{139         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{140         passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{141         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{142         credid=\mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\_credid}}(email)}
+\DoxyCodeLine{143         banalce=\mbox{\hyperlink{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}{get\_balance}}()}
+\DoxyCodeLine{144         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{145         name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{146         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{147         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{148         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{149         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{150         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
+\DoxyCodeLine{151         cid\_eq=db.gets.get\_client\_id(bid)}
+\DoxyCodeLine{152         bid\_eq=db.gets.get\_banking\_id(cid\_eq)}
+\DoxyCodeLine{153         self.assertEqual(cid\_eq, cid)}
+\DoxyCodeLine{154         self.assertEqual(bid\_eq, bid)}
+\DoxyCodeLine{155 }
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+References client.\+client.\+get\+\_\+balance(), client.\+client.\+get\+\_\+credid(), client.\+client.\+get\+\_\+email(), client.\+client.\+get\+\_\+name(), and client.\+client.\+get\+\_\+rand\+\_\+pass().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -324,26 +376,26 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 108 of file database.\+py.
+Definition at line 81 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{108     \textcolor{keyword}{def }test\_client\_exists(self):}
-\DoxyCodeLine{109         exchange=Currency(EUR)}
-\DoxyCodeLine{110         rate=exchange.rate}
-\DoxyCodeLine{111         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{112             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{113         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{114         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{115         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{116         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{117         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{118         self.assertTrue(db.exists.client\_exists(cid))}
+\DoxyCodeLine{81     \textcolor{keyword}{def }test\_client\_exists(self):}
+\DoxyCodeLine{82         exchange=Currency(EUR)}
+\DoxyCodeLine{83         rate=exchange.rate}
+\DoxyCodeLine{84         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{85             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{86         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{87         name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{88         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{89         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{90         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{91         self.assertTrue(db.exists.client\_exists(cid))}
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+email(), and database.\+get\+\_\+name().
+References client.\+client.\+get\+\_\+email(), and client.\+client.\+get\+\_\+name().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -361,35 +413,35 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 119 of file database.\+py.
+Definition at line 92 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{119     \textcolor{keyword}{def }test\_credential\_exists(self):}
-\DoxyCodeLine{120         exchange=Currency(EUR)}
-\DoxyCodeLine{121         rate=exchange.rate}
-\DoxyCodeLine{122         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{123             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{124         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{125         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{126         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{127         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{128         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
-\DoxyCodeLine{129         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{130         db.commit()}
-\DoxyCodeLine{131         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{132         db.commit()}
-\DoxyCodeLine{133         self.assertFalse(db.exists.credential\_exists(0))}
-\DoxyCodeLine{134         db.inserts.register(cid, passcode, credid)}
-\DoxyCodeLine{135         cid=db.gets.get\_client\_id\_byname(name, passcode)}
-\DoxyCodeLine{136         db.commit()}
-\DoxyCodeLine{137         self.assertTrue(db.exists.credential\_exists(cid))}
-\DoxyCodeLine{138 }
+\DoxyCodeLine{92     \textcolor{keyword}{def }test\_credential\_exists(self):}
+\DoxyCodeLine{93         exchange=Currency(EUR)}
+\DoxyCodeLine{94         rate=exchange.rate}
+\DoxyCodeLine{95         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{96             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{97         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{98         name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{99         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{100         passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{101         credid=\mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\_credid}}(email)}
+\DoxyCodeLine{102         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{103         db.commit()}
+\DoxyCodeLine{104         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{105         db.commit()}
+\DoxyCodeLine{106         self.assertFalse(db.exists.credential\_exists(0))}
+\DoxyCodeLine{107         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{108         cid=db.gets.get\_client\_id\_byname(name, passcode)}
+\DoxyCodeLine{109         db.commit()}
+\DoxyCodeLine{110         self.assertTrue(db.exists.credential\_exists(cid))}
+\DoxyCodeLine{111 }
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+References client.\+client.\+get\+\_\+credid(), client.\+client.\+get\+\_\+email(), client.\+client.\+get\+\_\+name(), and client.\+client.\+get\+\_\+rand\+\_\+pass().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -407,35 +459,35 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 229 of file database.\+py.
+Definition at line 249 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{229     \textcolor{keyword}{def }test\_credid2cid(self):}
-\DoxyCodeLine{230         exchange=Currency(EUR)}
-\DoxyCodeLine{231         rate=exchange.rate}
-\DoxyCodeLine{232         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{233             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{234         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{235         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{236         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{237         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
-\DoxyCodeLine{238         \textcolor{comment}{\# add new client}}
-\DoxyCodeLine{239         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{240         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{241         \textcolor{comment}{\# register client's credentials}}
-\DoxyCodeLine{242         db.inserts.register(cid, passcode, credid)}
-\DoxyCodeLine{243         \textcolor{comment}{\# credid2cid conversion}}
-\DoxyCodeLine{244         cid\_eq=db.gets.credid2cid(credid)}
-\DoxyCodeLine{245         self.assertEqual(cid, cid\_eq)}
-\DoxyCodeLine{246         credid\_eq=db.gets.cid2credid(cid)}
-\DoxyCodeLine{247         self.assertEqual(credid, credid\_eq)}
-\DoxyCodeLine{248 }
+\DoxyCodeLine{249     \textcolor{keyword}{def }test\_credid2cid(self):}
+\DoxyCodeLine{250         exchange=Currency(EUR)}
+\DoxyCodeLine{251         rate=exchange.rate}
+\DoxyCodeLine{252         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{253             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{254         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{255         passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{256         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{257         credid=\mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\_credid}}(email)}
+\DoxyCodeLine{258         \textcolor{comment}{\# add new client}}
+\DoxyCodeLine{259         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{260         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{261         \textcolor{comment}{\# register client's credentials}}
+\DoxyCodeLine{262         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{263         \textcolor{comment}{\# credid2cid conversion}}
+\DoxyCodeLine{264         cid\_eq=db.gets.credid2cid(credid)}
+\DoxyCodeLine{265         self.assertEqual(cid, cid\_eq)}
+\DoxyCodeLine{266         credid\_eq=db.gets.cid2credid(cid)}
+\DoxyCodeLine{267         self.assertEqual(credid, credid\_eq)}
+\DoxyCodeLine{268 }
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+credid(), database.\+get\+\_\+email(), and database.\+get\+\_\+rand\+\_\+pass().
+References client.\+client.\+get\+\_\+credid(), client.\+client.\+get\+\_\+email(), and client.\+client.\+get\+\_\+rand\+\_\+pass().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -453,21 +505,21 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 54 of file database.\+py.
+Definition at line 27 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{54     \textcolor{keyword}{def }test\_currency(self):}
-\DoxyCodeLine{55         \textcolor{comment}{\#db.init()}}
-\DoxyCodeLine{56         \textcolor{comment}{\#db.repeatable\_read()}}
-\DoxyCodeLine{57         \textcolor{comment}{\#db.lock\_advisory(lock)}}
-\DoxyCodeLine{58         exchange=Currency(EUR)}
-\DoxyCodeLine{59         rate=exchange.rate}
-\DoxyCodeLine{60         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{61             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{62         self.assertEqual(rate, 1)}
-\DoxyCodeLine{63         \textcolor{comment}{\#db.rollback(lock)}}
-\DoxyCodeLine{64 }
+\DoxyCodeLine{27     \textcolor{keyword}{def }test\_currency(self):}
+\DoxyCodeLine{28         \textcolor{comment}{\#db.init()}}
+\DoxyCodeLine{29         \textcolor{comment}{\#db.repeatable\_read()}}
+\DoxyCodeLine{30         \textcolor{comment}{\#db.lock\_advisory(lock)}}
+\DoxyCodeLine{31         exchange=Currency(EUR)}
+\DoxyCodeLine{32         rate=exchange.rate}
+\DoxyCodeLine{33         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{34             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{35         self.assertEqual(rate, 1)}
+\DoxyCodeLine{36         \textcolor{comment}{\#db.rollback(lock)}}
+\DoxyCodeLine{37 }
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdatabase_1_1_server_database_test_aa6e782c291a261aaf97f95bfb3009a36}\label{classdatabase_1_1_server_database_test_aa6e782c291a261aaf97f95bfb3009a36}} 
@@ -478,35 +530,35 @@ Definition at line 54 of file database.\+py.
 
 
 
-Definition at line 249 of file database.\+py.
+Definition at line 269 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{249     \textcolor{keyword}{def }test\_password(self):}
-\DoxyCodeLine{250         exchange=Currency(EUR)}
-\DoxyCodeLine{251         rate=exchange.rate}
-\DoxyCodeLine{252         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{253             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{254         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{255         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{256         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{257         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
-\DoxyCodeLine{258         banalce=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
-\DoxyCodeLine{259         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{260         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{261         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{262         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{263         db.inserts.register(cid, passcode, credid)}
-\DoxyCodeLine{264         \textcolor{comment}{\#add\_bank\_addount}}
-\DoxyCodeLine{265         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
-\DoxyCodeLine{266         passcode\_eq=db.gets.get\_password(credid)}
-\DoxyCodeLine{267         self.assertEqual(passcode, passcode\_eq)}
-\DoxyCodeLine{268 }
+\DoxyCodeLine{269     \textcolor{keyword}{def }test\_password(self):}
+\DoxyCodeLine{270         exchange=Currency(EUR)}
+\DoxyCodeLine{271         rate=exchange.rate}
+\DoxyCodeLine{272         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{273             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{274         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{275         passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{276         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{277         credid=\mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\_credid}}(email)}
+\DoxyCodeLine{278         banalce=\mbox{\hyperlink{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}{get\_balance}}()}
+\DoxyCodeLine{279         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{280         name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{281         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{282         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{283         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{284         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{285         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
+\DoxyCodeLine{286         passcode\_eq=db.gets.get\_password(credid)}
+\DoxyCodeLine{287         self.assertEqual(\mbox{\hyperlink{namespacecore_1_1utils_af6aaeb0ab3525abd04da39e8b580b811}{hash}}(passcode), passcode\_eq)}
+\DoxyCodeLine{288 }
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+References client.\+client.\+get\+\_\+balance(), client.\+client.\+get\+\_\+credid(), client.\+client.\+get\+\_\+email(), client.\+client.\+get\+\_\+name(), client.\+client.\+get\+\_\+rand\+\_\+pass(), and core.\+utils.\+hash().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -514,6 +566,55 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classdatabase_1_1_server_database_test_aa6e782c291a261aaf97f95bfb3009a36_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdatabase_1_1_server_database_test_ab7a182e9a784deb11b123340d9f04f42}\label{classdatabase_1_1_server_database_test_ab7a182e9a784deb11b123340d9f04f42}} 
+\index{database.ServerDatabaseTest@{database.ServerDatabaseTest}!test\_total\_balance@{test\_total\_balance}}
+\index{test\_total\_balance@{test\_total\_balance}!database.ServerDatabaseTest@{database.ServerDatabaseTest}}
+\doxysubsubsection{\texorpdfstring{test\_total\_balance()}{test\_total\_balance()}}
+{\footnotesize\ttfamily def database.\+Server\+Database\+Test.\+test\+\_\+total\+\_\+balance (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 178 of file database.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{178     \textcolor{keyword}{def }test\_total\_balance(self):}
+\DoxyCodeLine{179         c1 = Client(db)}
+\DoxyCodeLine{180         bank\_name=\mbox{\hyperlink{namespaceclient_1_1client_a833ad09ead45e7514e0b86ff1b03ca87}{get\_bank\_name}}()}
+\DoxyCodeLine{181         branch\_number=\mbox{\hyperlink{namespaceclient_1_1client_a61a3e8937663f872f16be7e13103ca00}{get\_branch\_number}}()}
+\DoxyCodeLine{182         account\_number=\mbox{\hyperlink{namespaceclient_1_1client_af8556d1f0e3ad687b312802456c5948b}{get\_account\_number}}()}
+\DoxyCodeLine{183         name\_reference=\mbox{\hyperlink{namespaceclient_1_1client_aeb04cfa07acf73990acf1b636aac2830}{get\_name\_reference}}()}
+\DoxyCodeLine{184         pg1=PaymentGate(bank\_name,branch\_number,account\_number, name\_reference)}
+\DoxyCodeLine{185         c1.add\_pg(pg1)}
+\DoxyCodeLine{186         c1.add\_bank\_account(c1.cid, pg1.balance, bank\_name, branch\_number, account\_number, name\_reference, c1.curr\_id)}
+\DoxyCodeLine{187         bank\_name=\mbox{\hyperlink{namespaceclient_1_1client_a833ad09ead45e7514e0b86ff1b03ca87}{get\_bank\_name}}()}
+\DoxyCodeLine{188         branch\_number=\mbox{\hyperlink{namespaceclient_1_1client_a61a3e8937663f872f16be7e13103ca00}{get\_branch\_number}}()}
+\DoxyCodeLine{189         account\_number=\mbox{\hyperlink{namespaceclient_1_1client_af8556d1f0e3ad687b312802456c5948b}{get\_account\_number}}()}
+\DoxyCodeLine{190         name\_reference=\mbox{\hyperlink{namespaceclient_1_1client_aeb04cfa07acf73990acf1b636aac2830}{get\_name\_reference}}()}
+\DoxyCodeLine{191         pg2=PaymentGate(bank\_name,branch\_number,account\_number, name\_reference)}
+\DoxyCodeLine{192         c1.add\_pg(pg2)}
+\DoxyCodeLine{193         c1.add\_bank\_account(c1.cid, pg2.balance, bank\_name, branch\_number, account\_number, name\_reference, c1.curr\_id)}
+\DoxyCodeLine{194         \textcolor{comment}{\#}}
+\DoxyCodeLine{195         bank\_exists=db.exists.bank\_account\_bycid(c1.cid)}
+\DoxyCodeLine{196         self.assertTrue(bank\_exists)}
+\DoxyCodeLine{197         \textcolor{comment}{\#TODO get number of bank accounts associated with cid}}
+\DoxyCodeLine{198         credid=db.gets.cid2credid(c1.cid)}
+\DoxyCodeLine{199         total\_balance=db.gets.get\_total\_balance\_by\_credid(credid)[\textcolor{stringliteral}{'balance'}]}
+\DoxyCodeLine{200         self.assertEqual(total\_balance, c1.total\_currency())}
+
+\end{DoxyCode}
+
+
+References client.\+client.\+get\+\_\+account\+\_\+number(), client.\+client.\+get\+\_\+bank\+\_\+name(), client.\+client.\+get\+\_\+branch\+\_\+number(), and client.\+client.\+get\+\_\+name\+\_\+reference().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdatabase_1_1_server_database_test_ab7a182e9a784deb11b123340d9f04f42_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classdatabase_1_1_server_database_test_a41e3628ffcad40e12a039d790f52ad00}\label{classdatabase_1_1_server_database_test_a41e3628ffcad40e12a039d790f52ad00}} 
@@ -532,88 +633,88 @@ procedure:
 \end{DoxyVerb}
  
 
-Definition at line 269 of file database.\+py.
+Definition at line 289 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{269     \textcolor{keyword}{def }test\_transaction(self):}
-\DoxyCodeLine{270         \textcolor{stringliteral}{""" create two clients, client\_1, client\_2}}
-\DoxyCodeLine{271 \textcolor{stringliteral}{}}
-\DoxyCodeLine{272 \textcolor{stringliteral}{        procedure:}}
-\DoxyCodeLine{273 \textcolor{stringliteral}{        -\/ client\_1 sends 10k to client\_2}}
-\DoxyCodeLine{274 \textcolor{stringliteral}{        -\/ client\_1 sends 20k to client\_2}}
-\DoxyCodeLine{275 \textcolor{stringliteral}{        -\/ client\_2 sends 5k to client\_1}}
-\DoxyCodeLine{276 \textcolor{stringliteral}{        -\/ transaction sum 35k sent/received}}
-\DoxyCodeLine{277 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{278         exchange=Currency(EUR)}
-\DoxyCodeLine{279         rate=exchange.rate}
-\DoxyCodeLine{280         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{281             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{282         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{283         c1\_name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{284         c1\_email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{285         c1\_passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{286         c1\_credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
-\DoxyCodeLine{287         c1\_bank\_name=\mbox{\hyperlink{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344}{get\_bank\_name}}()}
-\DoxyCodeLine{288         c1\_branch\_number=\mbox{\hyperlink{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36}{get\_branch\_number}}()}
-\DoxyCodeLine{289         c1\_account\_number=\mbox{\hyperlink{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1}{get\_account\_number}}()}
-\DoxyCodeLine{290         c1\_name\_reference=\mbox{\hyperlink{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197}{get\_name\_reference}}()}
-\DoxyCodeLine{291         c1\_balance=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
-\DoxyCodeLine{292         db.inserts.add\_client(c1\_name, c1\_email, curr\_id)}
-\DoxyCodeLine{293         db.commit()}
-\DoxyCodeLine{294         c1\_cid=db.gets.get\_client\_id\_byemail(c1\_email)}
-\DoxyCodeLine{295         db.inserts.register(c1\_cid, c1\_passcode, c1\_credid)}
-\DoxyCodeLine{296         db.commit()}
-\DoxyCodeLine{297         db.inserts.add\_bank\_account(c1\_cid, c1\_balance, c1\_bank\_name, c1\_branch\_number, c1\_account\_number, c1\_name\_reference, curr\_id)}
-\DoxyCodeLine{298         db.commit()}
-\DoxyCodeLine{299         \textcolor{comment}{\#}}
-\DoxyCodeLine{300         c2\_name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{301         c2\_email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{302         c2\_passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{303         c2\_credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
-\DoxyCodeLine{304         c2\_bank\_name=\mbox{\hyperlink{namespacedatabase_a7ce2eae13432eaebb3c72714d6789344}{get\_bank\_name}}()}
-\DoxyCodeLine{305         c2\_branch\_number=\mbox{\hyperlink{namespacedatabase_a4c72a9bbe34d492b258594872a56ec36}{get\_branch\_number}}()}
-\DoxyCodeLine{306         c2\_account\_number=\mbox{\hyperlink{namespacedatabase_ae5fde61d00fe40163728ebc3dbf739c1}{get\_account\_number}}()}
-\DoxyCodeLine{307         c2\_name\_reference=\mbox{\hyperlink{namespacedatabase_a9c31bc80dcdf2223d5c1bb86d8d56197}{get\_name\_reference}}()}
-\DoxyCodeLine{308         c2\_balance=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
-\DoxyCodeLine{309         db.inserts.add\_client(c2\_name, c2\_email, curr\_id)}
-\DoxyCodeLine{310         db.commit()}
-\DoxyCodeLine{311         c2\_cid=db.gets.get\_client\_id\_byemail(c2\_email)}
-\DoxyCodeLine{312         db.inserts.register(c2\_cid, c2\_passcode, c2\_credid)}
+\DoxyCodeLine{289     \textcolor{keyword}{def }test\_transaction(self):}
+\DoxyCodeLine{290         \textcolor{stringliteral}{""" create two clients, client\_1, client\_2}}
+\DoxyCodeLine{291 \textcolor{stringliteral}{}}
+\DoxyCodeLine{292 \textcolor{stringliteral}{        procedure:}}
+\DoxyCodeLine{293 \textcolor{stringliteral}{        -\/ client\_1 sends 10k to client\_2}}
+\DoxyCodeLine{294 \textcolor{stringliteral}{        -\/ client\_1 sends 20k to client\_2}}
+\DoxyCodeLine{295 \textcolor{stringliteral}{        -\/ client\_2 sends 5k to client\_1}}
+\DoxyCodeLine{296 \textcolor{stringliteral}{        -\/ transaction sum 35k sent/received}}
+\DoxyCodeLine{297 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{298         exchange=Currency(EUR)}
+\DoxyCodeLine{299         rate=exchange.rate}
+\DoxyCodeLine{300         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{301             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{302         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{303         c1\_name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{304         c1\_email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{305         c1\_passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{306         c1\_credid=\mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\_credid}}(c1\_email)}
+\DoxyCodeLine{307         c1\_bank\_name=\mbox{\hyperlink{namespaceclient_1_1client_a833ad09ead45e7514e0b86ff1b03ca87}{get\_bank\_name}}()}
+\DoxyCodeLine{308         c1\_branch\_number=\mbox{\hyperlink{namespaceclient_1_1client_a61a3e8937663f872f16be7e13103ca00}{get\_branch\_number}}()}
+\DoxyCodeLine{309         c1\_account\_number=\mbox{\hyperlink{namespaceclient_1_1client_af8556d1f0e3ad687b312802456c5948b}{get\_account\_number}}()}
+\DoxyCodeLine{310         c1\_name\_reference=\mbox{\hyperlink{namespaceclient_1_1client_aeb04cfa07acf73990acf1b636aac2830}{get\_name\_reference}}()}
+\DoxyCodeLine{311         c1\_balance=\mbox{\hyperlink{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}{get\_balance}}()}
+\DoxyCodeLine{312         db.inserts.add\_client(c1\_name, c1\_email, curr\_id)}
 \DoxyCodeLine{313         db.commit()}
-\DoxyCodeLine{314         db.inserts.add\_bank\_account(c2\_cid, c2\_balance, c2\_bank\_name, c2\_branch\_number, c2\_account\_number, c2\_name\_reference, curr\_id)}
-\DoxyCodeLine{315         db.commit()}
-\DoxyCodeLine{316         \textcolor{comment}{\#}}
-\DoxyCodeLine{317         }
-\DoxyCodeLine{320         costs=[10000, 20000, 5000]}
-\DoxyCodeLine{321         trx\_st\_0=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
-\DoxyCodeLine{322         db.inserts.insert\_trx(c2\_credid, c1\_credid, costs[0], curr\_id, \textcolor{stringliteral}{'transaction1'})}
-\DoxyCodeLine{323         db.commit()}
-\DoxyCodeLine{324         trx\_st\_1=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
-\DoxyCodeLine{325         db.inserts.insert\_trx(c2\_credid, c1\_credid, costs[1], curr\_id, \textcolor{stringliteral}{'transaction2'})}
-\DoxyCodeLine{326         db.commit()}
-\DoxyCodeLine{327         trx\_st\_2=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
-\DoxyCodeLine{328         db.inserts.insert\_trx(c1\_credid, c2\_credid, costs[2], curr\_id, \textcolor{stringliteral}{'transaction3'})}
-\DoxyCodeLine{329         db.commit()}
-\DoxyCodeLine{330         trx\_st\_3=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
-\DoxyCodeLine{331         }
-\DoxyCodeLine{335         c1\_trx\_sum\_0=db.gets.get\_transactions\_sum(c1\_credid, trx\_st\_0)}
-\DoxyCodeLine{336         db.commit()}
-\DoxyCodeLine{337         self.assertEqual(sum(costs), c1\_trx\_sum\_0)}
-\DoxyCodeLine{338         \textcolor{comment}{\#epoch 2}}
-\DoxyCodeLine{339         c1\_trx\_sum\_1=db.gets.get\_transactions\_sum(c1\_credid, trx\_st\_1)}
-\DoxyCodeLine{340         db.commit()}
-\DoxyCodeLine{341         self.assertEqual(sum(costs[1:]), c1\_trx\_sum\_1)}
-\DoxyCodeLine{342         \textcolor{comment}{\#epoch 3}}
-\DoxyCodeLine{343         c1\_trx\_sum\_2=db.gets.get\_transactions\_sum(c1\_credid, trx\_st\_2)}
-\DoxyCodeLine{344         db.commit()}
-\DoxyCodeLine{345         self.assertEqual(sum(costs[2:]), c1\_trx\_sum\_2)}
-\DoxyCodeLine{346         }
+\DoxyCodeLine{314         c1\_cid=db.gets.get\_client\_id\_byemail(c1\_email)}
+\DoxyCodeLine{315         db.inserts.register(c1\_cid, c1\_passcode, c1\_credid)}
+\DoxyCodeLine{316         db.commit()}
+\DoxyCodeLine{317         db.inserts.add\_bank\_account(c1\_cid, c1\_balance, c1\_bank\_name, c1\_branch\_number, c1\_account\_number, c1\_name\_reference, curr\_id)}
+\DoxyCodeLine{318         db.commit()}
+\DoxyCodeLine{319         \textcolor{comment}{\#}}
+\DoxyCodeLine{320         c2\_name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{321         c2\_email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{322         c2\_passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{323         c2\_credid=\mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\_credid}}(c2\_email)}
+\DoxyCodeLine{324         c2\_bank\_name=\mbox{\hyperlink{namespaceclient_1_1client_a833ad09ead45e7514e0b86ff1b03ca87}{get\_bank\_name}}()}
+\DoxyCodeLine{325         c2\_branch\_number=\mbox{\hyperlink{namespaceclient_1_1client_a61a3e8937663f872f16be7e13103ca00}{get\_branch\_number}}()}
+\DoxyCodeLine{326         c2\_account\_number=\mbox{\hyperlink{namespaceclient_1_1client_af8556d1f0e3ad687b312802456c5948b}{get\_account\_number}}()}
+\DoxyCodeLine{327         c2\_name\_reference=\mbox{\hyperlink{namespaceclient_1_1client_aeb04cfa07acf73990acf1b636aac2830}{get\_name\_reference}}()}
+\DoxyCodeLine{328         c2\_balance=\mbox{\hyperlink{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}{get\_balance}}()}
+\DoxyCodeLine{329         db.inserts.add\_client(c2\_name, c2\_email, curr\_id)}
+\DoxyCodeLine{330         db.commit()}
+\DoxyCodeLine{331         c2\_cid=db.gets.get\_client\_id\_byemail(c2\_email)}
+\DoxyCodeLine{332         db.inserts.register(c2\_cid, c2\_passcode, c2\_credid)}
+\DoxyCodeLine{333         db.commit()}
+\DoxyCodeLine{334         db.inserts.add\_bank\_account(c2\_cid, c2\_balance, c2\_bank\_name, c2\_branch\_number, c2\_account\_number, c2\_name\_reference, curr\_id)}
+\DoxyCodeLine{335         db.commit()}
+\DoxyCodeLine{336         \textcolor{comment}{\#}}
+\DoxyCodeLine{337         }
+\DoxyCodeLine{340         costs=[10000, 20000, 5000]}
+\DoxyCodeLine{341         trx\_st\_0=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+\DoxyCodeLine{342         db.inserts.insert\_trx(c2\_credid, c1\_credid, costs[0], curr\_id, \textcolor{stringliteral}{'transaction1'})}
+\DoxyCodeLine{343         db.commit()}
+\DoxyCodeLine{344         trx\_st\_1=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+\DoxyCodeLine{345         db.inserts.insert\_trx(c2\_credid, c1\_credid, costs[1], curr\_id, \textcolor{stringliteral}{'transaction2'})}
+\DoxyCodeLine{346         db.commit()}
+\DoxyCodeLine{347         trx\_st\_2=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+\DoxyCodeLine{348         db.inserts.insert\_trx(c1\_credid, c2\_credid, costs[2], curr\_id, \textcolor{stringliteral}{'transaction3'})}
+\DoxyCodeLine{349         db.commit()}
+\DoxyCodeLine{350         trx\_st\_3=datetime.datetime.now().strftime(TIMESTAMP\_FORMAT)}
+\DoxyCodeLine{351         }
+\DoxyCodeLine{355         c1\_trx\_sum\_0=db.gets.get\_transactions\_sum(c1\_credid, trx\_st\_0)}
+\DoxyCodeLine{356         db.commit()}
+\DoxyCodeLine{357         self.assertEqual(sum(costs), c1\_trx\_sum\_0)}
+\DoxyCodeLine{358         \textcolor{comment}{\#epoch 2}}
+\DoxyCodeLine{359         c1\_trx\_sum\_1=db.gets.get\_transactions\_sum(c1\_credid, trx\_st\_1)}
+\DoxyCodeLine{360         db.commit()}
+\DoxyCodeLine{361         self.assertEqual(sum(costs[1:]), c1\_trx\_sum\_1)}
+\DoxyCodeLine{362         \textcolor{comment}{\#epoch 3}}
+\DoxyCodeLine{363         c1\_trx\_sum\_2=db.gets.get\_transactions\_sum(c1\_credid, trx\_st\_2)}
+\DoxyCodeLine{364         db.commit()}
+\DoxyCodeLine{365         self.assertEqual(sum(costs[2:]), c1\_trx\_sum\_2)}
+\DoxyCodeLine{366         }
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+account\+\_\+number(), database.\+get\+\_\+balance(), database.\+get\+\_\+bank\+\_\+name(), database.\+get\+\_\+branch\+\_\+number(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), database.\+get\+\_\+name\+\_\+reference(), and database.\+get\+\_\+rand\+\_\+pass().
+References client.\+client.\+get\+\_\+account\+\_\+number(), client.\+client.\+get\+\_\+balance(), client.\+client.\+get\+\_\+bank\+\_\+name(), client.\+client.\+get\+\_\+branch\+\_\+number(), client.\+client.\+get\+\_\+credid(), client.\+client.\+get\+\_\+email(), client.\+client.\+get\+\_\+name(), client.\+client.\+get\+\_\+name\+\_\+reference(), and client.\+client.\+get\+\_\+rand\+\_\+pass().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -631,38 +732,38 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 205 of file database.\+py.
+Definition at line 225 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{205     \textcolor{keyword}{def }test\_update\_balance(self):}
-\DoxyCodeLine{206         exchange=Currency(EUR)}
-\DoxyCodeLine{207         rate=exchange.rate}
-\DoxyCodeLine{208         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
-\DoxyCodeLine{209             db.inserts.add\_currency(EUR, rate)}
-\DoxyCodeLine{210         curr\_id=db.gets.get\_currency\_id(EUR)}
-\DoxyCodeLine{211         passcode=\mbox{\hyperlink{namespacedatabase_a9d74c400363ef92ac842aff68c31457d}{get\_rand\_pass}}()}
-\DoxyCodeLine{212         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{213         credid=\mbox{\hyperlink{namespacedatabase_a0dcfb207ce9617f7ff5ce04ab52987d2}{get\_credid}}()}
-\DoxyCodeLine{214         balance=\mbox{\hyperlink{namespacedatabase_a0129fd40c2a6382b35f182c7251a72f4}{get\_balance}}()}
-\DoxyCodeLine{215         email=\mbox{\hyperlink{namespacedatabase_a8b13622a2162db83088b17b25f745069}{get\_email}}()}
-\DoxyCodeLine{216         name=\mbox{\hyperlink{namespacedatabase_a0f7ab0273a3344fdd498dc1e8954ded5}{get\_name}}()}
-\DoxyCodeLine{217         db.inserts.add\_client(name, email, curr\_id)}
-\DoxyCodeLine{218         db.commit()}
-\DoxyCodeLine{219         cid=db.gets.get\_client\_id\_byemail(email)}
-\DoxyCodeLine{220         db.inserts.register(cid, passcode, credid)}
-\DoxyCodeLine{221         db.commit()}
-\DoxyCodeLine{222         \textcolor{comment}{\#add\_bank\_addount}}
-\DoxyCodeLine{223         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
-\DoxyCodeLine{224         db.commit()}
-\DoxyCodeLine{225         db.updates.update\_account(cid, 0)}
-\DoxyCodeLine{226         balance\_cur=db.gets.get\_balance\_by\_cid(cid)[\textcolor{stringliteral}{'balance'}]}
-\DoxyCodeLine{227         self.assertEqual(balance\_cur, 0)}
+\DoxyCodeLine{225     \textcolor{keyword}{def }test\_update\_balance(self):}
+\DoxyCodeLine{226         exchange=Currency(EUR)}
+\DoxyCodeLine{227         rate=exchange.rate}
+\DoxyCodeLine{228         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} db.exists.currency(EUR):}
+\DoxyCodeLine{229             db.inserts.add\_currency(EUR, rate)}
+\DoxyCodeLine{230         curr\_id=db.gets.get\_currency\_id(EUR)}
+\DoxyCodeLine{231         passcode=\mbox{\hyperlink{namespaceclient_1_1client_acf449723d20f006b07f947ef4b68b225}{get\_rand\_pass}}()}
+\DoxyCodeLine{232         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{233         credid=\mbox{\hyperlink{namespaceclient_1_1client_a1beb02f2a714df26019dc87d9c754e9c}{get\_credid}}(email)}
+\DoxyCodeLine{234         balance=\mbox{\hyperlink{namespaceclient_1_1client_a3ac8178d0ad128d3c42b9a4b13b30e01}{get\_balance}}()}
+\DoxyCodeLine{235         email=\mbox{\hyperlink{namespaceclient_1_1client_ae2714197b50fcca23197fe90e9d34559}{get\_email}}()}
+\DoxyCodeLine{236         name=\mbox{\hyperlink{namespaceclient_1_1client_acc7c8dc333a379c50d929a5d0be5045e}{get\_name}}()}
+\DoxyCodeLine{237         db.inserts.add\_client(name, email, curr\_id)}
+\DoxyCodeLine{238         db.commit()}
+\DoxyCodeLine{239         cid=db.gets.get\_client\_id\_byemail(email)}
+\DoxyCodeLine{240         db.inserts.register(cid, passcode, credid)}
+\DoxyCodeLine{241         db.commit()}
+\DoxyCodeLine{242         \textcolor{comment}{\#add\_bank\_addount}}
+\DoxyCodeLine{243         bid=db.inserts.add\_bank\_account(cid, balance, bank\_name, branch\_number, account\_number, name\_reference, curr\_id)}
+\DoxyCodeLine{244         db.commit()}
+\DoxyCodeLine{245         db.updates.update\_account(cid, 0)}
+\DoxyCodeLine{246         balance\_cur=db.gets.get\_balance\_by\_cid(cid)[\textcolor{stringliteral}{'balance'}]}
+\DoxyCodeLine{247         self.assertEqual(balance\_cur, 0)}
 
 \end{DoxyCode}
 
 
-References database.\+get\+\_\+balance(), database.\+get\+\_\+credid(), database.\+get\+\_\+email(), database.\+get\+\_\+name(), and database.\+get\+\_\+rand\+\_\+pass().
+References client.\+client.\+get\+\_\+balance(), client.\+client.\+get\+\_\+credid(), client.\+client.\+get\+\_\+email(), client.\+client.\+get\+\_\+name(), and client.\+client.\+get\+\_\+rand\+\_\+pass().
 
 Here is the call graph for this function\+:
 \nopagebreak

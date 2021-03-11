@@ -69,13 +69,13 @@ $(function() {
 <div class="title">ledger.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="build_2lib_2core_2queries_2gets_2ledger_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div>
+<a href="build_2lib_2core_2queries_2gets_2ledger_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacecore_1_1queries_1_1gets_1_1ledger.html">    1</a></span>&#160;<span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> datetime <span class="keyword">as</span> dt</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">from</span> <a class="code" href="namespacecore_1_1connection__cursor.html">core.connection_cursor</a> <span class="keyword">import</span> conn, cur</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">from</span> <a class="code" href="namespacecore_1_1utils.html">core.utils</a> <span class="keyword">import</span> db_log</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">from</span> psycopg2 <span class="keyword">import</span> sql</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a48f7fc47aa39d3e7984fa01512758f0f">get_transactions</a>(st_dt, end_dt=dt.datetime.now()):</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a5972eaad1358e7f2c679c0665b6888d4">    7</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a5972eaad1358e7f2c679c0665b6888d4">get_transactions</a>(st_dt, end_dt=dt.datetime.now()):</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&quot;&quot;&quot; get the transactions within the given period exclusively</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">    @param st_dt: the start datetime</span></div>
@@ -88,16 +88,16 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    db_log.debug(stat)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> pd.read_sql(conn, stat)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#ae14b161205be95246f9dbf4e3170581a">get_sells</a>(dest, st_dt, end_dt=None):</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a9154db587e273a74a72c6d8f557b7995">   20</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a9154db587e273a74a72c6d8f557b7995">get_sells</a>(dest, st_dt, end_dt=None):</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="stringliteral">&quot;&quot;&quot; get sells transaction within the st_dt, end_dt period, while there destined to dest (CALLED AT SERVER SIDE)</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="stringliteral">    @param dest: the destination credential id</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="stringliteral">    @return sells transactions</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    trx=<a class="code" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a48f7fc47aa39d3e7984fa01512758f0f">get_transactions</a>(st_dt, end_dt).to_json()</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    trx=<a class="code" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a5972eaad1358e7f2c679c0665b6888d4">get_transactions</a>(st_dt, end_dt).to_json()</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    trx.apply(<span class="keyword">lambda</span> x:x[<span class="stringliteral">&#39;trx_dest&#39;</span>]==dest, inplace=<span class="keyword">True</span>)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> trx</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#abf9951152629a9000fe5c98442590ab0">get_last_timestamp</a>():</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a8455769de06bc3ac141cec1724e44f25">   29</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a8455769de06bc3ac141cec1724e44f25">get_last_timestamp</a>():</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="stringliteral">&quot;&quot;&quot; retrieve the timestamp of the last transaction (CALLED FROM THE CLIENT SIDE)</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="stringliteral">    @return timestamp</span></div>
@@ -107,15 +107,15 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    cur.execute(query)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> cur.fetchone()[0]</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1ledger_html_ae14b161205be95246f9dbf4e3170581a"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1ledger.html#ae14b161205be95246f9dbf4e3170581a">core.queries.gets.ledger.get_sells</a></div><div class="ttdeci">def get_sells(dest, st_dt, end_dt=None)</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2ledger_8py_source.html#l00020">ledger.py:20</a></div></div>
 <div class="ttc" id="anamespacecore_1_1connection__cursor_html"><div class="ttname"><a href="namespacecore_1_1connection__cursor.html">core.connection_cursor</a></div><div class="ttdef"><b>Definition:</b> <a href="core_2connection__cursor_8py_source.html#l00001">connection_cursor.py:1</a></div></div>
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1ledger_html_abf9951152629a9000fe5c98442590ab0"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1ledger.html#abf9951152629a9000fe5c98442590ab0">core.queries.gets.ledger.get_last_timestamp</a></div><div class="ttdeci">def get_last_timestamp()</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2ledger_8py_source.html#l00029">ledger.py:29</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1ledger_html_a8455769de06bc3ac141cec1724e44f25"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a8455769de06bc3ac141cec1724e44f25">core.queries.gets.ledger.get_last_timestamp</a></div><div class="ttdeci">def get_last_timestamp()</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2ledger_8py_source.html#l00029">ledger.py:29</a></div></div>
 <div class="ttc" id="anamespaceclient_1_1client_html_a28f28b5d621b127269d6035d7a435682"><div class="ttname"><a href="namespaceclient_1_1client.html#a28f28b5d621b127269d6035d7a435682">client.client.format</a></div><div class="ttdeci">format</div><div class="ttdef"><b>Definition:</b> <a href="core_2build_2lib_2client_2client_8py_source.html#l00024">client.py:24</a></div></div>
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1ledger_html_a48f7fc47aa39d3e7984fa01512758f0f"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a48f7fc47aa39d3e7984fa01512758f0f">core.queries.gets.ledger.get_transactions</a></div><div class="ttdeci">def get_transactions(st_dt, end_dt=dt.datetime.now())</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2ledger_8py_source.html#l00007">ledger.py:7</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1ledger_html_a5972eaad1358e7f2c679c0665b6888d4"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a5972eaad1358e7f2c679c0665b6888d4">core.queries.gets.ledger.get_transactions</a></div><div class="ttdeci">def get_transactions(st_dt, end_dt=dt.datetime.now())</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2ledger_8py_source.html#l00007">ledger.py:7</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1ledger_html_a9154db587e273a74a72c6d8f557b7995"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1ledger.html#a9154db587e273a74a72c6d8f557b7995">core.queries.gets.ledger.get_sells</a></div><div class="ttdeci">def get_sells(dest, st_dt, end_dt=None)</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2ledger_8py_source.html#l00020">ledger.py:20</a></div></div>
 <div class="ttc" id="anamespacecore_1_1utils_html"><div class="ttname"><a href="namespacecore_1_1utils.html">core.utils</a></div><div class="ttdef"><b>Definition:</b> <a href="core_2utils_8py_source.html#l00001">utils.py:1</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 27 2021 20:38:07 for tahweela by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 28 2021 17:18:04 for tahweela by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

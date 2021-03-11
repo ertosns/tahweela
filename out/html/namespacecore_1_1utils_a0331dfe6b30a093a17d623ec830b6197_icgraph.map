@@ -1,7 +1,6 @@
 <map id="core.utils.process_cur" name="core.utils.process_cur">
-<area shape="rect" id="node1" title=" " alt="" coords="323,149,485,175"/>
+<area shape="rect" id="node1" title=" " alt="" coords="323,119,485,146"/>
 <area shape="rect" id="node2" href="$classcore_1_1queries_1_1database_1_1inserts.html#a80392f09085ce37b53a05eab9dd27e65" title=" " alt="" coords="19,29,261,71"/>
 <area shape="rect" id="node3" href="$classcore_1_1queries_1_1database_1_1exists.html#a6ddfedf8537c2c779b936b3fa458a46f" title=" " alt="" coords="5,119,275,146"/>
-<area shape="rect" id="node4" href="$classcore_1_1utils_1_1_payment_gate.html#a9608aafd9e4449de10a400f298971aca" title=" " alt="" coords="41,171,239,212"/>
-<area shape="rect" id="node5" href="$classcore_1_1queries_1_1database_1_1gets.html#a961c8c9be3ba332859164169d0e00266" title=" " alt="" coords="29,260,251,301"/>
+<area shape="rect" id="node4" href="$classcore_1_1queries_1_1database_1_1gets.html#a961c8c9be3ba332859164169d0e00266" title=" " alt="" coords="29,195,251,236"/>
 </map>

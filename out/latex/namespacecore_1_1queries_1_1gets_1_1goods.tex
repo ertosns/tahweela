@@ -3,18 +3,18 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a318dba694261e9e12c7a73ec2062670f}{get\+\_\+all}} ()
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_afb53426c43b6bca4e2ea58bd6c4f1520}{get\+\_\+all}} ()
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a724a66f496c4af97e418c943f365993c}{get\+\_\+good}} (gid)
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_aaf35fbd5b95bb01504b4155306ed9bb7}{get\+\_\+good}} (gid)
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_ab12af44d723f8a291ed2217e895ca231}{get\+\_\+commodity}} (gname, quality=0)
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a9e45608035d90540a83407e2e2388790}{get\+\_\+commodity}} (gname, quality=0)
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a9bc8d36d821f0515648e881f2c987321}{get\+\_\+new\+\_\+price}} (gid)
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a362f3e72382aea4f1e523f0f91ad7a88}{get\+\_\+new\+\_\+price}} (gid)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1goods_a318dba694261e9e12c7a73ec2062670f}\label{namespacecore_1_1queries_1_1gets_1_1goods_a318dba694261e9e12c7a73ec2062670f}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1goods_afb53426c43b6bca4e2ea58bd6c4f1520}\label{namespacecore_1_1queries_1_1gets_1_1goods_afb53426c43b6bca4e2ea58bd6c4f1520}} 
 \index{core.queries.gets.goods@{core.queries.gets.goods}!get\_all@{get\_all}}
 \index{get\_all@{get\_all}!core.queries.gets.goods@{core.queries.gets.goods}}
 \doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
@@ -26,14 +26,14 @@ Definition at line 6 of file goods.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a318dba694261e9e12c7a73ec2062670f}{get\_all}}():}
+\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_afb53426c43b6bca4e2ea58bd6c4f1520}{get\_all}}():}
 \DoxyCodeLine{7     query=\textcolor{stringliteral}{"SELECT * FROM goods;"}}
 \DoxyCodeLine{8     \textcolor{comment}{\#return pd.read\_sql(query, conn, index\_col='id').to\_json()}}
 \DoxyCodeLine{9     \textcolor{keywordflow}{return} pd.read\_sql(query, conn).to\_json()}
 \DoxyCodeLine{10 }
 
 \end{DoxyCode}
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1goods_ab12af44d723f8a291ed2217e895ca231}\label{namespacecore_1_1queries_1_1gets_1_1goods_ab12af44d723f8a291ed2217e895ca231}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1goods_a9e45608035d90540a83407e2e2388790}\label{namespacecore_1_1queries_1_1gets_1_1goods_a9e45608035d90540a83407e2e2388790}} 
 \index{core.queries.gets.goods@{core.queries.gets.goods}!get\_commodity@{get\_commodity}}
 \index{get\_commodity@{get\_commodity}!core.queries.gets.goods@{core.queries.gets.goods}}
 \doxysubsubsection{\texorpdfstring{get\_commodity()}{get\_commodity()}}
@@ -51,7 +51,7 @@ Definition at line 22 of file goods.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{22 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_ab12af44d723f8a291ed2217e895ca231}{get\_commodity}}(gname, quality=0):}
+\DoxyCodeLine{22 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a9e45608035d90540a83407e2e2388790}{get\_commodity}}(gname, quality=0):}
 \DoxyCodeLine{23     \textcolor{stringliteral}{"""retrive good for the given goods constraints}}
 \DoxyCodeLine{24 \textcolor{stringliteral}{}}
 \DoxyCodeLine{25 \textcolor{stringliteral}{    @param gname: goods name}}
@@ -70,7 +70,7 @@ Definition at line 22 of file goods.\+py.
 
 References client.\+client.\+format.
 
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1goods_a724a66f496c4af97e418c943f365993c}\label{namespacecore_1_1queries_1_1gets_1_1goods_a724a66f496c4af97e418c943f365993c}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1goods_aaf35fbd5b95bb01504b4155306ed9bb7}\label{namespacecore_1_1queries_1_1gets_1_1goods_aaf35fbd5b95bb01504b4155306ed9bb7}} 
 \index{core.queries.gets.goods@{core.queries.gets.goods}!get\_good@{get\_good}}
 \index{get\_good@{get\_good}!core.queries.gets.goods@{core.queries.gets.goods}}
 \doxysubsubsection{\texorpdfstring{get\_good()}{get\_good()}}
@@ -87,7 +87,7 @@ Definition at line 11 of file goods.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a724a66f496c4af97e418c943f365993c}{get\_good}}(gid):}
+\DoxyCodeLine{11 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_aaf35fbd5b95bb01504b4155306ed9bb7}{get\_good}}(gid):}
 \DoxyCodeLine{12     \textcolor{stringliteral}{"""retrive good for the given goods id (gid)}}
 \DoxyCodeLine{13 \textcolor{stringliteral}{}}
 \DoxyCodeLine{14 \textcolor{stringliteral}{    @param gid: goods id}}
@@ -113,10 +113,10 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacecore_1_1queries_1_1gets_1_1goods_a724a66f496c4af97e418c943f365993c_icgraph}
+\includegraphics[width=350pt]{namespacecore_1_1queries_1_1gets_1_1goods_aaf35fbd5b95bb01504b4155306ed9bb7_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1goods_a9bc8d36d821f0515648e881f2c987321}\label{namespacecore_1_1queries_1_1gets_1_1goods_a9bc8d36d821f0515648e881f2c987321}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1goods_a362f3e72382aea4f1e523f0f91ad7a88}\label{namespacecore_1_1queries_1_1gets_1_1goods_a362f3e72382aea4f1e523f0f91ad7a88}} 
 \index{core.queries.gets.goods@{core.queries.gets.goods}!get\_new\_price@{get\_new\_price}}
 \index{get\_new\_price@{get\_new\_price}!core.queries.gets.goods@{core.queries.gets.goods}}
 \doxysubsubsection{\texorpdfstring{get\_new\_price()}{get\_new\_price()}}
@@ -133,13 +133,13 @@ Definition at line 35 of file goods.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{35 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a9bc8d36d821f0515648e881f2c987321}{get\_new\_price}}(gid):}
+\DoxyCodeLine{35 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a362f3e72382aea4f1e523f0f91ad7a88}{get\_new\_price}}(gid):}
 \DoxyCodeLine{36     \textcolor{stringliteral}{""" get good price with given good's id}}
 \DoxyCodeLine{37 \textcolor{stringliteral}{}}
 \DoxyCodeLine{38 \textcolor{stringliteral}{    @param gid: good's id}}
 \DoxyCodeLine{39 \textcolor{stringliteral}{    @return price in dollar}}
 \DoxyCodeLine{40 \textcolor{stringliteral}{    """}}
-\DoxyCodeLine{41     df = \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_a724a66f496c4af97e418c943f365993c}{get\_good}}(gid)}
+\DoxyCodeLine{41     df = \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1goods_aaf35fbd5b95bb01504b4155306ed9bb7}{get\_good}}(gid)}
 \DoxyCodeLine{42     cur\_id = df[\textcolor{stringliteral}{'good\_currency\_id'}].ix[0]}
 \DoxyCodeLine{43     \textcolor{keywordflow}{return} df[\textcolor{stringliteral}{'good\_cost'}].ix[0]*\mbox{\hyperlink{namespacequeries_1_1gets_1_1currency_ab3a96eb4cd55d9255081024ba4d7d55c}{to\_dollar}}(cur\_id)}
 
@@ -153,6 +153,6 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacecore_1_1queries_1_1gets_1_1goods_a9bc8d36d821f0515648e881f2c987321_cgraph}
+\includegraphics[width=350pt]{namespacecore_1_1queries_1_1gets_1_1goods_a362f3e72382aea4f1e523f0f91ad7a88_cgraph}
 \end{center}
 \end{figure}

@@ -1,5 +1,7 @@
 <map id="queries.gets.clients.get" name="queries.gets.clients.get">
-<area shape="rect" id="node1" title=" " alt="" coords="272,42,447,69"/>
-<area shape="rect" id="node2" href="$classcore__test_1_1_client.html#a3d31ef31142ee2ce1b6d4cd2ef9f219d" title=" " alt="" coords="40,5,189,47"/>
-<area shape="rect" id="node3" href="$namespacequeries_1_1gets_1_1clients.html#ac42c598d8042ade2e6bd72ada44bfd81" title=" " alt="" coords="5,71,224,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="352,97,527,123"/>
+<area shape="rect" id="node2" href="$classcore__test_1_1_client.html#a3d31ef31142ee2ce1b6d4cd2ef9f219d" title=" " alt="" coords="80,5,229,47"/>
+<area shape="rect" id="node3" href="$namespacequeries_1_1gets_1_1clients.html#ac42c598d8042ade2e6bd72ada44bfd81" title=" " alt="" coords="45,71,264,98"/>
+<area shape="rect" id="node4" href="$classcore_1_1server_1_1login_1_1_users_repository.html#a54f2004ea5875ee77e8094722977afe1" title=" " alt="" coords="5,122,304,149"/>
+<area shape="rect" id="node5" href="$classcore_1_1server_1_1login_1_1_users_repository.html#a5819dcbb6482708f5fc92260d1b76320" title=" " alt="" coords="23,173,287,215"/>
 </map>

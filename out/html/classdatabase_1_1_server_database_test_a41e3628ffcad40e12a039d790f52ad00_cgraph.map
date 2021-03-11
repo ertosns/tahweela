@@ -1,12 +1,12 @@
 <map id="database.ServerDatabaseTest.test_transaction" name="database.ServerDatabaseTest.test_transaction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,203,251,244"/>
-<area shape="rect" id="node2" href="$namespacedatabase.html#ae5fde61d00fe40163728ebc3dbf739c1" title=" " alt="" coords="579,5,745,47"/>
-<area shape="rect" id="node3" href="$namespacedatabase.html#a0129fd40c2a6382b35f182c7251a72f4" title=" " alt="" coords="579,235,745,262"/>
-<area shape="rect" id="node4" href="$namespacedatabase.html#a7ce2eae13432eaebb3c72714d6789344" title=" " alt="" coords="567,79,757,106"/>
-<area shape="rect" id="node5" href="$namespacedatabase.html#a4c72a9bbe34d492b258594872a56ec36" title=" " alt="" coords="583,148,741,189"/>
-<area shape="rect" id="node6" href="$namespacedatabase.html#a0dcfb207ce9617f7ff5ce04ab52987d2" title=" " alt="" coords="331,311,486,338"/>
-<area shape="rect" id="node7" href="$namespacedatabase.html#a8b13622a2162db83088b17b25f745069" title=" " alt="" coords="587,299,737,326"/>
-<area shape="rect" id="node8" href="$namespacedatabase.html#a0f7ab0273a3344fdd498dc1e8954ded5" title=" " alt="" coords="587,350,737,377"/>
-<area shape="rect" id="node9" href="$namespacedatabase.html#a9c31bc80dcdf2223d5c1bb86d8d56197" title=" " alt="" coords="299,109,519,135"/>
-<area shape="rect" id="node10" href="$namespacedatabase.html#a9d74c400363ef92ac842aff68c31457d" title=" " alt="" coords="319,413,499,439"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,232,251,273"/>
+<area shape="rect" id="node2" href="$namespaceclient_1_1client.html#af8556d1f0e3ad687b312802456c5948b" title=" " alt="" coords="311,5,493,47"/>
+<area shape="rect" id="node3" href="$namespaceclient_1_1client.html#a3ac8178d0ad128d3c42b9a4b13b30e01" title=" " alt="" coords="311,71,493,98"/>
+<area shape="rect" id="node4" href="$namespaceclient_1_1client.html#a833ad09ead45e7514e0b86ff1b03ca87" title=" " alt="" coords="299,122,505,149"/>
+<area shape="rect" id="node5" href="$namespaceclient_1_1client.html#a61a3e8937663f872f16be7e13103ca00" title=" " alt="" coords="315,173,489,215"/>
+<area shape="rect" id="node6" href="$namespaceclient_1_1client.html#a1beb02f2a714df26019dc87d9c754e9c" title=" " alt="" coords="317,239,487,266"/>
+<area shape="rect" id="node7" href="$namespaceclient_1_1client.html#ae2714197b50fcca23197fe90e9d34559" title=" " alt="" coords="319,290,485,317"/>
+<area shape="rect" id="node8" href="$namespaceclient_1_1client.html#acc7c8dc333a379c50d929a5d0be5045e" title=" " alt="" coords="319,341,485,367"/>
+<area shape="rect" id="node9" href="$namespaceclient_1_1client.html#aeb04cfa07acf73990acf1b636aac2830" title=" " alt="" coords="319,392,485,433"/>
+<area shape="rect" id="node10" href="$namespaceclient_1_1client.html#acf449723d20f006b07f947ef4b68b225" title=" " alt="" coords="304,458,500,485"/>
 </map>

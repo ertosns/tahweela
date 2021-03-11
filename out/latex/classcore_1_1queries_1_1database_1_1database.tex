@@ -2,8 +2,7 @@
 \label{classcore_1_1queries_1_1database_1_1database}\index{core.queries.database.database@{core.queries.database.database}}
 
 
-Inheritance diagram for core.\+queries.\+database.\+database\+:
-\nopagebreak
+Inheritance diagram for core.\+queries.\+database.\+database\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for core.\+queries.\+database.\+database\+:
 \end{figure}
 
 
-Collaboration diagram for core.\+queries.\+database.\+database\+:
-\nopagebreak
+Collaboration diagram for core.\+queries.\+database.\+database\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -83,7 +81,7 @@ def \mbox{\hyperlink{classcore_1_1queries_1_1database_1_1database_a0fdf7860709dd
 \doxysubsection{Detailed Description}
 
 
-Definition at line 693 of file database.\+py.
+Definition at line 783 of file database.\+py.
 
 
 
@@ -96,33 +94,32 @@ Definition at line 693 of file database.\+py.
 
 
 
-Definition at line 694 of file database.\+py.
+Definition at line 784 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{694     \textcolor{keyword}{def }\_\_init\_\_(self, dbconfigs):}
-\DoxyCodeLine{695         \textcolor{comment}{\#cursor}}
-\DoxyCodeLine{696         self.db\_configs=dbconfigs}
-\DoxyCodeLine{697         self.conn = psycopg2.connect(self.db\_configs)}
-\DoxyCodeLine{698         self.cur = self.conn.cursor()}
-\DoxyCodeLine{699         \textcolor{comment}{\#logger}}
-\DoxyCodeLine{700         logging.basicConfig(filename=\textcolor{stringliteral}{"db.log"}, \(\backslash\)}
-\DoxyCodeLine{701                             format=\textcolor{stringliteral}{'\%(asctime)s \%(message)s'}, \(\backslash\)}
-\DoxyCodeLine{702                             filemode=\textcolor{stringliteral}{'w'})}
-\DoxyCodeLine{703         self.logger=logging.getLogger()}
-\DoxyCodeLine{704         self.logger.setLevel(logging.DEBUG)}
-\DoxyCodeLine{705         self.exists=\mbox{\hyperlink{namespacequeries_1_1exists_1_1banking_a324fd7048117624c78ce9f1693d0be93}{exists}}(self.conn, self.cur)}
-\DoxyCodeLine{706         self.gets=gets(self.conn, self.cur, self.logger)}
-\DoxyCodeLine{707         self.inserts=inserts(self.conn, self.cur, self.logger)}
-\DoxyCodeLine{708         self.updates=updates(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{784     \textcolor{keyword}{def }\_\_init\_\_(self, dbconfigs):}
+\DoxyCodeLine{785         \textcolor{comment}{\#cursor}}
+\DoxyCodeLine{786         self.db\_configs=dbconfigs}
+\DoxyCodeLine{787         self.conn = psycopg2.connect(self.db\_configs)}
+\DoxyCodeLine{788         self.cur = self.conn.cursor()}
+\DoxyCodeLine{789         \textcolor{comment}{\#logger}}
+\DoxyCodeLine{790         logging.basicConfig(filename=\textcolor{stringliteral}{"db.log"}, \(\backslash\)}
+\DoxyCodeLine{791                             format=\textcolor{stringliteral}{'\%(asctime)s \%(message)s'}, \(\backslash\)}
+\DoxyCodeLine{792                             filemode=\textcolor{stringliteral}{'w'})}
+\DoxyCodeLine{793         self.logger=logging.getLogger()}
+\DoxyCodeLine{794         self.logger.setLevel(logging.DEBUG)}
+\DoxyCodeLine{795         self.exists=\mbox{\hyperlink{namespacequeries_1_1exists_1_1banking_a324fd7048117624c78ce9f1693d0be93}{exists}}(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{796         self.gets=gets(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{797         self.inserts=inserts(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{798         self.updates=updates(self.conn, self.cur, self.logger)}
 
 \end{DoxyCode}
 
 
 Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -137,33 +134,32 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 694 of file database.\+py.
+Definition at line 784 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{694     \textcolor{keyword}{def }\_\_init\_\_(self, dbconfigs):}
-\DoxyCodeLine{695         \textcolor{comment}{\#cursor}}
-\DoxyCodeLine{696         self.db\_configs=dbconfigs}
-\DoxyCodeLine{697         self.conn = psycopg2.connect(self.db\_configs)}
-\DoxyCodeLine{698         self.cur = self.conn.cursor()}
-\DoxyCodeLine{699         \textcolor{comment}{\#logger}}
-\DoxyCodeLine{700         logging.basicConfig(filename=\textcolor{stringliteral}{"db.log"}, \(\backslash\)}
-\DoxyCodeLine{701                             format=\textcolor{stringliteral}{'\%(asctime)s \%(message)s'}, \(\backslash\)}
-\DoxyCodeLine{702                             filemode=\textcolor{stringliteral}{'w'})}
-\DoxyCodeLine{703         self.logger=logging.getLogger()}
-\DoxyCodeLine{704         self.logger.setLevel(logging.DEBUG)}
-\DoxyCodeLine{705         self.exists=\mbox{\hyperlink{namespacequeries_1_1exists_1_1banking_a324fd7048117624c78ce9f1693d0be93}{exists}}(self.conn, self.cur)}
-\DoxyCodeLine{706         self.gets=gets(self.conn, self.cur, self.logger)}
-\DoxyCodeLine{707         self.inserts=inserts(self.conn, self.cur, self.logger)}
-\DoxyCodeLine{708         self.updates=updates(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{784     \textcolor{keyword}{def }\_\_init\_\_(self, dbconfigs):}
+\DoxyCodeLine{785         \textcolor{comment}{\#cursor}}
+\DoxyCodeLine{786         self.db\_configs=dbconfigs}
+\DoxyCodeLine{787         self.conn = psycopg2.connect(self.db\_configs)}
+\DoxyCodeLine{788         self.cur = self.conn.cursor()}
+\DoxyCodeLine{789         \textcolor{comment}{\#logger}}
+\DoxyCodeLine{790         logging.basicConfig(filename=\textcolor{stringliteral}{"db.log"}, \(\backslash\)}
+\DoxyCodeLine{791                             format=\textcolor{stringliteral}{'\%(asctime)s \%(message)s'}, \(\backslash\)}
+\DoxyCodeLine{792                             filemode=\textcolor{stringliteral}{'w'})}
+\DoxyCodeLine{793         self.logger=logging.getLogger()}
+\DoxyCodeLine{794         self.logger.setLevel(logging.DEBUG)}
+\DoxyCodeLine{795         self.exists=\mbox{\hyperlink{namespacequeries_1_1exists_1_1banking_a324fd7048117624c78ce9f1693d0be93}{exists}}(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{796         self.gets=gets(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{797         self.inserts=inserts(self.conn, self.cur, self.logger)}
+\DoxyCodeLine{798         self.updates=updates(self.conn, self.cur, self.logger)}
 
 \end{DoxyCode}
 
 
-References core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, queries.\+database.\+database.\+db\+\_\+configs, core.\+queries.\+database.\+database.\+db\+\_\+configs, queries.\+database.\+database.\+exists, core.\+queries.\+database.\+database.\+exists, queries.\+database.\+database.\+gets, core.\+queries.\+database.\+database.\+gets, queries.\+database.\+database.\+inserts, core.\+queries.\+database.\+database.\+inserts, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, queries.\+database.\+database.\+updates, and core.\+queries.\+database.\+database.\+updates.
+References core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, queries.\+database.\+database.\+db\+\_\+configs, core.\+queries.\+database.\+database.\+db\+\_\+configs, queries.\+database.\+database.\+exists, core.\+queries.\+database.\+database.\+exists, queries.\+database.\+database.\+gets, core.\+queries.\+database.\+database.\+gets, queries.\+database.\+database.\+inserts, core.\+queries.\+database.\+database.\+inserts, core.\+queries.\+database.\+exists.\+logger, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, queries.\+database.\+database.\+updates, and core.\+queries.\+database.\+database.\+updates.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -181,24 +177,23 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 734 of file database.\+py.
+Definition at line 824 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{734     \textcolor{keyword}{def }close(self):}
-\DoxyCodeLine{735         self.conn.close()}
+\DoxyCodeLine{824     \textcolor{keyword}{def }close(self):}
+\DoxyCodeLine{825         self.conn.close()}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, and core.\+queries.\+database.\+database.\+conn.
+References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, and core.\+queries.\+database.\+database.\+conn.
 
 
 
 Referenced by core.\+queries.\+database.\+database.\+close().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -213,20 +208,19 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 734 of file database.\+py.
+Definition at line 824 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{734     \textcolor{keyword}{def }close(self):}
-\DoxyCodeLine{735         self.conn.close()}
+\DoxyCodeLine{824     \textcolor{keyword}{def }close(self):}
+\DoxyCodeLine{825         self.conn.close()}
 
 \end{DoxyCode}
 
 
-References core.\+queries.\+database.\+database.\+close(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, and core.\+queries.\+database.\+database.\+conn.
+References core.\+queries.\+database.\+database.\+close(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, and core.\+queries.\+database.\+database.\+conn.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -241,36 +235,34 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 709 of file database.\+py.
+Definition at line 799 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{709     \textcolor{keyword}{def }commit(self, lock=None):}
-\DoxyCodeLine{710         self.conn.commit()}
-\DoxyCodeLine{711         self.logger.info(\textcolor{stringliteral}{"database committed"})}
-\DoxyCodeLine{712         \textcolor{comment}{\#self.repeatable\_read()}}
-\DoxyCodeLine{713         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
-\DoxyCodeLine{714             self.unlock\_advisory(lock)}
+\DoxyCodeLine{799     \textcolor{keyword}{def }commit(self, lock=None):}
+\DoxyCodeLine{800         self.conn.commit()}
+\DoxyCodeLine{801         self.logger.info(\textcolor{stringliteral}{"database committed"})}
+\DoxyCodeLine{802         \textcolor{comment}{\#self.repeatable\_read()}}
+\DoxyCodeLine{803         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{804             self.unlock\_advisory(lock)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, queries.\+database.\+database.\+unlock\+\_\+advisory(), and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
+References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+logger, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, queries.\+database.\+database.\+unlock\+\_\+advisory(), and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
 
 
 
 Referenced by core.\+queries.\+database.\+database.\+commit().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classcore_1_1queries_1_1database_1_1database_a5ed849df715331a2a218a8aefcf90588_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -285,21 +277,21 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 709 of file database.\+py.
+Definition at line 799 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{709     \textcolor{keyword}{def }commit(self, lock=None):}
-\DoxyCodeLine{710         self.conn.commit()}
-\DoxyCodeLine{711         self.logger.info(\textcolor{stringliteral}{"database committed"})}
-\DoxyCodeLine{712         \textcolor{comment}{\#self.repeatable\_read()}}
-\DoxyCodeLine{713         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
-\DoxyCodeLine{714             self.unlock\_advisory(lock)}
+\DoxyCodeLine{799     \textcolor{keyword}{def }commit(self, lock=None):}
+\DoxyCodeLine{800         self.conn.commit()}
+\DoxyCodeLine{801         self.logger.info(\textcolor{stringliteral}{"database committed"})}
+\DoxyCodeLine{802         \textcolor{comment}{\#self.repeatable\_read()}}
+\DoxyCodeLine{803         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{804             self.unlock\_advisory(lock)}
 
 \end{DoxyCode}
 
 
-References core.\+queries.\+database.\+database.\+commit(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, queries.\+database.\+database.\+unlock\+\_\+advisory(), and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
+References core.\+queries.\+database.\+database.\+commit(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+logger, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, queries.\+database.\+database.\+unlock\+\_\+advisory(), and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -317,24 +309,23 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 726 of file database.\+py.
+Definition at line 816 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{726     \textcolor{keyword}{def }committed\_read(self):}
-\DoxyCodeLine{727         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL READ COMMITTED;"})}
+\DoxyCodeLine{816     \textcolor{keyword}{def }committed\_read(self):}
+\DoxyCodeLine{817         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL READ COMMITTED;"})}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and core.\+queries.\+database.\+database.\+cur.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and core.\+queries.\+database.\+database.\+cur.
 
 
 
 Referenced by core.\+queries.\+database.\+database.\+committed\+\_\+read().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -349,20 +340,19 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 726 of file database.\+py.
+Definition at line 816 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{726     \textcolor{keyword}{def }committed\_read(self):}
-\DoxyCodeLine{727         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL READ COMMITTED;"})}
+\DoxyCodeLine{816     \textcolor{keyword}{def }committed\_read(self):}
+\DoxyCodeLine{817         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL READ COMMITTED;"})}
 
 \end{DoxyCode}
 
 
-References core.\+queries.\+database.\+database.\+committed\+\_\+read(), queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and core.\+queries.\+database.\+database.\+cur.
+References core.\+queries.\+database.\+database.\+committed\+\_\+read(), queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and core.\+queries.\+database.\+database.\+cur.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -377,22 +367,21 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 720 of file database.\+py.
+Definition at line 810 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{720     \textcolor{keyword}{def }init(self):}
-\DoxyCodeLine{721         self.conn=psycopg2.connect(self.db\_configs) \textcolor{comment}{\#TODO (res) should it be called?!}}
-\DoxyCodeLine{722         self.cur=self.conn.cursor()}
-\DoxyCodeLine{723         self.logger.info(\textcolor{stringliteral}{"database initialized"})}
+\DoxyCodeLine{810     \textcolor{keyword}{def }init(self):}
+\DoxyCodeLine{811         self.conn=psycopg2.connect(self.db\_configs) \textcolor{comment}{\#TODO (res) should it be called?!}}
+\DoxyCodeLine{812         self.cur=self.conn.cursor()}
+\DoxyCodeLine{813         self.logger.info(\textcolor{stringliteral}{"database initialized"})}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, queries.\+database.\+database.\+db\+\_\+configs, core.\+queries.\+database.\+database.\+db\+\_\+configs, core.\+queries.\+database.\+database.\+init(), queries.\+database.\+database.\+logger, and core.\+queries.\+database.\+database.\+logger.
+References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, queries.\+database.\+database.\+db\+\_\+configs, core.\+queries.\+database.\+database.\+db\+\_\+configs, core.\+queries.\+database.\+database.\+init(), core.\+queries.\+database.\+exists.\+logger, queries.\+database.\+database.\+logger, and core.\+queries.\+database.\+database.\+logger.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -407,26 +396,25 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 720 of file database.\+py.
+Definition at line 810 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{720     \textcolor{keyword}{def }init(self):}
-\DoxyCodeLine{721         self.conn=psycopg2.connect(self.db\_configs) \textcolor{comment}{\#TODO (res) should it be called?!}}
-\DoxyCodeLine{722         self.cur=self.conn.cursor()}
-\DoxyCodeLine{723         self.logger.info(\textcolor{stringliteral}{"database initialized"})}
+\DoxyCodeLine{810     \textcolor{keyword}{def }init(self):}
+\DoxyCodeLine{811         self.conn=psycopg2.connect(self.db\_configs) \textcolor{comment}{\#TODO (res) should it be called?!}}
+\DoxyCodeLine{812         self.cur=self.conn.cursor()}
+\DoxyCodeLine{813         self.logger.info(\textcolor{stringliteral}{"database initialized"})}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, queries.\+database.\+database.\+db\+\_\+configs, core.\+queries.\+database.\+database.\+db\+\_\+configs, queries.\+database.\+database.\+logger, and core.\+queries.\+database.\+database.\+logger.
+References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, queries.\+database.\+database.\+db\+\_\+configs, core.\+queries.\+database.\+database.\+db\+\_\+configs, core.\+queries.\+database.\+exists.\+logger, queries.\+database.\+database.\+logger, and core.\+queries.\+database.\+database.\+logger.
 
 
 
 Referenced by core.\+queries.\+database.\+database.\+init().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -441,25 +429,24 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 728 of file database.\+py.
+Definition at line 818 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{728     \textcolor{keyword}{def }lock\_advisory(self, lock):}
-\DoxyCodeLine{729         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_lock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
-\DoxyCodeLine{730         self.cur.execute(stat)}
+\DoxyCodeLine{818     \textcolor{keyword}{def }lock\_advisory(self, lock):}
+\DoxyCodeLine{819         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_lock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
+\DoxyCodeLine{820         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, and client.\+client.\+format.
 
 
 
 Referenced by core.\+queries.\+database.\+database.\+lock\+\_\+advisory().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -474,21 +461,20 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 728 of file database.\+py.
+Definition at line 818 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{728     \textcolor{keyword}{def }lock\_advisory(self, lock):}
-\DoxyCodeLine{729         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_lock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
-\DoxyCodeLine{730         self.cur.execute(stat)}
+\DoxyCodeLine{818     \textcolor{keyword}{def }lock\_advisory(self, lock):}
+\DoxyCodeLine{819         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_lock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
+\DoxyCodeLine{820         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, client.\+client.\+format, and core.\+queries.\+database.\+database.\+lock\+\_\+advisory().
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, client.\+client.\+format, and core.\+queries.\+database.\+database.\+lock\+\_\+advisory().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -503,24 +489,23 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 724 of file database.\+py.
+Definition at line 814 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{724     \textcolor{keyword}{def }repeatable\_read(self):}
-\DoxyCodeLine{725         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;"})}
+\DoxyCodeLine{814     \textcolor{keyword}{def }repeatable\_read(self):}
+\DoxyCodeLine{815         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;"})}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and core.\+queries.\+database.\+database.\+cur.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, and core.\+queries.\+database.\+database.\+cur.
 
 
 
 Referenced by core.\+queries.\+database.\+database.\+repeatable\+\_\+read().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -535,20 +520,19 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 724 of file database.\+py.
+Definition at line 814 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{724     \textcolor{keyword}{def }repeatable\_read(self):}
-\DoxyCodeLine{725         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;"})}
+\DoxyCodeLine{814     \textcolor{keyword}{def }repeatable\_read(self):}
+\DoxyCodeLine{815         self.cur.execute(\textcolor{stringliteral}{"SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;"})}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, and core.\+queries.\+database.\+database.\+repeatable\+\_\+read().
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, and core.\+queries.\+database.\+database.\+repeatable\+\_\+read().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -563,23 +547,22 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 715 of file database.\+py.
+Definition at line 805 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{715     \textcolor{keyword}{def }rollback(self, lock=None):}
-\DoxyCodeLine{716         self.conn.rollback()}
-\DoxyCodeLine{717         self.logger.info(\textcolor{stringliteral}{"database rollback"})}
-\DoxyCodeLine{718         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
-\DoxyCodeLine{719             self.unlock\_advisory(lock)}
+\DoxyCodeLine{805     \textcolor{keyword}{def }rollback(self, lock=None):}
+\DoxyCodeLine{806         self.conn.rollback()}
+\DoxyCodeLine{807         self.logger.info(\textcolor{stringliteral}{"database rollback"})}
+\DoxyCodeLine{808         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{809             self.unlock\_advisory(lock)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+rollback(), queries.\+database.\+database.\+unlock\+\_\+advisory(), and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
+References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+logger, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+rollback(), queries.\+database.\+database.\+unlock\+\_\+advisory(), and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -594,20 +577,20 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 715 of file database.\+py.
+Definition at line 805 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{715     \textcolor{keyword}{def }rollback(self, lock=None):}
-\DoxyCodeLine{716         self.conn.rollback()}
-\DoxyCodeLine{717         self.logger.info(\textcolor{stringliteral}{"database rollback"})}
-\DoxyCodeLine{718         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
-\DoxyCodeLine{719             self.unlock\_advisory(lock)}
+\DoxyCodeLine{805     \textcolor{keyword}{def }rollback(self, lock=None):}
+\DoxyCodeLine{806         self.conn.rollback()}
+\DoxyCodeLine{807         self.logger.info(\textcolor{stringliteral}{"database rollback"})}
+\DoxyCodeLine{808         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lock==\textcolor{keywordtype}{None}:}
+\DoxyCodeLine{809             self.unlock\_advisory(lock)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, queries.\+database.\+database.\+unlock\+\_\+advisory(), and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
+References queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, core.\+queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+database.\+conn, core.\+queries.\+database.\+exists.\+logger, queries.\+database.\+database.\+logger, core.\+queries.\+database.\+database.\+logger, queries.\+database.\+database.\+unlock\+\_\+advisory(), and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
 
 
 
@@ -621,8 +604,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classcore_1_1queries_1_1database_1_1database_af925c35c20775f563098178f7d45b84d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -637,25 +619,24 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 731 of file database.\+py.
+Definition at line 821 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{731     \textcolor{keyword}{def }unlock\_advisory(self, lock):}
-\DoxyCodeLine{732         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_unlock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
-\DoxyCodeLine{733         self.cur.execute(stat)}
+\DoxyCodeLine{821     \textcolor{keyword}{def }unlock\_advisory(self, lock):}
+\DoxyCodeLine{822         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_unlock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
+\DoxyCodeLine{823         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, and client.\+client.\+format.
 
 
 
 Referenced by core.\+queries.\+database.\+database.\+commit(), core.\+queries.\+database.\+database.\+rollback(), and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -670,21 +651,20 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 731 of file database.\+py.
+Definition at line 821 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{731     \textcolor{keyword}{def }unlock\_advisory(self, lock):}
-\DoxyCodeLine{732         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_unlock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
-\DoxyCodeLine{733         self.cur.execute(stat)}
+\DoxyCodeLine{821     \textcolor{keyword}{def }unlock\_advisory(self, lock):}
+\DoxyCodeLine{822         stat=\textcolor{stringliteral}{"SELECT pg\_advisory\_unlock(\{\});"}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(lock)}
+\DoxyCodeLine{823         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, client.\+client.\+format, and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, core.\+queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+database.\+cur, client.\+client.\+format, and core.\+queries.\+database.\+database.\+unlock\+\_\+advisory().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -702,7 +682,7 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 697 of file database.\+py.
+Definition at line 787 of file database.\+py.
 
 
 
@@ -716,7 +696,7 @@ Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(
 
 
 
-Definition at line 698 of file database.\+py.
+Definition at line 788 of file database.\+py.
 
 
 
@@ -730,7 +710,7 @@ Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(
 
 
 
-Definition at line 696 of file database.\+py.
+Definition at line 786 of file database.\+py.
 
 
 
@@ -744,7 +724,7 @@ Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(
 
 
 
-Definition at line 705 of file database.\+py.
+Definition at line 795 of file database.\+py.
 
 
 
@@ -758,7 +738,7 @@ Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(
 
 
 
-Definition at line 706 of file database.\+py.
+Definition at line 796 of file database.\+py.
 
 
 
@@ -772,7 +752,7 @@ Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(
 
 
 
-Definition at line 707 of file database.\+py.
+Definition at line 797 of file database.\+py.
 
 
 
@@ -786,7 +766,7 @@ Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(
 
 
 
-Definition at line 703 of file database.\+py.
+Definition at line 793 of file database.\+py.
 
 
 
@@ -800,7 +780,7 @@ Referenced by core.\+queries.\+database.\+database.\+\_\+\+\_\+init\+\_\+\+\_\+(
 
 
 
-Definition at line 708 of file database.\+py.
+Definition at line 798 of file database.\+py.
 
 
 

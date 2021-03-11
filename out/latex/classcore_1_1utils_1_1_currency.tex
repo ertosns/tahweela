@@ -2,8 +2,7 @@
 \label{classcore_1_1utils_1_1_currency}\index{core.utils.Currency@{core.utils.Currency}}
 
 
-Inheritance diagram for core.\+utils.\+Currency\+:
-\nopagebreak
+Inheritance diagram for core.\+utils.\+Currency\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for core.\+utils.\+Currency\+:
 \end{figure}
 
 
-Collaboration diagram for core.\+utils.\+Currency\+:
-\nopagebreak
+Collaboration diagram for core.\+utils.\+Currency\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -53,7 +51,7 @@ def \mbox{\hyperlink{classcore_1_1utils_1_1_currency_aacc36d5f14c3423d970efc461b
 \doxysubsection{Detailed Description}
 
 
-Definition at line 94 of file utils.\+py.
+Definition at line 165 of file utils.\+py.
 
 
 
@@ -66,26 +64,25 @@ Definition at line 94 of file utils.\+py.
 
 
 
-Definition at line 95 of file utils.\+py.
+Definition at line 166 of file utils.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{95     \textcolor{keyword}{def }\_\_init\_\_(self, preference, base=EUR):}
-\DoxyCodeLine{96         self.base=base}
-\DoxyCodeLine{97         self.pref=preference}
-\DoxyCodeLine{98         self.rate = \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self.base, self.pref)}
-\DoxyCodeLine{99         log.info(\textcolor{stringliteral}{"exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
-\DoxyCodeLine{100         \textcolor{keywordflow}{if} self.rate==0:}
-\DoxyCodeLine{101             log.critical(\textcolor{stringliteral}{"currence base \{\}, pref \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.base, self.pref))}
-\DoxyCodeLine{102 }
+\DoxyCodeLine{166     \textcolor{keyword}{def }\_\_init\_\_(self, preference, base=EUR):}
+\DoxyCodeLine{167         self.base=base}
+\DoxyCodeLine{168         self.pref=preference}
+\DoxyCodeLine{169         self.rate = \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self.base, self.pref)}
+\DoxyCodeLine{170         log.info(\textcolor{stringliteral}{"exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{171         \textcolor{keywordflow}{if} self.rate==0:}
+\DoxyCodeLine{172             log.critical(\textcolor{stringliteral}{"currence base \{\}, pref \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.base, self.pref))}
+\DoxyCodeLine{173 }
 
 \end{DoxyCode}
 
 
 Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -100,26 +97,25 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 95 of file utils.\+py.
+Definition at line 166 of file utils.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{95     \textcolor{keyword}{def }\_\_init\_\_(self, preference, base=EUR):}
-\DoxyCodeLine{96         self.base=base}
-\DoxyCodeLine{97         self.pref=preference}
-\DoxyCodeLine{98         self.rate = \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self.base, self.pref)}
-\DoxyCodeLine{99         log.info(\textcolor{stringliteral}{"exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
-\DoxyCodeLine{100         \textcolor{keywordflow}{if} self.rate==0:}
-\DoxyCodeLine{101             log.critical(\textcolor{stringliteral}{"currence base \{\}, pref \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.base, self.pref))}
-\DoxyCodeLine{102 }
+\DoxyCodeLine{166     \textcolor{keyword}{def }\_\_init\_\_(self, preference, base=EUR):}
+\DoxyCodeLine{167         self.base=base}
+\DoxyCodeLine{168         self.pref=preference}
+\DoxyCodeLine{169         self.rate = \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self.base, self.pref)}
+\DoxyCodeLine{170         log.info(\textcolor{stringliteral}{"exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{171         \textcolor{keywordflow}{if} self.rate==0:}
+\DoxyCodeLine{172             log.critical(\textcolor{stringliteral}{"currence base \{\}, pref \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.base, self.pref))}
+\DoxyCodeLine{173 }
 
 \end{DoxyCode}
 
 
 References core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Currency.\+base, core.\+utils.\+Currency.\+exchange(), core.\+utils.\+format, core.\+utils.\+Currency.\+pref, and core.\+utils.\+Currency.\+rate.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -137,14 +133,14 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 107 of file utils.\+py.
+Definition at line 178 of file utils.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{107     \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self, amount=1):}
-\DoxyCodeLine{108         print(\textcolor{stringliteral}{"making exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
-\DoxyCodeLine{109         }
-\DoxyCodeLine{110         \textcolor{keywordflow}{return} amount*self.rate}
+\DoxyCodeLine{178     \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self, amount=1):}
+\DoxyCodeLine{179         print(\textcolor{stringliteral}{"making exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181         \textcolor{keywordflow}{return} amount*self.rate}
 
 \end{DoxyCode}
 
@@ -155,8 +151,7 @@ References core.\+utils.\+format, and core.\+utils.\+Currency.\+rate.
 
 Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), and core.\+utils.\+Currency.\+exchange().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -171,22 +166,21 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 107 of file utils.\+py.
+Definition at line 178 of file utils.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{107     \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self, amount=1):}
-\DoxyCodeLine{108         print(\textcolor{stringliteral}{"making exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
-\DoxyCodeLine{109         }
-\DoxyCodeLine{110         \textcolor{keywordflow}{return} amount*self.rate}
+\DoxyCodeLine{178     \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{exchange}}(self, amount=1):}
+\DoxyCodeLine{179         print(\textcolor{stringliteral}{"making exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181         \textcolor{keywordflow}{return} amount*self.rate}
 
 \end{DoxyCode}
 
 
 References core.\+utils.\+Currency.\+exchange(), core.\+utils.\+format, and core.\+utils.\+Currency.\+rate.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -201,22 +195,21 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 111 of file utils.\+py.
+Definition at line 182 of file utils.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{111     \textcolor{keyword}{def }exchange\_back(self, amount=1):}
-\DoxyCodeLine{112         print(\textcolor{stringliteral}{"making back exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
-\DoxyCodeLine{113         \textcolor{keywordflow}{return} amount/self.rate}
-\DoxyCodeLine{114 }
+\DoxyCodeLine{182     \textcolor{keyword}{def }exchange\_back(self, amount=1):}
+\DoxyCodeLine{183         print(\textcolor{stringliteral}{"making back exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{184         \textcolor{keywordflow}{return} amount/self.rate}
+\DoxyCodeLine{185 }
 
 \end{DoxyCode}
 
 
 References core.\+utils.\+Currency.\+exchange\+\_\+back(), core.\+utils.\+format, and core.\+utils.\+Currency.\+rate.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -231,14 +224,14 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 111 of file utils.\+py.
+Definition at line 182 of file utils.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{111     \textcolor{keyword}{def }exchange\_back(self, amount=1):}
-\DoxyCodeLine{112         print(\textcolor{stringliteral}{"making back exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
-\DoxyCodeLine{113         \textcolor{keywordflow}{return} amount/self.rate}
-\DoxyCodeLine{114 }
+\DoxyCodeLine{182     \textcolor{keyword}{def }exchange\_back(self, amount=1):}
+\DoxyCodeLine{183         print(\textcolor{stringliteral}{"making back exchange with rate \{\}"}.\mbox{\hyperlink{namespacecore_1_1utils_ab017119a978e22f05131102eda0a6530}{format}}(self.rate))}
+\DoxyCodeLine{184         \textcolor{keywordflow}{return} amount/self.rate}
+\DoxyCodeLine{185 }
 
 \end{DoxyCode}
 
@@ -249,8 +242,7 @@ References core.\+utils.\+format, and core.\+utils.\+Currency.\+rate.
 
 Referenced by core.\+utils.\+Currency.\+exchange\+\_\+back().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -267,22 +259,21 @@ Here is the caller graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 103 of file utils.\+py.
+Definition at line 174 of file utils.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{103     \textcolor{keyword}{def }valid(self):}
-\DoxyCodeLine{104         \textcolor{stringliteral}{""" wither the given preference currency is available}}
-\DoxyCodeLine{105 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{106         \textcolor{keywordflow}{return} \textcolor{keywordflow}{not} self.rate==0}
+\DoxyCodeLine{174     \textcolor{keyword}{def }valid(self):}
+\DoxyCodeLine{175         \textcolor{stringliteral}{""" wither the given preference currency is available}}
+\DoxyCodeLine{176 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{177         \textcolor{keywordflow}{return} \textcolor{keywordflow}{not} self.rate==0}
 
 \end{DoxyCode}
 
 
 References core.\+utils.\+Currency.\+rate, and core.\+utils.\+Currency.\+valid().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -299,14 +290,14 @@ Here is the call graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 103 of file utils.\+py.
+Definition at line 174 of file utils.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{103     \textcolor{keyword}{def }valid(self):}
-\DoxyCodeLine{104         \textcolor{stringliteral}{""" wither the given preference currency is available}}
-\DoxyCodeLine{105 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{106         \textcolor{keywordflow}{return} \textcolor{keywordflow}{not} self.rate==0}
+\DoxyCodeLine{174     \textcolor{keyword}{def }valid(self):}
+\DoxyCodeLine{175         \textcolor{stringliteral}{""" wither the given preference currency is available}}
+\DoxyCodeLine{176 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{177         \textcolor{keywordflow}{return} \textcolor{keywordflow}{not} self.rate==0}
 
 \end{DoxyCode}
 
@@ -317,8 +308,7 @@ References core.\+utils.\+Currency.\+rate.
 
 Referenced by core.\+utils.\+Currency.\+valid().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -336,11 +326,11 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 96 of file utils.\+py.
+Definition at line 167 of file utils.\+py.
 
 
 
-Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Payment\+Gate.\+authenticated(), and core.\+utils.\+Payment\+Gate.\+get\+\_\+balance().
+Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+utils.\+Payment\+Gate.\+\_\+\+\_\+init\+\_\+\+\_\+(), and core.\+utils.\+Payment\+Gate.\+get\+\_\+balance().
 
 \mbox{\Hypertarget{classcore_1_1utils_1_1_currency_ad120746185705e27127cbfe663b266d4}\label{classcore_1_1utils_1_1_currency_ad120746185705e27127cbfe663b266d4}} 
 \index{core.utils.Currency@{core.utils.Currency}!pref@{pref}}
@@ -350,7 +340,7 @@ Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+uti
 
 
 
-Definition at line 97 of file utils.\+py.
+Definition at line 168 of file utils.\+py.
 
 
 
@@ -364,7 +354,7 @@ Referenced by core.\+utils.\+Currency.\+\_\+\+\_\+init\+\_\+\+\_\+().
 
 
 
-Definition at line 98 of file utils.\+py.
+Definition at line 169 of file utils.\+py.
 
 
 

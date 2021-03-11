@@ -3,16 +3,16 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_ad5d5284944f89a08087fffb3cc9365f8}{get\+\_\+all}} ()
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_ad4103197a70facc8220b9cd6ebcbecd9}{get\+\_\+all}} ()
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_a54a7c09aef96d6e88d47ea1411b8890d}{get\+\_\+good\+\_\+owner}} (gid)
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_a4477051c244712964575a58a24b13efc}{get\+\_\+good\+\_\+owner}} (gid)
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_af8a3b6f70d91c173aa230d4703686623}{get\+\_\+owner\+\_\+goods}} (oid)
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_aa7962d5efdfde5e58ec19cc103f64edb}{get\+\_\+owner\+\_\+goods}} (oid)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1owner_ad5d5284944f89a08087fffb3cc9365f8}\label{namespacecore_1_1queries_1_1gets_1_1owner_ad5d5284944f89a08087fffb3cc9365f8}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1owner_ad4103197a70facc8220b9cd6ebcbecd9}\label{namespacecore_1_1queries_1_1gets_1_1owner_ad4103197a70facc8220b9cd6ebcbecd9}} 
 \index{core.queries.gets.owner@{core.queries.gets.owner}!get\_all@{get\_all}}
 \index{get\_all@{get\_all}!core.queries.gets.owner@{core.queries.gets.owner}}
 \doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
@@ -24,13 +24,13 @@ Definition at line 6 of file owner.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_ad5d5284944f89a08087fffb3cc9365f8}{get\_all}}():}
+\DoxyCodeLine{6 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_ad4103197a70facc8220b9cd6ebcbecd9}{get\_all}}():}
 \DoxyCodeLine{7     query=\textcolor{stringliteral}{"SELECT * FROM owner;"}}
 \DoxyCodeLine{8     \textcolor{keywordflow}{return} pd.read\_sql(query, conn, index\_col=\textcolor{stringliteral}{'id'})}
 \DoxyCodeLine{9 }
 
 \end{DoxyCode}
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1owner_a54a7c09aef96d6e88d47ea1411b8890d}\label{namespacecore_1_1queries_1_1gets_1_1owner_a54a7c09aef96d6e88d47ea1411b8890d}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1owner_a4477051c244712964575a58a24b13efc}\label{namespacecore_1_1queries_1_1gets_1_1owner_a4477051c244712964575a58a24b13efc}} 
 \index{core.queries.gets.owner@{core.queries.gets.owner}!get\_good\_owner@{get\_good\_owner}}
 \index{get\_good\_owner@{get\_good\_owner}!core.queries.gets.owner@{core.queries.gets.owner}}
 \doxysubsubsection{\texorpdfstring{get\_good\_owner()}{get\_good\_owner()}}
@@ -47,7 +47,7 @@ Definition at line 10 of file owner.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{10 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_a54a7c09aef96d6e88d47ea1411b8890d}{get\_good\_owner}}(gid):}
+\DoxyCodeLine{10 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_a4477051c244712964575a58a24b13efc}{get\_good\_owner}}(gid):}
 \DoxyCodeLine{11    \textcolor{stringliteral}{"""return owner id (oid) for the given gid}}
 \DoxyCodeLine{12 \textcolor{stringliteral}{}}
 \DoxyCodeLine{13 \textcolor{stringliteral}{   @param gid: good}}
@@ -64,7 +64,7 @@ Definition at line 10 of file owner.\+py.
 
 References client.\+client.\+format.
 
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1owner_af8a3b6f70d91c173aa230d4703686623}\label{namespacecore_1_1queries_1_1gets_1_1owner_af8a3b6f70d91c173aa230d4703686623}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1owner_aa7962d5efdfde5e58ec19cc103f64edb}\label{namespacecore_1_1queries_1_1gets_1_1owner_aa7962d5efdfde5e58ec19cc103f64edb}} 
 \index{core.queries.gets.owner@{core.queries.gets.owner}!get\_owner\_goods@{get\_owner\_goods}}
 \index{get\_owner\_goods@{get\_owner\_goods}!core.queries.gets.owner@{core.queries.gets.owner}}
 \doxysubsubsection{\texorpdfstring{get\_owner\_goods()}{get\_owner\_goods()}}
@@ -81,7 +81,7 @@ Definition at line 21 of file owner.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{21 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_af8a3b6f70d91c173aa230d4703686623}{get\_owner\_goods}}(oid):}
+\DoxyCodeLine{21 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1owner_aa7962d5efdfde5e58ec19cc103f64edb}{get\_owner\_goods}}(oid):}
 \DoxyCodeLine{22    \textcolor{stringliteral}{"""return the good assigned to the given owner id (oid)}}
 \DoxyCodeLine{23 \textcolor{stringliteral}{}}
 \DoxyCodeLine{24 \textcolor{stringliteral}{   @param oid: is the owner id}}

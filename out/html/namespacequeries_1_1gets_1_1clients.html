@@ -103,7 +103,7 @@ Functions</h2></td></tr>
 @return tuple (id, name, join date)
 </pre> 
 <p class="definition">Definition at line <a class="el" href="core_2build_2lib_2queries_2gets_2clients_8py_source.html#l00015">15</a> of file <a class="el" href="core_2build_2lib_2queries_2gets_2clients_8py_source.html">clients.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1clients.html#a5f570c6683ac4f1a2570e7d9be2d29c8">get</a>(cid):</div>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1clients.html#a138a078c6f129972bfd1974e81c39ec5">get</a>(cid):</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;retrieve client into with given client id (cid)</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral">    @param cid: client id</span></div>
@@ -117,15 +117,17 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_2build_2lib_2client_2client_8py_source.html#l00024">client.client.format</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="core__test_8py_source.html#l00148">core_test.Client.get_balance()</a>, and <a class="el" href="core_2build_2lib_2queries_2gets_2clients_8py_source.html#l00026">queries.gets.clients.get_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="core__test_8py_source.html#l00113">core_test.Client.get_balance()</a>, <a class="el" href="core_2build_2lib_2queries_2gets_2clients_8py_source.html#l00026">queries.gets.clients.get_name()</a>, <a class="el" href="login_8py_source.html#l00048">core.server.login.UsersRepository.get_user()</a>, and <a class="el" href="login_8py_source.html#l00050">core.server.login.UsersRepository.get_user_by_id()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967_icgraph.png" border="0" usemap="#namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967_icgraph" alt=""/></div>
 <map name="namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967_icgraph" id="namespacequeries_1_1gets_1_1clients_a6f7dad25e8067171b69e7cfb469f3967_icgraph">
-<area shape="rect" title=" " alt="" coords="272,42,447,69"/>
-<area shape="rect" href="classcore__test_1_1_client.html#a3d31ef31142ee2ce1b6d4cd2ef9f219d" title=" " alt="" coords="40,5,189,47"/>
-<area shape="rect" href="namespacequeries_1_1gets_1_1clients.html#ac42c598d8042ade2e6bd72ada44bfd81" title=" " alt="" coords="5,71,224,98"/>
+<area shape="rect" title=" " alt="" coords="352,97,527,123"/>
+<area shape="rect" href="classcore__test_1_1_client.html#a3d31ef31142ee2ce1b6d4cd2ef9f219d" title=" " alt="" coords="80,5,229,47"/>
+<area shape="rect" href="namespacequeries_1_1gets_1_1clients.html#ac42c598d8042ade2e6bd72ada44bfd81" title=" " alt="" coords="45,71,264,98"/>
+<area shape="rect" href="classcore_1_1server_1_1login_1_1_users_repository.html#a54f2004ea5875ee77e8094722977afe1" title=" " alt="" coords="5,122,304,149"/>
+<area shape="rect" href="classcore_1_1server_1_1login_1_1_users_repository.html#a5819dcbb6482708f5fc92260d1b76320" title=" " alt="" coords="23,173,287,215"/>
 </map>
 </div>
 
@@ -147,7 +149,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <pre class="fragment">retrieve all clients info</pre> 
 <p class="definition">Definition at line <a class="el" href="core_2build_2lib_2queries_2gets_2clients_8py_source.html#l00007">7</a> of file <a class="el" href="core_2build_2lib_2queries_2gets_2clients_8py_source.html">clients.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1clients.html#a89d6eabb7b579700fc607e7858f6f8d0">get_all</a>():</div>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1clients.html#a98643ddc664f6312db3f9d2bd6921b43">get_all</a>():</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;retrieve all clients info</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
@@ -179,13 +181,13 @@ Here is the caller graph for this function:</div>
 @return client name
 </pre> 
 <p class="definition">Definition at line <a class="el" href="core_2build_2lib_2queries_2gets_2clients_8py_source.html#l00026">26</a> of file <a class="el" href="core_2build_2lib_2queries_2gets_2clients_8py_source.html">clients.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1clients.html#af9e4fe854ac628d8bb786a8058374335">get_name</a>(cid):</div>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1clients.html#a824b15848875fd891515b56a37cb7343">get_name</a>(cid):</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;retrieve client name corresponding to given client id (cid)</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="stringliteral">    @param cid: client id</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="stringliteral">    @return client name</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacecore_1_1queries_1_1gets_1_1clients.html#a5f570c6683ac4f1a2570e7d9be2d29c8">get</a>(cid)[1]</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacecore_1_1queries_1_1gets_1_1clients.html#a138a078c6f129972bfd1974e81c39ec5">get</a>(cid)[1]</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_2build_2lib_2queries_2gets_2clients_8py_source.html#l00015">queries.gets.clients.get()</a>.</p>
 <div class="dynheader">
@@ -201,13 +203,13 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1clients_html_a89d6eabb7b579700fc607e7858f6f8d0"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1clients.html#a89d6eabb7b579700fc607e7858f6f8d0">core.queries.gets.clients.get_all</a></div><div class="ttdeci">def get_all()</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2clients_8py_source.html#l00007">clients.py:7</a></div></div>
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1clients_html_a5f570c6683ac4f1a2570e7d9be2d29c8"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1clients.html#a5f570c6683ac4f1a2570e7d9be2d29c8">core.queries.gets.clients.get</a></div><div class="ttdeci">def get(cid)</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2clients_8py_source.html#l00015">clients.py:15</a></div></div>
 <div class="ttc" id="anamespaceclient_1_1client_html_a28f28b5d621b127269d6035d7a435682"><div class="ttname"><a href="namespaceclient_1_1client.html#a28f28b5d621b127269d6035d7a435682">client.client.format</a></div><div class="ttdeci">format</div><div class="ttdef"><b>Definition:</b> <a href="core_2build_2lib_2client_2client_8py_source.html#l00024">client.py:24</a></div></div>
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1clients_html_af9e4fe854ac628d8bb786a8058374335"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1clients.html#af9e4fe854ac628d8bb786a8058374335">core.queries.gets.clients.get_name</a></div><div class="ttdeci">def get_name(cid)</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2clients_8py_source.html#l00026">clients.py:26</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1clients_html_a824b15848875fd891515b56a37cb7343"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1clients.html#a824b15848875fd891515b56a37cb7343">core.queries.gets.clients.get_name</a></div><div class="ttdeci">def get_name(cid)</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2clients_8py_source.html#l00026">clients.py:26</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1clients_html_a98643ddc664f6312db3f9d2bd6921b43"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1clients.html#a98643ddc664f6312db3f9d2bd6921b43">core.queries.gets.clients.get_all</a></div><div class="ttdeci">def get_all()</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2clients_8py_source.html#l00007">clients.py:7</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1clients_html_a138a078c6f129972bfd1974e81c39ec5"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1clients.html#a138a078c6f129972bfd1974e81c39ec5">core.queries.gets.clients.get</a></div><div class="ttdeci">def get(cid)</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2clients_8py_source.html#l00015">clients.py:15</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 27 2021 20:38:08 for tahweela by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 28 2021 17:18:45 for tahweela by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

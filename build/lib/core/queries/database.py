@@ -186,7 +186,25 @@ class gets(object):
         self.cur.execute(query)
         return self.cur.fetchone()[0]
         #return pd.read_sql(query, self.conn).ix[0]
+    def get_bank(self, bid):
+        """ retrieve bank given it's id
 
+        @param bid: bank id
+        @return bank as dict with keys ['balance', 'bank_name', 'branch_number', 'account_number', 'name_reference'
+,'base']
+        """
+        query=sql.SQL("SELECT FROM banking AS B (B.balance, B.bank_name, B.branch_number, B.account_number,B.name_reference, currency.currency_name) INNER JOINT currency ON (currency.id=B.currency_id) WHERE B.id={bid}").format(bid=sql.Literal(bid))
+        banks_df=pd.read_sql(query, self.conn)
+
+        bank={}
+        row = eval(banks.iloc[0][0])
+        bank['balance']=row[0]
+        bank['bank_name']=row[1]
+        bank['branch_number']=row[2]
+        bank['account_number']=row[3]
+        bank['name_reference']=row[4]
+        bank['base']=row[5]
+        return bank
     def get_banking_id(self, cid):
         """retrieve the corresponding banking_id of the given  client_id (cid) (called at the server side)
 
@@ -198,6 +216,20 @@ class gets(object):
         self.db_log.debug(query)
         self.cur.execute(query)
         return self.cur.fetchone()[0]
+    def get_banking_ids(self, cid):
+        """retrieve all banking accounts assigned to the client given client id (cid)
+
+        @param cid: client id
+        @return bank_ids: list of bank ids associated with our client
+        """
+        query=sql.SQL("SELECT (id) FROM banking WHERE client_id={cid}  FOR UPDATE SKIP LOCKED;").\
+            format(cid=sql.Literal(cid))
+        banks_df = pd.read_sql(query, self.conn)
+        bank_ids = []
+        for i in range(len(banks_df)):
+            id = banks_df.iloc[i][0]
+            bank_ids.append(id)
+        return bank_ids
         #return pd.read_sql(query, self.conn).ix[0]
     def get_preference_currency_bycid(self, cid):
         """get the preference currency for client with client id (cid)
@@ -262,6 +294,30 @@ class gets(object):
         balance=fet[0]
         base=fet[1]
         return {'balance':balance, 'base': base}
+    def get_total_balance_by_credid(self, cred_id):
+        """ get total balance of client with given credential id
+
+        @param cred_id: client credential id
+        @return dict {'balance':balance, 'base': base}
+        """
+        query=sql.SQL("SELECT (b.balance, cur.currency_name) FROM banking as b INNER JOIN  credentials AS c ON (c.id=b.client_id) INNER JOIN currency AS cur ON (cur.id=b.currency_id) WHERE c.cred_id={credid} FOR UPDATE SKIP LOCKED;").\
+            format(credid=sql.Literal(cred_id))
+        self.db_log.debug(query)
+        #self.cur.execute(query)
+        balance_df=pd.read_sql(query, self.conn)
+        sum=0
+        for i in range(len(balance_df)):
+            row = eval(balance_df.iloc[i][0])
+            balance=row[0]
+            base=row[1]
+            currency = Currency(EUR, base)
+            ineuro_cost=currency.exchange(balance)
+            sum+=float(ineuro_cost)
+        return {'balance':sum, 'base': EUR}
+        #fet=eval(self.cur.fetchone()[0])
+        #balance=fet[0]
+        #base=fet[1]
+        #return {'balance':balance, 'base': base}
     def get_all_clients(self):
         """retrieve all clients info
 

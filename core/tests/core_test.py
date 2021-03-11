@@ -12,57 +12,22 @@ import unittest
 from core.server.server import app
 import os
 import string
-from core.utils import CONTACTS_URL, GOODS_URL, REGISTER_URL, LEDGER_URL, PURCHASE_URL, BALANCE_URL, BALANCE, MAX_GOODS, MAX_COST, STOCHASTIC_TRADE_THRESHOLD, TRANSACTION_URL, ADD_BANK_ACCOUNT_URL, REGISTER, ADD_BANK_ACCOUNT, FEE, TRANSACTION, EUR, USD, EGP, process_cur, Currency, unwrap_cur
+from core.utils import CONTACTS_URL, GOODS_URL, REGISTER_URL, LEDGER_URL, PURCHASE_URL, BALANCE_URL, BALANCE, MAX_GOODS, MAX_COST, STOCHASTIC_TRADE_THRESHOLD, TRANSACTION_URL, ADD_BANK_ACCOUNT_URL, REGISTER, ADD_BANK_ACCOUNT, FEE, TRANSACTION, EUR, USD, EGP, process_cur, Currency, unwrap_cur, get_credid, get_bank_name, get_branch_number, get_account_number, get_name_reference, get_name, get_email, get_balance, get_rand_pass, get_amount
 from core.queries.database import database
+from core.configs import db_configs
+
 import base64
 
-seed=int.from_bytes(os.urandom(3), 'big')
-random.seed(seed)
-faker=Faker(seed)
-db_configs="dbname='demo'  user='tahweela' password='tahweela'"
-logging.basicConfig(filename="core.log", \
+#db_configs="dbname='demo'  user='tahweela' password='tahweela'"
+logging.basicConfig(filename="/tmp/core.log", \
                     format='%(asctime)s %(message)s', \
                     filemode='w')
 logger=logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
-def get_bank_name():
-    return faker.name().split()[0]
-def get_branch_number():
-    return int(33*random.random())
-def get_account_number():
-    return int(3333333*random.random())
-def get_name_reference():
-    return faker.name().split()[1]
-def get_name():
-    return faker.name()
-def get_email():
-    return faker.email()
-def get_balance():
-    return 333*random.random()
-def get_credid():
-    return int(3333333333333*random.random())
-def get_rand_pass(L=9):
-    passcode=''.join(random.choice(string.ascii_uppercase+\
-                                 string.ascii_lowercase+\
-                                 string.digits)\
-                     for _ in range(L))
-    return passcode
-def rand_alphanum(L=9):
-    passcode=''.join(random.choice(string.ascii_uppercase+\
-                                 string.ascii_lowercase+\
-                                 string.digits)\
-                     for _ in range(L))
-    return passcode
-def get_amount():
-    return 3333*random.random()
 
 class Client(object):
     def __init__(self, app):
-        seed=int.from_bytes(os.urandom(2), 'big')
-        self.faker = Faker()
-        random.seed(seed)
-        Faker.seed(seed)
         #
         self.app=app
         #
@@ -178,7 +143,7 @@ class RestfulTest(unittest.TestCase):
         self.pas=None
         logger.info("client initialized")
     #TODO cant work with adding client first!!
-    '''
+
     def test_register(self):
         """ check if this client has credentials, if not register
 
@@ -192,16 +157,14 @@ class RestfulTest(unittest.TestCase):
         #before register you need to add the client
         res=self.app.post(REGISTER, data=json.dumps(payload))
         response = res.json #json.loads(res.json)
-        print('|______>register test respones: ', response)
         self.assertEqual(res.status_code, 201)
         credid=response['cred_id']
         #cid set to 0, since it never matters in the client side
         #self.db.inserts.register(0, passcode, credid)
         logger.debug("user registered with credentials username: {}, email: {}, passcode: {}".format(name, email, passcode))
-        self.assertTrue(type(credid)==int)
         self.uname=email
         self.pas=passcode
-    '''
+
     #
     def __auth(self):
         self.assertFalse(self.uname==None)
@@ -473,7 +436,7 @@ class RestfulTest(unittest.TestCase):
             logger.info("making transaction with {}[{}] by amount: {}".\
                         format(contact_name, contact_email, amount))
             #if random.random()> STOCHASTIC_TRADE_THRESHOLD and good.cost <= self.balance:
-            #TODO (fix) doesn't work!
+            #TODO (fix)
             #trx=self.__purchase(good.gid)
             trx=self.__transact(contact_credid, amount)
             self.__add_trax(trx)

@@ -3,16 +3,16 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a48f7fc47aa39d3e7984fa01512758f0f}{get\+\_\+transactions}} (st\+\_\+dt, end\+\_\+dt=dt.\+datetime.\+now())
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a5972eaad1358e7f2c679c0665b6888d4}{get\+\_\+transactions}} (st\+\_\+dt, end\+\_\+dt=dt.\+datetime.\+now())
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_ae14b161205be95246f9dbf4e3170581a}{get\+\_\+sells}} (dest, st\+\_\+dt, end\+\_\+dt=None)
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a9154db587e273a74a72c6d8f557b7995}{get\+\_\+sells}} (dest, st\+\_\+dt, end\+\_\+dt=None)
 \item 
-def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_abf9951152629a9000fe5c98442590ab0}{get\+\_\+last\+\_\+timestamp}} ()
+def \mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a8455769de06bc3ac141cec1724e44f25}{get\+\_\+last\+\_\+timestamp}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1ledger_abf9951152629a9000fe5c98442590ab0}\label{namespacecore_1_1queries_1_1gets_1_1ledger_abf9951152629a9000fe5c98442590ab0}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1ledger_a8455769de06bc3ac141cec1724e44f25}\label{namespacecore_1_1queries_1_1gets_1_1ledger_a8455769de06bc3ac141cec1724e44f25}} 
 \index{core.queries.gets.ledger@{core.queries.gets.ledger}!get\_last\_timestamp@{get\_last\_timestamp}}
 \index{get\_last\_timestamp@{get\_last\_timestamp}!core.queries.gets.ledger@{core.queries.gets.ledger}}
 \doxysubsubsection{\texorpdfstring{get\_last\_timestamp()}{get\_last\_timestamp()}}
@@ -28,7 +28,7 @@ Definition at line 29 of file ledger.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_abf9951152629a9000fe5c98442590ab0}{get\_last\_timestamp}}():}
+\DoxyCodeLine{29 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a8455769de06bc3ac141cec1724e44f25}{get\_last\_timestamp}}():}
 \DoxyCodeLine{30     \textcolor{stringliteral}{""" retrieve the timestamp of the last transaction (CALLED FROM THE CLIENT SIDE)}}
 \DoxyCodeLine{31 \textcolor{stringliteral}{}}
 \DoxyCodeLine{32 \textcolor{stringliteral}{    @return timestamp}}
@@ -39,7 +39,7 @@ Definition at line 29 of file ledger.\+py.
 \DoxyCodeLine{37     \textcolor{keywordflow}{return} cur.fetchone()[0]}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1ledger_ae14b161205be95246f9dbf4e3170581a}\label{namespacecore_1_1queries_1_1gets_1_1ledger_ae14b161205be95246f9dbf4e3170581a}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1ledger_a9154db587e273a74a72c6d8f557b7995}\label{namespacecore_1_1queries_1_1gets_1_1ledger_a9154db587e273a74a72c6d8f557b7995}} 
 \index{core.queries.gets.ledger@{core.queries.gets.ledger}!get\_sells@{get\_sells}}
 \index{get\_sells@{get\_sells}!core.queries.gets.ledger@{core.queries.gets.ledger}}
 \doxysubsubsection{\texorpdfstring{get\_sells()}{get\_sells()}}
@@ -55,12 +55,12 @@ Definition at line 20 of file ledger.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{20 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_ae14b161205be95246f9dbf4e3170581a}{get\_sells}}(dest, st\_dt, end\_dt=None):}
+\DoxyCodeLine{20 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a9154db587e273a74a72c6d8f557b7995}{get\_sells}}(dest, st\_dt, end\_dt=None):}
 \DoxyCodeLine{21     \textcolor{stringliteral}{""" get sells transaction within the st\_dt, end\_dt period, while there destined to dest (CALLED AT SERVER SIDE)}}
 \DoxyCodeLine{22 \textcolor{stringliteral}{    @param dest: the destination credential id}}
 \DoxyCodeLine{23 \textcolor{stringliteral}{    @return sells transactions}}
 \DoxyCodeLine{24 \textcolor{stringliteral}{"""}}
-\DoxyCodeLine{25     trx=\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a48f7fc47aa39d3e7984fa01512758f0f}{get\_transactions}}(st\_dt, end\_dt).to\_json()}
+\DoxyCodeLine{25     trx=\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a5972eaad1358e7f2c679c0665b6888d4}{get\_transactions}}(st\_dt, end\_dt).to\_json()}
 \DoxyCodeLine{26     trx.apply(\textcolor{keyword}{lambda} x:x[\textcolor{stringliteral}{'trx\_dest'}]==dest, inplace=\textcolor{keyword}{True})}
 \DoxyCodeLine{27     \textcolor{keywordflow}{return} trx}
 \DoxyCodeLine{28 }
@@ -75,10 +75,10 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacecore_1_1queries_1_1gets_1_1ledger_ae14b161205be95246f9dbf4e3170581a_cgraph}
+\includegraphics[width=350pt]{namespacecore_1_1queries_1_1gets_1_1ledger_a9154db587e273a74a72c6d8f557b7995_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1ledger_a48f7fc47aa39d3e7984fa01512758f0f}\label{namespacecore_1_1queries_1_1gets_1_1ledger_a48f7fc47aa39d3e7984fa01512758f0f}} 
+\mbox{\Hypertarget{namespacecore_1_1queries_1_1gets_1_1ledger_a5972eaad1358e7f2c679c0665b6888d4}\label{namespacecore_1_1queries_1_1gets_1_1ledger_a5972eaad1358e7f2c679c0665b6888d4}} 
 \index{core.queries.gets.ledger@{core.queries.gets.ledger}!get\_transactions@{get\_transactions}}
 \index{get\_transactions@{get\_transactions}!core.queries.gets.ledger@{core.queries.gets.ledger}}
 \doxysubsubsection{\texorpdfstring{get\_transactions()}{get\_transactions()}}
@@ -96,7 +96,7 @@ Definition at line 7 of file ledger.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{7 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a48f7fc47aa39d3e7984fa01512758f0f}{get\_transactions}}(st\_dt, end\_dt=dt.datetime.now()):}
+\DoxyCodeLine{7 \textcolor{keyword}{def }\mbox{\hyperlink{namespacecore_1_1queries_1_1gets_1_1ledger_a5972eaad1358e7f2c679c0665b6888d4}{get\_transactions}}(st\_dt, end\_dt=dt.datetime.now()):}
 \DoxyCodeLine{8     \textcolor{stringliteral}{""" get the transactions within the given period exclusively}}
 \DoxyCodeLine{9 \textcolor{stringliteral}{}}
 \DoxyCodeLine{10 \textcolor{stringliteral}{    @param st\_dt: the start datetime}}
@@ -124,6 +124,6 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacecore_1_1queries_1_1gets_1_1ledger_a48f7fc47aa39d3e7984fa01512758f0f_icgraph}
+\includegraphics[width=350pt]{namespacecore_1_1queries_1_1gets_1_1ledger_a5972eaad1358e7f2c679c0665b6888d4_icgraph}
 \end{center}
 \end{figure}

@@ -5,6 +5,8 @@
 \item 
 class \mbox{\hyperlink{classcore_1_1utils_1_1_currency}{core.\+utils.\+Currency}}
 \item 
+class \mbox{\hyperlink{classcore_1_1utils_1_1_client}{core.\+utils.\+Client}}
+\item 
 class \mbox{\hyperlink{classcore_1_1utils_1_1_payment_gate}{core.\+utils.\+Payment\+Gate}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
@@ -15,11 +17,21 @@ class \mbox{\hyperlink{classcore_1_1utils_1_1_payment_gate}{core.\+utils.\+Payme
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca}{core.\+utils.\+exchangerate\+\_\+rate}} (base, pref)
+def \mbox{\hyperlink{namespacecore_1_1utils_a4a2dce567cf68721ef8e6d3614f6b711}{core.\+utils.\+get\+\_\+bank\+\_\+name}} ()
 \item 
-def \mbox{\hyperlink{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b}{core.\+utils.\+fixer\+\_\+rate}} (base, pref)
+def \mbox{\hyperlink{namespacecore_1_1utils_a54e7bb0cd21f936fd30a1b0d91b22830}{core.\+utils.\+get\+\_\+branch\+\_\+number}} ()
 \item 
-def \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{core.\+utils.\+exchange}} (base, pref)
+def \mbox{\hyperlink{namespacecore_1_1utils_a297afc8ed1be7550d5c175835f5edc8c}{core.\+utils.\+get\+\_\+account\+\_\+number}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a3d666c9f64cc2f75dab0209ca9432780}{core.\+utils.\+get\+\_\+name\+\_\+reference}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a0dffdfa1814e158b8eab7a75bf61653a}{core.\+utils.\+get\+\_\+name}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a27d18cd8f47923f28155d5c446ea2e60}{core.\+utils.\+get\+\_\+email}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_aeed8cdb467bfba668593185b5fd30c89}{core.\+utils.\+get\+\_\+balance}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_ac8d25b4364f3a53d187a426bb0228331}{core.\+utils.\+get\+\_\+rand\+\_\+pass}} (L=9)
 \item 
 def \mbox{\hyperlink{namespacecore_1_1utils_ac13f32df1a27f40f8f3c89c01e40e18c}{core.\+utils.\+daily\+\_\+limit}} (pref=E\+UR)
 \item 
@@ -28,11 +40,27 @@ def \mbox{\hyperlink{namespacecore_1_1utils_ace7833d9faa7284d9efbb4081fa80f11}{c
 def \mbox{\hyperlink{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}{core.\+utils.\+process\+\_\+cur}} (cur)
 \item 
 def \mbox{\hyperlink{namespacecore_1_1utils_ab7cdc3ae00c853b06466311cb4a43e65}{core.\+utils.\+unwrap\+\_\+cur}} (cur)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a6977dd5e1ce05503b5972d8778e121cb}{core.\+utils.\+get\+\_\+amount}} ()
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a4e186c2b2098f883b6cc569279e6b059}{core.\+utils.\+get\+\_\+credid}} (word)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a428d08d1e899ad5e2ec8096ff5bb9a75}{core.\+utils.\+is\+\_\+email}} (email)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_af6aaeb0ab3525abd04da39e8b580b811}{core.\+utils.\+hash}} (word)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a6bc28f8727c8ce7b34d2a6a8284d7dca}{core.\+utils.\+exchangerate\+\_\+rate}} (base, pref)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_aef75caebf4b6edd1de907b833d1c429b}{core.\+utils.\+fixer\+\_\+rate}} (base, pref)
+\item 
+def \mbox{\hyperlink{namespacecore_1_1utils_a8ffc326d48258758aea8c15e7b5ec228}{core.\+utils.\+exchange}} (base, pref)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacecore_1_1utils_a6a7e0440a2beea6620ee3168f2333b83}{core.\+utils.\+seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \textquotesingle{}big\textquotesingle{})
+\mbox{\hyperlink{namespacecore_1_1utils_a6a7e0440a2beea6620ee3168f2333b83}{core.\+utils.\+seed}} = int.\+from\+\_\+bytes(os.\+urandom(2), \char`\"{}big\char`\"{})
+\item 
+\mbox{\hyperlink{namespacecore_1_1utils_aad5613410a426a14bced7c13bc7fa8e8}{core.\+utils.\+faker}} = Faker(seed)
 \item 
 string \mbox{\hyperlink{namespacecore_1_1utils_a014ec7ca779f32f62cdaf93bd227b56a}{core.\+utils.\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+F\+O\+R\+M\+AT}} = \char`\"{}\%Y-\/\%m-\/\%d \%H\+:\%M\+:\%S.\%f\char`\"{}
 \item 
@@ -59,6 +87,10 @@ string \mbox{\hyperlink{namespacecore_1_1utils_a8fe8d82568a35a95541bd476be058300
 string \mbox{\hyperlink{namespacecore_1_1utils_a0d86ced3754761f6594c03dee0eaf55e}{core.\+utils.\+B\+A\+L\+A\+N\+C\+E\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/balance\char`\"{}
 \item 
 string \mbox{\hyperlink{namespacecore_1_1utils_ae97978e2270dab09224699fe41d0450d}{core.\+utils.\+B\+A\+L\+A\+N\+CE}} = \char`\"{}/api/v0.\+1/balance\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_aec6cc4ab2e366045707f04a2bde783dc}{core.\+utils.\+T\+O\+T\+A\+L\+\_\+\+B\+A\+L\+A\+N\+C\+E\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/totalbalance\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacecore_1_1utils_a0a25ccbbb3bf468726e8c55baf76050b}{core.\+utils.\+T\+O\+T\+A\+L\+\_\+\+B\+A\+L\+A\+N\+CE}} = \char`\"{}/api/v0.\+1/totalbalance\char`\"{}
 \item 
 string \mbox{\hyperlink{namespacecore_1_1utils_a93098b497cd66fc2ad84fbd38661e580}{core.\+utils.\+C\+U\+R\+R\+E\+N\+C\+Y\+\_\+\+U\+RL}} = \char`\"{}http\+://localhost\+:5000/api/v0.\+1/currency\char`\"{}
 \item 

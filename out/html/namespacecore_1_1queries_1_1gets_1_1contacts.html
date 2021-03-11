@@ -74,14 +74,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a863a3b77cb56e4d587f8640fb234de00"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a863a3b77cb56e4d587f8640fb234de00">get_all</a> ()</td></tr>
-<tr class="separator:a863a3b77cb56e4d587f8640fb234de00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaafe0c43da5c49502c803312a902650"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aaaafe0c43da5c49502c803312a902650">get_banking_id</a> (cid)</td></tr>
-<tr class="separator:aaaafe0c43da5c49502c803312a902650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e3690d219a1d9d148a410d125a1413"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aa6e3690d219a1d9d148a410d125a1413">get_all</a> ()</td></tr>
+<tr class="separator:aa6e3690d219a1d9d148a410d125a1413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b893960d977a4a4b7d1bf7409008792"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a9b893960d977a4a4b7d1bf7409008792">get_banking_id</a> (cid)</td></tr>
+<tr class="separator:a9b893960d977a4a4b7d1bf7409008792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a863a3b77cb56e4d587f8640fb234de00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a863a3b77cb56e4d587f8640fb234de00">&#9670;&nbsp;</a></span>get_all()</h2>
+<a id="aa6e3690d219a1d9d148a410d125a1413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e3690d219a1d9d148a410d125a1413">&#9670;&nbsp;</a></span>get_all()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,8 +95,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core_2queries_2gets_2contacts_8py_source.html#l00006">6</a> of file <a class="el" href="core_2queries_2gets_2contacts_8py_source.html">contacts.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a863a3b77cb56e4d587f8640fb234de00">get_all</a>():</div>
+<p class="definition">Definition at line <a class="el" href="build_2lib_2core_2queries_2gets_2contacts_8py_source.html#l00006">6</a> of file <a class="el" href="build_2lib_2core_2queries_2gets_2contacts_8py_source.html">contacts.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aa6e3690d219a1d9d148a410d125a1413">get_all</a>():</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    query = <span class="stringliteral">&quot;SELECT * FROM contacts;&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    db_log.debug(query)</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> pd.read_sql(query, conn)</div>
@@ -104,8 +104,8 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="aaaafe0c43da5c49502c803312a902650"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaafe0c43da5c49502c803312a902650">&#9670;&nbsp;</a></span>get_banking_id()</h2>
+<a id="a9b893960d977a4a4b7d1bf7409008792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b893960d977a4a4b7d1bf7409008792">&#9670;&nbsp;</a></span>get_banking_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,8 +124,8 @@ Functions</h2></td></tr>
 @param cid: contact id
 @return banking_id or the associated banking id for the given contact id
 </pre> 
-<p class="definition">Definition at line <a class="el" href="core_2queries_2gets_2contacts_8py_source.html#l00011">11</a> of file <a class="el" href="core_2queries_2gets_2contacts_8py_source.html">contacts.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aaaafe0c43da5c49502c803312a902650">get_banking_id</a>(cid):</div>
+<p class="definition">Definition at line <a class="el" href="build_2lib_2core_2queries_2gets_2contacts_8py_source.html#l00011">11</a> of file <a class="el" href="build_2lib_2core_2queries_2gets_2contacts_8py_source.html">contacts.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">def </span><a class="code" href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a9b893960d977a4a4b7d1bf7409008792">get_banking_id</a>(cid):</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="stringliteral">&quot;&quot;&quot; called at the client side, to retrieve the stored banking id in the contacts</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">    @param cid: contact id</span></div>
@@ -141,12 +141,12 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1contacts_html_aaaafe0c43da5c49502c803312a902650"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aaaafe0c43da5c49502c803312a902650">core.queries.gets.contacts.get_banking_id</a></div><div class="ttdeci">def get_banking_id(cid)</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2contacts_8py_source.html#l00011">contacts.py:11</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1contacts_html_a9b893960d977a4a4b7d1bf7409008792"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a9b893960d977a4a4b7d1bf7409008792">core.queries.gets.contacts.get_banking_id</a></div><div class="ttdeci">def get_banking_id(cid)</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2contacts_8py_source.html#l00011">contacts.py:11</a></div></div>
 <div class="ttc" id="anamespaceclient_1_1client_html_a28f28b5d621b127269d6035d7a435682"><div class="ttname"><a href="namespaceclient_1_1client.html#a28f28b5d621b127269d6035d7a435682">client.client.format</a></div><div class="ttdeci">format</div><div class="ttdef"><b>Definition:</b> <a href="core_2build_2lib_2client_2client_8py_source.html#l00024">client.py:24</a></div></div>
-<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1contacts_html_a863a3b77cb56e4d587f8640fb234de00"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1contacts.html#a863a3b77cb56e4d587f8640fb234de00">core.queries.gets.contacts.get_all</a></div><div class="ttdeci">def get_all()</div><div class="ttdef"><b>Definition:</b> <a href="core_2queries_2gets_2contacts_8py_source.html#l00006">contacts.py:6</a></div></div>
+<div class="ttc" id="anamespacecore_1_1queries_1_1gets_1_1contacts_html_aa6e3690d219a1d9d148a410d125a1413"><div class="ttname"><a href="namespacecore_1_1queries_1_1gets_1_1contacts.html#aa6e3690d219a1d9d148a410d125a1413">core.queries.gets.contacts.get_all</a></div><div class="ttdeci">def get_all()</div><div class="ttdef"><b>Definition:</b> <a href="build_2lib_2core_2queries_2gets_2contacts_8py_source.html#l00006">contacts.py:6</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 27 2021 20:38:07 for tahweela by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 28 2021 17:18:37 for tahweela by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

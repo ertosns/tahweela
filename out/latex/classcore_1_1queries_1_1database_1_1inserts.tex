@@ -2,8 +2,7 @@
 \label{classcore_1_1queries_1_1database_1_1inserts}\index{core.queries.database.inserts@{core.queries.database.inserts}}
 
 
-Inheritance diagram for core.\+queries.\+database.\+inserts\+:
-\nopagebreak
+Inheritance diagram for core.\+queries.\+database.\+inserts\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for core.\+queries.\+database.\+inserts\+:
 \end{figure}
 
 
-Collaboration diagram for core.\+queries.\+database.\+inserts\+:
-\nopagebreak
+Collaboration diagram for core.\+queries.\+database.\+inserts\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -65,7 +63,7 @@ def \mbox{\hyperlink{classcore_1_1queries_1_1database_1_1inserts_a66f1cf4c6bceda
 \doxysubsection{Detailed Description}
 
 
-Definition at line 512 of file database.\+py.
+Definition at line 601 of file database.\+py.
 
 
 
@@ -78,22 +76,21 @@ Definition at line 512 of file database.\+py.
 
 
 
-Definition at line 513 of file database.\+py.
+Definition at line 602 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{513     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
-\DoxyCodeLine{514         self.conn=conn}
-\DoxyCodeLine{515         self.cur=cur}
-\DoxyCodeLine{516         self.db\_log=logger}
+\DoxyCodeLine{602     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
+\DoxyCodeLine{603         self.conn=conn}
+\DoxyCodeLine{604         self.cur=cur}
+\DoxyCodeLine{605         self.db\_log=logger}
 
 \end{DoxyCode}
 
 
 Referenced by core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -108,22 +105,21 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 513 of file database.\+py.
+Definition at line 602 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{513     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
-\DoxyCodeLine{514         self.conn=conn}
-\DoxyCodeLine{515         self.cur=cur}
-\DoxyCodeLine{516         self.db\_log=logger}
+\DoxyCodeLine{602     \textcolor{keyword}{def }\_\_init\_\_(self, conn, cur, logger):}
+\DoxyCodeLine{603         self.conn=conn}
+\DoxyCodeLine{604         self.cur=cur}
+\DoxyCodeLine{605         self.db\_log=logger}
 
 \end{DoxyCode}
 
 
-References core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, queries.\+database.\+database.\+conn, queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, and queries.\+database.\+updates.\+db\+\_\+log.
+References core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), queries.\+database.\+exists.\+conn, core.\+queries.\+database.\+exists.\+conn, queries.\+database.\+gets.\+conn, core.\+queries.\+database.\+gets.\+conn, queries.\+database.\+inserts.\+conn, queries.\+database.\+updates.\+conn, core.\+queries.\+database.\+inserts.\+conn, queries.\+database.\+database.\+conn, queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, and core.\+queries.\+database.\+inserts.\+db\+\_\+log.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -146,42 +142,41 @@ Here is the call graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 528 of file database.\+py.
+Definition at line 617 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{528     \textcolor{keyword}{def }\mbox{\hyperlink{namespaceserver_1_1server_aced7adfb3283961f246d18e0a562e7f2}{add\_bank\_account}}(self, cid, balance, bank\_name, branch\_number, account\_number, name\_reference, base\_currency\_id):}
-\DoxyCodeLine{529         \textcolor{stringliteral}{""" give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)}}
-\DoxyCodeLine{530 \textcolor{stringliteral}{}}
-\DoxyCodeLine{531 \textcolor{stringliteral}{        @param cid: client id}}
-\DoxyCodeLine{532 \textcolor{stringliteral}{        @param balance: client account balance}}
-\DoxyCodeLine{533 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{534         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO banking (client\_id, balance,  bank\_name, branch\_number, account\_number, name\_reference, currency\_id) VALUES (\{cid\}, \{balance\}, \{bname\}, \{bnum\}, \{anum\}, \{nr\}, \{base\_currency\});"}).\(\backslash\)}
-\DoxyCodeLine{535             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid), \(\backslash\)}
-\DoxyCodeLine{536                    balance=sql.Literal(balance), \(\backslash\)}
-\DoxyCodeLine{537                    bname=sql.Literal(bank\_name), \(\backslash\)}
-\DoxyCodeLine{538                    bnum=sql.Literal(branch\_number), \(\backslash\)}
-\DoxyCodeLine{539                    anum=sql.Literal(account\_number), \(\backslash\)}
-\DoxyCodeLine{540                    nr=sql.Literal(name\_reference), \(\backslash\)}
-\DoxyCodeLine{541                    base\_currency=sql.Literal(base\_currency\_id))}
-\DoxyCodeLine{542         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{543         self.cur.execute(stat)}
-\DoxyCodeLine{544         stat=\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('banking', 'id'));"}}
-\DoxyCodeLine{545         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{546         self.cur.execute(stat)}
-\DoxyCodeLine{547         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+\DoxyCodeLine{617     \textcolor{keyword}{def }\mbox{\hyperlink{namespaceserver_1_1server_aced7adfb3283961f246d18e0a562e7f2}{add\_bank\_account}}(self, cid, balance, bank\_name, branch\_number, account\_number, name\_reference, base\_currency\_id):}
+\DoxyCodeLine{618         \textcolor{stringliteral}{""" give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)}}
+\DoxyCodeLine{619 \textcolor{stringliteral}{}}
+\DoxyCodeLine{620 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{621 \textcolor{stringliteral}{        @param balance: client account balance}}
+\DoxyCodeLine{622 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{623         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO banking (client\_id, balance,  bank\_name, branch\_number, account\_number, name\_reference, currency\_id) VALUES (\{cid\}, \{balance\}, \{bname\}, \{bnum\}, \{anum\}, \{nr\}, \{base\_currency\});"}).\(\backslash\)}
+\DoxyCodeLine{624             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid), \(\backslash\)}
+\DoxyCodeLine{625                    balance=sql.Literal(balance), \(\backslash\)}
+\DoxyCodeLine{626                    bname=sql.Literal(bank\_name), \(\backslash\)}
+\DoxyCodeLine{627                    bnum=sql.Literal(branch\_number), \(\backslash\)}
+\DoxyCodeLine{628                    anum=sql.Literal(account\_number), \(\backslash\)}
+\DoxyCodeLine{629                    nr=sql.Literal(name\_reference), \(\backslash\)}
+\DoxyCodeLine{630                    base\_currency=sql.Literal(base\_currency\_id))}
+\DoxyCodeLine{631         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{632         self.cur.execute(stat)}
+\DoxyCodeLine{633         stat=\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('banking', 'id'));"}}
+\DoxyCodeLine{634         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{635         self.cur.execute(stat)}
+\DoxyCodeLine{636         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
 
 
 
 Referenced by core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -201,38 +196,37 @@ Here is the caller graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 528 of file database.\+py.
+Definition at line 617 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{528     \textcolor{keyword}{def }\mbox{\hyperlink{namespaceserver_1_1server_aced7adfb3283961f246d18e0a562e7f2}{add\_bank\_account}}(self, cid, balance, bank\_name, branch\_number, account\_number, name\_reference, base\_currency\_id):}
-\DoxyCodeLine{529         \textcolor{stringliteral}{""" give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)}}
-\DoxyCodeLine{530 \textcolor{stringliteral}{}}
-\DoxyCodeLine{531 \textcolor{stringliteral}{        @param cid: client id}}
-\DoxyCodeLine{532 \textcolor{stringliteral}{        @param balance: client account balance}}
-\DoxyCodeLine{533 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{534         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO banking (client\_id, balance,  bank\_name, branch\_number, account\_number, name\_reference, currency\_id) VALUES (\{cid\}, \{balance\}, \{bname\}, \{bnum\}, \{anum\}, \{nr\}, \{base\_currency\});"}).\(\backslash\)}
-\DoxyCodeLine{535             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid), \(\backslash\)}
-\DoxyCodeLine{536                    balance=sql.Literal(balance), \(\backslash\)}
-\DoxyCodeLine{537                    bname=sql.Literal(bank\_name), \(\backslash\)}
-\DoxyCodeLine{538                    bnum=sql.Literal(branch\_number), \(\backslash\)}
-\DoxyCodeLine{539                    anum=sql.Literal(account\_number), \(\backslash\)}
-\DoxyCodeLine{540                    nr=sql.Literal(name\_reference), \(\backslash\)}
-\DoxyCodeLine{541                    base\_currency=sql.Literal(base\_currency\_id))}
-\DoxyCodeLine{542         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{543         self.cur.execute(stat)}
-\DoxyCodeLine{544         stat=\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('banking', 'id'));"}}
-\DoxyCodeLine{545         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{546         self.cur.execute(stat)}
-\DoxyCodeLine{547         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+\DoxyCodeLine{617     \textcolor{keyword}{def }\mbox{\hyperlink{namespaceserver_1_1server_aced7adfb3283961f246d18e0a562e7f2}{add\_bank\_account}}(self, cid, balance, bank\_name, branch\_number, account\_number, name\_reference, base\_currency\_id):}
+\DoxyCodeLine{618         \textcolor{stringliteral}{""" give the client with the given id (cid) banking account (CALLED AT SERVER SIDE)}}
+\DoxyCodeLine{619 \textcolor{stringliteral}{}}
+\DoxyCodeLine{620 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{621 \textcolor{stringliteral}{        @param balance: client account balance}}
+\DoxyCodeLine{622 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{623         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO banking (client\_id, balance,  bank\_name, branch\_number, account\_number, name\_reference, currency\_id) VALUES (\{cid\}, \{balance\}, \{bname\}, \{bnum\}, \{anum\}, \{nr\}, \{base\_currency\});"}).\(\backslash\)}
+\DoxyCodeLine{624             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid), \(\backslash\)}
+\DoxyCodeLine{625                    balance=sql.Literal(balance), \(\backslash\)}
+\DoxyCodeLine{626                    bname=sql.Literal(bank\_name), \(\backslash\)}
+\DoxyCodeLine{627                    bnum=sql.Literal(branch\_number), \(\backslash\)}
+\DoxyCodeLine{628                    anum=sql.Literal(account\_number), \(\backslash\)}
+\DoxyCodeLine{629                    nr=sql.Literal(name\_reference), \(\backslash\)}
+\DoxyCodeLine{630                    base\_currency=sql.Literal(base\_currency\_id))}
+\DoxyCodeLine{631         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{632         self.cur.execute(stat)}
+\DoxyCodeLine{633         stat=\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('banking', 'id'));"}}
+\DoxyCodeLine{634         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{635         self.cur.execute(stat)}
+\DoxyCodeLine{636         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
 
 \end{DoxyCode}
 
 
-References core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+References core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -254,33 +248,32 @@ note that some clients might not have banking id yet
 \end{DoxyVerb}
  
 
-Definition at line 548 of file database.\+py.
+Definition at line 637 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{548     \textcolor{keyword}{def }add\_client(self, name, email, cur\_pref\_id):}
-\DoxyCodeLine{549         \textcolor{stringliteral}{""" add new client to the network (CALLED AT THE SERVER SIDE),}}
-\DoxyCodeLine{550 \textcolor{stringliteral}{}}
-\DoxyCodeLine{551 \textcolor{stringliteral}{        note that some clients might not have banking id yet}}
-\DoxyCodeLine{552 \textcolor{stringliteral}{        @param name: client name}}
-\DoxyCodeLine{553 \textcolor{stringliteral}{        @param email: client email}}
-\DoxyCodeLine{554 \textcolor{stringliteral}{        @param cur\_pref: currency preference id}}
-\DoxyCodeLine{555 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{556         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO clients (client\_name, client\_email, currency\_id) VALUES (\{name\}, \{email\}, \{cur\_pref\})"}).\(\backslash\)}
-\DoxyCodeLine{557             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(name=sql.Literal(name),\(\backslash\)}
-\DoxyCodeLine{558                    email=sql.Literal(email),\(\backslash\)}
-\DoxyCodeLine{559                    cur\_pref=sql.Literal(cur\_pref\_id))}
-\DoxyCodeLine{560         self.cur.execute(stat)}
-\DoxyCodeLine{561         self.cur.execute(\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('clients', 'client\_id'));"})}
-\DoxyCodeLine{562         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+\DoxyCodeLine{637     \textcolor{keyword}{def }add\_client(self, name, email, cur\_pref\_id):}
+\DoxyCodeLine{638         \textcolor{stringliteral}{""" add new client to the network (CALLED AT THE SERVER SIDE),}}
+\DoxyCodeLine{639 \textcolor{stringliteral}{}}
+\DoxyCodeLine{640 \textcolor{stringliteral}{        note that some clients might not have banking id yet}}
+\DoxyCodeLine{641 \textcolor{stringliteral}{        @param name: client name}}
+\DoxyCodeLine{642 \textcolor{stringliteral}{        @param email: client email}}
+\DoxyCodeLine{643 \textcolor{stringliteral}{        @param cur\_pref: currency preference id}}
+\DoxyCodeLine{644 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{645         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO clients (client\_name, client\_email, currency\_id) VALUES (\{name\}, \{email\}, \{cur\_pref\})"}).\(\backslash\)}
+\DoxyCodeLine{646             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(name=sql.Literal(name),\(\backslash\)}
+\DoxyCodeLine{647                    email=sql.Literal(email),\(\backslash\)}
+\DoxyCodeLine{648                    cur\_pref=sql.Literal(cur\_pref\_id))}
+\DoxyCodeLine{649         self.cur.execute(stat)}
+\DoxyCodeLine{650         self.cur.execute(\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('clients', 'client\_id'));"})}
+\DoxyCodeLine{651         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
 
 \end{DoxyCode}
 
 
-References core.\+queries.\+database.\+inserts.\+add\+\_\+client(), core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, and client.\+client.\+format.
+References core.\+queries.\+database.\+inserts.\+add\+\_\+client(), core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, and client.\+client.\+format.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -302,37 +295,36 @@ note that some clients might not have banking id yet
 \end{DoxyVerb}
  
 
-Definition at line 548 of file database.\+py.
+Definition at line 637 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{548     \textcolor{keyword}{def }add\_client(self, name, email, cur\_pref\_id):}
-\DoxyCodeLine{549         \textcolor{stringliteral}{""" add new client to the network (CALLED AT THE SERVER SIDE),}}
-\DoxyCodeLine{550 \textcolor{stringliteral}{}}
-\DoxyCodeLine{551 \textcolor{stringliteral}{        note that some clients might not have banking id yet}}
-\DoxyCodeLine{552 \textcolor{stringliteral}{        @param name: client name}}
-\DoxyCodeLine{553 \textcolor{stringliteral}{        @param email: client email}}
-\DoxyCodeLine{554 \textcolor{stringliteral}{        @param cur\_pref: currency preference id}}
-\DoxyCodeLine{555 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{556         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO clients (client\_name, client\_email, currency\_id) VALUES (\{name\}, \{email\}, \{cur\_pref\})"}).\(\backslash\)}
-\DoxyCodeLine{557             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(name=sql.Literal(name),\(\backslash\)}
-\DoxyCodeLine{558                    email=sql.Literal(email),\(\backslash\)}
-\DoxyCodeLine{559                    cur\_pref=sql.Literal(cur\_pref\_id))}
-\DoxyCodeLine{560         self.cur.execute(stat)}
-\DoxyCodeLine{561         self.cur.execute(\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('clients', 'client\_id'));"})}
-\DoxyCodeLine{562         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
+\DoxyCodeLine{637     \textcolor{keyword}{def }add\_client(self, name, email, cur\_pref\_id):}
+\DoxyCodeLine{638         \textcolor{stringliteral}{""" add new client to the network (CALLED AT THE SERVER SIDE),}}
+\DoxyCodeLine{639 \textcolor{stringliteral}{}}
+\DoxyCodeLine{640 \textcolor{stringliteral}{        note that some clients might not have banking id yet}}
+\DoxyCodeLine{641 \textcolor{stringliteral}{        @param name: client name}}
+\DoxyCodeLine{642 \textcolor{stringliteral}{        @param email: client email}}
+\DoxyCodeLine{643 \textcolor{stringliteral}{        @param cur\_pref: currency preference id}}
+\DoxyCodeLine{644 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{645         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO clients (client\_name, client\_email, currency\_id) VALUES (\{name\}, \{email\}, \{cur\_pref\})"}).\(\backslash\)}
+\DoxyCodeLine{646             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(name=sql.Literal(name),\(\backslash\)}
+\DoxyCodeLine{647                    email=sql.Literal(email),\(\backslash\)}
+\DoxyCodeLine{648                    cur\_pref=sql.Literal(cur\_pref\_id))}
+\DoxyCodeLine{649         self.cur.execute(stat)}
+\DoxyCodeLine{650         self.cur.execute(\textcolor{stringliteral}{"SELECT currval(pg\_get\_serial\_sequence('clients', 'client\_id'));"})}
+\DoxyCodeLine{651         \textcolor{keywordflow}{return} self.cur.fetchone()[0]}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, and client.\+client.\+format.
 
 
 
 Referenced by core.\+queries.\+database.\+inserts.\+add\+\_\+client().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -352,41 +344,39 @@ Here is the caller graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 517 of file database.\+py.
+Definition at line 606 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{517     \textcolor{keyword}{def }add\_currency(self, cur\_name, cur\_rate):}
-\DoxyCodeLine{518         \textcolor{stringliteral}{"""support new currency}}
-\DoxyCodeLine{519 \textcolor{stringliteral}{}}
-\DoxyCodeLine{520 \textcolor{stringliteral}{        @param cur\_name: currency\_name}}
-\DoxyCodeLine{521 \textcolor{stringliteral}{        @param cur\_rate: currency rate based by euro}}
-\DoxyCodeLine{522 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{523         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO currency (currency\_name, currency\_value) VALUES (\{cur\_name\}, \{cur\_val\});"}).\(\backslash\)}
-\DoxyCodeLine{524             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name=sql.Literal(\mbox{\hyperlink{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}{process\_cur}}(cur\_name)), \(\backslash\)}
-\DoxyCodeLine{525                    cur\_val=sql.Literal(cur\_rate))}
-\DoxyCodeLine{526         print(\textcolor{stringliteral}{'currency added name: \{\}, and rate: \{\}'}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name, cur\_rate))}
-\DoxyCodeLine{527         self.cur.execute(stat)}
+\DoxyCodeLine{606     \textcolor{keyword}{def }add\_currency(self, cur\_name, cur\_rate):}
+\DoxyCodeLine{607         \textcolor{stringliteral}{"""support new currency}}
+\DoxyCodeLine{608 \textcolor{stringliteral}{}}
+\DoxyCodeLine{609 \textcolor{stringliteral}{        @param cur\_name: currency\_name}}
+\DoxyCodeLine{610 \textcolor{stringliteral}{        @param cur\_rate: currency rate based by euro}}
+\DoxyCodeLine{611 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{612         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO currency (currency\_name, currency\_value) VALUES (\{cur\_name\}, \{cur\_val\});"}).\(\backslash\)}
+\DoxyCodeLine{613             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name=sql.Literal(\mbox{\hyperlink{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}{process\_cur}}(cur\_name)), \(\backslash\)}
+\DoxyCodeLine{614                    cur\_val=sql.Literal(cur\_rate))}
+\DoxyCodeLine{615         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(\textcolor{stringliteral}{'currency added name: \{\}, and rate: \{\}'}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name, cur\_rate))}
+\DoxyCodeLine{616         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, client.\+client.\+format, and core.\+utils.\+process\+\_\+cur().
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, and core.\+utils.\+process\+\_\+cur().
 
 
 
 Referenced by core.\+queries.\+database.\+inserts.\+add\+\_\+currency().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classcore_1_1queries_1_1database_1_1inserts_a80392f09085ce37b53a05eab9dd27e65_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -406,26 +396,26 @@ Here is the caller graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 517 of file database.\+py.
+Definition at line 606 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{517     \textcolor{keyword}{def }add\_currency(self, cur\_name, cur\_rate):}
-\DoxyCodeLine{518         \textcolor{stringliteral}{"""support new currency}}
-\DoxyCodeLine{519 \textcolor{stringliteral}{}}
-\DoxyCodeLine{520 \textcolor{stringliteral}{        @param cur\_name: currency\_name}}
-\DoxyCodeLine{521 \textcolor{stringliteral}{        @param cur\_rate: currency rate based by euro}}
-\DoxyCodeLine{522 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{523         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO currency (currency\_name, currency\_value) VALUES (\{cur\_name\}, \{cur\_val\});"}).\(\backslash\)}
-\DoxyCodeLine{524             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name=sql.Literal(\mbox{\hyperlink{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}{process\_cur}}(cur\_name)), \(\backslash\)}
-\DoxyCodeLine{525                    cur\_val=sql.Literal(cur\_rate))}
-\DoxyCodeLine{526         print(\textcolor{stringliteral}{'currency added name: \{\}, and rate: \{\}'}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name, cur\_rate))}
-\DoxyCodeLine{527         self.cur.execute(stat)}
+\DoxyCodeLine{606     \textcolor{keyword}{def }add\_currency(self, cur\_name, cur\_rate):}
+\DoxyCodeLine{607         \textcolor{stringliteral}{"""support new currency}}
+\DoxyCodeLine{608 \textcolor{stringliteral}{}}
+\DoxyCodeLine{609 \textcolor{stringliteral}{        @param cur\_name: currency\_name}}
+\DoxyCodeLine{610 \textcolor{stringliteral}{        @param cur\_rate: currency rate based by euro}}
+\DoxyCodeLine{611 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{612         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO currency (currency\_name, currency\_value) VALUES (\{cur\_name\}, \{cur\_val\});"}).\(\backslash\)}
+\DoxyCodeLine{613             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name=sql.Literal(\mbox{\hyperlink{namespacecore_1_1utils_a0331dfe6b30a093a17d623ec830b6197}{process\_cur}}(cur\_name)), \(\backslash\)}
+\DoxyCodeLine{614                    cur\_val=sql.Literal(cur\_rate))}
+\DoxyCodeLine{615         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(\textcolor{stringliteral}{'currency added name: \{\}, and rate: \{\}'}.\mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cur\_name, cur\_rate))}
+\DoxyCodeLine{616         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References core.\+queries.\+database.\+inserts.\+add\+\_\+currency(), queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, client.\+client.\+format, and core.\+utils.\+process\+\_\+cur().
+References core.\+queries.\+database.\+inserts.\+add\+\_\+currency(), queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, and core.\+utils.\+process\+\_\+cur().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -450,37 +440,36 @@ Here is the call graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 563 of file database.\+py.
+Definition at line 652 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{563     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1contacts_a3b7b9d1a7b1fea50f69d8f0ca8f43332}{insert\_contact}}(self, email, name, credid):}
-\DoxyCodeLine{564         \textcolor{stringliteral}{""" insert new contact (CALLED AT THE CLIENT SIDE)}}
-\DoxyCodeLine{565 \textcolor{stringliteral}{}}
-\DoxyCodeLine{566 \textcolor{stringliteral}{}}
-\DoxyCodeLine{567 \textcolor{stringliteral}{        @param email: contact's email}}
-\DoxyCodeLine{568 \textcolor{stringliteral}{        @param name: contact's name}}
-\DoxyCodeLine{569 \textcolor{stringliteral}{        @param credid: contact's credid}}
-\DoxyCodeLine{570 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{571         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO contacts (contact\_id, contact\_name, contact\_email) VALUES (\{credid\}, \{email\}, \{name\})"}).\(\backslash\)}
-\DoxyCodeLine{572             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(credid=sql.Literal(credid), \(\backslash\)}
-\DoxyCodeLine{573                    email=sql.Literal(email), \(\backslash\)}
-\DoxyCodeLine{574                    name=sql.Literal(name))}
-\DoxyCodeLine{575         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{576         self.cur.execute(stat)}
-\DoxyCodeLine{577 }
+\DoxyCodeLine{652     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1contacts_a3b7b9d1a7b1fea50f69d8f0ca8f43332}{insert\_contact}}(self, email, name, credid):}
+\DoxyCodeLine{653         \textcolor{stringliteral}{""" insert new contact (CALLED AT THE CLIENT SIDE)}}
+\DoxyCodeLine{654 \textcolor{stringliteral}{}}
+\DoxyCodeLine{655 \textcolor{stringliteral}{}}
+\DoxyCodeLine{656 \textcolor{stringliteral}{        @param email: contact's email}}
+\DoxyCodeLine{657 \textcolor{stringliteral}{        @param name: contact's name}}
+\DoxyCodeLine{658 \textcolor{stringliteral}{        @param credid: contact's credid}}
+\DoxyCodeLine{659 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{660         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO contacts (contact\_id, contact\_name, contact\_email) VALUES (\{credid\}, \{email\}, \{name\})"}).\(\backslash\)}
+\DoxyCodeLine{661             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(credid=sql.Literal(credid), \(\backslash\)}
+\DoxyCodeLine{662                    email=sql.Literal(email), \(\backslash\)}
+\DoxyCodeLine{663                    name=sql.Literal(name))}
+\DoxyCodeLine{664         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{665         self.cur.execute(stat)}
+\DoxyCodeLine{666 }
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
 
 
 
 Referenced by core.\+queries.\+database.\+inserts.\+insert\+\_\+contact().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -502,33 +491,32 @@ Here is the caller graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 563 of file database.\+py.
+Definition at line 652 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{563     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1contacts_a3b7b9d1a7b1fea50f69d8f0ca8f43332}{insert\_contact}}(self, email, name, credid):}
-\DoxyCodeLine{564         \textcolor{stringliteral}{""" insert new contact (CALLED AT THE CLIENT SIDE)}}
-\DoxyCodeLine{565 \textcolor{stringliteral}{}}
-\DoxyCodeLine{566 \textcolor{stringliteral}{}}
-\DoxyCodeLine{567 \textcolor{stringliteral}{        @param email: contact's email}}
-\DoxyCodeLine{568 \textcolor{stringliteral}{        @param name: contact's name}}
-\DoxyCodeLine{569 \textcolor{stringliteral}{        @param credid: contact's credid}}
-\DoxyCodeLine{570 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{571         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO contacts (contact\_id, contact\_name, contact\_email) VALUES (\{credid\}, \{email\}, \{name\})"}).\(\backslash\)}
-\DoxyCodeLine{572             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(credid=sql.Literal(credid), \(\backslash\)}
-\DoxyCodeLine{573                    email=sql.Literal(email), \(\backslash\)}
-\DoxyCodeLine{574                    name=sql.Literal(name))}
-\DoxyCodeLine{575         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{576         self.cur.execute(stat)}
-\DoxyCodeLine{577 }
+\DoxyCodeLine{652     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1contacts_a3b7b9d1a7b1fea50f69d8f0ca8f43332}{insert\_contact}}(self, email, name, credid):}
+\DoxyCodeLine{653         \textcolor{stringliteral}{""" insert new contact (CALLED AT THE CLIENT SIDE)}}
+\DoxyCodeLine{654 \textcolor{stringliteral}{}}
+\DoxyCodeLine{655 \textcolor{stringliteral}{}}
+\DoxyCodeLine{656 \textcolor{stringliteral}{        @param email: contact's email}}
+\DoxyCodeLine{657 \textcolor{stringliteral}{        @param name: contact's name}}
+\DoxyCodeLine{658 \textcolor{stringliteral}{        @param credid: contact's credid}}
+\DoxyCodeLine{659 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{660         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO contacts (contact\_id, contact\_name, contact\_email) VALUES (\{credid\}, \{email\}, \{name\})"}).\(\backslash\)}
+\DoxyCodeLine{661             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(credid=sql.Literal(credid), \(\backslash\)}
+\DoxyCodeLine{662                    email=sql.Literal(email), \(\backslash\)}
+\DoxyCodeLine{663                    name=sql.Literal(name))}
+\DoxyCodeLine{664         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{665         self.cur.execute(stat)}
+\DoxyCodeLine{666 }
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, and core.\+queries.\+database.\+inserts.\+insert\+\_\+contact().
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, and core.\+queries.\+database.\+inserts.\+insert\+\_\+contact().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -551,35 +539,34 @@ Here is the call graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 591 of file database.\+py.
+Definition at line 681 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{591     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1ledger_aeebdc20c719395acfabe5904e5f82676}{insert\_trx}}(self, des, src, cost, cur\_id, name):}
-\DoxyCodeLine{592         \textcolor{stringliteral}{""" insert transaction from 'src' to 'des' for good with 'gid'}}
-\DoxyCodeLine{593 \textcolor{stringliteral}{}}
-\DoxyCodeLine{594 \textcolor{stringliteral}{        @param des: the transaction destination}}
-\DoxyCodeLine{595 \textcolor{stringliteral}{        @param src: the transaction source}}
-\DoxyCodeLine{596 \textcolor{stringliteral}{        @param cost: the transaction amount}}
-\DoxyCodeLine{597 \textcolor{stringliteral}{        @param cur\_id: the currency id}}
-\DoxyCodeLine{598 \textcolor{stringliteral}{        @param name: the transaction name}}
-\DoxyCodeLine{599 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{600         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO ledger (trx\_dest, trx\_src, trx\_cost, trx\_cur\_id, trx\_name) VALUES (\{des\}, \{src\}, \{cost\}, \{cur\_id\}, \{name\});"}).\(\backslash\)}
-\DoxyCodeLine{601             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(des=sql.Literal(des), \(\backslash\)}
-\DoxyCodeLine{602                    src=sql.Literal(src), \(\backslash\)}
-\DoxyCodeLine{603                    cost=sql.Literal(cost), \(\backslash\)}
-\DoxyCodeLine{604                    cur\_id=sql.Literal(cur\_id), \(\backslash\)}
-\DoxyCodeLine{605                    name=sql.Literal(name))}
-\DoxyCodeLine{606         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{607         self.cur.execute(stat)}
+\DoxyCodeLine{681     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1ledger_aeebdc20c719395acfabe5904e5f82676}{insert\_trx}}(self, des, src, cost, cur\_id, name):}
+\DoxyCodeLine{682         \textcolor{stringliteral}{""" insert transaction from 'src' to 'des' for good with 'gid'}}
+\DoxyCodeLine{683 \textcolor{stringliteral}{}}
+\DoxyCodeLine{684 \textcolor{stringliteral}{        @param des: the transaction destination}}
+\DoxyCodeLine{685 \textcolor{stringliteral}{        @param src: the transaction source}}
+\DoxyCodeLine{686 \textcolor{stringliteral}{        @param cost: the transaction amount}}
+\DoxyCodeLine{687 \textcolor{stringliteral}{        @param cur\_id: the currency id}}
+\DoxyCodeLine{688 \textcolor{stringliteral}{        @param name: the transaction name}}
+\DoxyCodeLine{689 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{690         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO ledger (trx\_dest, trx\_src, trx\_cost, trx\_cur\_id, trx\_name) VALUES (\{des\}, \{src\}, \{cost\}, \{cur\_id\}, \{name\});"}).\(\backslash\)}
+\DoxyCodeLine{691             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(des=sql.Literal(des), \(\backslash\)}
+\DoxyCodeLine{692                    src=sql.Literal(src), \(\backslash\)}
+\DoxyCodeLine{693                    cost=sql.Literal(cost), \(\backslash\)}
+\DoxyCodeLine{694                    cur\_id=sql.Literal(cur\_id), \(\backslash\)}
+\DoxyCodeLine{695                    name=sql.Literal(name))}
+\DoxyCodeLine{696         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{697         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, and core.\+queries.\+database.\+inserts.\+insert\+\_\+trx().
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, and core.\+queries.\+database.\+inserts.\+insert\+\_\+trx().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -602,39 +589,38 @@ Here is the call graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 591 of file database.\+py.
+Definition at line 681 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{591     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1ledger_aeebdc20c719395acfabe5904e5f82676}{insert\_trx}}(self, des, src, cost, cur\_id, name):}
-\DoxyCodeLine{592         \textcolor{stringliteral}{""" insert transaction from 'src' to 'des' for good with 'gid'}}
-\DoxyCodeLine{593 \textcolor{stringliteral}{}}
-\DoxyCodeLine{594 \textcolor{stringliteral}{        @param des: the transaction destination}}
-\DoxyCodeLine{595 \textcolor{stringliteral}{        @param src: the transaction source}}
-\DoxyCodeLine{596 \textcolor{stringliteral}{        @param cost: the transaction amount}}
-\DoxyCodeLine{597 \textcolor{stringliteral}{        @param cur\_id: the currency id}}
-\DoxyCodeLine{598 \textcolor{stringliteral}{        @param name: the transaction name}}
-\DoxyCodeLine{599 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{600         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO ledger (trx\_dest, trx\_src, trx\_cost, trx\_cur\_id, trx\_name) VALUES (\{des\}, \{src\}, \{cost\}, \{cur\_id\}, \{name\});"}).\(\backslash\)}
-\DoxyCodeLine{601             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(des=sql.Literal(des), \(\backslash\)}
-\DoxyCodeLine{602                    src=sql.Literal(src), \(\backslash\)}
-\DoxyCodeLine{603                    cost=sql.Literal(cost), \(\backslash\)}
-\DoxyCodeLine{604                    cur\_id=sql.Literal(cur\_id), \(\backslash\)}
-\DoxyCodeLine{605                    name=sql.Literal(name))}
-\DoxyCodeLine{606         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{607         self.cur.execute(stat)}
+\DoxyCodeLine{681     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1ledger_aeebdc20c719395acfabe5904e5f82676}{insert\_trx}}(self, des, src, cost, cur\_id, name):}
+\DoxyCodeLine{682         \textcolor{stringliteral}{""" insert transaction from 'src' to 'des' for good with 'gid'}}
+\DoxyCodeLine{683 \textcolor{stringliteral}{}}
+\DoxyCodeLine{684 \textcolor{stringliteral}{        @param des: the transaction destination}}
+\DoxyCodeLine{685 \textcolor{stringliteral}{        @param src: the transaction source}}
+\DoxyCodeLine{686 \textcolor{stringliteral}{        @param cost: the transaction amount}}
+\DoxyCodeLine{687 \textcolor{stringliteral}{        @param cur\_id: the currency id}}
+\DoxyCodeLine{688 \textcolor{stringliteral}{        @param name: the transaction name}}
+\DoxyCodeLine{689 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{690         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO ledger (trx\_dest, trx\_src, trx\_cost, trx\_cur\_id, trx\_name) VALUES (\{des\}, \{src\}, \{cost\}, \{cur\_id\}, \{name\});"}).\(\backslash\)}
+\DoxyCodeLine{691             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(des=sql.Literal(des), \(\backslash\)}
+\DoxyCodeLine{692                    src=sql.Literal(src), \(\backslash\)}
+\DoxyCodeLine{693                    cost=sql.Literal(cost), \(\backslash\)}
+\DoxyCodeLine{694                    cur\_id=sql.Literal(cur\_id), \(\backslash\)}
+\DoxyCodeLine{695                    name=sql.Literal(name))}
+\DoxyCodeLine{696         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{697         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
 
 
 
 Referenced by core.\+queries.\+database.\+inserts.\+insert\+\_\+trx().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -655,35 +641,36 @@ Here is the caller graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 578 of file database.\+py.
+Definition at line 667 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{578     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1credentials_a8c28b189106fd302808937c74f277b6f}{register}}(self, cid, passcode, cred\_id):}
-\DoxyCodeLine{579         \textcolor{stringliteral}{"""add client credentials returned from the server}}
-\DoxyCodeLine{580 \textcolor{stringliteral}{}}
-\DoxyCodeLine{581 \textcolor{stringliteral}{        @param cid: client id}}
-\DoxyCodeLine{582 \textcolor{stringliteral}{        @param passcode: client password}}
-\DoxyCodeLine{583 \textcolor{stringliteral}{        @param cred\_id: credential id}}
-\DoxyCodeLine{584 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{585         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO credentials (id, passcode, cred\_id) VALUES (\{cid\}, \{passcode\}, \{credid\});"}).\(\backslash\)}
-\DoxyCodeLine{586             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid),\(\backslash\)}
-\DoxyCodeLine{587                    passcode=sql.Literal(passcode), \(\backslash\)}
-\DoxyCodeLine{588                    credid=sql.Literal(cred\_id))}
-\DoxyCodeLine{589         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{590         self.cur.execute(stat)}
+\DoxyCodeLine{667     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1credentials_a8c28b189106fd302808937c74f277b6f}{register}}(self, cid, passcode, cred\_id):}
+\DoxyCodeLine{668         \textcolor{stringliteral}{"""add client credentials returned from the server}}
+\DoxyCodeLine{669 \textcolor{stringliteral}{}}
+\DoxyCodeLine{670 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{671 \textcolor{stringliteral}{        @param passcode: client password}}
+\DoxyCodeLine{672 \textcolor{stringliteral}{        @param cred\_id: credential id}}
+\DoxyCodeLine{673 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{674         \textcolor{comment}{\#, gen\_salt('bf',8)}}
+\DoxyCodeLine{675         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO credentials  (id, passcode, cred\_id)  VALUES (\{cid\}, \{passcode\}, \{credid\});"}).\(\backslash\)}
+\DoxyCodeLine{676             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid),\(\backslash\)}
+\DoxyCodeLine{677                    passcode=sql.Literal(\mbox{\hyperlink{namespacecore_1_1utils_af6aaeb0ab3525abd04da39e8b580b811}{hash}}(passcode)), \(\backslash\)}
+\DoxyCodeLine{678                    credid=sql.Literal(cred\_id))}
+\DoxyCodeLine{679         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{680         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, and core.\+queries.\+database.\+inserts.\+register().
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, core.\+utils.\+hash(), and core.\+queries.\+database.\+inserts.\+register().
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=281pt]{classcore_1_1queries_1_1database_1_1inserts_a81b12061353afa5cd7bc4a65f2c1c126_cgraph}
+\includegraphics[width=350pt]{classcore_1_1queries_1_1database_1_1inserts_a81b12061353afa5cd7bc4a65f2c1c126_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classcore_1_1queries_1_1database_1_1inserts_a81b12061353afa5cd7bc4a65f2c1c126}\label{classcore_1_1queries_1_1database_1_1inserts_a81b12061353afa5cd7bc4a65f2c1c126}} 
@@ -700,35 +687,43 @@ Here is the call graph for this function\+:
 \end{DoxyVerb}
  
 
-Definition at line 578 of file database.\+py.
+Definition at line 667 of file database.\+py.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{578     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1credentials_a8c28b189106fd302808937c74f277b6f}{register}}(self, cid, passcode, cred\_id):}
-\DoxyCodeLine{579         \textcolor{stringliteral}{"""add client credentials returned from the server}}
-\DoxyCodeLine{580 \textcolor{stringliteral}{}}
-\DoxyCodeLine{581 \textcolor{stringliteral}{        @param cid: client id}}
-\DoxyCodeLine{582 \textcolor{stringliteral}{        @param passcode: client password}}
-\DoxyCodeLine{583 \textcolor{stringliteral}{        @param cred\_id: credential id}}
-\DoxyCodeLine{584 \textcolor{stringliteral}{        """}}
-\DoxyCodeLine{585         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO credentials (id, passcode, cred\_id) VALUES (\{cid\}, \{passcode\}, \{credid\});"}).\(\backslash\)}
-\DoxyCodeLine{586             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid),\(\backslash\)}
-\DoxyCodeLine{587                    passcode=sql.Literal(passcode), \(\backslash\)}
-\DoxyCodeLine{588                    credid=sql.Literal(cred\_id))}
-\DoxyCodeLine{589         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
-\DoxyCodeLine{590         self.cur.execute(stat)}
+\DoxyCodeLine{667     \textcolor{keyword}{def }\mbox{\hyperlink{namespacequeries_1_1inserts_1_1credentials_a8c28b189106fd302808937c74f277b6f}{register}}(self, cid, passcode, cred\_id):}
+\DoxyCodeLine{668         \textcolor{stringliteral}{"""add client credentials returned from the server}}
+\DoxyCodeLine{669 \textcolor{stringliteral}{}}
+\DoxyCodeLine{670 \textcolor{stringliteral}{        @param cid: client id}}
+\DoxyCodeLine{671 \textcolor{stringliteral}{        @param passcode: client password}}
+\DoxyCodeLine{672 \textcolor{stringliteral}{        @param cred\_id: credential id}}
+\DoxyCodeLine{673 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{674         \textcolor{comment}{\#, gen\_salt('bf',8)}}
+\DoxyCodeLine{675         stat=sql.SQL(\textcolor{stringliteral}{"INSERT INTO credentials  (id, passcode, cred\_id)  VALUES (\{cid\}, \{passcode\}, \{credid\});"}).\(\backslash\)}
+\DoxyCodeLine{676             \mbox{\hyperlink{namespaceclient_1_1client_a28f28b5d621b127269d6035d7a435682}{format}}(cid=sql.Literal(cid),\(\backslash\)}
+\DoxyCodeLine{677                    passcode=sql.Literal(\mbox{\hyperlink{namespacecore_1_1utils_af6aaeb0ab3525abd04da39e8b580b811}{hash}}(passcode)), \(\backslash\)}
+\DoxyCodeLine{678                    credid=sql.Literal(cred\_id))}
+\DoxyCodeLine{679         self.db\_log.\mbox{\hyperlink{namespaceserver_1_1server_addf5a8b97b626d4622f3fb2b2f8065ab}{debug}}(stat)}
+\DoxyCodeLine{680         self.cur.execute(stat)}
 
 \end{DoxyCode}
 
 
-References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, server.\+server.\+debug, and client.\+client.\+format.
+References queries.\+database.\+exists.\+cur, core.\+queries.\+database.\+exists.\+cur, queries.\+database.\+gets.\+cur, core.\+queries.\+database.\+gets.\+cur, queries.\+database.\+inserts.\+cur, queries.\+database.\+updates.\+cur, core.\+queries.\+database.\+inserts.\+cur, queries.\+database.\+database.\+cur, queries.\+database.\+gets.\+db\+\_\+log, core.\+queries.\+database.\+gets.\+db\+\_\+log, queries.\+database.\+inserts.\+db\+\_\+log, queries.\+database.\+updates.\+db\+\_\+log, core.\+queries.\+database.\+inserts.\+db\+\_\+log, server.\+server.\+debug, client.\+client.\+format, and core.\+utils.\+hash().
 
 
 
 Referenced by core.\+queries.\+database.\+inserts.\+register().
 
-Here is the caller graph for this function\+:
+Here is the call graph for this function\+:
 \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcore_1_1queries_1_1database_1_1inserts_a81b12061353afa5cd7bc4a65f2c1c126_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -746,7 +741,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 514 of file database.\+py.
+Definition at line 603 of file database.\+py.
 
 
 
@@ -760,7 +755,7 @@ Referenced by core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+()
 
 
 
-Definition at line 515 of file database.\+py.
+Definition at line 604 of file database.\+py.
 
 
 
@@ -774,11 +769,11 @@ Referenced by core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+()
 
 
 
-Definition at line 516 of file database.\+py.
+Definition at line 605 of file database.\+py.
 
 
 
-Referenced by core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), core.\+queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+database.\+inserts.\+insert\+\_\+trx(), and core.\+queries.\+database.\+inserts.\+register().
+Referenced by core.\+queries.\+database.\+inserts.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+updates.\+\_\+\+\_\+init\+\_\+\+\_\+(), core.\+queries.\+database.\+inserts.\+add\+\_\+bank\+\_\+account(), core.\+queries.\+database.\+inserts.\+add\+\_\+currency(), core.\+queries.\+database.\+inserts.\+insert\+\_\+contact(), core.\+queries.\+database.\+inserts.\+insert\+\_\+trx(), and core.\+queries.\+database.\+inserts.\+register().
 
 
 
